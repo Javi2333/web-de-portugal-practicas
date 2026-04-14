@@ -317,6 +317,7 @@
     }
     .form-field input.error,
     .form-field textarea.error { border-color: #ff6b6b; }
+    .form-hint { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; display: block; }
 
     .form-submit-btn {
       width: 100%;
@@ -578,14 +579,10 @@
             </h4>
             <div class="hours-row">
               <span class="hours-day">Lunes – Viernes</span>
-              <span class="hours-time">9:00 – 18:00</span>
+              <span class="hours-time">9:00 – 14:00<br>17:00 – 20:30</span>
             </div>
             <div class="hours-row">
-              <span class="hours-day">Sábado</span>
-              <span class="hours-time">10:00 – 14:00</span>
-            </div>
-            <div class="hours-row">
-              <span class="hours-day">Domingo</span>
+              <span class="hours-day">Sábado - Domingo</span>
               <span class="hours-time--closed">Cerrado</span>
             </div>
           </div>
@@ -623,8 +620,8 @@
                 <input type="text" id="cf-nombre" name="nombre" placeholder="Tu nombre" required />
               </div>
               <div class="form-field">
-                <label for="cf-apellido">Apellido</label>
-                <input type="text" id="cf-apellido" name="apellido" placeholder="Tu apellido" />
+                <label for="cf-apellido">Apellido *</label>   
+                <input type="text" id="cf-apellido" name="apellido" placeholder="Tu apellido" required />
               </div>
             </div>
             <div class="form-row">
@@ -635,6 +632,7 @@
               <div class="form-field">
                 <label for="cf-telefono">Teléfono</label>
                 <input type="tel" id="cf-telefono" name="telefono" placeholder="+34 600 000 000" />
+                <span class="form-hint">Mínimo 9 dígitos</span>
               </div>
             </div>
             <div class="form-field">
@@ -742,15 +740,22 @@
       e.preventDefault();
 
       // Basic validation
-      const nombre  = document.getElementById('cf-nombre');
-      const email   = document.getElementById('cf-email');
-      const mensaje = document.getElementById('cf-mensaje');
+      const nombre   = document.getElementById('cf-nombre');
+      const apellido = document.getElementById('cf-apellido');
+      const email    = document.getElementById('cf-email');
+      const telefono = document.getElementById('cf-telefono');
+      const mensaje  = document.getElementById('cf-mensaje');
       let valid = true;
 
-      [nombre, email, mensaje].forEach(f => f.classList.remove('error'));
+      [nombre, apellido, email, telefono, mensaje].forEach(f => f.classList.remove('error'));
 
       if (!nombre.value.trim()) { nombre.classList.add('error'); valid = false; }
+      if (!apellido.value.trim()) { apellido.classList.add('error'); valid = false; }
       if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { email.classList.add('error'); valid = false; }
+      if (telefono.value.trim()) {
+        const digits = telefono.value.replace(/\D/g, '');
+        if (digits.length < 9 || digits.length > 14) { telefono.classList.add('error'); valid = false; }
+      }
       if (!mensaje.value.trim()) { mensaje.classList.add('error'); valid = false; }
 
       if (!valid) return;
