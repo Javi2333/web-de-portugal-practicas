@@ -243,3 +243,147 @@ if (vaciarBtn) vaciarBtn.addEventListener('click', clearCart);
 // init on every page
 updateCartBadge();
 renderCarritoPage();
+
+// ── Search Overlay ────────────────────────────────────────────────
+(function initSearch() {
+    const searchBtn = document.getElementById('navSearchBtn');
+    if (!searchBtn) return;
+
+    // Build overlay dynamically
+    const overlay = document.createElement('div');
+    overlay.className = 'search-overlay';
+    overlay.id = 'searchOverlay';
+    overlay.innerHTML = `
+        <div class="search-overlay-inner">
+          <div class="search-bar-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="searchInput" placeholder="Buscar productos LED…" autocomplete="off" spellcheck="false"/>
+            <button class="search-close-btn" id="searchCloseBtn" aria-label="Cerrar">✕</button>
+          </div>
+          <p class="search-hint">Escribe para buscar entre nuestros 36 productos · <kbd>Esc</kbd> para cerrar</p>
+          <div class="search-results-list" id="searchResultsList"></div>
+        </div>`;
+    document.body.appendChild(overlay);
+
+    // Collect all products from DOM (available on produtos.html)
+    // On other pages, build from a static mini-list
+    let PRODUCTS = [];
+
+    function buildProductList() {
+        const cards = document.querySelectorAll('.produto-card[data-title]');
+        if (cards.length > 0) {
+            cards.forEach(c => PRODUCTS.push({ title: c.dataset.title, desc: c.dataset.desc || '' }));
+        }
+    }
+    buildProductList();
+
+    const input        = document.getElementById('searchInput');
+    const resultsList  = document.getElementById('searchResultsList');
+    const closeBtn     = document.getElementById('searchCloseBtn');
+
+    function openSearch() {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => input.focus(), 50);
+    }
+    function closeSearch() {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        input.value = '';
+        resultsList.innerHTML = '';
+    }
+
+    searchBtn.addEventListener('click', openSearch);
+    closeBtn.addEventListener('click', closeSearch);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeSearch(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
+
+    input.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        resultsList.innerHTML = '';
+        if (!q) return;
+
+        if (PRODUCTS.length === 0) {
+            // On pages without product cards, redirect to produtos.html
+            resultsList.innerHTML = `<div class="search-no-results">Pulse <strong>Enter</strong> para buscar "<strong>${q}</strong>" en el catálogo</div>`;
+            return;
+        }
+
+        const matches = PRODUCTS.filter(p =>
+            p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q)
+        ).slice(0, 8);
+
+        if (matches.length === 0) {
+            resultsList.innerHTML = `<div class="search-no-results">Sin resultados para <strong>"${input.value}"</strong>.<br>Prueba con otra palabra.</div>`;
+            return;
+        }
+
+        matches.forEach(p => {
+            const item = document.createElement('a');
+            item.href = 'produtos.html';
+            item.className = 'search-result-item';
+            item.innerHTML = `
+                <div class="search-result-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+                </div>
+                <div class="search-result-info">
+                  <h4>${p.title}</h4>
+                  <p>${p.desc.slice(0, 70)}…</p>
+                </div>`;
+            item.addEventListener('click', () => closeSearch());
+            resultsList.appendChild(item);
+        });
+    });
+
+    // Enter = go to produtos.html with query
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const q = input.value.trim();
+            if (q) {
+                closeSearch();
+                window.location.href = `produtos.html?q=${encodeURIComponent(q)}`;
+            }
+        }
+    });
+
+    // Filter grid on produtos.html if ?q= present
+    const urlQ = new URLSearchParams(window.location.search).get('q');
+    if (urlQ) {
+        const grid = document.getElementById('produtos');
+        if (grid) {
+            const term = urlQ.toLowerCase();
+            let anyVisible = false;
+            document.querySelectorAll('.produto-card').forEach(card => {
+                const matches = (card.dataset.title || '').toLowerCase().includes(term)
+                             || (card.dataset.desc  || '').toLowerCase().includes(term);
+                card.style.display = matches ? '' : 'none';
+                if (matches) anyVisible = true;
+            });
+            // Show banner
+            const header = grid.querySelector('.section-header');
+            if (header) {
+                const banner = document.createElement('div');
+                banner.style.cssText = 'margin-top:16px;padding:10px 18px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.3);border-radius:10px;font-size:0.88rem;color:var(--text-muted)';
+                banner.innerHTML = anyVisible
+                    ? `Mostrando resultados para <strong style="color:var(--white)">"${urlQ}"</strong> — <a href="produtos.html" style="color:var(--primary-light)">Ver todos los productos</a>`
+                    : `No se encontraron resultados para <strong style="color:var(--white)">"${urlQ}"</strong> — <a href="produtos.html" style="color:var(--primary-light)">Ver todos los productos</a>`;
+                header.appendChild(banner);
+            }
+        }
+    }
+})();
+
+// ── User Dropdown (click toggle on mobile) ────────────────────────
+(function initUserDropdown() {
+    const wrap = document.getElementById('navUserWrap');
+    const btn  = document.getElementById('navUserBtn');
+    if (!wrap || !btn) return;
+
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        wrap.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+        if (!wrap.contains(e.target)) wrap.classList.remove('open');
+    });
+})();

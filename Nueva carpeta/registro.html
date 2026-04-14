@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registrarse – Letreros Programables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .auth-page::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 600px;
+      background: radial-gradient(ellipse, rgba(0,212,255,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .auth-card {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px 44px;
+      width: 100%;
+      max-width: 480px;
+      position: relative;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    }
+    .auth-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), var(--primary), transparent);
+      border-radius: 0 0 2px 2px;
+    }
+    .auth-logo { text-align: center; margin-bottom: 32px; }
+    .auth-logo a { display: inline-flex; align-items: center; gap: 10px; }
+    .auth-logo .logo-stack span { font-size: 0.7rem; }
+    .auth-title { font-size: 1.6rem; font-weight: 800; color: var(--white); text-align: center; margin-bottom: 6px; }
+    .auth-subtitle { font-size: 0.88rem; color: var(--text-muted); text-align: center; margin-bottom: 32px; }
+    .auth-form { display: flex; flex-direction: column; gap: 16px; }
+    .auth-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .auth-field label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+    .auth-field input, .auth-field select {
+      width: 100%;
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 13px 16px;
+      color: var(--white);
+      font-size: 0.93rem;
+      font-family: inherit;
+      transition: var(--transition);
+      box-sizing: border-box;
+    }
+    .auth-field input::placeholder { color: var(--text-muted); }
+    .auth-field input:focus, .auth-field select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,212,255,0.12); }
+    .auth-field select option { background: var(--dark-2); }
+    .auth-check { display: flex; align-items: flex-start; gap: 10px; }
+    .auth-check input[type=checkbox] { width: 16px; height: 16px; margin-top: 2px; flex-shrink: 0; accent-color: var(--primary); }
+    .auth-check span { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+    .auth-check a { color: var(--primary-light); transition: var(--transition); }
+    .auth-check a:hover { color: var(--accent); }
+    .auth-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent), #0099cc);
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      color: var(--dark);
+      font-size: 0.95rem;
+      font-weight: 800;
+      font-family: inherit;
+      cursor: pointer;
+      transition: var(--transition);
+      letter-spacing: 0.02em;
+      margin-top: 4px;
+    }
+    .auth-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,212,255,0.35); }
+    .auth-benefits { display: flex; flex-direction: column; gap: 10px; padding: 16px; background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.15); border-radius: var(--radius-sm); margin-bottom: 8px; }
+    .auth-benefit { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; color: var(--text-muted); }
+    .auth-benefit-icon { width: 20px; height: 20px; background: rgba(0,212,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--accent); flex-shrink: 0; }
+    .auth-footer { text-align: center; font-size: 0.88rem; color: var(--text-muted); margin-top: 24px; }
+    .auth-footer a { color: var(--primary-light); font-weight: 600; transition: var(--transition); }
+    .auth-footer a:hover { color: var(--accent); }
+    @media (max-width: 480px) {
+      .auth-card { padding: 32px 20px; }
+      .auth-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" stroke="var(--text-muted)"/>
+            <ellipse cx="12" cy="12" rx="4" ry="10" stroke="var(--primary)"/>
+            <line x1="2" y1="12" x2="22" y2="12" stroke="var(--primary)"/>
+            <line x1="4" y1="7" x2="20" y2="7" stroke="var(--text-muted)"/>
+            <line x1="4" y1="17" x2="20" y2="17" stroke="var(--text-muted)"/>
+          </svg>
+        </div>
+        <div class="logo-stack"><span>LETREROS</span><span>PROGRAMABLES</span><span>.COM</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="como-funciona.html">Como Funciona</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="carrito.html" class="cart-nav-btn" id="cartNavBtn" aria-label="Carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="auth-page">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-svg" style="width:32px;height:32px">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="32" height="32">
+              <circle cx="12" cy="12" r="10" stroke="var(--text-muted)"/>
+              <ellipse cx="12" cy="12" rx="4" ry="10" stroke="var(--primary)"/>
+              <line x1="2" y1="12" x2="22" y2="12" stroke="var(--primary)"/>
+            </svg>
+          </div>
+          <div class="logo-stack"><span>LETREROS</span><span>PROGRAMABLES</span><span>.COM</span></div>
+        </a>
+      </div>
+      <h1 class="auth-title">Crea tu cuenta</h1>
+      <p class="auth-subtitle">Únete y accede a precios exclusivos, historial de pedidos y mucho más</p>
+
+      <div class="auth-benefits">
+        <div class="auth-benefit"><div class="auth-benefit-icon">✓</div>Precios especiales para clientes registrados</div>
+        <div class="auth-benefit"><div class="auth-benefit-icon">✓</div>Historial de pedidos y seguimiento en tiempo real</div>
+        <div class="auth-benefit"><div class="auth-benefit-icon">✓</div>Gestión de listas de favoritos y comparador</div>
+      </div>
+
+      <form class="auth-form" onsubmit="return false">
+        <div class="auth-row">
+          <div class="auth-field">
+            <label for="regName">Nombre</label>
+            <input type="text" id="regName" placeholder="Tu nombre"/>
+          </div>
+          <div class="auth-field">
+            <label for="regSurname">Apellidos</label>
+            <input type="text" id="regSurname" placeholder="Tus apellidos"/>
+          </div>
+        </div>
+        <div class="auth-field">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" placeholder="tu@email.com" autocomplete="email"/>
+        </div>
+        <div class="auth-field">
+          <label for="regPhone">Teléfono (opcional)</label>
+          <input type="tel" id="regPhone" placeholder="+34 600 000 000"/>
+        </div>
+        <div class="auth-row">
+          <div class="auth-field">
+            <label for="regPass">Contraseña</label>
+            <input type="password" id="regPass" placeholder="Mín. 8 caracteres"/>
+          </div>
+          <div class="auth-field">
+            <label for="regPass2">Confirmar</label>
+            <input type="password" id="regPass2" placeholder="Repite la contraseña"/>
+          </div>
+        </div>
+        <div class="auth-check">
+          <input type="checkbox" id="regTerms"/>
+          <span>Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política de Privacidad</a></span>
+        </div>
+        <div class="auth-check">
+          <input type="checkbox" id="regNewsletter"/>
+          <span>Quiero recibir novedades y ofertas exclusivas por email</span>
+        </div>
+        <button type="submit" class="auth-submit">Crear cuenta gratuita</button>
+      </form>
+      <p class="auth-footer">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
