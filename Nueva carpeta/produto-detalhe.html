@@ -12,8 +12,8 @@
   <style>
     /* ── Product Detail Page ─────────────────────────────────── */
     .detalhe-hero {
-      padding: calc(var(--navbar-h) + 3rem) 0 3rem;
-      background: var(--bg-secondary);
+      padding: calc(80px + 3rem) 0 3rem;
+      background: var(--dark-2);
       border-bottom: 1px solid var(--border);
     }
     .detalhe-breadcrumb {
@@ -29,7 +29,7 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .detalhe-breadcrumb a:hover { color: var(--primary); }
+    .detalhe-breadcrumb a:hover { color: var(--accent); }
     .detalhe-breadcrumb svg { opacity: 0.5; }
 
     .detalhe-grid {
@@ -47,7 +47,7 @@
     .detalhe-main-img {
       width: 100%;
       aspect-ratio: 4/3;
-      background: var(--bg-card);
+      background: var(--dark-3);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       overflow: hidden;
@@ -85,9 +85,9 @@
     .detalhe-thumb {
       width: 72px;
       height: 72px;
-      background: var(--bg-card);
+      background: var(--dark-3);
       border: 2px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: var(--radius-sm);
       overflow: hidden;
       cursor: pointer;
       transition: border-color 0.2s;
@@ -112,24 +112,26 @@
       font-weight: 600;
       padding: 0.25rem 0.75rem;
       border-radius: 999px;
-      background: rgba(var(--primary-rgb), 0.12);
-      color: var(--primary);
+      background: rgba(0,102,255,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(0,212,255,0.2);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
     .detalhe-tag--bestseller {
-      background: rgba(255, 165, 0, 0.15);
+      background: rgba(245,158,11,0.15);
       color: #f59e0b;
+      border-color: rgba(245,158,11,0.25);
     }
     .detalhe-title {
       font-size: clamp(1.4rem, 3vw, 2rem);
       font-weight: 800;
       line-height: 1.2;
-      color: var(--text-primary);
+      color: var(--white);
       margin-bottom: 1rem;
     }
     .detalhe-desc {
-      color: var(--text-secondary);
+      color: var(--text-muted);
       line-height: 1.75;
       margin-bottom: 1.5rem;
       font-size: 1rem;
@@ -156,9 +158,9 @@
       margin-bottom: 1.5rem;
     }
     .spec-item {
-      background: var(--bg-card);
+      background: var(--dark-3);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: var(--radius-sm);
       padding: 0.65rem 0.9rem;
     }
     .spec-item .spec-label {
@@ -172,7 +174,7 @@
     }
     .spec-item .spec-val {
       font-size: 0.9rem;
-      color: var(--text-primary);
+      color: var(--white);
       font-weight: 600;
     }
 
@@ -192,7 +194,7 @@
       margin-bottom: 1.5rem;
     }
     .detalhe-sizes-table th {
-      background: var(--bg-card);
+      background: var(--dark-3);
       color: var(--text-muted);
       font-size: 0.75rem;
       font-weight: 700;
@@ -204,11 +206,11 @@
     }
     .detalhe-sizes-table td {
       padding: 0.6rem 0.75rem;
-      color: var(--text-secondary);
+      color: var(--text);
       border-bottom: 1px solid var(--border);
     }
-    .detalhe-sizes-table tr:hover td { background: var(--bg-card); }
-    .detalhe-sizes-table td:first-child { font-weight: 600; color: var(--text-primary); }
+    .detalhe-sizes-table tr:hover td { background: var(--dark-3); }
+    .detalhe-sizes-table td:first-child { font-weight: 600; color: var(--white); }
 
     /* CTA buttons */
     .detalhe-ctas {
@@ -216,11 +218,12 @@
       gap: 0.75rem;
       flex-wrap: wrap;
     }
-    .detalhe-ctas .btn { flex: 1; min-width: 180px; }
+    .detalhe-ctas .btn { flex: 1; min-width: 180px; justify-content: center; }
 
     /* Features section */
     .detalhe-features {
       padding: 4rem 0;
+      background: var(--dark);
     }
     .detalhe-features-grid {
       display: grid;
@@ -229,59 +232,63 @@
       margin-top: 2rem;
     }
     .feature-card {
-      background: var(--bg-card);
+      background: var(--glass);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius);
       padding: 1.5rem;
-      transition: border-color 0.2s, transform 0.2s;
+      transition: var(--transition);
     }
     .feature-card:hover {
-      border-color: var(--primary);
+      border-color: rgba(0,102,255,0.4);
+      background: var(--glass-hover);
       transform: translateY(-3px);
     }
     .feature-icon {
       width: 44px;
       height: 44px;
-      background: rgba(var(--primary-rgb), 0.12);
-      border-radius: var(--radius);
+      background: rgba(0,102,255,0.15);
+      border: 1px solid rgba(0,102,255,0.3);
+      border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 1rem;
-      color: var(--primary);
+      color: var(--primary-light);
     }
     .feature-icon svg { width: 22px; height: 22px; }
     .feature-card h3 {
       font-size: 0.95rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
-      color: var(--text-primary);
+      color: var(--white);
     }
     .feature-card p {
       font-size: 0.85rem;
-      color: var(--text-secondary);
+      color: var(--text-muted);
       line-height: 1.6;
     }
 
-    /* Loading state */
-    .detalhe-loading {
-      text-align: center;
-      padding: 6rem 2rem;
-      color: var(--text-muted);
-    }
+    /* Not found */
     .detalhe-not-found {
       text-align: center;
-      padding: 6rem 2rem;
+      padding: 8rem 2rem;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
     }
-    .detalhe-not-found h2 { color: var(--text-primary); margin-bottom: 1rem; }
-    .detalhe-not-found p { color: var(--text-muted); margin-bottom: 2rem; }
+    .detalhe-not-found h2 { color: var(--white); font-size: 1.5rem; }
+    .detalhe-not-found p { color: var(--text-muted); margin-bottom: 1rem; }
 
-    /* Extra info section */
+    /* Extra info */
     .detalhe-extra {
-      padding: 2rem 0 4rem;
+      padding: 0 0 4rem;
+      background: var(--dark);
     }
     .detalhe-extra-content {
-      background: var(--bg-card);
+      background: var(--glass);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 2rem;
@@ -290,10 +297,10 @@
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      color: var(--text-primary);
+      color: var(--white);
     }
     .detalhe-extra-content p, .detalhe-extra-content li {
-      color: var(--text-secondary);
+      color: var(--text-muted);
       line-height: 1.8;
     }
     .detalhe-extra-content ul {
