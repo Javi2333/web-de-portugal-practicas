@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
   <meta charset="UTF-8" />
@@ -50,95 +50,430 @@
     </div>
   </nav>
 
-  <!-- ===== SOBRE NÓS ===== -->
-  <section class="sobre-nos" id="sobre-nos">
+  <style>
+    /* ── Sobre Nos Page Styles ─── */
+    .sobre-hero {
+      padding: 140px 0 80px;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .sobre-hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(0,102,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .sobre-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 860px) { .sobre-hero-inner { grid-template-columns: 1fr; } }
+    .sobre-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .sobre-hero p {
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .sobre-hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .sobre-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,102,255,0.12);
+      border: 1px solid rgba(0,102,255,0.3);
+      color: var(--accent);
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .sobre-stats-bar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .sobre-stat-item {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+    .sobre-stat-item:nth-child(2n) { border-right: none; }
+    .sobre-stat-item:nth-child(3), .sobre-stat-item:nth-child(4) { border-bottom: none; }
+    .sobre-stat-num {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .sobre-stat-lbl { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* Capabilities */
+    .sobre-capabilities {
+      padding: 80px 0;
+      background: var(--dark-2);
+    }
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .cap-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .cap-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+    .cap-card:hover { background: var(--glass-hover); transform: translateY(-4px); border-color: rgba(0,102,255,0.35); }
+    .cap-card:hover::before { transform: scaleX(1); }
+    .cap-icon {
+      width: 48px; height: 48px;
+      background: rgba(0,102,255,0.15);
+      border: 1px solid rgba(0,102,255,0.3);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary-light);
+      margin-bottom: 1rem;
+    }
+    .cap-icon svg { width: 22px; height: 22px; }
+    .cap-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .cap-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* Programming section */
+    .sobre-prog {
+      padding: 80px 0;
+      background: var(--dark);
+    }
+    .prog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 700px) { .prog-grid { grid-template-columns: 1fr; } }
+    .prog-card {
+      background: var(--dark-3);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .prog-card:hover { border-color: rgba(0,102,255,0.4); transform: translateY(-4px); box-shadow: var(--shadow); }
+    .prog-card-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+    }
+    .prog-card-tag--base { background: rgba(0,102,255,0.15); color: var(--primary-light); border: 1px solid rgba(0,102,255,0.3); }
+    .prog-card-tag--wifi { background: rgba(0,212,255,0.12); color: var(--accent); border: 1px solid rgba(0,212,255,0.3); }
+    .prog-card h3 { font-size: 1.2rem; font-weight: 800; color: var(--white); margin-bottom: 1rem; }
+    .prog-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+    .prog-card-icon {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      width: 52px; height: 52px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary-light);
+      opacity: 0.6;
+    }
+
+    /* Characteristics */
+    .sobre-chars {
+      padding: 80px 0;
+      background: var(--dark-2);
+    }
+    .chars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 860px) { .chars-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .chars-grid { grid-template-columns: 1fr; } }
+    .char-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      transition: var(--transition);
+    }
+    .char-item:hover { border-color: rgba(0,102,255,0.35); background: var(--glass-hover); transform: translateX(4px); }
+    .char-check {
+      width: 24px; height: 24px;
+      background: rgba(0,102,255,0.15);
+      border: 1px solid rgba(0,102,255,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .char-item span { font-size: 0.88rem; color: var(--text); line-height: 1.4; }
+    .char-item strong { color: var(--white); }
+
+    /* CTA band */
+    .sobre-cta {
+      padding: 80px 0;
+      background: var(--dark);
+    }
+    .sobre-cta-inner {
+      background: linear-gradient(135deg, rgba(0,102,255,0.14) 0%, rgba(0,212,255,0.07) 100%);
+      border: 1px solid rgba(0,102,255,0.3);
+      border-radius: var(--radius-lg);
+      padding: 4rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sobre-cta-inner::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 500px; height: 300px;
+      background: radial-gradient(ellipse, rgba(0,102,255,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .sobre-cta-inner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--white); margin-bottom: 1rem; position: relative; z-index: 1; }
+    .sobre-cta-inner p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1rem; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.7; position: relative; z-index: 1; }
+    .sobre-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+  </style>
+
+  <!-- ===== HERO ===== -->
+  <section class="sobre-hero" id="sobre-nos">
     <div class="container">
-      <div class="sobre-nos-inner">
-        <div class="sobre-nos-content">
-          <span class="section-tag">Quem somos</span>
-          <h2 class="section-title">Sobre a LedSignPT</h2>
-          <p>Somos especialistas em letreiros LED programáveis e painéis LED para negócios em Portugal. Com mais de 10 anos de experiência, ajudamos milhares de empresas a comunicar melhor e a atrair mais clientes.</p>
-          <p>Trabalhamos exclusivamente com equipamentos de alta qualidade, testados e certificados. Oferecemos consultoria personalizada, entrega rápida e apoio técnico continuado para que a sua experiência seja sempre excelente.</p>
-          <div class="sobre-checks">
-            <div class="check-item"><span class="check-icon">✓</span>Equipamentos certificados e de qualidade</div>
-            <div class="check-item"><span class="check-icon">✓</span>Apoio técnico personalizado</div>
-            <div class="check-item"><span class="check-icon">✓</span>Envio para todo Portugal Continental e Ilhas</div>
-            <div class="check-item"><span class="check-icon">✓</span>Garantia em todos os produtos</div>
+      <div class="sobre-hero-inner">
+        <div class="fade-up">
+          <span class="section-tag">La empresa</span>
+          <h1>Letreros <span class="accent-text">Programables</span></h1>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Somos una empresa de fabricación nacional ubicada en <strong style="color:var(--white)">Granada</strong>, pero distribuimos pantallas LED por toda <strong style="color:var(--white)">España y el resto de Europa</strong>. Trabajamos con LEDs y componentes de alta calidad, garantizando la mejor relación calidad–precio del mercado.</p>
+          <div class="sobre-hero-badges">
+            <span class="sobre-badge">Nacional</span>
+            <span class="sobre-badge">Europa</span>
+            <span class="sobre-badge">Fabricantes</span>
           </div>
         </div>
-        <div class="sobre-nos-stats">
-          <div class="sobre-stat">
-            <span class="sobre-stat-number">+5.000</span>
-            <span class="sobre-stat-label">Clientes em Portugal</span>
+        <div class="sobre-stats-bar fade-up">
+          <div class="sobre-stat-item">
+            <span class="sobre-stat-num">100K+</span>
+            <span class="sobre-stat-lbl">Horas de vida útil aprox.</span>
           </div>
-          <div class="sobre-stat">
-            <span class="sobre-stat-number">+10 anos</span>
-            <span class="sobre-stat-label">De experiência</span>
+          <div class="sobre-stat-item">
+            <span class="sobre-stat-num">5</span>
+            <span class="sobre-stat-lbl">Variedades Monocolor o RGB</span>
           </div>
-          <div class="sobre-stat">
-            <span class="sobre-stat-number">48h</span>
-            <span class="sobre-stat-label">Prazo de entrega</span>
+          <div class="sobre-stat-item">
+            <span class="sobre-stat-num">2</span>
+            <span class="sobre-stat-lbl">Métodos de programación</span>
           </div>
-          <div class="sobre-stat">
-            <span class="sobre-stat-number">4.9★</span>
-            <span class="sobre-stat-label">Avaliação média</span>
+          <div class="sobre-stat-item">
+            <span class="sobre-stat-num">1</span>
+            <span class="sobre-stat-lbl">Objetivo: satisfacer al cliente</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== TESTEMUNHOS ===== -->
-  <section class="testemunhos" id="testemunhos">
+  <!-- ===== FUNCIONALIDADES ===== -->
+  <section class="sobre-capabilities" id="capacidades">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">O que dizem os nossos clientes</span>
-        <h2 class="section-title">Testemunhos</h2>
+      <div class="section-header fade-up">
+        <span class="section-tag">Qué reproducen</span>
+        <h2 class="section-title">Nuestras pantallas reproducen</h2>
+        <p class="section-subtitle">Disponemos de una amplia variedad de pantallas: monocolor (rojo, verde, blanco, ámbar o azul) y RGB. Todo personalizado a través del software moderno e intuitivo proporcionado.</p>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Comprei um letreiro LED para a minha cabeleireiro e a diferença foi imediata. As clientes passam na rua, veem as promoções no letreiro e entram. Muito fácil de programar e excelente qualidade."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MF</div>
-            <div class="author-info">
-              <strong>Margarida F.</strong>
-              <span>Cabeleireiro Glamour, Lisboa</span>
-            </div>
+      <div class="cap-grid">
+        <div class="cap-card fade-up">
+          <div class="cap-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h8M4 18h12"/></svg>
           </div>
+          <h3>Textos estáticos o movimiento</h3>
+          <p>Puedes poner todos los mensajes que quieras, elegir tamaño y tipo de letra, ajustar velocidad y efectos de movimiento.</p>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"A cruz LED programável para a nossa farmácia está a fazer um excelente trabalho. Mostra a temperatura, hora e as nossas mensagens. Os clientes valorizam muito. O serviço de apoio foi impecável."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">JP</div>
-            <div class="author-info">
-              <strong>João P.</strong>
-              <span>Farmácia Central, Porto</span>
-            </div>
+        <div class="cap-card fade-up">
+          <div class="cap-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
+          <h3>Fecha y hora</h3>
+          <p>Mantiene la información relevante siempre a la vista y de forma completamente automatizada.</p>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Instalei um painel LED no meu restaurante para mostrar o menu do dia e as promoções. O feedback dos clientes é fantástico e aumentou muito o consumo. Entrega super rápida e tudo bem embalado."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">RC</div>
-            <div class="author-info">
-              <strong>Rui C.</strong>
-              <span>Restaurante O Típico, Coimbra</span>
-            </div>
+        <div class="cap-card fade-up">
+          <div class="cap-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
           </div>
+          <h3>Logos y diseños</h3>
+          <p>Añade logos de tu marca, diseños de cruces, marcos, etc. para captar la atención de tus clientes al instante.</p>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Muito satisfeita com o letreiro LED para o meu ginásio. A programação é intuitiva, funciona na perfeição e a visibilidade é incrível. Recomendo a qualquer negócio que queira destacar-se."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">AS</div>
-            <div class="author-info">
-              <strong>Ana S.</strong>
-              <span>FitLife Gym, Braga</span>
-            </div>
+        <div class="cap-card fade-up">
+          <div class="cap-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5zm2.5 2.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5zM2.5 14c.83 0 1.5-.67 1.5-1.5v-5c0-.83-.67-1.5-1.5-1.5S1 6.67 1 7.5v5c0 .83.67 1.5 1.5 1.5zM6 14c.83 0 1.5-.67 1.5-1.5V10c0-.83-.67-1.5-1.5-1.5S4.5 9.17 4.5 10v2.5c0 .83.67 1.5 1.5 1.5z"/></svg>
           </div>
+          <h3>Temperatura</h3>
+          <p>Como opcional, puede añadirle la temperatura en tiempo real, un servicio muy valorado por el público en la vía urbana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMACIÓN ===== -->
+  <section class="sobre-prog" id="programacion">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Software</span>
+        <h2 class="section-title">La programación es muy cómoda</h2>
+        <p class="section-subtitle">Haces el programa en el ordenador y tenemos dos opciones para transmitir la información a la pantalla:</p>
+      </div>
+      <div class="prog-grid">
+        <div class="prog-card fade-up">
+          <div class="prog-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <span class="prog-card-tag prog-card-tag--base">Modo Base</span>
+          <h3>A través de memoria USB</h3>
+          <p>Haces el programa en el ordenador y lo exportas a la memoria USB, después conectas esta al letrero. Si el letrero se encuentra a gran altura, tenemos la posibilidad de añadirle un cable macho - hembra para alargar la conexión.</p>
+        </div>
+        <div class="prog-card fade-up">
+          <div class="prog-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <span class="prog-card-tag prog-card-tag--wifi">Modo Opcional</span>
+          <h3>A distancia por WiFi</h3>
+          <p>Haces el programa en tu ordenador y mandas el programa a distancia al letrero que tiene una antena WiFi. Al elegir esta opción también es posible programar su pantalla a través de su teléfono inteligente.</p>
+        </div>
+      </div>
+      <p class="section-subtitle fade-up" style="margin-top:2rem; text-align:center;">¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</p>
+    </div>
+  </section>
+
+  <!-- ===== CARACTERÍSTICAS ===== -->
+  <section class="sobre-chars" id="caracteristicas">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Especificaciones técnicas</span>
+        <h2 class="section-title">Características principales</h2>
+      </div>
+      <div class="chars-grid">
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Para exterior e interior (Nuestras pantallas llevan protección para exterior).</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Modelos de una cara y a doble cara (Banderolas publicitarias).</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Permiten poner fecha, hora, cualquier texto e información que desean.</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Programación mediante USB con ordenador PC (No necesita pantalla conectada).</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Opcional: programación a distancia WiFi para ordenador y teléfono.</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Opcional: Añadir un sensor de temperatura si lo desea.</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Fácil de programar.</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Alta definición e iluminación LED.</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Baja emisión de calor.</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Resistente a impactos y vibraciones.</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Fácil Instalación.</span>
+        </div>
+        <div class="char-item fade-up">
+          <span class="char-check">✓</span>
+          <span>Vida útil aprox. 100.000 horas.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO SOMOS CTA ===== -->
+  <section class="sobre-cta">
+    <div class="container">
+      <div class="sobre-cta-inner fade-up">
+        <h2>Nuestro principal objetivo</h2>
+        <p>Letreros Programables somos una empresa especialista en el diseño, fabricación y comercialización de letreros led programables para la satisfacción profesional de necesidades empresariales.</p>
+        <p>Nuestra vocación de estar a la vanguardia del sector nos ha llevado a la especialización y al desarrollo de productos diferenciales. Nuestro principal objetivo es que nuestros productos tengan un gran impacto en su negocio.</p>
+        <div class="sobre-cta-btns" style="margin-top: 2rem;">
+          <a href="produtos.html" class="btn btn-primary btn-large">Ver todos los productos</a>
+          <a href="contacto.html" class="btn btn-outline btn-large">Solicitar presupuesto</a>
         </div>
       </div>
     </div>
