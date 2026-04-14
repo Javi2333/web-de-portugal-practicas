@@ -164,63 +164,18 @@ function showCartToast(title) {
     toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// ── Product Modal ─────────────────────────────────────────────────
-const modalOverlay = document.getElementById('modalOverlay');
-const modalClose = document.getElementById('modalClose');
-const modalTitle = document.getElementById('modalTitle');
-const modalDesc = document.getElementById('modalDesc');
-const modalBadge = document.getElementById('modalBadge');
-const modalAddBtn = document.getElementById('modalAddToCart');
-
-let _currentModalTitle = '';
-let _currentModalDesc = '';
-
-function openModal(title, desc, badge) {
-    _currentModalTitle = title;
-    _currentModalDesc = desc;
-    modalTitle.textContent = title;
-    modalDesc.textContent = desc;
-    if (badge) {
-        modalBadge.textContent = badge;
-        modalBadge.style.display = 'inline-block';
-    } else {
-        modalBadge.style.display = 'none';
-    }
-    modalOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    modalOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-}
-
-if (modalOverlay) {
-    document.querySelectorAll('.produto-card').forEach(card => {
-        card.addEventListener('click', () => {
-            openModal(
-                card.dataset.title || '',
-                card.dataset.desc || '',
-                card.dataset.badge || ''
-            );
-        });
+// ── Product Cards → navigate to detail page ───────────────────────
+document.querySelectorAll('.produto-card').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (e) => {
+        // Allow clicks on inner links/buttons to work normally
+        if (e.target.closest('a, button')) return;
+        const id = card.dataset.id;
+        if (id) {
+            window.location.href = `produto-detalhe.html?id=${id}`;
+        }
     });
-
-    if (modalAddBtn) {
-        modalAddBtn.addEventListener('click', () => {
-            addToCart(_currentModalTitle, _currentModalDesc);
-            closeModal();
-        });
-    }
-
-    modalClose.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', (e) => {
-        if (e.target === modalOverlay) closeModal();
-    });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-    });
-}
+});
 
 // ── Carrito page render ───────────────────────────────────────────
 function renderCarritoPage() {

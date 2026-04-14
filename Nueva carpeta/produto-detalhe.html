@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Detalle de Produto – Letreros Programables</title>
+  <meta name="description" id="pageDesc" content="Detalle completo del producto LED programable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Product Detail Page ─────────────────────────────────── */
+    .detalhe-hero {
+      padding: calc(var(--navbar-h) + 3rem) 0 3rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+    .detalhe-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .detalhe-breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .detalhe-breadcrumb a:hover { color: var(--primary); }
+    .detalhe-breadcrumb svg { opacity: 0.5; }
+
+    .detalhe-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .detalhe-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* Image gallery */
+    .detalhe-gallery {}
+    .detalhe-main-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .detalhe-main-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1.5rem;
+    }
+    .detalhe-main-img .placeholder-icon {
+      width: 80px;
+      height: 80px;
+      opacity: 0.2;
+    }
+    .detalhe-main-img .placeholder-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    .detalhe-badge-img {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+    .detalhe-thumbs {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .detalhe-thumb {
+      width: 72px;
+      height: 72px;
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .detalhe-thumb.active { border-color: var(--primary); }
+    .detalhe-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+    .detalhe-thumb svg { width: 32px; height: 32px; opacity: 0.2; }
+
+    /* Info block */
+    .detalhe-info {}
+    .detalhe-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .detalhe-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(var(--primary-rgb), 0.12);
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .detalhe-tag--bestseller {
+      background: rgba(255, 165, 0, 0.15);
+      color: #f59e0b;
+    }
+    .detalhe-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+    .detalhe-desc {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+    .detalhe-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* Specs table */
+    .detalhe-specs-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .detalhe-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .spec-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.65rem 0.9rem;
+    }
+    .spec-item .spec-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .spec-item .spec-val {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Sizes table */
+    .detalhe-sizes-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .detalhe-sizes-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+    .detalhe-sizes-table th {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .detalhe-sizes-table td {
+      padding: 0.6rem 0.75rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+    .detalhe-sizes-table tr:hover td { background: var(--bg-card); }
+    .detalhe-sizes-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+    /* CTA buttons */
+    .detalhe-ctas {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .detalhe-ctas .btn { flex: 1; min-width: 180px; }
+
+    /* Features section */
+    .detalhe-features {
+      padding: 4rem 0;
+    }
+    .detalhe-features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feature-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(var(--primary-rgb), 0.12);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .feature-icon svg { width: 22px; height: 22px; }
+    .feature-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+    .feature-card p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Loading state */
+    .detalhe-loading {
+      text-align: center;
+      padding: 6rem 2rem;
+      color: var(--text-muted);
+    }
+    .detalhe-not-found {
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    .detalhe-not-found h2 { color: var(--text-primary); margin-bottom: 1rem; }
+    .detalhe-not-found p { color: var(--text-muted); margin-bottom: 2rem; }
+
+    /* Extra info section */
+    .detalhe-extra {
+      padding: 2rem 0 4rem;
+    }
+    .detalhe-extra-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+    .detalhe-extra-content h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    .detalhe-extra-content p, .detalhe-extra-content li {
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .detalhe-extra-content ul {
+      padding-left: 1.5rem;
+      margin-top: 0.75rem;
+    }
+    .detalhe-extra-content li { margin-bottom: 0.4rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" stroke="var(--text-muted)"/>
+            <ellipse cx="12" cy="12" rx="4" ry="10" stroke="var(--primary)"/>
+            <line x1="2" y1="12" x2="22" y2="12" stroke="var(--primary)"/>
+            <line x1="4" y1="7" x2="20" y2="7" stroke="var(--text-muted)"/>
+            <line x1="4" y1="17" x2="20" y2="17" stroke="var(--text-muted)"/>
+          </svg>
+        </div>
+        <div class="logo-stack">
+          <span>LETREROS</span>
+          <span>PROGRAMABLES</span>
+          <span>.COM</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="como-funciona.html">Como Funciona</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="carrito.html" class="cart-nav-btn" id="cartNavBtn" aria-label="Carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="contacto.html" class="btn btn-primary btn-small">Pedir Orçamento</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT (rendered by JS) ===== -->
+  <main id="detalheMain"></main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contacto">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo footer-logo">
+              <div class="logo-svg">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10" stroke="var(--text-muted)"/>
+                  <ellipse cx="12" cy="12" rx="4" ry="10" stroke="var(--primary)"/>
+                  <line x1="2" y1="12" x2="22" y2="12" stroke="var(--primary)"/>
+                  <line x1="4" y1="7" x2="20" y2="7" stroke="var(--text-muted)"/>
+                  <line x1="4" y1="17" x2="20" y2="17" stroke="var(--text-muted)"/>
+                </svg>
+              </div>
+              <div class="logo-stack">
+                <span>LETREROS</span>
+                <span>PROGRAMABLES</span>
+                <span>.COM</span>
+              </div>
+            </a>
+            <p>Spain Worldex Business S.L. · B19531706<br>Especialistas en letreros LED programables. Calidad, soporte y entrega rápida.</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/letrerosledprogramables" class="social-link social-link--facebook" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@ledparatodos" class="social-link social-link--youtube" aria-label="YouTube" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/explore/search/keyword/?q=%23rondaluziluminacion" class="social-link social-link--instagram" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://wa.me/34627689699" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Letreros Programables. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos e Condições</a>
+          <a href="#">Política de Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/34627689699" class="whatsapp-float" aria-label="Contactar via WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="products-data.js"></script>
+  <script src="main.js"></script>
+  <script>
+    (function () {
+      // Read product id from URL ?id=N
+      const params = new URLSearchParams(window.location.search);
+      const id = parseInt(params.get('id'), 10);
+      const main = document.getElementById('detalheMain');
+
+      if (!id || !window.PRODUCTS_DATA) {
+        main.innerHTML = renderNotFound();
+        return;
+      }
+
+      const product = window.PRODUCTS_DATA.find(p => p.id === id);
+
+      if (!product) {
+        main.innerHTML = renderNotFound();
+        return;
+      }
+
+      // Update page meta
+      document.getElementById('pageTitle').textContent = `${product.title} – Letreros Programables`;
+      document.getElementById('pageDesc').setAttribute('content', product.shortDesc || product.desc);
+
+      main.innerHTML = renderProduct(product);
+
+      // Thumbnail switcher
+      document.querySelectorAll('.detalhe-thumb').forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          const src = thumb.dataset.src;
+          document.querySelectorAll('.detalhe-thumb').forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+          const mainImg = document.getElementById('mainProductImg');
+          if (mainImg && src) mainImg.src = src;
+        });
+      });
+
+      // Add to cart button
+      const addBtn = document.getElementById('btnAddToCart');
+      if (addBtn) {
+        addBtn.addEventListener('click', () => {
+          addToCart(product.title, product.shortDesc || product.desc);
+        });
+      }
+
+      function renderProduct(p) {
+        const badge = p.badge ? `<span class="produto-badge detalhe-badge-img">${p.badge}</span>` : '';
+        const tags = (p.tags || []).map(t =>
+          `<span class="detalhe-tag${t === 'Más vendido' ? ' detalhe-tag--bestseller' : ''}">${t}</span>`
+        ).join('');
+
+        // Main image
+        const hasImages = p.images && p.images.length > 0;
+        const mainImgHtml = hasImages
+          ? `<img id="mainProductImg" src="${p.images[0]}" alt="${p.title}" />`
+          : `<div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div>`;
+
+        // Thumbnails
+        const thumbsHtml = hasImages && p.images.length > 1
+          ? `<div class="detalhe-thumbs">${p.images.map((src, i) =>
+              `<div class="detalhe-thumb${i === 0 ? ' active' : ''}" data-src="${src}">
+                <img src="${src}" alt="Imagen ${i + 1}" />
+              </div>`
+            ).join('')}</div>`
+          : '';
+
+        // Specs
+        const specsHtml = p.specs && p.specs.length > 0
+          ? `<p class="detalhe-specs-title">Especificaciones técnicas</p>
+             <div class="detalhe-specs">
+               ${p.specs.map(s => `<div class="spec-item"><span class="spec-label">${s.label}</span><span class="spec-val">${s.value}</span></div>`).join('')}
+             </div>` : '';
+
+        // Sizes table
+        const sizesHtml = p.sizes && p.sizes.length > 0
+          ? `<p class="detalhe-sizes-title">Tamaños disponibles</p>
+             <table class="detalhe-sizes-table">
+               <thead><tr>${Object.keys(p.sizes[0]).map(k => `<th>${k}</th>`).join('')}</tr></thead>
+               <tbody>${p.sizes.map(row => `<tr>${Object.values(row).map(v => `<td>${v}</td>`).join('')}</tr>`).join('')}</tbody>
+             </table>` : '';
+
+        // Features
+        const featuresHtml = p.features && p.features.length > 0
+          ? `<section class="detalhe-features">
+               <div class="container">
+                 <div class="section-header">
+                   <span class="section-tag">Características</span>
+                   <h2 class="section-title">¿Por qué elegir este producto?</h2>
+                 </div>
+                 <div class="detalhe-features-grid">
+                   ${p.features.map(f => `
+                     <div class="feature-card fade-up">
+                       <div class="feature-icon">${f.icon || defaultIcon()}</div>
+                       <h3>${f.title}</h3>
+                       <p>${f.desc}</p>
+                     </div>`).join('')}
+                 </div>
+               </div>
+             </section>` : '';
+
+        // Extra info
+        const extraHtml = p.extra
+          ? `<section class="detalhe-extra">
+               <div class="container">
+                 <div class="detalhe-extra-content">
+                   <h2>${p.extra.title || 'Información adicional'}</h2>
+                   ${p.extra.html || ''}
+                 </div>
+               </div>
+             </section>` : '';
+
+        return `
+          <section class="detalhe-hero">
+            <div class="container">
+              <nav class="detalhe-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Início</a>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                <a href="produtos.html">Produtos</a>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                <span>${p.title}</span>
+              </nav>
+
+              <div class="detalhe-grid">
+                <!-- Gallery -->
+                <div class="detalhe-gallery">
+                  <div class="detalhe-main-img">
+                    ${badge}
+                    ${mainImgHtml}
+                  </div>
+                  ${thumbsHtml}
+                </div>
+
+                <!-- Info -->
+                <div class="detalhe-info">
+                  ${tags ? `<div class="detalhe-tags">${tags}</div>` : ''}
+                  <h1 class="detalhe-title">${p.title}</h1>
+                  <p class="detalhe-desc">${p.desc}</p>
+                  <hr class="detalhe-divider" />
+                  ${specsHtml}
+                  ${sizesHtml}
+                  <div class="detalhe-ctas">
+                    <button class="btn btn-primary" id="btnAddToCart">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                      Añadir al Carrito
+                    </button>
+                    <a href="contacto.html" class="btn btn-outline">Pedir Informações</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          ${featuresHtml}
+          ${extraHtml}
+        `;
+      }
+
+      function renderNotFound() {
+        return `
+          <div class="detalhe-not-found">
+            <h2>Produto não encontrado</h2>
+            <p>O produto que procura não existe ou ainda não está disponível.</p>
+            <a href="produtos.html" class="btn btn-primary">Ver todos os produtos</a>
+          </div>`;
+      }
+
+      function defaultIcon() {
+        return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`;
+      }
+    })();
+  </script>
+</body>
+</html>
