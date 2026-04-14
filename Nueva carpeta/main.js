@@ -100,18 +100,88 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ── Cart (localStorage) ───────────────────────────────────────────
+const CART_KEY = 'ledsign_cart';
+
+function getCart() {
+    try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
+    catch { return []; }
+}
+function saveCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+function addToCart(title, desc) {
+    const cart = getCart();
+    const idx = cart.findIndex(i => i.title === title);
+    if (idx >= 0) { cart[idx].qty += 1; }
+    else { cart.push({ title, desc, qty: 1 }); }
+    saveCart(cart);
+    updateCartBadge();
+    showCartToast(title);
+}
+function removeFromCart(title) {
+    saveCart(getCart().filter(i => i.title !== title));
+    updateCartBadge();
+    renderCarritoPage();
+}
+function updateQty(title, delta) {
+    const cart = getCart();
+    const idx = cart.findIndex(i => i.title === title);
+    if (idx < 0) return;
+    cart[idx].qty = Math.max(1, cart[idx].qty + delta);
+    saveCart(cart);
+    updateCartBadge();
+    renderCarritoPage();
+}
+function clearCart() {
+    saveCart([]);
+    updateCartBadge();
+    renderCarritoPage();
+}
+
+function updateCartBadge() {
+    const badge = document.getElementById('cartBadge');
+    if (!badge) return;
+    const total = getCart().reduce((s, i) => s + i.qty, 0);
+    badge.textContent = total;
+    badge.classList.toggle('hidden', total === 0);
+}
+
+// ── Toast notification ────────────────────────────────────────────
+let toastTimer = null;
+function showCartToast(title) {
+    let toast = document.getElementById('cartToast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'cartToast';
+        toast.className = 'cart-toast';
+        toast.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span id="cartToastMsg"></span>`;
+        document.body.appendChild(toast);
+    }
+    document.getElementById('cartToastMsg').textContent = `"${title.length > 40 ? title.slice(0, 40) + '…' : title}" añadido al carrito`;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
 // ── Product Modal ─────────────────────────────────────────────────
 const modalOverlay = document.getElementById('modalOverlay');
-const modalClose   = document.getElementById('modalClose');
-const modalTitle   = document.getElementById('modalTitle');
-const modalDesc    = document.getElementById('modalDesc');
-const modalBadge   = document.getElementById('modalBadge');
+const modalClose = document.getElementById('modalClose');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalBadge = document.getElementById('modalBadge');
+const modalAddBtn = document.getElementById('modalAddToCart');
+
+let _currentModalTitle = '';
+let _currentModalDesc = '';
 
 function openModal(title, desc, badge) {
+    _currentModalTitle = title;
+    _currentModalDesc = desc;
     modalTitle.textContent = title;
-    modalDesc.textContent  = desc;
+    modalDesc.textContent = desc;
     if (badge) {
-        modalBadge.textContent   = badge;
+        modalBadge.textContent = badge;
         modalBadge.style.display = 'inline-block';
     } else {
         modalBadge.style.display = 'none';
@@ -130,20 +200,91 @@ if (modalOverlay) {
         card.addEventListener('click', () => {
             openModal(
                 card.dataset.title || '',
-                card.dataset.desc  || '',
+                card.dataset.desc || '',
                 card.dataset.badge || ''
             );
         });
     });
 
-    modalClose.addEventListener('click', closeModal);
+    if (modalAddBtn) {
+        modalAddBtn.addEventListener('click', () => {
+            addToCart(_currentModalTitle, _currentModalDesc);
+            closeModal();
+        });
+    }
 
+    modalClose.addEventListener('click', closeModal);
     modalOverlay.addEventListener('click', (e) => {
         if (e.target === modalOverlay) closeModal();
     });
-
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
     });
 }
 
+// ── Carrito page render ───────────────────────────────────────────
+function renderCarritoPage() {
+    const emptyEl = document.getElementById('carritoEmpty');
+    const contentEl = document.getElementById('carritoContent');
+    const listEl = document.getElementById('carritoList');
+    const totalEl = document.getElementById('carritoTotalItems');
+    if (!emptyEl || !contentEl) return;
+
+    const cart = getCart();
+    const totalItems = cart.reduce((s, i) => s + i.qty, 0);
+
+    if (cart.length === 0) {
+        emptyEl.style.display = '';
+        contentEl.style.display = 'none';
+        return;
+    }
+
+    emptyEl.style.display = 'none';
+    contentEl.style.display = '';
+    totalEl.textContent = totalItems;
+
+    listEl.innerHTML = cart.map(item => `
+        <div class="carrito-item">
+          <div class="carrito-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <circle cx="8" cy="10" r="2"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <div class="carrito-item-info">
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+          </div>
+          <div class="carrito-item-qty">
+            <button class="qty-btn" data-action="dec" data-title="${item.title}">−</button>
+            <span class="qty-num">${item.qty}</span>
+            <button class="qty-btn" data-action="inc" data-title="${item.title}">+</button>
+          </div>
+          <button class="carrito-item-remove" data-title="${item.title}" aria-label="Eliminar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/>
+              <path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/>
+            </svg>
+          </button>
+        </div>
+    `).join('');
+
+    // qty + remove events
+    listEl.querySelectorAll('.qty-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            updateQty(btn.dataset.title, btn.dataset.action === 'inc' ? 1 : -1);
+        });
+    });
+    listEl.querySelectorAll('.carrito-item-remove').forEach(btn => {
+        btn.addEventListener('click', () => removeFromCart(btn.dataset.title));
+    });
+}
+
+// vaciar carrito button
+const vaciarBtn = document.getElementById('vaciarCarrito');
+if (vaciarBtn) vaciarBtn.addEventListener('click', clearCart);
+
+// init on every page
+updateCartBadge();
+renderCarritoPage();
