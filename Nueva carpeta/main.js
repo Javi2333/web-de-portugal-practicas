@@ -99,3 +99,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         window.scrollTo({ top, behavior: 'smooth' });
     });
 });
+
+// ── Product Modal ─────────────────────────────────────────────────
+const modalOverlay = document.getElementById('modalOverlay');
+const modalClose   = document.getElementById('modalClose');
+const modalTitle   = document.getElementById('modalTitle');
+const modalDesc    = document.getElementById('modalDesc');
+const modalBadge   = document.getElementById('modalBadge');
+
+function openModal(title, desc, badge) {
+    modalTitle.textContent = title;
+    modalDesc.textContent  = desc;
+    if (badge) {
+        modalBadge.textContent   = badge;
+        modalBadge.style.display = 'inline-block';
+    } else {
+        modalBadge.style.display = 'none';
+    }
+    modalOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    modalOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+if (modalOverlay) {
+    document.querySelectorAll('.produto-card').forEach(card => {
+        card.addEventListener('click', () => {
+            openModal(
+                card.dataset.title || '',
+                card.dataset.desc  || '',
+                card.dataset.badge || ''
+            );
+        });
+    });
+
+    modalClose.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+}
+
