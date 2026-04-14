@@ -65,7 +65,7 @@ if (slides.length > 0) {
 
 // ── Scroll Reveal (fade-up) ───────────────────────────────────────
 const fadeEls = document.querySelectorAll(
-    '.vantagem-card, .produto-card, .step-card, .testimonial-card, .sobre-stat, .section-header'
+    '.vantagem-card, .produto-card, .step-card, .testimonial-card, .sobre-stat, .section-header, .fade-up'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-up'));
