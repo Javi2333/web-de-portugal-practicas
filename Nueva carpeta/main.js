@@ -387,3 +387,79 @@ renderCarritoPage();
         if (!wrap.contains(e.target)) wrap.classList.remove('open');
     });
 })();
+
+// ── Category Sidebar Logic ──────────────────────────────────────
+(function initCategoryFilter() {
+    const sidebar = document.getElementById('catSidebar');
+    if (!sidebar) return; // Only runs on pages with sidebar (produtos.html)
+
+    const catButtons = document.querySelectorAll('.cat-item');
+    const cards = document.querySelectorAll('.produto-card');
+    const activeLabel = document.getElementById('catActiveName');
+    const activeCount = document.getElementById('catActiveCount');
+    const mobileToggle = document.getElementById('catMobileToggle');
+    const catList = document.getElementById('catList');
+
+    // 1. Calculate dynamic counts when page loads
+    const counts = { all: cards.length };
+    cards.forEach(card => {
+        const cat = card.dataset.category;
+        if (cat) {
+            counts[cat] = (counts[cat] || 0) + 1;
+        }
+    });
+
+    // 2. Update count badges in sidebar
+    catButtons.forEach(btn => {
+        const cat = btn.dataset.cat;
+        const countEl = btn.querySelector('.cat-count');
+        if (countEl) {
+            countEl.textContent = counts[cat] || 0;
+        }
+    });
+
+    // Mobile Toggle
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            catList.classList.toggle('show');
+        });
+    }
+
+    // 3. Filtering logic
+    function filterCategory(cat, name) {
+        let visibleCount = 0;
+        cards.forEach(card => {
+            if (cat === 'all' || card.dataset.category === cat) {
+                card.style.display = '';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Update top bar text & count
+        if (activeLabel) activeLabel.textContent = name;
+        if (activeCount) activeCount.textContent = `${visibleCount} producto${visibleCount !== 1 ? 's' : ''}`;
+
+        // Close mobile menu if open
+        if (window.innerWidth <= 1024 && catList.classList.contains('show')) {
+            catList.classList.remove('show');
+        }
+    }
+
+    // 4. Click events on category buttons
+    catButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            catButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const cat = btn.dataset.cat;
+            const name = btn.querySelector('.cat-label').textContent;
+            filterCategory(cat, name);
+        });
+    });
+
+    // Note: Search logic sets `display: ''` or `'none'` based on query parsing.
+    // If the user searches from search bar inside produtos.html, it will override categories!
+    // This is generally acceptable. If they click a category, it clears search overrides.
+})();

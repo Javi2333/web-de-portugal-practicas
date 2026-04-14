@@ -80,17 +80,40 @@
         <h2 class="section-title">Os Nossos Produtos</h2>
         <p class="section-subtitle">Descubra a nossa gama completa de letreiros LED programáveis e painéis LED para todo o tipo de negócios. Clique num produto para ver mais informação.</p>
       </div>
-      <div class="produtos-grid">
 
-        <!-- 1 -->
-        <article class="produto-card" data-id="1" data-title="Letrero LED Programable en RGB, 1 Cara" data-desc="Letrero LED programable en RGB con millones de colores, disponible en 1 cara. Disponible en varios tamaños para adaptarse a cualquier espacio. Ideal para publicidad en locales comerciales, escaparates y montras. Programación sencilla mediante USB o WiFi." data-badge="">
-          <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-          <div class="produto-body">
-            <h3>Letrero LED Programable en RGB, 1 Cara</h3>
-            <p>Letrero LED programable en RGB, 1 cara. Disponible en varios tamaños. Ideal para publicidad en locales y escaparates.</p>
-            <span class="produto-ver-mas">Ver más →</span>
+      <div class="produtos-layout">
+        <aside class="cat-sidebar" id="catSidebar">
+          <div class="cat-sidebar-inner">
+            <div class="cat-sidebar-title">Categorías</div>
+            <ul class="cat-list" id="catList">
+              <li><button class="cat-item active" data-cat="all"><span class="cat-icon">◈</span><span class="cat-label">Todos los productos</span><span class="cat-count">36</span></button></li>
+              <li><button class="cat-item" data-cat="letreros"><span class="cat-icon">▬</span><span class="cat-label">Letreros LED Programables</span><span class="cat-count">4</span></button></li>
+              <li><button class="cat-item" data-cat="banderolas"><span class="cat-icon">⬛</span><span class="cat-label">Banderolas LED Programables</span><span class="cat-count">2</span></button></li>
+              <li><button class="cat-item" data-cat="pantallas"><span class="cat-icon">▣</span><span class="cat-label">Pantallas LED Full Color</span><span class="cat-count">4</span></button></li>
+              <li><button class="cat-item" data-cat="rotulos"><span class="cat-icon">◉</span><span class="cat-label">Rótulos Especial Negocios</span><span class="cat-count">22</span></button></li>
+              <li><button class="cat-item" data-cat="cruces"><span class="cat-icon">✚</span><span class="cat-label">Cruces LED Programables</span><span class="cat-count">3</span></button></li>
+              <li><button class="cat-item" data-cat="marcadores"><span class="cat-icon">⏱</span><span class="cat-label">Marcadores Deportivos</span><span class="cat-count">2</span></button></li>
+              <li><button class="cat-item" data-cat="accesorios"><span class="cat-icon">⚙</span><span class="cat-label">Accesorios / Control Acceso</span><span class="cat-count">2</span></button></li>
+            </ul>
           </div>
-        </article>
+        </aside>
+
+        <div class="produtos-main">
+          <div class="cat-active-bar">
+            <span class="cat-active-label">Mostrando: <strong id="catActiveName">Todos los productos</strong></span>
+            <span class="cat-active-count" id="catActiveCount">36 productos</span>
+          </div>
+          <div class="produtos-grid" id="produtosGrid">
+
+            <!-- 1 -->
+            <article class="produto-card" data-id="1" data-category="letreros" data-title="Letrero LED Programable en RGB, 1 Cara" data-desc="Letrero LED programable en RGB con millones de colores, disponible en 1 cara. Disponible en varios tamaños para adaptarse a cualquier espacio. Ideal para publicidad en locales comerciales, escaparates y montras. Programación sencilla mediante USB o WiFi." data-badge="">
+              <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
+              <div class="produto-body">
+                <h3>Letrero LED Programable en RGB, 1 Cara</h3>
+                <p>Letrero LED programable en RGB, 1 cara. Disponible en varios tamaños. Ideal para publicidad en locales y escaparates.</p>
+                <span class="produto-ver-mas">Ver más →</span>
+              </div>
+            </article>
 
         <!-- 2 -->
         <article class="produto-card" data-id="2" data-title="Pantalla LED Programable Full Color P10 (Exterior) 1 Cara" data-desc="Pantalla LED programable Full Color P10 para exterior, 1 cara. Alta resolución con pixel pitch P10, resistente a la intemperie IP65. Perfecta para publicidad LED en grandes superficies, estaciones de servicio, centros comerciales y fachadas. Incluye control remoto." data-badge="">
@@ -102,18 +125,18 @@
           </div>
         </article>
 
-        <!-- 3 -->
-        <article class="produto-card" data-id="3" data-title="Pantalla LED Programable Full Color P5 (Exterior) 1 Cara" data-desc="Pantalla LED programable Full Color P5 para exterior, 1 cara. Mayor resolución que P10 con pixel pitch P5, ideal para distancias cortas y medias. Imágenes nítidas y colores vivos. Resistente a la intemperie. Incluye control remoto y software de programación." data-badge="">
-          <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-          <div class="produto-body">
-            <h3>Pantalla LED Programable Full Color P5 (Exterior) 1 Cara</h3>
-            <p>Pantalla LED programable Full Color P5 para exterior, 1 cara. Mayor resolución, ideal para distancias cortas y medias.</p>
-            <span class="produto-ver-mas">Ver más →</span>
-          </div>
-        </article>
+            <!-- 3 -->
+            <article class="produto-card" data-id="3" data-category="pantallas" data-title="Pantalla LED Programable Full Color P5 (Exterior) 1 Cara" data-desc="Pantalla LED programable Full Color P5 para exterior, 1 cara. Mayor resolución que P10 con pixel pitch P5, ideal para distancias cortas y medias. Imágenes nítidas y colores vivos. Resistente a la intemperie. Incluye control remoto y software de programación." data-badge="">
+              <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
+              <div class="produto-body">
+                <h3>Pantalla LED Programable Full Color P5 (Exterior) 1 Cara</h3>
+                <p>Pantalla LED programable Full Color P5 para exterior, 1 cara. Mayor resolución, ideal para distancias cortas y medias.</p>
+                <span class="produto-ver-mas">Ver más →</span>
+              </div>
+            </article>
 
         <!-- 4 -->
-        <article class="produto-card" data-id="4" data-title="Letrero LED Programable, 1 Cara" data-desc="Letrero LED programable de 1 cara, disponible en varios tamaños y colores. Perfecto para negocios que buscan visibilidad con bajo consumo energético. Programación sencilla por USB o WiFi. Incluye soporte y kit de montaje." data-badge="Más vendido">
+        <article class="produto-card" data-id="4" data-category="letreros" data-title="Letrero LED Programable, 1 Cara" data-desc="Letrero LED programable de 1 cara, disponible en varios tamaños y colores. Perfecto para negocios que buscan visibilidad con bajo consumo energético. Programación sencilla por USB o WiFi. Incluye soporte y kit de montaje." data-badge="Más vendido">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable, 1 Cara</h3>
@@ -123,7 +146,7 @@
         </article>
 
         <!-- 5 -->
-        <article class="produto-card" data-id="5" data-title="Letrero LED Programable, 2 Caras" data-desc="Letrero LED programable de 2 caras, disponible en varios tamaños y colores. Máxima visibilidad desde ambos lados, ideal para entradas, calles peatonales y espacios con tráfico en dos sentidos. Incluye soporte lateral y kit de montaje." data-badge="">
+        <article class="produto-card" data-id="5" data-category="letreros" data-title="Letrero LED Programable, 2 Caras" data-desc="Letrero LED programable de 2 caras, disponible en varios tamaños y colores. Máxima visibilidad desde ambos lados, ideal para entradas, calles peatonales y espacios con tráfico en dos sentidos. Incluye soporte lateral y kit de montaje." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable, 2 Caras</h3>
@@ -133,7 +156,7 @@
         </article>
 
         <!-- 6 -->
-        <article class="produto-card" data-id="6" data-title="Pantalla LED Programable Full Color P6 (Exterior) 1 Cara" data-desc="Pantalla LED programable Full Color P6 para exterior, 1 cara. Pixel pitch P6, equilibrio perfecto entre resolución y precio. Resistente a la intemperie IP65, colores vivos y alto brillo. Ideal para carteles publicitarios en exteriores." data-badge="">
+        <article class="produto-card" data-id="6" data-category="pantallas" data-title="Pantalla LED Programable Full Color P6 (Exterior) 1 Cara" data-desc="Pantalla LED programable Full Color P6 para exterior, 1 cara. Pixel pitch P6, equilibrio perfecto entre resolución y precio. Resistente a la intemperie IP65, colores vivos y alto brillo. Ideal para carteles publicitarios en exteriores." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Pantalla LED Programable Full Color P6 (Exterior) 1 Cara</h3>
@@ -143,7 +166,7 @@
         </article>
 
         <!-- 7 -->
-        <article class="produto-card" data-id="7" data-title="Pantalla LED Programable Full Color P5 (Interior) 1 Cara" data-desc="Pantalla LED programable Full Color P5 para interior, 1 cara. Alta resolución con pixel pitch P5, perfecta para escaparates, stands y puntos de venta interiores. Imágenes y vídeos a todo color con gran nitidez." data-badge="">
+        <article class="produto-card" data-id="7" data-category="pantallas" data-title="Pantalla LED Programable Full Color P5 (Interior) 1 Cara" data-desc="Pantalla LED programable Full Color P5 para interior, 1 cara. Alta resolución con pixel pitch P5, perfecta para escaparates, stands y puntos de venta interiores. Imágenes y vídeos a todo color con gran nitidez." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Pantalla LED Programable Full Color P5 (Interior) 1 Cara</h3>
@@ -153,7 +176,7 @@
         </article>
 
         <!-- 8 -->
-        <article class="produto-card" data-id="8" data-title="Letrero LED Programable para Parking en RGB, 1 Cara" data-desc="Letrero LED programable específico para parking, en RGB, 1 cara. Disponible en varios tamaños. Muestra mensajes de libre/completo, tarifas y horarios. Alta visibilidad día y noche. Ideal para aparcamientos públicos y privados." data-badge="">
+        <article class="produto-card" data-id="8" data-category="rotulos" data-title="Letrero LED Programable para Parking en RGB, 1 Cara" data-desc="Letrero LED programable específico para parking, en RGB, 1 cara. Disponible en varios tamaños. Muestra mensajes de libre/completo, tarifas y horarios. Alta visibilidad día y noche. Ideal para aparcamientos públicos y privados." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Parking en RGB, 1 Cara</h3>
@@ -163,7 +186,7 @@
         </article>
 
         <!-- 9 -->
-        <article class="produto-card" data-id="9" data-title="Letrero LED Programable para Autoescuelas en RGB, 1 Cara" data-desc="Letrero LED programable diseñado para autoescuelas, en RGB, 1 cara. Muestra horarios de clases, información de matrícula y mensajes promocionales. Alta visibilidad, programación sencilla. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="9" data-category="rotulos" data-title="Letrero LED Programable para Autoescuelas en RGB, 1 Cara" data-desc="Letrero LED programable diseñado para autoescuelas, en RGB, 1 cara. Muestra horarios de clases, información de matrícula y mensajes promocionales. Alta visibilidad, programación sencilla. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Autoescuelas en RGB, 1 Cara</h3>
@@ -173,7 +196,7 @@
         </article>
 
         <!-- 10 -->
-        <article class="produto-card" data-id="10" data-title="Letrero LED Programable en RGB, 2 Caras" data-desc="Letrero LED programable en RGB, 2 caras. Disponible en varios tamaños. Visibilidad doble para mayor impacto publicitario. Millones de colores y efectos. Ideal para negocios en calles con tráfico en ambas direcciones." data-badge="">
+        <article class="produto-card" data-id="10" data-category="letreros" data-title="Letrero LED Programable en RGB, 2 Caras" data-desc="Letrero LED programable en RGB, 2 caras. Disponible en varios tamaños. Visibilidad doble para mayor impacto publicitario. Millones de colores y efectos. Ideal para negocios en calles con tráfico en ambas direcciones." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable en RGB, 2 Caras</h3>
@@ -183,7 +206,7 @@
         </article>
 
         <!-- 11 -->
-        <article class="produto-card" data-id="11" data-title="Banderola LED Programable Full Color P5 Doble Cara" data-desc="Banderola LED programable Full Color P5 de doble cara, diseñada para colgar en fachadas o postes. Alta resolución P5 con colores vivos a todo color. Ideal para centros comerciales, calles peatonales y eventos. Resistente al exterior." data-badge="">
+        <article class="produto-card" data-id="11" data-category="banderolas" data-title="Banderola LED Programable Full Color P5 Doble Cara" data-desc="Banderola LED programable Full Color P5 de doble cara, diseñada para colgar en fachadas o postes. Alta resolución P5 con colores vivos a todo color. Ideal para centros comerciales, calles peatonales y eventos. Resistente al exterior." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Banderola LED Programable Full Color P5 Doble Cara</h3>
@@ -193,7 +216,7 @@
         </article>
 
         <!-- 12 -->
-        <article class="produto-card" data-id="12" data-title="Banderola LED Programable Full Color P10 Doble Cara" data-desc="Banderola LED programable Full Color P10 de doble cara. Pixel pitch P10, ideal para grandes distancias de visualización. Diseñada para colgar en fachadas o postes. Resistente al exterior y de bajo consumo energético." data-badge="">
+        <article class="produto-card" data-id="12" data-category="banderolas" data-title="Banderola LED Programable Full Color P10 Doble Cara" data-desc="Banderola LED programable Full Color P10 de doble cara. Pixel pitch P10, ideal para grandes distancias de visualización. Diseñada para colgar en fachadas o postes. Resistente al exterior y de bajo consumo energético." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Banderola LED Programable Full Color P10 Doble Cara</h3>
@@ -203,7 +226,7 @@
         </article>
 
         <!-- 13 -->
-        <article class="produto-card" data-id="13" data-title="Cruz LED Programable para Farmacias – Veterinarias – Clínicas, 2 Caras" data-desc="Cruz LED programable de 2 caras para farmacias, veterinarias y clínicas. Gran visibilidad desde ambos lados. Muestra temperatura, hora y mensajes personalizados. Disponible en verde monocor o RGB. Incluye soporte lateral." data-badge="">
+        <article class="produto-card" data-id="13" data-category="cruces" data-title="Cruz LED Programable para Farmacias – Veterinarias – Clínicas, 2 Caras" data-desc="Cruz LED programable de 2 caras para farmacias, veterinarias y clínicas. Gran visibilidad desde ambos lados. Muestra temperatura, hora y mensajes personalizados. Disponible en verde monocor o RGB. Incluye soporte lateral." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Cruz LED Programable para Farmacias – Veterinarias – Clínicas, 2 Caras</h3>
@@ -213,7 +236,7 @@
         </article>
 
         <!-- 14 -->
-        <article class="produto-card" data-id="14" data-title="Cruz LED Programable en RGB para Farmacias – Veterinarias" data-desc="Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara. Colores a todo color con millones de combinaciones. Muestra temperatura, hora y textos personalizados. Incluye soporte lateral y programación sencilla." data-badge="">
+        <article class="produto-card" data-id="14" data-category="cruces" data-title="Cruz LED Programable en RGB para Farmacias – Veterinarias" data-desc="Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara. Colores a todo color con millones de combinaciones. Muestra temperatura, hora y textos personalizados. Incluye soporte lateral y programación sencilla." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Cruz LED Programable en RGB para Farmacias – Veterinarias</h3>
@@ -223,7 +246,7 @@
         </article>
 
         <!-- 15 -->
-        <article class="produto-card" data-id="15" data-title="Letrero LED Programable para Gasolineras en RGB, 1 Cara" data-desc="Letrero LED programable específico para gasolineras en RGB, 1 cara. Muestra precios de combustible, ofertas y mensajes promocionales. Alta visibilidad día y noche. Disponible en varios tamaños adaptados a estaciones de servicio." data-badge="">
+        <article class="produto-card" data-id="15" data-category="rotulos" data-title="Letrero LED Programable para Gasolineras en RGB, 1 Cara" data-desc="Letrero LED programable específico para gasolineras en RGB, 1 cara. Muestra precios de combustible, ofertas y mensajes promocionales. Alta visibilidad día y noche. Disponible en varios tamaños adaptados a estaciones de servicio." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Gasolineras en RGB, 1 Cara</h3>
@@ -233,7 +256,7 @@
         </article>
 
         <!-- 16 -->
-        <article class="produto-card" data-id="16" data-title="Letrero LED Programable para Academias en RGB, 1 Cara" data-desc="Letrero LED programable para academias e idiomas en RGB, 1 cara. Muestra horarios, idiomas disponibles, ofertas y matrículas. Alta visibilidad para atraer nuevos alumnos. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="16" data-category="rotulos" data-title="Letrero LED Programable para Academias en RGB, 1 Cara" data-desc="Letrero LED programable para academias e idiomas en RGB, 1 cara. Muestra horarios, idiomas disponibles, ofertas y matrículas. Alta visibilidad para atraer nuevos alumnos. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Academias en RGB, 1 Cara</h3>
@@ -243,7 +266,7 @@
         </article>
 
         <!-- 17 -->
-        <article class="produto-card" data-id="17" data-title="Letrero LED Programable para Clínicas en RGB, 2 Caras" data-desc="Letrero LED programable para clínicas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra servicios, horarios y mensajes de salud. Disponible en varios tamaños. Incluye soporte lateral y software de programación." data-badge="">
+        <article class="produto-card" data-id="17" data-category="rotulos" data-title="Letrero LED Programable para Clínicas en RGB, 2 Caras" data-desc="Letrero LED programable para clínicas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra servicios, horarios y mensajes de salud. Disponible en varios tamaños. Incluye soporte lateral y software de programación." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Clínicas en RGB, 2 Caras</h3>
@@ -253,7 +276,7 @@
         </article>
 
         <!-- 18 -->
-        <article class="produto-card" data-id="18" data-title="Letrero LED Programable para Clínicas en RGB, 1 Cara" data-desc="Letrero LED programable para clínicas en RGB, 1 cara. Muestra servicios médicos disponibles, horarios de consulta y mensajes de bienestar. Alta visibilidad y programación sencilla. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="18" data-category="rotulos" data-title="Letrero LED Programable para Clínicas en RGB, 1 Cara" data-desc="Letrero LED programable para clínicas en RGB, 1 cara. Muestra servicios médicos disponibles, horarios de consulta y mensajes de bienestar. Alta visibilidad y programación sencilla. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Clínicas en RGB, 1 Cara</h3>
@@ -263,7 +286,7 @@
         </article>
 
         <!-- 19 -->
-        <article class="produto-card" data-id="19" data-title="Letrero LED Programable para Parking en RGB, 2 Caras" data-desc="Letrero LED programable para parking en RGB, 2 caras. Visibilidad desde ambos lados, ideal para entradas de aparcamientos. Muestra información de libre/completo, tarifas y horarios. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="19" data-category="rotulos" data-title="Letrero LED Programable para Parking en RGB, 2 Caras" data-desc="Letrero LED programable para parking en RGB, 2 caras. Visibilidad desde ambos lados, ideal para entradas de aparcamientos. Muestra información de libre/completo, tarifas y horarios. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Parking en RGB, 2 Caras</h3>
@@ -273,7 +296,7 @@
         </article>
 
         <!-- 20 -->
-        <article class="produto-card" data-id="20" data-title="Letrero LED Programable para Autoescuelas en RGB, 2 Caras" data-desc="Letrero LED programable para autoescuelas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra horarios, precios de matrícula y mensajes promocionales. Disponible en varios tamaños. Incluye soporte lateral." data-badge="">
+        <article class="produto-card" data-id="20" data-category="rotulos" data-title="Letrero LED Programable para Autoescuelas en RGB, 2 Caras" data-desc="Letrero LED programable para autoescuelas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra horarios, precios de matrícula y mensajes promocionales. Disponible en varios tamaños. Incluye soporte lateral." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Autoescuelas en RGB, 2 Caras</h3>
@@ -283,7 +306,7 @@
         </article>
 
         <!-- 21 -->
-        <article class="produto-card" data-id="21" data-title="Letrero LED Programable para Academias en RGB, 2 Caras" data-desc="Letrero LED programable para academias en RGB, 2 caras. Ideal para academias de idiomas, música, danza y formación. Doble visibilidad. Muestra horarios, idiomas disponibles y ofertas de matrícula. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="21" data-category="rotulos" data-title="Letrero LED Programable para Academias en RGB, 2 Caras" data-desc="Letrero LED programable para academias en RGB, 2 caras. Ideal para academias de idiomas, música, danza y formación. Doble visibilidad. Muestra horarios, idiomas disponibles y ofertas de matrícula. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Academias en RGB, 2 Caras</h3>
@@ -293,7 +316,7 @@
         </article>
 
         <!-- 22 -->
-        <article class="produto-card" data-id="22" data-title="Letrero LED Programable para Clínicas Dentales en RGB, 2 Caras" data-desc="Letrero LED programable para clínicas dentales en RGB, 2 caras. Muestra servicios de odontología, horarios de cita y mensajes de salud dental. Doble visibilidad. Diseño compatible con imagen corporativa de clínicas." data-badge="">
+        <article class="produto-card" data-id="22" data-category="rotulos" data-title="Letrero LED Programable para Clínicas Dentales en RGB, 2 Caras" data-desc="Letrero LED programable para clínicas dentales en RGB, 2 caras. Muestra servicios de odontología, horarios de cita y mensajes de salud dental. Doble visibilidad. Diseño compatible con imagen corporativa de clínicas." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Clínicas Dentales en RGB, 2 Caras</h3>
@@ -303,7 +326,7 @@
         </article>
 
         <!-- 23 -->
-        <article class="produto-card" data-id="23" data-title="Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 1 Cara" data-desc="Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara. Muestra menús del día, promociones especiales, horarios y eventos. Alta visibilidad para atraer clientes. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="23" data-category="rotulos" data-title="Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 1 Cara" data-desc="Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara. Muestra menús del día, promociones especiales, horarios y eventos. Alta visibilidad para atraer clientes. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 1 Cara</h3>
@@ -313,7 +336,7 @@
         </article>
 
         <!-- 24 -->
-        <article class="produto-card" data-id="24" data-title="Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 2 Caras" data-desc="Letrero LED programable para bares, restaurantes y cafeterías en RGB, 2 caras. Mayor visibilidad desde dos ángulos. Muestra menús del día, ofertas especiales y eventos. Ideal para terrazas y locales con acceso por dos calles." data-badge="">
+        <article class="produto-card" data-id="24" data-category="rotulos" data-title="Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 2 Caras" data-desc="Letrero LED programable para bares, restaurantes y cafeterías en RGB, 2 caras. Mayor visibilidad desde dos ángulos. Muestra menús del día, ofertas especiales y eventos. Ideal para terrazas y locales con acceso por dos calles." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 2 Caras</h3>
@@ -323,7 +346,7 @@
         </article>
 
         <!-- 25 -->
-        <article class="produto-card" data-id="25" data-title="Letrero LED Programable para Hoteles en RGB, 1 Cara" data-desc="Letrero LED programable para hoteles en RGB, 1 cara. Muestra disponibilidad de habitaciones, eventos, restauración y bienvenida personalizada. Alta visibilidad. Disponible en varios tamaños. Perfecto para la señalización exterior de hoteles." data-badge="">
+        <article class="produto-card" data-id="25" data-category="rotulos" data-title="Letrero LED Programable para Hoteles en RGB, 1 Cara" data-desc="Letrero LED programable para hoteles en RGB, 1 cara. Muestra disponibilidad de habitaciones, eventos, restauración y bienvenida personalizada. Alta visibilidad. Disponible en varios tamaños. Perfecto para la señalización exterior de hoteles." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Hoteles en RGB, 1 Cara</h3>
@@ -333,7 +356,7 @@
         </article>
 
         <!-- 26 -->
-        <article class="produto-card" data-id="26" data-title="Letrero LED Programable para Hoteles en RGB, 2 Caras" data-desc="Letrero LED programable para hoteles en RGB, 2 caras. Doble visibilidad para señalización exterior completa. Muestra disponibilidad de habitaciones, servicios del hotel, eventos y mensajes de bienvenida. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="26" data-category="rotulos" data-title="Letrero LED Programable para Hoteles en RGB, 2 Caras" data-desc="Letrero LED programable para hoteles en RGB, 2 caras. Doble visibilidad para señalización exterior completa. Muestra disponibilidad de habitaciones, servicios del hotel, eventos y mensajes de bienvenida. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Hoteles en RGB, 2 Caras</h3>
@@ -343,7 +366,7 @@
         </article>
 
         <!-- 27 -->
-        <article class="produto-card" data-id="27" data-title="Letreros LED Programable para Discotecas – Pub en RGB, 1 Cara" data-desc="Letrero LED programable para discotecas y pubs en RGB, 1 cara. Impacto visual máximo con animaciones y colores vivos. Muestra nombre del local, eventos, DJs y promociones. Disponible en varios tamaños para fachadas y escaparates." data-badge="">
+        <article class="produto-card" data-id="27" data-category="rotulos" data-title="Letreros LED Programable para Discotecas – Pub en RGB, 1 Cara" data-desc="Letrero LED programable para discotecas y pubs en RGB, 1 cara. Impacto visual máximo con animaciones y colores vivos. Muestra nombre del local, eventos, DJs y promociones. Disponible en varios tamaños para fachadas y escaparates." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letreros LED Programable para Discotecas – Pub en RGB, 1 Cara</h3>
@@ -353,7 +376,7 @@
         </article>
 
         <!-- 28 -->
-        <article class="produto-card" data-id="28" data-title="Letreros LED Programable para Discotecas – Pub en RGB, 2 Caras" data-desc="Letrero LED programable para discotecas y pubs en RGB, 2 caras. Máxima visibilidad desde ambos lados. Impacto visual con colores y animaciones. Perfecto para festivales, eventos y locales de ocio nocturno. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="28" data-category="rotulos" data-title="Letreros LED Programable para Discotecas – Pub en RGB, 2 Caras" data-desc="Letrero LED programable para discotecas y pubs en RGB, 2 caras. Máxima visibilidad desde ambos lados. Impacto visual con colores y animaciones. Perfecto para festivales, eventos y locales de ocio nocturno. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letreros LED Programable para Discotecas – Pub en RGB, 2 Caras</h3>
@@ -363,7 +386,7 @@
         </article>
 
         <!-- 29 -->
-        <article class="produto-card" data-id="29" data-title="Letrero LED Programable Cronómetro Digital en RGB, 1 Cara" data-desc="Letrero LED programable con función de cronómetro digital en RGB, 1 cara. Muestra cuenta atrás, cuenta progresiva, hora en tiempo real y mensajes personalizados. Ideal para gimnasios, competiciones deportivas y eventos. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="29" data-category="marcadores" data-title="Letrero LED Programable Cronómetro Digital en RGB, 1 Cara" data-desc="Letrero LED programable con función de cronómetro digital en RGB, 1 cara. Muestra cuenta atrás, cuenta progresiva, hora en tiempo real y mensajes personalizados. Ideal para gimnasios, competiciones deportivas y eventos. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable Cronómetro Digital en RGB, 1 Cara</h3>
@@ -373,7 +396,7 @@
         </article>
 
         <!-- 30 -->
-        <article class="produto-card" data-id="30" data-title="Letrero LED Programable Cronómetro Digital, 2 Caras" data-desc="Letrero LED programable con función de cronómetro digital, 2 caras. Doble visibilidad. Cuenta atrás, cuenta progresiva y hora en tiempo real. Ideal para eventos deportivos, competiciones y espacios públicos con mucho flujo de personas." data-badge="">
+        <article class="produto-card" data-id="30" data-category="marcadores" data-title="Letrero LED Programable Cronómetro Digital, 2 Caras" data-desc="Letrero LED programable con función de cronómetro digital, 2 caras. Doble visibilidad. Cuenta atrás, cuenta progresiva y hora en tiempo real. Ideal para eventos deportivos, competiciones y espacios públicos con mucho flujo de personas." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable Cronómetro Digital, 2 Caras</h3>
@@ -383,7 +406,7 @@
         </article>
 
         <!-- 31 -->
-        <article class="produto-card" data-id="31" data-title="Letrero LED Programable para Estancos en RGB, 1 Cara" data-desc="Letrero LED programable para estancos en RGB, 1 cara. Muestra precios de tabaco, loterías, servicios y promociones especiales. Alta visibilidad para atraer clientes. Disponible en varios tamaños adaptados a establecimientos estancos." data-badge="">
+        <article class="produto-card" data-id="31" data-category="rotulos" data-title="Letrero LED Programable para Estancos en RGB, 1 Cara" data-desc="Letrero LED programable para estancos en RGB, 1 cara. Muestra precios de tabaco, loterías, servicios y promociones especiales. Alta visibilidad para atraer clientes. Disponible en varios tamaños adaptados a establecimientos estancos." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Estancos en RGB, 1 Cara</h3>
@@ -393,7 +416,7 @@
         </article>
 
         <!-- 32 -->
-        <article class="produto-card" data-id="32" data-title="Letrero LED Programable para Estancos en RGB, 2 Caras" data-desc="Letrero LED programable para estancos en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra precios de tabaco, loterías y servicios. Disponible en varios tamaños. Ideal para estancos en zonas peatonales y esquinas." data-badge="">
+        <article class="produto-card" data-id="32" data-category="rotulos" data-title="Letrero LED Programable para Estancos en RGB, 2 Caras" data-desc="Letrero LED programable para estancos en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra precios de tabaco, loterías y servicios. Disponible en varios tamaños. Ideal para estancos en zonas peatonales y esquinas." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Estancos en RGB, 2 Caras</h3>
@@ -403,7 +426,7 @@
         </article>
 
         <!-- 33 -->
-        <article class="produto-card" data-id="33" data-title="Letrero LED Programable para el Control de Acceso RGB, 1 Cara" data-desc="Letrero LED programable para control de acceso en RGB, 1 cara. Muestra mensajes de PASE / ESPERE / STOP con colores diferenciados. Ideal para parkings, hospitales, supermercados y cualquier espacio con control de aforo. Programación sencilla e inmediata." data-badge="">
+        <article class="produto-card" data-id="33" data-category="accesorios" data-title="Letrero LED Programable para el Control de Acceso RGB, 1 Cara" data-desc="Letrero LED programable para control de acceso en RGB, 1 cara. Muestra mensajes de PASE / ESPERE / STOP con colores diferenciados. Ideal para parkings, hospitales, supermercados y cualquier espacio con control de aforo. Programación sencilla e inmediata." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para el Control de Acceso RGB, 1 Cara</h3>
@@ -413,7 +436,7 @@
         </article>
 
         <!-- 34 -->
-        <article class="produto-card" data-id="34" data-title="Letrero LED Programable para el Control de Acceso Rojo-Verde, 1 Cara" data-desc="Letrero LED programable para control de acceso en rojo y verde, 1 cara. Sistema sencillo con dos colores para PASE (verde) y STOP (rojo). Ideal para controlar el flujo de personas en accesos, consultas y espacios con aforo limitado." data-badge="">
+        <article class="produto-card" data-id="34" data-category="accesorios" data-title="Letrero LED Programable para el Control de Acceso Rojo-Verde, 1 Cara" data-desc="Letrero LED programable para control de acceso en rojo y verde, 1 cara. Sistema sencillo con dos colores para PASE (verde) y STOP (rojo). Ideal para controlar el flujo de personas en accesos, consultas y espacios con aforo limitado." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para el Control de Acceso Rojo-Verde, 1 Cara</h3>
@@ -423,7 +446,7 @@
         </article>
 
         <!-- 35 -->
-        <article class="produto-card" data-id="35" data-title="Cruz LED Programable R5 para Farmacias – Veterinarias" data-desc="Cruz LED programable R5 de alta resolución para farmacias y veterinarias. Pixel pitch R5, imágenes más nítidas y detalladas. Muestra temperatura, hora, mensajes y animaciones. Incluye soporte lateral. Alta visibilidad tanto de día como de noche." data-badge="">
+        <article class="produto-card" data-id="35" data-category="cruces" data-title="Cruz LED Programable R5 para Farmacias – Veterinarias" data-desc="Cruz LED programable R5 de alta resolución para farmacias y veterinarias. Pixel pitch R5, imágenes más nítidas y detalladas. Muestra temperatura, hora, mensajes y animaciones. Incluye soporte lateral. Alta visibilidad tanto de día como de noche." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Cruz LED Programable R5 para Farmacias – Veterinarias</h3>
@@ -433,7 +456,7 @@
         </article>
 
         <!-- 36 -->
-        <article class="produto-card" data-id="36" data-title="Letrero LED Programable para Clínicas en RGB, 1 Cara" data-desc="Letrero LED programable para clínicas en RGB, 1 cara. Muestra especialidades médicas disponibles, horarios de consulta, avisos y mensajes de salud. Colores vivos y alta visibilidad. Disponible en varios tamaños." data-badge="">
+        <article class="produto-card" data-id="36" data-category="rotulos" data-title="Letrero LED Programable para Clínicas en RGB, 1 Cara" data-desc="Letrero LED programable para clínicas en RGB, 1 cara. Muestra especialidades médicas disponibles, horarios de consulta, avisos y mensajes de salud. Colores vivos y alta visibilidad. Disponible en varios tamaños." data-badge="">
           <div class="produto-img-wrap produto-img-placeholder"><div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
           <div class="produto-body">
             <h3>Letrero LED Programable para Clínicas en RGB, 1 Cara</h3>
