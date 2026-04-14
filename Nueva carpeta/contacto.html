@@ -15,6 +15,388 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+<<<<<<< HEAD
+=======
+  <style>
+    /* ── CONTACT PAGE EXTRAS ── */
+    .contact-hero {
+      padding: 140px 0 80px;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 600px;
+      background: radial-gradient(ellipse, rgba(0,102,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .contact-hero-inner {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .contact-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .contact-hero p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── CONTACT CARDS ── */
+    .contact-cards-section {
+      padding: 80px 0 0;
+      background: var(--dark);
+    }
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .contact-card {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0,102,255,0.35);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+    }
+    .contact-card:hover::before { transform: scaleX(1); }
+
+    .contact-card--whatsapp:hover { border-color: rgba(37,211,102,0.4); }
+    .contact-card--whatsapp::before { background: #25d366; }
+    .contact-card--facebook:hover { border-color: rgba(24,119,242,0.4); }
+    .contact-card--facebook::before { background: #1877f2; }
+    .contact-card--youtube:hover { border-color: rgba(255,0,0,0.4); }
+    .contact-card--youtube::before { background: #ff0000; }
+    .contact-card--instagram:hover { border-color: rgba(220,39,67,0.4); }
+    .contact-card--instagram::before { background: linear-gradient(90deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+
+    .contact-card-icon {
+      width: 56px; height: 56px;
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+    }
+    .contact-card-icon--phone  { background: rgba(0,102,255,0.15); border: 1px solid rgba(0,102,255,0.3); color: var(--primary-light); }
+    .contact-card-icon--mail   { background: rgba(0,212,255,0.12); border: 1px solid rgba(0,212,255,0.25); color: var(--accent); }
+    .contact-card-icon--wa     { background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.25); color: #25d366; }
+    .contact-card-icon--fb     { background: rgba(24,119,242,0.12); border: 1px solid rgba(24,119,242,0.25); color: #1877f2; }
+    .contact-card-icon--yt     { background: rgba(255,0,0,0.12); border: 1px solid rgba(255,0,0,0.25); color: #ff0000; }
+    .contact-card-icon--ig     { background: rgba(220,39,67,0.12); border: 1px solid rgba(220,39,67,0.25); color: #e1306c; }
+    .contact-card-icon svg { width: 26px; height: 26px; }
+
+    .contact-card-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .contact-card-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .contact-card-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    /* ── MAIN CONTACT SECTION ── */
+    .contact-main {
+      padding: 80px 0 100px;
+      background: var(--dark);
+    }
+    .contact-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* Left column – info */
+    .contact-info-col .section-tag { margin-bottom: 14px; }
+    .contact-info-col .section-title { text-align: left; font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 14px; }
+    .contact-info-col > p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    .contact-detail-list { display: flex; flex-direction: column; gap: 18px; margin-bottom: 40px; }
+    .contact-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .contact-detail-icon {
+      width: 42px; height: 42px;
+      background: rgba(0,102,255,0.12);
+      border: 1px solid rgba(0,102,255,0.25);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary-light);
+      flex-shrink: 0;
+    }
+    .contact-detail-icon svg { width: 18px; height: 18px; }
+    .contact-detail-text strong {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .contact-detail-text a,
+    .contact-detail-text span {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.5;
+      display: block;
+    }
+    .contact-detail-text a:hover { color: var(--accent); }
+
+    /* Hours box */
+    .contact-hours-box {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .contact-hours-box h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .contact-hours-box h4 svg { color: var(--primary-light); }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { color: var(--text-muted); }
+    .hours-time { color: var(--white); font-weight: 600; }
+    .hours-time--closed { color: #ff6b6b; font-weight: 600; }
+
+    /* Social row inside info col */
+    .contact-social-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .contact-social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .contact-social-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .contact-social-btn:hover { color: var(--white); transform: translateY(-2px); }
+    .contact-social-btn--fb:hover  { background: rgba(24,119,242,0.15); border-color: rgba(24,119,242,0.4); color: #1877f2; }
+    .contact-social-btn--yt:hover  { background: rgba(255,0,0,0.12); border-color: rgba(255,0,0,0.35); color: #ff4444; }
+    .contact-social-btn--ig:hover  { background: rgba(220,39,67,0.12); border-color: rgba(220,39,67,0.35); color: #e1306c; }
+    .contact-social-btn--wa:hover  { background: rgba(37,211,102,0.12); border-color: rgba(37,211,102,0.35); color: #25d366; }
+
+    /* Right column – form */
+    .contact-form-box {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      position: relative;
+    }
+    .contact-form-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
+      border-radius: 0 0 2px 2px;
+    }
+    .contact-form-box h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .contact-form-box > p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 18px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 13px 16px;
+      color: var(--white);
+      font-size: 0.93rem;
+      font-family: inherit;
+      transition: var(--transition);
+      box-sizing: border-box;
+    }
+    .form-field select {
+      appearance: none;
+      cursor: pointer;
+    }
+    .form-field textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: var(--text-muted); }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0,102,255,0.15);
+    }
+    .form-field input.error,
+    .form-field textarea.error { border-color: #ff6b6b; }
+    .form-hint { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; display: block; }
+
+    .form-submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary), #0056e0);
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 15px;
+      color: var(--white);
+      font-size: 0.97rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .form-submit-btn:hover {
+      background: linear-gradient(135deg, var(--primary-dark), #0044bb);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,102,255,0.4);
+    }
+    .form-submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+    .form-submit-btn svg { width: 18px; height: 18px; }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .form-success-icon {
+      width: 64px; height: 64px;
+      background: rgba(0,212,255,0.12);
+      border: 2px solid rgba(0,212,255,0.35);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--accent);
+    }
+    .form-success-icon svg { width: 28px; height: 28px; }
+    .form-success h4 { font-size: 1.1rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .form-success p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+
+    .form-privacy {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+    .form-privacy a { color: var(--primary-light); }
+    .form-privacy a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .contact-cards-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 860px) {
+      .contact-main-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .contact-cards-grid { grid-template-columns: 1fr 1fr; }
+      .contact-form-box { padding: 28px 22px; }
+      .contact-social-row { flex-wrap: wrap; }
+    }
+    @media (max-width: 400px) {
+      .contact-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+>>>>>>> b7b5e065597b8bc590ae38ac3843ec946ffe939f
 </head>
 
 <body>
@@ -97,6 +479,7 @@
   <!-- ===== CTA FINAL ===== -->
   <section class="cta-final" id="orcamento">
     <div class="container">
+<<<<<<< HEAD
       <div class="cta-final-inner">
         <div class="cta-glow"></div>
         <h2>¿Necesita ayuda para elegir<br>el letrero ideal?</h2>
@@ -119,6 +502,224 @@
             Pedir Presupuesto
           </a>
         </div>
+=======
+      <div class="contact-hero-inner fade-up">
+        <span class="section-tag">Contacto</span>
+        <h1>Estamos aquí para <span class="accent-text">ayudarte</span></h1>
+        <p>¿Tienes dudas sobre qué letrero elegir? ¿Necesitas un presupuesto personalizado? Escríbenos o llámanos — respondemos en menos de 24 horas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT CARDS ===== -->
+  <section class="contact-cards-section">
+    <div class="container">
+      <div class="contact-cards-grid">
+
+        <!-- Teléfono -->
+        <a href="tel:+34958050026" class="contact-card fade-up">
+          <div class="contact-card-icon contact-card-icon--phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.27"/><path d="M22 16.92l-4.35-1.45a2 2 0 00-2 .45l-1.27 1.27a16 16 0 01-6.84-6.84l1.27-1.27a2 2 0 00.45-2L7.08 2H4a2 2 0 00-2 1.92 16 16 0 0016 16z"/></svg>
+          </div>
+          <div class="contact-card-label">Teléfono</div>
+          <div class="contact-card-value">+34 958 050 026</div>
+          <div class="contact-card-sub">Lunes a viernes<br>9:00 – 18:00 h</div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/34627689699" class="contact-card contact-card--whatsapp fade-up" target="_blank" rel="noopener">
+          <div class="contact-card-icon contact-card-icon--wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="contact-card-label">WhatsApp</div>
+          <div class="contact-card-value">+34 627 689 699</div>
+          <div class="contact-card-sub">Respuesta rápida<br>también en festivos</div>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:info@letrerosprogramables.com" class="contact-card fade-up">
+          <div class="contact-card-icon contact-card-icon--mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value">info@letreros<br>programables.com</div>
+          <div class="contact-card-sub">Respuesta en<br>menos de 24 h</div>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/letrerosledprogramables" class="contact-card contact-card--facebook fade-up" target="_blank" rel="noopener">
+          <div class="contact-card-icon contact-card-icon--fb">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </div>
+          <div class="contact-card-label">Facebook</div>
+          <div class="contact-card-value">Letreros LED<br>Programables</div>
+          <div class="contact-card-sub">Síguenos para<br>novedades y ofertas</div>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@ledparatodos" class="contact-card contact-card--youtube fade-up" target="_blank" rel="noopener">
+          <div class="contact-card-icon contact-card-icon--yt">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          </div>
+          <div class="contact-card-label">YouTube</div>
+          <div class="contact-card-value">@ledparatodos</div>
+          <div class="contact-card-sub">Tutoriales y demos<br>de nuestros productos</div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/explore/search/keyword/?q=%23rondaluziluminacion" class="contact-card contact-card--instagram fade-up" target="_blank" rel="noopener">
+          <div class="contact-card-icon contact-card-icon--ig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div class="contact-card-label">Instagram</div>
+          <div class="contact-card-value">#rondaluz<br>iluminacion</div>
+          <div class="contact-card-sub">Fotos de instalaciones<br>reales de clientes</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTACT ===== -->
+  <section class="contact-main" id="formulario">
+    <div class="container">
+      <div class="contact-main-grid">
+
+        <!-- Left: info + hours -->
+        <div class="contact-info-col fade-up">
+          <span class="section-tag">Información de contacto</span>
+          <h2 class="section-title">Cuéntanos qué necesitas</h2>
+          <p>Somos Spain Worldex Business S.L. (B19531706), especialistas en letreros LED programables con sede en Granada. Nuestro equipo te asesorará sin compromiso para encontrar la solución perfecta para tu negocio.</p>
+
+          <div class="contact-detail-list">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.27"/><path d="M22 16.92l-4.35-1.45a2 2 0 00-2 .45l-1.27 1.27a16 16 0 01-6.84-6.84l1.27-1.27a2 2 0 00.45-2L7.08 2H4a2 2 0 00-2 1.92 16 16 0 0016 16z"/></svg>
+              </div>
+              <div class="contact-detail-text">
+                <strong>Teléfono</strong>
+                <a href="tel:+34958050026">+34 958 050 026</a>
+                <a href="https://wa.me/34627689699" target="_blank" rel="noopener" style="color:var(--text-muted); font-size:0.85rem; font-weight:400;">WhatsApp: +34 627 689 699</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-detail-text">
+                <strong>Email</strong>
+                <a href="mailto:info@letrerosprogramables.com">info@letrerosprogramables.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-detail-text">
+                <strong>Dirección</strong>
+                <span>Spain Worldex Business S.L.</span>
+                <span style="color:var(--text-muted); font-size:0.85rem; font-weight:400;">Granada, Andalucía, España</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="contact-hours-box">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Horario de atención
+            </h4>
+            <div class="hours-row">
+              <span class="hours-day">Lunes – Viernes</span>
+              <span class="hours-time">9:00 – 14:00<br>17:00 – 20:30</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sábado - Domingo</span>
+              <span class="hours-time--closed">Cerrado</span>
+            </div>
+          </div>
+
+          <!-- Social buttons -->
+          <div class="contact-social-row">
+            <a href="https://www.facebook.com/letrerosledprogramables" class="contact-social-btn contact-social-btn--fb" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.youtube.com/@ledparatodos" class="contact-social-btn contact-social-btn--yt" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+              YouTube
+            </a>
+            <a href="https://www.instagram.com/explore/search/keyword/?q=%23rondaluziluminacion" class="contact-social-btn contact-social-btn--ig" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </a>
+            <a href="https://wa.me/34627689699" class="contact-social-btn contact-social-btn--wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-box fade-up" id="contactFormBox">
+          <h3>Pide tu presupuesto gratuito</h3>
+          <p>Rellena el formulario y te contactamos en menos de 24 horas.</p>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-nombre">Nombre *</label>
+                <input type="text" id="cf-nombre" name="nombre" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-field">
+                <label for="cf-apellido">Apellido *</label>   
+                <input type="text" id="cf-apellido" name="apellido" placeholder="Tu apellido" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-email">Email *</label>
+                <input type="email" id="cf-email" name="email" placeholder="tu@email.com" required />
+              </div>
+              <div class="form-field">
+                <label for="cf-telefono">Teléfono</label>
+                <input type="tel" id="cf-telefono" name="telefono" placeholder="+34 600 000 000" />
+                <span class="form-hint">Mínimo 9 dígitos</span>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cf-tipo">Tipo de negocio</label>
+              <select id="cf-tipo" name="tipo">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="tienda">Tienda / Comercio</option>
+                <option value="farmacia">Farmacia</option>
+                <option value="bar">Bar / Restaurante</option>
+                <option value="empresa">Empresa / Oficina</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="cf-mensaje">Mensaje *</label>
+              <textarea id="cf-mensaje" name="mensaje" placeholder="Cuéntanos qué tipo de letrero necesitas, dimensiones aproximadas, o cualquier duda que tengas..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit-btn" id="formSubmitBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Enviar mensaje
+            </button>
+            <p class="form-privacy">Al enviar aceptas nuestra <a href="#">Política de Privacidad</a>. No compartimos tus datos con terceros.</p>
+          </form>
+
+          <!-- Success state -->
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h4>¡Mensaje enviado!</h4>
+            <p>Gracias por contactarnos. Nuestro equipo revisará tu solicitud y te responderá en menos de 24 horas.</p>
+          </div>
+        </div>
+
+>>>>>>> b7b5e065597b8bc590ae38ac3843ec946ffe939f
       </div>
     </div>
   </section>
@@ -204,6 +805,57 @@
   </a>
 
   <script src="main.js"></script>
+<<<<<<< HEAD
+=======
+  <script>
+    // ── Contact form handler ──
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const submitBtn  = document.getElementById('formSubmitBtn');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Basic validation
+      const nombre   = document.getElementById('cf-nombre');
+      const apellido = document.getElementById('cf-apellido');
+      const email    = document.getElementById('cf-email');
+      const telefono = document.getElementById('cf-telefono');
+      const mensaje  = document.getElementById('cf-mensaje');
+      let valid = true;
+
+      [nombre, apellido, email, telefono, mensaje].forEach(f => f.classList.remove('error'));
+
+      if (!nombre.value.trim()) { nombre.classList.add('error'); valid = false; }
+      if (!apellido.value.trim()) { apellido.classList.add('error'); valid = false; }
+      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { email.classList.add('error'); valid = false; }
+      if (telefono.value.trim()) {
+        const digits = telefono.value.replace(/\D/g, '');
+        if (digits.length < 9 || digits.length > 14) { telefono.classList.add('error'); valid = false; }
+      }
+      if (!mensaje.value.trim()) { mensaje.classList.add('error'); valid = false; }
+
+      if (!valid) return;
+
+      // Simulate send (replace with real fetch/API call)
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Enviando...';
+
+      setTimeout(() => {
+        contactForm.style.display = 'none';
+        formSuccess.style.display = 'block';
+      }, 1400);
+    });
+
+    // Remove error class on input
+    document.querySelectorAll('.contact-form input, .contact-form textarea').forEach(el => {
+      el.addEventListener('input', () => el.classList.remove('error'));
+    });
+  </script>
+  <style>
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  </style>
+>>>>>>> b7b5e065597b8bc590ae38ac3843ec946ffe939f
 </body>
 
 </html>
