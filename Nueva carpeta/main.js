@@ -263,6 +263,15 @@ renderCarritoPage();
           </div>
           <p class="search-hint">Escribe para buscar entre nuestros 36 productos · <kbd>Esc</kbd> para cerrar</p>
           <div class="search-results-list" id="searchResultsList"></div>
+          <a href="recomendador.html" class="search-recommender-btn" id="searchRecommenderBtn">
+            <span class="search-recommender-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            </span>
+            <span class="search-recommender-text">
+              <strong>¿No sabes qué letrero necesitas?</strong>
+              <span>Rellena el configurador y te recomendamos el producto ideal →</span>
+            </span>
+          </a>
         </div>`;
     document.body.appendChild(overlay);
 

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configurador de Letreiro LED – Ledparatodos</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Configura tu letrero LED programable ideal. Selecciona el tipo de negocio, color, pixel pitch y tamaño y te recomendamos el producto perfecto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── CONFIGURADOR ── */
+    .config-hero {
+      padding: 140px 0 60px;
+      background: var(--dark);
+      text-align: center;
+    }
+    .config-hero h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .config-hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── WRAPPER ── */
+    .config-section {
+      padding: 60px 0 120px;
+      background: var(--dark);
+    }
+    .config-box {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+    .config-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
+    }
+
+    /* ── PROGRESS BAR ── */
+    .config-progress {
+      display: flex;
+      padding: 28px 36px 0;
+      gap: 8px;
+      align-items: center;
+    }
+    .config-progress-step {
+      flex: 1;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      transition: background 0.4s ease;
+    }
+    .config-progress-step.done { background: var(--primary); }
+    .config-progress-step.active { background: var(--accent); }
+
+    .config-step-label {
+      text-align: center;
+      padding: 12px 36px 0;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .config-step-label span { color: var(--primary-light); }
+
+    /* ── STEP PANELS ── */
+    .config-steps {
+      padding: 36px 36px 40px;
+    }
+    .config-step {
+      display: none;
+    }
+    .config-step.active {
+      display: block;
+      animation: stepIn 0.35s ease;
+    }
+    @keyframes stepIn {
+      from { opacity: 0; transform: translateX(20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .config-step h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .config-step > p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    /* ── OPTION CARDS ── */
+    .config-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .config-opt {
+      background: var(--dark-3);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .config-opt:hover {
+      border-color: var(--primary);
+      background: rgba(0,102,255,0.05);
+      transform: translateY(-3px);
+    }
+    .config-opt.selected {
+      border-color: var(--primary);
+      background: rgba(0,102,255,0.12);
+      color: var(--primary-light);
+    }
+    .config-opt .opt-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .config-opt .opt-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+    }
+    .config-opt .opt-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .config-opt.selected .opt-label { color: var(--primary-light); }
+    .config-opt.disabled {
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    /* ── SIZE INPUTS ── */
+    .size-inputs {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .size-field {
+      flex: 1;
+      min-width: 180px;
+    }
+    .size-field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .size-input-wrap {
+      display: flex;
+      align-items: stretch;
+    }
+    .size-input-wrap input {
+      flex: 1;
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+      padding: 12px 16px;
+      color: var(--white);
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .size-input-wrap input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0,102,255,0.15);
+    }
+    .size-unit {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-left: none;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 0 14px;
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .size-x { font-size: 1.5rem; font-weight: 300; color: var(--text-muted); align-self: flex-end; padding-bottom: 12px; }
+
+    .size-hint {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 8px;
+      padding: 10px 14px;
+      background: rgba(0,212,255,0.04);
+      border: 1px solid rgba(0,212,255,0.15);
+      border-radius: var(--radius-sm);
+    }
+    .size-hint strong { color: var(--accent); }
+    .size-error {
+      font-size: 0.83rem;
+      color: #ff6b6b;
+      margin-top: 8px;
+      display: none;
+    }
+
+    /* Info boxes */
+    .config-info-box {
+      background: rgba(0,102,255,0.06);
+      border: 1px solid rgba(0,102,255,0.2);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .config-info-box strong { color: var(--white); }
+
+    /* ── NAV BUTTONS ── */
+    .config-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      margin-top: 8px;
+    }
+    .config-nav-left { display: flex; gap: 12px; }
+    .btn-config-back {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 24px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .btn-config-back:hover { color: var(--white); border-color: var(--white); }
+    .btn-config-next {
+      background: linear-gradient(135deg, var(--primary), #0056e0);
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 13px 32px;
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-config-next:hover {
+      background: linear-gradient(135deg, #0056e0, #0040b0);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,102,255,0.35);
+    }
+    .btn-config-next:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+    /* ── RESULT ── */
+    #stepResult { display: none; }
+    #stepResult.active { display: block; }
+    .result-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .result-header .result-icon {
+      width: 70px; height: 70px;
+      background: rgba(0,212,255,0.1);
+      border: 2px solid rgba(0,212,255,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2rem;
+    }
+    .result-header h2 { color: var(--white); font-size: 1.5rem; font-weight: 900; margin-bottom: 8px; }
+    .result-header p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .result-summary {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+    .result-summary h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    .result-specs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 14px;
+    }
+    .result-spec {
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+    }
+    .result-spec-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 4px; font-weight: 600; }
+    .result-spec-val { font-size: 1rem; font-weight: 800; color: var(--white); }
+
+    .result-products {
+      margin-bottom: 32px;
+    }
+    .result-products h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .result-product-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--dark-3);
+      border: 1.5px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .result-product-card:hover {
+      background: rgba(0,102,255,0.08);
+      transform: translateX(4px);
+    }
+    .result-product-card-icon {
+      width: 56px; height: 56px;
+      background: rgba(0,102,255,0.15);
+      border: 1px solid rgba(0,102,255,0.3);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+    .result-product-info { flex: 1; }
+    .result-product-info strong { display: block; color: var(--white); font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+    .result-product-info span { font-size: 0.83rem; color: var(--text-muted); }
+    .result-product-arrow { color: var(--primary-light); font-size: 1.3rem; }
+
+    .no-match-box {
+      text-align: center;
+      padding: 32px;
+      background: rgba(255,107,107,0.05);
+      border: 1px solid rgba(255,107,107,0.2);
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+    }
+    .no-match-box p { color: var(--text-muted); }
+    .no-match-box strong { color: #ff6b6b; }
+
+    .result-cta-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-restart {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 13px 28px;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .btn-restart:hover { color: var(--white); border-color: var(--white); }
+
+    @media (max-width: 600px) {
+      .config-progress { padding: 24px 20px 0; }
+      .config-steps { padding: 28px 20px 32px; }
+      .config-options { grid-template-columns: 1fr 1fr; }
+      .size-inputs { flex-direction: column; }
+      .size-x { display: none; }
+      .result-cta-btns { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" stroke="var(--text-muted)"/>
+            <ellipse cx="12" cy="12" rx="4" ry="10" stroke="var(--primary)"/>
+            <line x1="2" y1="12" x2="22" y2="12" stroke="var(--primary)"/>
+            <line x1="4" y1="7" x2="20" y2="7" stroke="var(--text-muted)"/>
+            <line x1="4" y1="17" x2="20" y2="17" stroke="var(--text-muted)"/>
+          </svg>
+        </div>
+        <div class="logo-stack">
+          <span>LEDS</span>
+          <span>PARATODOS</span>
+          <span>.COM</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="como-funciona.html">Como Funciona</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="carrito.html" class="cart-nav-btn" id="cartNavBtn" aria-label="Carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <button class="nav-search-btn" id="navSearchBtn" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="nav-user-wrap" id="navUserWrap">
+        <button class="nav-user-btn" id="navUserBtn" aria-label="Mi cuenta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <div class="nav-user-dropdown" id="navUserDropdown">
+          <a href="login.html" class="nav-user-option nav-user-option--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            Iniciar Sesión
+          </a>
+          <div class="nav-user-divider"></div>
+          <a href="registro.html" class="nav-user-option">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            Registrarse
+          </a>
+        </div>
+      </div>
+      <a href="contacto.html" class="btn btn-primary btn-small">Pedir Orçamento</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="config-hero">
+    <div class="container">
+      <span class="section-tag">Configurador de letreros</span>
+      <h1>Encuentra tu letrero <span class="accent-text">ideal</span></h1>
+      <p>Responde unas pocas preguntas y te recomendaremos el letrero LED perfecto para tu negocio según tus necesidades y medidas.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONFIGURADOR ===== -->
+  <section class="config-section">
+    <div class="container">
+      <div class="config-box">
+
+        <!-- Progress -->
+        <div class="config-progress" id="configProgress">
+          <div class="config-progress-step active" data-idx="0"></div>
+          <div class="config-progress-step" data-idx="1"></div>
+          <div class="config-progress-step" data-idx="2"></div>
+          <div class="config-progress-step" data-idx="3"></div>
+          <div class="config-progress-step" data-idx="4"></div>
+        </div>
+        <div class="config-step-label">Paso <span id="currentStepNum">1</span> de 5</div>
+
+        <div class="config-steps" id="configSteps">
+
+          <!-- STEP 1: Tipo de negocio -->
+          <div class="config-step active" id="step1">
+            <h2>¿Para qué tipo de negocio?</h2>
+            <p>Selecciona la categoría que mejor describa tu negocio. Esto nos ayuda a filtrar los letreros más adecuados.</p>
+            <div class="config-options" id="opts-negocio">
+              <div class="config-opt" data-val="farmacia">
+                <span class="opt-icon">💊</span>
+                <span class="opt-label">Farmacia / Veterinaria</span>
+              </div>
+              <div class="config-opt" data-val="bar">
+                <span class="opt-icon">🍺</span>
+                <span class="opt-label">Bar / Restaurante / Cafetería</span>
+              </div>
+              <div class="config-opt" data-val="parking">
+                <span class="opt-icon">🅿️</span>
+                <span class="opt-label">Parking / Garage</span>
+              </div>
+              <div class="config-opt" data-val="clinica">
+                <span class="opt-icon">🏥</span>
+                <span class="opt-label">Clínica / Dental / Médico</span>
+              </div>
+              <div class="config-opt" data-val="hotel">
+                <span class="opt-icon">🏨</span>
+                <span class="opt-label">Hotel / Hostal</span>
+              </div>
+              <div class="config-opt" data-val="academia">
+                <span class="opt-icon">🎓</span>
+                <span class="opt-label">Academia / Autoescuela</span>
+              </div>
+              <div class="config-opt" data-val="gasolinera">
+                <span class="opt-icon">⛽</span>
+                <span class="opt-label">Gasolinera / Servicio</span>
+              </div>
+              <div class="config-opt" data-val="discoteca">
+                <span class="opt-icon">🎵</span>
+                <span class="opt-label">Discoteca / Pub</span>
+              </div>
+              <div class="config-opt" data-val="estanco">
+                <span class="opt-icon">🚬</span>
+                <span class="opt-label">Estanco / Lotería</span>
+              </div>
+              <div class="config-opt" data-val="comercio">
+                <span class="opt-icon">🛍️</span>
+                <span class="opt-label">Comercio / Tienda general</span>
+              </div>
+              <div class="config-opt" data-val="deporte">
+                <span class="opt-icon">🏆</span>
+                <span class="opt-label">Deportivo / Polideportivo</span>
+              </div>
+              <div class="config-opt" data-val="acceso">
+                <span class="opt-icon">🚦</span>
+                <span class="opt-label">Control de acceso / Aforo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: Tipo de color -->
+          <div class="config-step" id="step2">
+            <h2>¿Qué tipo de color necesitas?</h2>
+            <p>El tipo de color afecta tanto el precio como la resolución visual del letrero.</p>
+            <div class="config-options" id="opts-color">
+              <div class="config-opt" data-val="monocolor">
+                <span class="opt-icon">⚪</span>
+                <span class="opt-label">Monocolor</span>
+                <span class="opt-sub">Un solo color (rojo, verde o azul). Ideal para textos sencillos.</span>
+              </div>
+              <div class="config-opt" data-val="rgb">
+                <span class="opt-icon">🎨</span>
+                <span class="opt-label">RGB</span>
+                <span class="opt-sub">Millones de colores. Textos y animaciones vistosas.</span>
+              </div>
+              <div class="config-opt" data-val="fullcolor">
+                <span class="opt-icon">🖥️</span>
+                <span class="opt-label">Full Color</span>
+                <span class="opt-sub">Resolución de pantalla. Vídeos e imágenes a todo color.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Pixel Pitch -->
+          <div class="config-step" id="step3">
+            <h2>¿Qué pixel pitch prefieres?</h2>
+            <p>El <strong>pixel pitch</strong> determina la resolución: cuanto menor es el número, más nítida es la imagen y se puede ver bien de más cerca. A mayor número, más económico y para ver de lejos.</p>
+            <div class="config-info-box" id="pitchInfoBox">
+              Selecciona el tipo de color primero para ver las opciones disponibles.
+            </div>
+            <div class="config-options" id="opts-pitch">
+              <div class="config-opt" data-val="P10">
+                <span class="opt-icon">📡</span>
+                <span class="opt-label">P10</span>
+                <span class="opt-sub">Visualización desde lejos. Ideal para calles y fachadas. Precio bajo.</span>
+              </div>
+              <div class="config-opt" data-val="P6">
+                <span class="opt-icon">📺</span>
+                <span class="opt-label">P6</span>
+                <span class="opt-sub">Balance entre resolución y precio. Para distancias medias.</span>
+              </div>
+              <div class="config-opt" data-val="P5">
+                <span class="opt-icon">🔍</span>
+                <span class="opt-label">P5</span>
+                <span class="opt-sub">Alta resolución. Ideal para locales donde el cliente pasa cerca.</span>
+              </div>
+              <div class="config-opt" data-val="P25">
+                <span class="opt-icon">🏟️</span>
+                <span class="opt-label">P25</span>
+                <span class="opt-sub">Gran distancia de visualización. Económico para grandes formatos exteriores.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: Exterior / Interior -->
+          <div class="config-step" id="step4">
+            <h2>¿Dónde se instalará el letrero?</h2>
+            <p>Elige si el letrero irá en el exterior (fachada, escaparate exterior) o en el interior del local.</p>
+            <div class="config-info-box" id="ubicacionInfo">
+              La instalación exterior requiere protección IP65 contra lluvia y polvo.
+            </div>
+            <div class="config-options" id="opts-ubicacion">
+              <div class="config-opt" data-val="exterior">
+                <span class="opt-icon">🌧️</span>
+                <span class="opt-label">Exterior</span>
+                <span class="opt-sub">Fachada, escaparate o zona expuesta al exterior. Protección IP65.</span>
+              </div>
+              <div class="config-opt" data-val="interior">
+                <span class="opt-icon">🏬</span>
+                <span class="opt-label">Interior</span>
+                <span class="opt-sub">Dentro del local, frente de mostrador o espacio interior.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 5: Tamaño -->
+          <div class="config-step" id="step5">
+            <h2>¿Qué tamaño necesitas?</h2>
+            <p>Introduce las dimensiones deseadas en centímetros. Las medidas deben ser múltiplos del tamaño de placa del pixel pitch elegido.</p>
+            <div class="config-info-box" id="sizeRuleInfo">
+              <!-- filled by JS -->
+            </div>
+            <div class="size-inputs">
+              <div class="size-field">
+                <label for="inputAncho">Ancho</label>
+                <div class="size-input-wrap">
+                  <input type="number" id="inputAncho" min="1" placeholder="ej. 128" />
+                  <span class="size-unit">cm</span>
+                </div>
+              </div>
+              <span class="size-x">×</span>
+              <div class="size-field">
+                <label for="inputAlto">Alto</label>
+                <div class="size-input-wrap">
+                  <input type="number" id="inputAlto" min="1" placeholder="ej. 32" />
+                  <span class="size-unit">cm</span>
+                </div>
+              </div>
+            </div>
+            <div class="size-error" id="sizeError">⚠️ Las medidas no son válidas. Revisa las restricciones.</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:14px;">
+              Máximo permitido: <strong style="color:var(--white)">200 cm × 100 cm</strong>
+            </p>
+          </div>
+
+        </div><!-- /config-steps -->
+
+        <!-- Nav buttons -->
+        <div class="config-nav" id="configNav">
+          <div class="config-nav-left">
+            <button class="btn-config-back" id="btnBack" style="display:none">← Atrás</button>
+          </div>
+          <button class="btn-config-next" id="btnNext">
+            Siguiente
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+      </div><!-- /config-box -->
+
+      <!-- RESULT (outside box so it can grow) -->
+      <div class="config-box" id="stepResult" style="margin-top:24px;display:none;">
+        <div class="config-steps">
+          <div class="result-header">
+            <div class="result-icon">✅</div>
+            <h2>¡Tu letrero ideal está aquí!</h2>
+            <p>Basándonos en tus respuestas, estos son los productos que mejor se adaptan a tus necesidades:</p>
+          </div>
+          <div class="result-summary">
+            <h4>📋 Resumen de tu configuración</h4>
+            <div class="result-specs" id="resultSpecs"></div>
+          </div>
+          <div class="result-products">
+            <h4>🎯 Productos recomendados</h4>
+            <div id="resultProductList"></div>
+          </div>
+          <div class="result-cta-btns">
+            <a href="produtos.html" class="btn btn-primary btn-large">Ver todos los productos</a>
+            <a href="https://wa.me/34627689699" class="btn btn-outline-white" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Pedir por WhatsApp
+            </a>
+            <button class="btn-restart" id="btnRestart">↺ Volver a configurar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer minimal -->
+  <footer class="footer" style="margin-top:0">
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Letreros Programables. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34627689699" class="whatsapp-float" aria-label="Contactar via WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
+  <script>
+  // ═══════════════════════════════════════════════
+  //  CONFIGURADOR DE LETREROS LED
+  // ═══════════════════════════════════════════════
+  (function() {
+
+    // ── State ──
+    const state = {
+      negocio: null,
+      color: null,
+      pitch: null,
+      ubicacion: null,
+      ancho: null,
+      alto: null
+    };
+
+    let currentStep = 1;
+    const TOTAL_STEPS = 5;
+
+    // ── Pitch rules ──
+    const pitchRules = {
+      P10:  { plateW: 32, plateH: 16, multiple: 16  },
+      P5:   { plateW: 32, plateH: 16, multiple: 16  },
+      P25:  { plateW: 32, plateH: 16, multiple: 16  },
+      P6:   { plateW: 19.2, plateH: 19.2, multiple: 19.2 }
+    };
+    const MAX_W = 200, MAX_H = 100; // cm
+
+    // ── Color → available pitches ──
+    const colorPitchMap = {
+      monocolor: ['P10', 'P6'],
+      rgb:       ['P10', 'P6', 'P5', 'P25'],
+      fullcolor: ['P10', 'P6', 'P5', 'P25']
+    };
+
+    // ── Pitches with interior/exterior option ──
+    const pitchHasUbicacion = ['P5', 'P25'];
+
+    // ── DOM refs ──
+    const steps        = document.querySelectorAll('.config-step');
+    const progressBars = document.querySelectorAll('.config-progress-step');
+    const stepNumEl    = document.getElementById('currentStepNum');
+    const btnNext      = document.getElementById('btnNext');
+    const btnBack      = document.getElementById('btnBack');
+    const configBox    = document.querySelector('.config-box');
+    const resultBox    = document.getElementById('stepResult');
+    const btnRestart   = document.getElementById('btnRestart');
+
+    // ── Helpers ──
+    function showStep(n) {
+      steps.forEach((s, i) => s.classList.toggle('active', i === n - 1));
+      progressBars.forEach((b, i) => {
+        b.classList.remove('active', 'done');
+        if (i < n - 1) b.classList.add('done');
+        else if (i === n - 1) b.classList.add('active');
+      });
+      stepNumEl.textContent = n;
+      btnBack.style.display  = n === 1 ? 'none' : 'block';
+      btnNext.textContent    = n === TOTAL_STEPS ? 'Ver mi letrero →' : 'Siguiente';
+      btnNext.innerHTML      = n === TOTAL_STEPS
+        ? 'Ver mi letrero →'
+        : 'Siguiente <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>';
+      currentStep = n;
+    }
+
+    function getSelectedOpt(groupId) {
+      const sel = document.querySelector(`#${groupId} .config-opt.selected`);
+      return sel ? sel.dataset.val : null;
+    }
+
+    // ── Validate current step ──
+    function isStepValid() {
+      switch(currentStep) {
+        case 1: return !!state.negocio;
+        case 2: return !!state.color;
+        case 3: return !!state.pitch;
+        case 4: return !!state.ubicacion || !pitchHasUbicacion.includes(state.pitch);
+        case 5: return validateSizes();
+      }
+    }
+
+    function validateSizes() {
+      const w = parseFloat(document.getElementById('inputAncho').value);
+      const h = parseFloat(document.getElementById('inputAlto').value);
+      const rule = pitchRules[state.pitch];
+      if (!rule || !w || !h) return false;
+      if (w > MAX_W || h > MAX_H) return false;
+      const mult = rule.multiple;
+      const ok = (Math.round(w * 10) % Math.round(mult * 10) === 0) &&
+                 (Math.round(h * 10) % Math.round(mult * 10) === 0);
+      document.getElementById('sizeError').style.display = ok ? 'none' : 'block';
+      return ok;
+    }
+
+    // ── Update pitch availability based on color ──
+    function updatePitchOptions() {
+      if (!state.color) return;
+      const available = colorPitchMap[state.color] || [];
+      const box = document.getElementById('pitchInfoBox');
+      box.innerHTML = `Con <strong>${state.color}</strong>, los pitch disponibles son: <strong>${available.join(', ')}</strong>.`;
+      document.querySelectorAll('#opts-pitch .config-opt').forEach(opt => {
+        const disabled = !available.includes(opt.dataset.val);
+        opt.classList.toggle('disabled', disabled);
+        if (disabled && opt.classList.contains('selected')) {
+          opt.classList.remove('selected');
+          state.pitch = null;
+        }
+      });
+    }
+
+    // ── Update size rules info ──
+    function updateSizeInfo() {
+      const rule = pitchRules[state.pitch];
+      if (!rule) return;
+      const m = rule.multiple;
+      document.getElementById('sizeRuleInfo').innerHTML =
+        `Con <strong>${state.pitch}</strong>: las placas miden <strong>${rule.plateW} × ${rule.plateH} cm</strong>. Las dimensiones que elijas deben ser <strong>múltiplos de ${m} cm</strong>. Máximo <strong>${MAX_W} × ${MAX_H} cm</strong>`;
+    }
+
+    // ── Update step 4 visibility based on pitch ──
+    function shouldSkipUbicacion() {
+      return !pitchHasUbicacion.includes(state.pitch);
+    }
+
+    // ── Opt-click handlers ──
+    function bindOpts(groupId, stateKey) {
+      document.querySelectorAll(`#${groupId} .config-opt`).forEach(opt => {
+        opt.addEventListener('click', () => {
+          if (opt.classList.contains('disabled')) return;
+          document.querySelectorAll(`#${groupId} .config-opt`).forEach(o => o.classList.remove('selected'));
+          opt.classList.add('selected');
+          state[stateKey] = opt.dataset.val;
+          btnNext.disabled = false;
+
+          // Side effects
+          if (stateKey === 'color') updatePitchOptions();
+          if (stateKey === 'pitch') updateSizeInfo();
+        });
+      });
+    }
+
+    bindOpts('opts-negocio',  'negocio');
+    bindOpts('opts-color',    'color');
+    bindOpts('opts-pitch',    'pitch');
+    bindOpts('opts-ubicacion','ubicacion');
+
+    // Size inputs
+    ['inputAncho','inputAlto'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => {
+        state[id === 'inputAncho' ? 'ancho' : 'alto'] = parseFloat(document.getElementById(id).value);
+        validateSizes();
+      });
+    });
+
+    // ── Navigation ──
+    btnNext.addEventListener('click', () => {
+      if (!isStepValid()) {
+        return; // silent – buttons show them what's selected
+      }
+      if (currentStep === TOTAL_STEPS) {
+        showResult();
+        return;
+      }
+
+      let nextStep = currentStep + 1;
+      // Skip step 4 (ubicacion) if pitch doesn't require it
+      if (nextStep === 4 && shouldSkipUbicacion()) {
+        // Auto-set ubicacion to exterior if not applicable
+        state.ubicacion = 'exterior';
+        nextStep = 5;
+      }
+      showStep(nextStep);
+      if (nextStep === 5) updateSizeInfo();
+    });
+
+    btnBack.addEventListener('click', () => {
+      let prevStep = currentStep - 1;
+      // If we skipped step 4, go back to step 3 from step 5
+      if (currentStep === 5 && shouldSkipUbicacion()) {
+        prevStep = 3;
+      }
+      showStep(prevStep);
+    });
+
+    // ── Product catalog map ──
+    // (negocio) → (product ids that match)
+    const catalogMap = {
+      farmacia:   [13, 14, 35],
+      bar:        [23, 24],
+      parking:    [8, 19, 33, 34],
+      clinica:    [17, 18, 22, 36],
+      hotel:      [25, 26],
+      academia:   [16, 21, 9, 20],
+      gasolinera: [15],
+      discoteca:  [27, 28],
+      estanco:    [31, 32],
+      comercio:   [1, 4, 5, 10],
+      deporte:    [29, 30],
+      acceso:     [33, 34]
+    };
+
+    const productNames = {
+      1:  { name:'Letrero LED Programable en RGB, 1 Cara', icon:'▬', cat:'letreros' },
+      4:  { name:'Letrero LED Programable, 1 Cara', icon:'▬', cat:'letreros' },
+      5:  { name:'Letrero LED Programable, 2 Caras', icon:'▬', cat:'letreros' },
+      8:  { name:'Letrero LED Programable para Parking en RGB, 1 Cara', icon:'🅿️', cat:'rotulos' },
+      9:  { name:'Letrero LED Programable para Autoescuelas en RGB, 1 Cara', icon:'🚗', cat:'rotulos' },
+      10: { name:'Letrero LED Programable en RGB, 2 Caras', icon:'▬', cat:'letreros' },
+      13: { name:'Cruz LED Programable para Farmacias – Veterinarias – Clínicas, 2 Caras', icon:'✚', cat:'cruces' },
+      14: { name:'Cruz LED Programable en RGB para Farmacias – Veterinarias', icon:'✚', cat:'cruces' },
+      15: { name:'Letrero LED Programable para Gasolineras en RGB, 1 Cara', icon:'⛽', cat:'rotulos' },
+      16: { name:'Letrero LED Programable para Academias en RGB, 1 Cara', icon:'🎓', cat:'rotulos' },
+      17: { name:'Letrero LED Programable para Clínicas en RGB, 2 Caras', icon:'🏥', cat:'rotulos' },
+      18: { name:'Letrero LED Programable para Clínicas en RGB, 1 Cara', icon:'🏥', cat:'rotulos' },
+      19: { name:'Letrero LED Programable para Parking en RGB, 2 Caras', icon:'🅿️', cat:'rotulos' },
+      20: { name:'Letrero LED Programable para Autoescuelas en RGB, 2 Caras', icon:'🚗', cat:'rotulos' },
+      21: { name:'Letrero LED Programable para Academias en RGB, 2 Caras', icon:'🎓', cat:'rotulos' },
+      22: { name:'Letrero LED Programable para Clínicas Dentales en RGB, 2 Caras', icon:'🦷', cat:'rotulos' },
+      23: { name:'Letrero LED Programable para Bares/Restaurantes/Cafeterías en RGB, 1 Cara', icon:'🍺', cat:'rotulos' },
+      24: { name:'Letrero LED Programable para Bares/Restaurantes/Cafeterías en RGB, 2 Caras', icon:'🍺', cat:'rotulos' },
+      25: { name:'Letrero LED Programable para Hoteles en RGB, 1 Cara', icon:'🏨', cat:'rotulos' },
+      26: { name:'Letrero LED Programable para Hoteles en RGB, 2 Caras', icon:'🏨', cat:'rotulos' },
+      27: { name:'Letreros LED Programable para Discotecas/Pub en RGB, 1 Cara', icon:'🎵', cat:'rotulos' },
+      28: { name:'Letreros LED Programable para Discotecas/Pub en RGB, 2 Caras', icon:'🎵', cat:'rotulos' },
+      29: { name:'Letrero LED Programable Cronómetro Digital en RGB, 1 Cara', icon:'⏱', cat:'marcadores' },
+      30: { name:'Letrero LED Programable Cronómetro Digital, 2 Caras', icon:'⏱', cat:'marcadores' },
+      31: { name:'Letrero LED Programable para Estancos en RGB, 1 Cara', icon:'🚬', cat:'rotulos' },
+      32: { name:'Letrero LED Programable para Estancos en RGB, 2 Caras', icon:'🚬', cat:'rotulos' },
+      33: { name:'Letrero LED Programable para Control de Acceso RGB, 1 Cara', icon:'🚦', cat:'accesorios' },
+      34: { name:'Letrero LED Programable Control de Acceso Rojo-Verde, 1 Cara', icon:'🚦', cat:'accesorios' },
+      35: { name:'Cruz LED Programable R5 para Farmacias – Veterinarias', icon:'✚', cat:'cruces' },
+      36: { name:'Letrero LED Programable para Clínicas en RGB, 1 Cara', icon:'🏥', cat:'rotulos' }
+    };
+
+    const negocioLabels = {
+      farmacia:'Farmacia / Veterinaria', bar:'Bar / Restaurante / Cafetería', parking:'Parking / Garage',
+      clinica:'Clínica / Dental / Médico', hotel:'Hotel / Hostal', academia:'Academia / Autoescuela',
+      gasolinera:'Gasolinera / Servicio', discoteca:'Discoteca / Pub', estanco:'Estanco / Lotería',
+      comercio:'Comercio / Tienda', deporte:'Deportivo / Polideportivo', acceso:'Control de acceso'
+    };
+    const colorLabels = { monocolor:'Monocolor', rgb:'RGB', fullcolor:'Full Color' };
+
+    function showResult() {
+      // hide configurator nav + progress
+      document.getElementById('configNav').style.display = 'none';
+      document.getElementById('configProgress').style.display = 'none';
+      document.querySelector('.config-step-label').style.display = 'none';
+      steps.forEach(s => s.classList.remove('active'));
+
+      // Build summary
+      const specs = document.getElementById('resultSpecs');
+      specs.innerHTML = `
+        <div class="result-spec"><div class="result-spec-label">Negocio</div><div class="result-spec-val">${negocioLabels[state.negocio] || state.negocio}</div></div>
+        <div class="result-spec"><div class="result-spec-label">Tipo de color</div><div class="result-spec-val">${colorLabels[state.color] || state.color}</div></div>
+        <div class="result-spec"><div class="result-spec-label">Pixel Pitch</div><div class="result-spec-val">${state.pitch}</div></div>
+        <div class="result-spec"><div class="result-spec-label">Ubicación</div><div class="result-spec-val">${state.ubicacion === 'exterior' ? '🌧️ Exterior' : '🏬 Interior'}</div></div>
+        <div class="result-spec"><div class="result-spec-label">Tamaño</div><div class="result-spec-val">${state.ancho} × ${state.alto} cm</div></div>
+      `;
+
+      // Find matching products
+      let matchIds = catalogMap[state.negocio] || [];
+
+      // Filter by color type
+      if (state.color === 'fullcolor') {
+        // Full color → pantallas only (or suggest all and highlight)
+        matchIds = matchIds.length ? matchIds : [1,2,3,4,5,6,7];
+      }
+
+      // Build list HTML
+      const listEl = document.getElementById('resultProductList');
+      if (matchIds.length === 0) {
+        listEl.innerHTML = `<div class="no-match-box"><strong>No encontramos un match exacto</strong><p>Te recomendamos visitar el catálogo completo y filtrar según tus necesidades, o contáctanos por WhatsApp y te asesoramos en minutos.</p></div>`;
+      } else {
+        listEl.innerHTML = matchIds.slice(0,4).map(id => {
+          const p = productNames[id];
+          if (!p) return '';
+          return `<a href="produtos.html" class="result-product-card">
+            <div class="result-product-card-icon">${p.icon}</div>
+            <div class="result-product-info">
+              <strong>${p.name}</strong>
+              <span>Categoría: ${p.cat} · Haz clic para verlo en el catálogo</span>
+            </div>
+            <span class="result-product-arrow">→</span>
+          </a>`;
+        }).join('');
+      }
+
+      // Show result box
+      resultBox.style.display = 'block';
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Restart
+    btnRestart.addEventListener('click', () => {
+      Object.assign(state, { negocio:null, color:null, pitch:null, ubicacion:null, ancho:null, alto:null });
+      document.querySelectorAll('.config-opt').forEach(o => o.classList.remove('selected'));
+      document.getElementById('inputAncho').value = '';
+      document.getElementById('inputAlto').value = '';
+      document.getElementById('sizeError').style.display = 'none';
+      resultBox.style.display = 'none';
+      document.getElementById('configNav').style.display = 'flex';
+      document.getElementById('configProgress').style.display = 'flex';
+      document.querySelector('.config-step-label').style.display = 'block';
+      showStep(1);
+      window.scrollTo({ top: document.querySelector('.config-box').offsetTop - 120, behavior: 'smooth' });
+    });
+
+    // Init
+    showStep(1);
+
+  })();
+  </script>
+</body>
+</html>
