@@ -73,16 +73,17 @@ fadeEls.forEach(el => el.classList.add('fade-up'));
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-            // Staggered delay based on element position in its grid
+            // Staggered delay capped at 200ms so products appear quickly
             const siblings = Array.from(entry.target.parentElement.children);
             const idx = siblings.indexOf(entry.target);
+            const delay = Math.min(idx * 40, 200);
             setTimeout(() => {
                 entry.target.classList.add('visible');
-            }, idx * 80);
+            }, delay);
             revealObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.12 });
+}, { threshold: 0.05 });
 
 fadeEls.forEach(el => revealObserver.observe(el));
 

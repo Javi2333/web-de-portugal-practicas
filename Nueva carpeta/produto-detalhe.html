@@ -129,6 +129,20 @@
       color: var(--white);
       margin-bottom: 1rem;
     }
+    .detalhe-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+    .detalhe-price-tax {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
     .detalhe-desc {
       color: var(--text-muted);
       line-height: 1.75;
@@ -546,6 +560,7 @@
                 <div class="detalhe-info">
                   ${tags ? `<div class="detalhe-tags">${tags}</div>` : ''}
                   <h1 class="detalhe-title">${p.title}</h1>
+                  ${p.price ? `<p class="detalhe-price">${p.price}<span class="detalhe-price-tax">Impuestos incluidos</span></p>` : ''}
                   <p class="detalhe-desc">${p.desc}</p>
                   <hr class="detalhe-divider" />
                   ${specsHtml}

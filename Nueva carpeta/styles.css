@@ -380,7 +380,7 @@ ul { list-style: none; }
 
 /* Sidebar */
 .cat-sidebar {
-  width: 280px;
+  width: 340px;
   flex-shrink: 0;
   position: sticky;
   top: 100px;
@@ -427,7 +427,7 @@ ul { list-style: none; }
   color: var(--primary-light);
 }
 .cat-icon { width: 24px; text-align: center; margin-right: 8px; font-size: 1.1rem; }
-.cat-label { flex: 1; display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cat-label { flex: 1; display: inline-block; white-space: normal; overflow: visible; }
 .cat-count {
   font-size: 0.75rem;
   background: var(--dark-3);
