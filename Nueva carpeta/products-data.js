@@ -6,11 +6,12 @@
 window.PRODUCTS_DATA = [
   {
     id: 1,
-    title: "Letrero LED Programable en RGB, 1 Cara",
+    title: "Letrero LED Programable en RGB, 1 Cara. Disponible en varios tamaños",
     badge: "",
     tags: ["RGB", "1 Cara", "Interior / Exterior"],
     shortDesc: "Letrero LED programable en RGB con millones de colores, disponible en 1 cara.",
-    desc: "Letrero LED programable en RGB con millones de colores, disponible en 1 cara. Disponible en varios tamaños para adaptarse a cualquier espacio. Ideal para publicidad en locales comerciales, escaparates y montras. Programación sencilla mediante USB o WiFi.",
+    desc: "Letrero luminoso LED programable a 1 cara en RGB, disponible en varios tamaños. Con estos rótulos luminosos podrás reproducir el color que desees en cada momento. Pantallas LED programables fabricadas con diodos LEDs SMD para conseguir una gran definición. Cartel digital para textos, fecha, hora, (temperatura y wifi si se le añade) y logos muy sencillos. Producto válido para usar en exterior.",
+    price: "181,50 €",
     images: [
       "img/producto-1/img-3.jpg",
       "img/producto-1/img-1.jpg",
@@ -23,10 +24,208 @@ window.PRODUCTS_DATA = [
       "img/producto-1/img-9.jpg",
       "img/producto-1/img-10.jpg"
     ],
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 16 cm de alto",
+          "32 cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "32 cm de ancho x 64 cm de alto",
+          "32 cm de ancho x 80 cm de alto",
+          "32 cm de ancho x 96 cm de alto",
+          "64 cm de ancho x 16 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto",
+          "96 cm de ancho x 48 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 16 cm de alto",
+          "128 cm de ancho x 32 cm de alto",
+          "128 cm de ancho x 48 cm de alto",
+          "128 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 80 cm de alto",
+          "128 cm de ancho x 96 cm de alto",
+          "160 cm de ancho x 16 cm de alto",
+          "160 cm de ancho x 32 cm de alto",
+          "160 cm de ancho x 48 cm de alto",
+          "160 cm de ancho x 64 cm de alto",
+          "160 cm de ancho x 80 cm de alto",
+          "160 cm de ancho x 96 cm de alto",
+          "192 cm de ancho x 16 cm de alto",
+          "192 cm de ancho x 32 cm de alto",
+          "192 cm de ancho x 48 cm de alto",
+          "192 cm de ancho x 64 cm de alto",
+          "192 cm de ancho x 80 cm de alto",
+          "192 cm de ancho x 96 cm de alto",
+          "224 cm de ancho x 16 cm de alto",
+          "224 cm de ancho x 32 cm de alto",
+          "224 cm de ancho x 48 cm de alto",
+          "224 cm de ancho x 64 cm de alto",
+          "224 cm de ancho x 80 cm de alto",
+          "224 cm de ancho x 96 cm de alto",
+          "256 cm de ancho x 16 cm de alto",
+          "256 cm de ancho x 32 cm de alto",
+          "256 cm de ancho x 48 cm de alto",
+          "256 cm de ancho x 64 cm de alto",
+          "256 cm de ancho x 80 cm de alto",
+          "256 cm de ancho x 96 cm de alto",
+          "288 cm de ancho x 16 cm de alto",
+          "288 cm de ancho x 32 cm de alto",
+          "288 cm de ancho x 48 cm de alto",
+          "288 cm de ancho x 64 cm de alto",
+          "288 cm de ancho x 80 cm de alto",
+          "288 cm de ancho x 96 cm de alto"
+        ]
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Letreros LED programables RGB a una cara.</h2>
+          <p><strong>¡Pantallas para reproducir en una sola todos los colores a tu gusto!</strong></p>
+          <ul>
+            <li>Hay fáciles de programar e instalar</li>
+            <li>Al ser en RGB puedes personalizar en cada momento el color o variedad a colores que quieres que aparezcan en el letrero luminoso</li>
+            <li>Hay fáciles de instalar</li>
+            <li>Larga durabilidad</li>
+            <li>Bajo consumo</li>
+            <li>Alta luminosidad</li>
+            <li>Gran servicio de atención al cliente</li>
+          </ul>
+          <p>Elige los colores básicos (Red - Green - Blue) y sus posibles mezclas de colores básicos en una sola pantalla LED.</p>
+          <p>Somos fabricantes de rótulos electrónicos con años de experiencia, para poder ofrecerte un producto de alta calidad al mejor precio.</p>
+          <p>Además podremos ofrecerte el mejor servicio y ayuda para que consigas el mejor resultado en su cartel luminoso LED ya que contamos con un equipo cualificado y especializado en pantallas publicitarias LED programables.</p>
+          <p>Este electrodoméstico a una cara para tiendas, locales y todo tipo de negocios. Muestra en tu pantalla programable la información que necesites, en el momento que necesites.</p>
+          <p>Puedes colocarlo como mejor te convenga (mira en los accesorios y elige el soporte para colocar tu pantalla):</p>
+          <ul>
+            <li>En interior con el kit de suspensión</li>
+            <li>En exterior pegado a la pared</li>
+            <li>En exterior en la pared como banderola publicitaria a una cara</li>
+          </ul>
+          <p>Con nuestros carteles publicitarios LED programables llama la atención de sus clientes gracias a su gran personalización y a la alta luminosidad de los LEDs con los que trabajamos.</p>
+          <p>Tenemos una gran variedad de pantallas LED con respecto al tamaño y al color, para que el cliente elija la que más se adapte a sus necesidades.</p>
+          <p>En nuestra web le damos la opción de que escoja solo lo que necesita y el diseño que más le guste de nuestros letreros luminosos.</p>
+
+          <h3>Características principales:</h3>
+          <ul>
+            <li>- Nuestras pantallas son válidas para interior y exterior.</li>
+            <li>- Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. <em>*Puede añadir como opcional la sonda de temperatura.</em></li>
+            <li>- Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). <em>*Puede añadir como opcional la programación WiFi y programar a distancia con su ordenador, tableta o móvil.</em></li>
+            <li>- Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Le entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de vídeos para ayudarte.</li>
+            <li>- Elige usted el tamaño de letras y número de caracteres que deseas que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</li>
+            <li>- Texto estático o con movimiento.</li>
+            <li>- Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</li>
+            <li>- Baja emisión de calor</li>
+            <li>- Ahorro de energía</li>
+            <li>- Resistente a impactos y vibraciones</li>
+            <li>- Protección IP25 o exterior</li>
+            <li>- Mejor relación calidad-precio del mercado.</li>
+            <li>- Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
+            <li>- Fácil instalación y programación.</li>
+            <li>- Vida útil 100.000 horas aproximadamente.</li>
+            <li>- 2 años de garantía</li>
+            <li>- Servicio de atención al cliente de calidad.</li>
+          </ul>
+          <p><a href="contacto.html">Consulta nuestra ficha técnica para más detalles.</a></p>
+          <p><em>*Mire en los accesorios para elegir el soporte o kit de suspensión que desee para colocar su letrero LED programable de alta luminosidad.</em></p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETREROS LEDS PROGRAMABLES RGB</span>
+          </div>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+              <tr><th>Pixel constitución</th><td>1R</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+              <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB</td></tr>
+              <tr><th>Peso (Kg)</th><td>2,1</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: `
+          <div class="tab-file-card">
+            <div class="tab-file-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="tab-file-info">
+              <p class="tab-file-name">Dossier Letreros LED Programables RGB</p>
+              <p class="tab-file-meta">PDF · Ficha técnica completa</p>
+            </div>
+            <a href="docs/Web_Dossier_Letreros_LED_Programables_RGB.pdf" class="btn btn-outline tab-file-btn" download target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Descargar
+            </a>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ]
   },
   {
     id: 2,
@@ -39,7 +238,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 3,
@@ -52,7 +252,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 4,
@@ -65,7 +266,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 5,
@@ -78,7 +280,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 6,
@@ -91,7 +294,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 7,
@@ -104,7 +308,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 8,
@@ -117,7 +322,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 9,
@@ -130,7 +336,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 10,
@@ -143,7 +350,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 11,
@@ -156,7 +364,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 12,
@@ -169,7 +378,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 13,
@@ -182,7 +392,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 14,
@@ -195,7 +406,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 15,
@@ -208,7 +420,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 16,
@@ -221,7 +434,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 17,
@@ -234,7 +448,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 18,
@@ -247,7 +462,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 19,
@@ -260,7 +476,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 20,
@@ -273,7 +490,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 21,
@@ -286,7 +504,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 22,
@@ -299,7 +518,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 23,
@@ -312,7 +532,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 24,
@@ -325,7 +546,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 25,
@@ -338,7 +560,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 26,
@@ -351,7 +574,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 27,
@@ -364,7 +588,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 28,
@@ -377,7 +602,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 29,
@@ -390,7 +616,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 30,
@@ -403,7 +630,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 31,
@@ -416,7 +644,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 32,
@@ -429,7 +658,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 33,
@@ -442,7 +672,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 34,
@@ -455,7 +686,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 35,
@@ -468,7 +700,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 36,
@@ -484,6 +717,7 @@ window.PRODUCTS_DATA = [
     sizes: [],
     features: [],
     extra: null,
+<<<<<<< HEAD
     variants: [
       {
         label: "Sonda de Temperatura",
@@ -562,6 +796,9 @@ window.PRODUCTS_DATA = [
       `,
       details: `<p><strong>Referencia</strong> Letrero led clínicas</p>`
     }
+=======
+    related: [40, 41, 42, 37, 38, 39]
+>>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
   },
   {
     id: 37,
@@ -575,7 +812,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 38,
@@ -589,7 +827,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 39,
@@ -603,7 +842,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 40,
@@ -617,7 +857,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 41,
@@ -631,7 +872,8 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 42,
@@ -645,6 +887,7 @@ window.PRODUCTS_DATA = [
     specs: [],
     sizes: [],
     features: [],
-    extra: null
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
   }
 ];

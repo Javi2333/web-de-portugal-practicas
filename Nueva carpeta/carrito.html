@@ -10,6 +10,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .carrito-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .carrito-item-img {
+      width: 90px;
+      height: 68px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .carrito-item-img--placeholder {
+      background: var(--dark-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+    }
+    .carrito-item-info { flex: 1; min-width: 0; }
+    .carrito-item-info h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .carrito-item-options {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .carrito-item-options li {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .carrito-item-options li strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .carrito-item-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .carrito-item-price {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin: 0.3rem 0 0;
+    }
+    @media (max-width: 600px) {
+      .carrito-item { flex-wrap: wrap; }
+      .carrito-item-img { width: 60px; height: 46px; }
+    }
+  </style>
 </head>
 <body>
 

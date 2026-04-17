@@ -111,23 +111,29 @@ function getCart() {
 function saveCart(cart) {
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
-function addToCart(title, desc) {
+function addToCart(title, desc, image, price, options) {
     const cart = getCart();
-    const idx = cart.findIndex(i => i.title === title);
-    if (idx >= 0) { cart[idx].qty += 1; }
-    else { cart.push({ title, desc, qty: 1 }); }
+    const key = (options && options.length > 0)
+        ? title + '||' + options.map(o => o.value).join('|')
+        : title;
+    const idx = cart.findIndex(i => (i.key || i.title) === key);
+    if (idx >= 0) {
+        cart[idx].qty += 1;
+    } else {
+        cart.push({ key, title, desc, image: image || null, price: price || null, options: options || [], qty: 1 });
+    }
     saveCart(cart);
     updateCartBadge();
     showCartToast(title);
 }
-function removeFromCart(title) {
-    saveCart(getCart().filter(i => i.title !== title));
+function removeFromCart(key) {
+    saveCart(getCart().filter(i => (i.key || i.title) !== key));
     updateCartBadge();
     renderCarritoPage();
 }
-function updateQty(title, delta) {
+function updateQty(key, delta) {
     const cart = getCart();
-    const idx = cart.findIndex(i => i.title === title);
+    const idx = cart.findIndex(i => (i.key || i.title) === key);
     if (idx < 0) return;
     cart[idx].qty = Math.max(1, cart[idx].qty + delta);
     saveCart(cart);
@@ -199,41 +205,53 @@ function renderCarritoPage() {
     contentEl.style.display = '';
     totalEl.textContent = totalItems;
 
-    listEl.innerHTML = cart.map(item => `
+    listEl.innerHTML = cart.map(item => {
+        const itemKey = item.key || item.title;
+        const imgHtml = item.image
+            ? `<img src="${item.image}" alt="${item.title}" class="carrito-item-img" />`
+            : `<div class="carrito-item-img carrito-item-img--placeholder">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+                   <rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/>
+                 </svg>
+               </div>`;
+        const optionsHtml = item.options && item.options.length > 0
+            ? `<ul class="carrito-item-options">${item.options.map(o =>
+                `<li><strong>${o.label}:</strong> ${o.value}</li>`
+              ).join('')}</ul>`
+            : `<p class="carrito-item-desc">${item.desc}</p>`;
+        const priceHtml = item.price
+            ? `<p class="carrito-item-price">${item.price}</p>`
+            : '';
+        return `
         <div class="carrito-item">
-          <div class="carrito-item-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <circle cx="8" cy="10" r="2"/>
-              <path d="M21 15l-5-5L5 21"/>
-            </svg>
-          </div>
+          ${imgHtml}
           <div class="carrito-item-info">
             <h3>${item.title}</h3>
-            <p>${item.desc}</p>
+            ${optionsHtml}
+            ${priceHtml}
           </div>
           <div class="carrito-item-qty">
-            <button class="qty-btn" data-action="dec" data-title="${item.title}">−</button>
+            <button class="qty-btn" data-action="dec" data-key="${itemKey}">−</button>
             <span class="qty-num">${item.qty}</span>
-            <button class="qty-btn" data-action="inc" data-title="${item.title}">+</button>
+            <button class="qty-btn" data-action="inc" data-key="${itemKey}">+</button>
           </div>
-          <button class="carrito-item-remove" data-title="${item.title}" aria-label="Eliminar">
+          <button class="carrito-item-remove" data-key="${itemKey}" aria-label="Eliminar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
               <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/>
               <path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/>
             </svg>
           </button>
-        </div>
-    `).join('');
+        </div>`;
+    }).join('');
 
     // qty + remove events
     listEl.querySelectorAll('.qty-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            updateQty(btn.dataset.title, btn.dataset.action === 'inc' ? 1 : -1);
+            updateQty(btn.dataset.key, btn.dataset.action === 'inc' ? 1 : -1);
         });
     });
     listEl.querySelectorAll('.carrito-item-remove').forEach(btn => {
-        btn.addEventListener('click', () => removeFromCart(btn.dataset.title));
+        btn.addEventListener('click', () => removeFromCart(btn.dataset.key));
     });
 }
 
