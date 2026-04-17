@@ -322,7 +322,6 @@
     }
     .detalhe-extra-content li { margin-bottom: 0.4rem; }
 
-<<<<<<< HEAD
     /* ── Tabs Section ── */
     .detalhe-tabs-section {
       padding: 4rem 0;
@@ -368,7 +367,6 @@
     }
     .tab-content.active { display: block; }
 
-    /* Specific formatting inside tabs based on screenshot */
     .tab-content h3.text-red {
       color: #d32f2f;
       text-align: center;
@@ -430,22 +428,10 @@
     }
     .variant-label {
       font-size: 0.75rem;
-=======
-    /* ── Product Options ──────────────────────────────────────────── */
-    .detalhe-options {
-      display: flex;
-      flex-direction: column;
-      gap: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-    .detalhe-option-label {
-      font-size: 0.72rem;
->>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--text-muted);
-<<<<<<< HEAD
       min-width: 160px;
     }
     .variant-options { display: flex; gap: 0.5rem; flex-wrap: wrap; }
@@ -457,7 +443,31 @@
       color: var(--text-muted);
       font-size: 0.85rem;
       font-weight: 600;
-=======
+      cursor: pointer;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .variant-btn:hover { border-color: var(--primary-light); color: var(--white); }
+    .variant-btn.active {
+      background: var(--dark-3);
+      border-color: var(--primary);
+      color: var(--white);
+      box-shadow: 0 0 0 2px rgba(0,102,255,0.15);
+    }
+    
+    /* ── Product Options ── */
+    .detalhe-options {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .detalhe-option-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
       display: block;
       margin-bottom: 0.5rem;
     }
@@ -514,7 +524,7 @@
       pointer-events: none;
     }
 
-    /* ── Qty + CTA ────────────────────────────────────────────────── */
+    /* ── Qty + CTA ── */
     .detalhe-qty-cta {
       display: flex;
       gap: 0.75rem;
@@ -559,11 +569,7 @@
     }
     .detalhe-qty-cta .detalhe-ctas { flex: 1; }
 
-    /* ── Tabs Section ─────────────────────────────────────────────── */
-    .detalhe-tabs-section {
-      background: var(--dark);
-      padding: 0 0 4rem;
-    }
+    /* ── User's Tab Logic (Secondary) ── */
     .detalhe-tabs-nav {
       display: flex;
       border-bottom: 1px solid var(--border);
@@ -596,14 +602,6 @@
       padding: 2rem 0 0;
     }
     .detalhe-tab-panel.active { display: block; }
-    .detalhe-tab-content {
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 2rem 2.5rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
     .detalhe-tab-content h2 {
       font-size: 1.2rem;
       font-weight: 800;
@@ -633,85 +631,7 @@
       font-size: 0.9rem;
     }
 
-    /* Referencia */
-    .tab-referencia {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .tab-ref-label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .tab-ref-val {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* Specs table in tab */
-    .tab-specs-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.875rem;
-    }
-    .tab-specs-table tr { border-bottom: 1px solid var(--border); }
-    .tab-specs-table tr:last-child { border-bottom: none; }
-    .tab-specs-table th {
-      text-align: left;
-      font-weight: 600;
-      color: var(--white);
-      padding: 0.65rem 1rem 0.65rem 0;
-      width: 55%;
-      vertical-align: top;
-    }
-    .tab-specs-table td {
-      color: var(--text-muted);
-      padding: 0.65rem 0;
-    }
-    .tab-specs-table tr:nth-child(odd) th,
-    .tab-specs-table tr:nth-child(odd) td {
-      background: rgba(255,255,255,0.02);
-    }
-
-    /* File card */
-    .tab-file-card {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      padding: 1.25rem;
-      background: var(--dark-3);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-    .tab-file-icon {
-      color: var(--primary-light);
-      flex-shrink: 0;
-    }
-    .tab-file-info { flex: 1; }
-    .tab-file-name {
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 0.2rem !important;
-    }
-    .tab-file-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin: 0 !important;
-    }
-    .tab-file-btn {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.85rem;
-      padding: 0.5rem 1rem;
-    }
-
-    /* ── También podría gustarte ──────────────────────────────────── */
+    /* ── Tambien podria gustarte ── */
     .detalhe-related {
       margin-top: 2.5rem;
       padding-top: 2rem;
@@ -738,104 +658,43 @@
       transition: var(--transition);
       cursor: pointer;
     }
-    .related-card:hover {
-      border-color: rgba(0,102,255,0.4);
-      transform: translateY(-3px);
-    }
+    .related-card:hover { border-color: rgba(0,102,255,0.4); transform: translateY(-3px); }
     .related-card-img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: var(--dark-2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      width: 100%; aspect-ratio: 4/3; background: var(--dark-2);
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
-    .related-card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .related-card-img svg { opacity: 0.2; }
+    .related-card-img img { width: 100%; height: 100%; object-fit: cover; }
     .related-card-body { padding: 0.75rem; }
     .related-card-title {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.4;
-      margin-bottom: 0.6rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      font-size: 0.78rem; font-weight: 600; color: var(--white); line-height: 1.4;
+      margin-bottom: 0.6rem; display: -webkit-box; -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
     }
-    .related-card-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+    .related-card-actions { display: flex; align-items: center; gap: 0.5rem; }
     .related-card-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 0.3rem 0.65rem;
->>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
-      cursor: pointer;
-      font-family: inherit;
-      transition: var(--transition);
+      display: flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.05em; color: var(--text-muted); background: none; border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 0.3rem 0.65rem; cursor: pointer; transition: var(--transition);
     }
-<<<<<<< HEAD
-    .variant-btn:hover { border-color: var(--primary-light); color: var(--white); }
-    .variant-btn.active {
-      background: var(--dark-3);
-      border-color: var(--primary);
-      color: var(--white);
-      box-shadow: 0 0 0 2px rgba(0,102,255,0.15);
-    }
+    .related-card-btn:hover { border-color: var(--primary); color: var(--primary-light); }
 
     /* ── Size dropdown ── */
     .detalhe-size-wrap { margin-bottom: 1.5rem; }
     .detalhe-size-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      display: block;
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-muted); margin-bottom: 0.5rem; display: block;
     }
     .detalhe-size-select {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      background: var(--dark-3);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      color: var(--white);
-      font-size: 0.92rem;
-      font-family: inherit;
-      cursor: pointer;
-      appearance: auto;
-      transition: border-color 0.2s;
+      width: 100%; padding: 0.75rem 1rem; background: var(--dark-3); border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm); color: var(--white); font-size: 0.92rem; font-family: inherit;
+      cursor: pointer; appearance: auto; transition: border-color 0.2s;
     }
-    .detalhe-size-select:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(0,102,255,0.15);
-    }
+    .detalhe-size-select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,102,255,0.15); }
     .detalhe-size-select option { background: #111827; }
-=======
     .related-card-btn:hover {
       border-color: var(--primary);
       color: var(--primary-light);
     }
->>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
   </style>
 </head>
 <body>
@@ -976,7 +835,6 @@
         });
       });
 
-<<<<<<< HEAD
       // Tabs logic
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -992,7 +850,6 @@
       });
 
       // Add to cart logic
-=======
       // Tab switcher
       document.querySelectorAll('.detalhe-tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1030,7 +887,6 @@
       }
 
       // Add to cart button
->>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
       const addBtn = document.getElementById('btnAddToCart');
       if (addBtn) {
         addBtn.addEventListener('click', () => {
@@ -1075,7 +931,6 @@
             ).join('')}</div>`
           : '';
 
-<<<<<<< HEAD
         // Variant toggles (only if product has variants)
         const variantsHtml = p.variants && p.variants.length > 0
           ? `<div class="detalhe-variants">
@@ -1100,7 +955,6 @@
                  ${p.sizesDropdown.map(s => `<option value="${s}">${s}</option>`).join('')}
                </select>
              </div>` : '';
-=======
         // Options (toggles + select)
         const optionsHtml = p.options && p.options.length > 0
           ? `<div class="detalhe-options">
@@ -1129,7 +983,6 @@
                }).join('')}
              </div>` : '';
 
->>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
         // Specs
         const specsHtml = p.specs && p.specs.length > 0
           ? `<p class="detalhe-specs-title">Especificaciones técnicas</p>
@@ -1169,35 +1022,16 @@
                   </div>
                 </div>`;
               }).join('');
-              return `<div class="detalhe-related">
-                <h3 class="detalhe-related-title">También podría gustarte</h3>
-                <div class="detalhe-related-grid">${cards}</div>
-              </div>`;
+              return `<section class="detalhe-related-section">
+                <div class="container">
+                  <div class="detalhe-related">
+                    <h3 class="detalhe-related-title">También podría gustarte</h3>
+                    <div class="detalhe-related-grid">${cards}</div>
+                  </div>
+                </div>
+              </section>`;
             })()
           : '';
-
-        // Tabs
-        const tabsHtml = p.tabs && p.tabs.length > 0
-          ? `<section class="detalhe-tabs-section">
-               <div class="container">
-                 <nav class="detalhe-tabs-nav">
-                   ${p.tabs.map((tab, i) =>
-                     `<button class="detalhe-tab-btn${i === 0 ? ' active' : ''}" data-tab="${tab.id}">${tab.label}</button>`
-                   ).join('')}
-                 </nav>
-                 ${p.tabs.map((tab, i) =>
-                   `<div class="detalhe-tab-panel${i === 0 ? ' active' : ''}" id="tabpanel_${tab.id}">
-                     <div class="detalhe-tab-content">
-                       ${tab.html
-                         ? tab.html
-                         : `<div class="detalhe-tab-empty">No hay contenido disponible aún.</div>`
-                       }
-                     </div>
-                     ${relatedHtml}
-                   </div>`
-                 ).join('')}
-               </div>
-             </section>` : '';
 
         // Features
         const featuresHtml = p.features && p.features.length > 0
@@ -1308,13 +1142,7 @@
           ${tabsHtml}
           ${featuresHtml}
           ${extraHtml}
-<<<<<<< HEAD
-          ${tabsHtml}
-=======
-          ${(!p.tabs || p.tabs.length === 0) && relatedHtml
-            ? `<section class="detalhe-tabs-section"><div class="container">${relatedHtml}</div></section>`
-            : ''}
->>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
+          ${relatedHtml}
         `;
       }
 

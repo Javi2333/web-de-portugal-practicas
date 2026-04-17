@@ -717,7 +717,6 @@ window.PRODUCTS_DATA = [
     sizes: [],
     features: [],
     extra: null,
-<<<<<<< HEAD
     variants: [
       {
         label: "Sonda de Temperatura",
@@ -795,10 +794,8 @@ window.PRODUCTS_DATA = [
         </ul>
       `,
       details: `<p><strong>Referencia</strong> Letrero led clínicas</p>`
-    }
-=======
+    },
     related: [40, 41, 42, 37, 38, 39]
->>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
   },
   {
     id: 37,
