@@ -710,12 +710,95 @@ window.PRODUCTS_DATA = [
     tags: ["RGB", "Clínicas", "1 Cara"],
     shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
     desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra especialidades médicas disponibles, horarios de consulta, avisos y mensajes de salud. Colores vivos y alta visibilidad. Disponible en varios tamaños.",
-    images: [],
+    images: [
+      "img/producto-36/letrero-led-programable-para-clinicas-rgb.jpg"
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+<<<<<<< HEAD
+    variants: [
+      {
+        label: "Sonda de Temperatura",
+        key: "sonda",
+        options: ["Sí", "No"]
+      },
+      {
+        label: "Modo de Programación",
+        key: "modo",
+        options: ["USB", "USB + Programación WiFi"]
+      }
+    ],
+    sizesDropdown: [
+      "32cm de ancho x 32cm de alto",
+      "64cm de ancho x 32cm de alto",
+      "64cm de ancho x 48cm de alto",
+      "64cm de ancho x 64cm de alto",
+      "96cm de ancho x 48cm de alto",
+      "96cm de ancho x 64cm de alto",
+      "128cm de ancho x 64cm de alto",
+      "128cm de ancho x 80cm de alto",
+      "160cm de ancho x 64cm de alto",
+      "160cm de ancho x 80cm de alto",
+      "192cm de ancho x 80cm de alto",
+      "192cm de ancho x 96cm de alto"
+    ],
+    tabs: {
+      desc: `
+        <h3 class="text-red">Pantallas LED programables:<br/>Especial clínicas y farmacias</h3>
+        <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+        <p>Nuestros rótulos electrónicos son muy llamativos y dinámicos.</p>
+        <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros luminosos LED perfectos para cada negocio.</p>
+        <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar el cartel luminoso a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada, puede añadir varios dibujos de cruces, textos, movimiento, y mucho más.</p>
+        <p>¡Al ser fabricantes nos permite ofrecerle el letrero luminoso LED programable que está buscando!</p>
+        <p>Para farmacias, veterinarias, clínicas dentales, de salud, podólogo, nutricionista, ect.</p>
+        <p>Estos paneles LED son en forma cuadrada o rectangular, en los que podrá añadir:</p>
+        <ul>
+          <li>- Logos típicos de farmacias y clínicas.</li>
+          <li>- Textos personalizados de su clínica o negocio.</li>
+          <li>- Horario, nombre, dirección, teléfono, eventos, ofertas, servicios y mucho más.</li>
+        </ul>
+
+        <h4 class="text-blue">Especificaciones técnicas:</h4>
+        <div class="tab-specs-grid">
+          <div class="tab-spec-row"><span class="tab-spec-label">Separación entre píxeles (mm)</span><span class="tab-spec-val">10</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Densidad de píxeles (Puntos/m2)</span><span class="tab-spec-val">10.000</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Pixel constitución</span><span class="tab-spec-val">RGB</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Vida estimada</span><span class="tab-spec-val">100.000 Horas</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Brillo (Candelas/m2)</span><span class="tab-spec-val">>2000</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Control de brillo (Sincrónico/Asincrónico)</span><span class="tab-spec-val">16/8</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Tensión</span><span class="tab-spec-val">220V</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Frecuencia</span><span class="tab-spec-val">50 Hz</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Ángulo de visión</span><span class="tab-spec-val">120º / 60º</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Temperatura de trabajo</span><span class="tab-spec-val">-20ºC – +70ºC</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Transmisión de datos</span><span class="tab-spec-val">PC – USB (Opcional WiFi)</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Peso (Kg)</span><span class="tab-spec-val">2,1</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Protección</span><span class="tab-spec-val">Para exterior: Soporta agentes atmosféricos</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Construcción</span><span class="tab-spec-val">Aluminio / PC</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Dimensiones (cm)</span><span class="tab-spec-val">*Consultar</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Certificados</span><span class="tab-spec-val">CE-RHOS</span></div>
+          <div class="tab-spec-row"><span class="tab-spec-label">Garantía</span><span class="tab-spec-val">2 Años</span></div>
+        </div>
+
+        <a href="#" class="text-blue">Consulte nuestra ficha técnica para más detalles.</a>
+
+        <h4 class="text-green">*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</h4>
+        <h4 class="text-green">Para colocar en exterior:</h4>
+        <ul>
+          <li>- Pegado a la pared.</li>
+          <li>- Perpendicular a la pared como banderola electrónica.</li>
+        </ul>
+        <h4 class="text-green">Para colocar en interior:</h4>
+        <ul>
+          <li>- Kit de suspensión para colocar su letrero led en interior o escaparates.</li>
+        </ul>
+      `,
+      details: `<p><strong>Referencia</strong> Letrero led clínicas</p>`
+    }
+=======
     related: [40, 41, 42, 37, 38, 39]
+>>>>>>> e51969e98f01fd8b0f564fb642638f1a105e256a
   },
   {
     id: 37,
