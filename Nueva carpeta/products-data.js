@@ -234,7 +234,7 @@ window.PRODUCTS_DATA = [
     tags: ["Full Color", "P10", "Exterior", "1 Cara"],
     shortDesc: "Pantalla LED programable Full Color P10 para exterior, 1 cara.",
     desc: "Pantalla LED programable Full Color P10 para exterior, 1 cara. Alta resolución con pixel pitch P10, resistente a la intemperie IP65. Perfecta para publicidad LED en grandes superficies, estaciones de servicio, centros comerciales y fachadas. Incluye control remoto.",
-    images: [],
+    images: ["img/producto-2/img-1.jpg"],
     specs: [],
     sizes: [],
     features: [],
