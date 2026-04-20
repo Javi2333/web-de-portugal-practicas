@@ -691,17 +691,93 @@ window.PRODUCTS_DATA = [
   },
   {
     id: 35,
-    title: "Cruz LED Programable R5 para Farmacias – Veterinarias",
+    title: "Cruz LED Programable RGB P6 para Farmacias – Veterinarias – Clínicas, 2 Caras",
     badge: "",
-    tags: ["Cruz LED", "R5", "Farmacia"],
-    shortDesc: "Cruz LED programable R5 de alta resolución para farmacias y veterinarias.",
-    desc: "Cruz LED programable R5 de alta resolución para farmacias y veterinarias. Pixel pitch R5, imágenes más nítidas y detalladas. Muestra temperatura, hora, mensajes y animaciones. Incluye soporte lateral. Alta visibilidad tanto de día como de noche.",
-    images: [],
+    tags: ["Cruz LED", "RGB", "P6", "Farmacia"],
+    shortDesc: "Cruz de farmacias y clínicas a doble cara a todo color con resolución del LED P6.",
+    desc: "Cruz de farmacias y clínicas a doble cara a todo color con resolución del LED P6. Con estas cruces LED programables podrás elegir el color de la pantalla luminosa en cada momento para que se adapte a sus necesidades. Llame la atención desde largas distancias gracias a su alta luminosidad. Producto válido para usar en exterior.",
+    price: "726,00 €",
+    images: [
+      "img/producto-35/cruz-led-rgb-p6-verde.jpg",
+      "img/producto-35/cruz-led-rgb-p6-azul.jpg"
+    ],
+    options: [
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Ancho X Alto)",
+        type: "select",
+        choices: [
+          "57 cm de ancho x 57 cm de alto",
+          "77 cm de ancho x 77 cm de alto"
+        ]
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
-    related: [40, 41, 42, 37, 38, 39]
+    related: [13, 14, 36, 37, 38, 39],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Cruces LED programables P6 para farmacias, veterinarias y clínicas en RGB.</h2>
+          <p>En nuestra gama de productos pueden encontrar entre otros, nuestras cruces LED programables RGB P6 para exterior. En estas cruces tú puedes elegir el contenido de tu cruz en cada momento, texto, imágenes, vídeos, animaciones... y muchos efectos. Muestra tu información y mucho más.</p>
+          <p>Además gracias a la alta luminosidad de LED, estas cruces son visibles desde largas distancias y muy llamativas para destacar entre las cruces convencionales y de la competencia.</p>
+          <p>Para farmacias, veterinarias, clínicas, etc.</p>
+          <p>Al ser fabricantes, podemos ofrecerle la cruz que más se adapta a sus necesidades. En este caso le presentamos la cruz LED programable a todo color de medidas: <strong>77x77 cm</strong></p>
+
+          <h3>Especificaciones</h3>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>6</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m2)</th><td>27.777 píxeles/m2 (pixel real)</td></tr>
+              <tr><th>Pixel constitución</th><td>SMD3535</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m2)</th><td>&gt;6000</td></tr>
+              <tr><th>Colores en pantalla</th><td>68.7 mil millones de colores</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia de cuadros</th><td>60 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120° / 120°</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20°C — +70°C</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB , WiFi</td></tr>
+              <tr><th>Entrada</th><td>Vídeo compuesto, S-Video, DVI, HDMI, SDI, HD-SDI</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos (IP65)</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+
+          <p><a href="contacto.html">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+          <p><em>*Las cruces a doble cara incluyen en el precio el soporte para colocar perpendicular a la pared.</em></p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">Cruz led programable p6</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ]
   },
   {
     id: 36,
