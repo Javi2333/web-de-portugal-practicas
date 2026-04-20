@@ -1040,12 +1040,35 @@
         });
       });
 
+      // Price recalculation
+      let basePrice = product.price
+        ? parseFloat(product.price.replace(/\./g, '').replace(',', '.').replace(/[^0-9.]/g, ''))
+        : 0;
+      let currentPrice = product.price || '';
+
+      function recalcPrice() {
+        if (!product.price) return;
+        let total = basePrice;
+        if (product.options) {
+          product.options.forEach(opt => {
+            if (opt.surcharges) {
+              const activeBtn = document.querySelector(`.detalhe-toggle-btn.active[data-option="${opt.id}"]`);
+              if (activeBtn) total += opt.surcharges[activeBtn.dataset.value] || 0;
+            }
+          });
+        }
+        currentPrice = total.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+        const priceEl = document.getElementById('productPrice');
+        if (priceEl) priceEl.textContent = currentPrice;
+      }
+
       // Toggle option buttons
       document.querySelectorAll('.detalhe-toggle-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const optId = btn.dataset.option;
           document.querySelectorAll(`.detalhe-toggle-btn[data-option="${optId}"]`).forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
+          recalcPrice();
         });
       });
 
@@ -1083,7 +1106,7 @@
           }
           const image = product.images && product.images.length > 0 ? product.images[0] : null;
           for (let i = 0; i < qty; i++) {
-            addToCart(product.title, product.shortDesc || product.desc, image, product.price, selectedOptions);
+            addToCart(product.title, product.shortDesc || product.desc, image, currentPrice || product.price, selectedOptions);
           }
         });
       }
@@ -1357,7 +1380,7 @@
                 <div class="detalhe-info">
                   ${tags ? `<div class="detalhe-tags">${tags}</div>` : ''}
                   <h1 class="detalhe-title">${p.title}</h1>
-                  ${p.price ? `<p class="detalhe-price">${p.price}<span class="detalhe-price-tax">Impuestos incluidos</span></p>` : ''}
+                  ${p.price ? `<p class="detalhe-price"><span id="productPrice">${p.price}</span><span class="detalhe-price-tax">Impuestos incluidos</span></p>` : ''}
                   <p class="detalhe-desc">${p.desc}</p>
                   <hr class="detalhe-divider" />
                   ${specsHtml}
