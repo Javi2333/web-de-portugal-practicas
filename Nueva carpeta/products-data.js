@@ -398,16 +398,180 @@ window.PRODUCTS_DATA = [
   },
   {
     id: 3,
-    title: "Pantalla LED Programable Full Color P5 (Exterior) 1 Cara",
+    title: "Pantalla LED Programable Full Color P5 (Exterior) 1 Cara. Disponible en varios tamaños",
     badge: "",
     tags: ["Full Color", "P5", "Exterior", "1 Cara"],
     shortDesc: "Pantalla LED programable Full Color P5 para exterior, 1 cara.",
-    desc: "Pantalla LED programable Full Color P5 para exterior, 1 cara. Mayor resolución que P10 con pixel pitch P5, ideal para distancias cortas y medias. Imágenes nítidas y colores vivos. Resistente a la intemperie. Incluye control remoto y software de programación.",
-    images: [],
+    desc: "Pantallas luminosas LED a todo color programables para exterior en resolución del pixel P5. Letreros luminosos full color para reproducir todo lo que necesites como texto, logos, imágenes, vídeos y muchos efectos. Fabricados con LEDs SMD, que proporcionan mayor definición y luminosidad. Estos rótulos electrónicos tienen una distancia óptima de visualización desde 5 metros.",
+    price: "779,72 €",
+    images: ["img/producto-3/img-1.jpg"],
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "Sí"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "64cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 80 cm de alto",
+          "128 cm de ancho x 96 cm de alto",
+          "160 cm de ancho x 16 cm de alto",
+          "160 cm de ancho x 32 cm de alto",
+          "160 cm de ancho x 48 cm de alto",
+          "160 cm de ancho x 64 cm de alto",
+          "160 cm de ancho x 80 cm de alto",
+          "160 cm de ancho x 96 cm de alto",
+          "192 cm de ancho x 16 cm de alto",
+          "192 cm de ancho x 32 cm de alto",
+          "192 cm de ancho x 48 cm de alto",
+          "192 cm de ancho x 64 cm de alto",
+          "192 cm de ancho x 80 cm de alto",
+          "192 cm de ancho x 96 cm de alto",
+          "224 cm de ancho x 16 cm de alto",
+          "224 cm de ancho x 32 cm de alto",
+          "224 cm de ancho x 48 cm de alto",
+          "224 cm de ancho x 64 cm de alto",
+          "224 cm de ancho x 80 cm de alto",
+          "224 cm de ancho x 96 cm de alto",
+          "256 cm de ancho x 16 cm de alto",
+          "256 cm de ancho x 32 cm de alto",
+          "256 cm de ancho x 48 cm de alto",
+          "256 cm de ancho x 64 cm de alto",
+          "256 cm de ancho x 80 cm de alto",
+          "256 cm de ancho x 96 cm de alto",
+          "288 cm de ancho x 16 cm de alto",
+          "288 cm de ancho x 32 cm de alto",
+          "288 cm de ancho x 48 cm de alto",
+          "288 cm de ancho x 64 cm de alto",
+          "288 cm de ancho x 80 cm de alto",
+          "288 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 80 cm de alto"
+        ]
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables Full Color P5 para exterior. Gran luminosidad.</h2>
+          <p><strong>¡Tu pantalla a todo color!</strong></p>
+
+          <h3>Descripción del producto:</h3>
+          <p>Os presentamos nuestras pantallas led programables para exterior P5 a todo color.</p>
+          <p>Perfectas para texto, imágenes, logos, vídeos, y mucho más.</p>
+          <p>El tipo de led de estas pantallas es SMD para conseguir una mejor definición de la imagen. Además usamos LED de alta calidad para conseguir un excelente brillo y permiten que nuestros clientes vean nuestras imágenes con claridad.</p>
+          <p>Son pantallas de exterior, lo que les proporciona una gran luminosidad, con una visualización óptima desde los 5m.</p>
+          <p>Entre sus ventajas destaca su bajo consumo gracias a la tecnología LED (500W/m2 de promedio) y larga vida útil.</p>
+          <p>Ofrecemos unas pantallas muy fáciles de programar, de montar y desmontar y de su transporte.</p>
+          <p>Al ser fabricantes podemos construir, a través de nuestros módulos, la medida que más se adapte a las necesidades de nuestros clientes.</p>
+          <p>Según los expertos para que la visualización del LED en exterior sea correcta con aproximadamente 5000 nits de luminosidad son suficientes, nosotros apostamos con ello ofreciendo pantallas con una luminosidad aproximada de 5000-6000 nits.</p>
+          <p>Aquí te damos algunas de las razones por las que elegir nuestras pantallas LED full color:</p>
+          <ul>
+            <li>Captan la atención gracias a su luminosidad, efectos y movimiento.</li>
+            <li>Estas pantallas pueden reproducir efectos, vídeos, imágenes y texto en las diferentes zonas de la pantalla LED, además de poner el número de mensajes que usted desee.</li>
+            <li>Son pantallas preparadas para su instalación en exterior.</li>
+            <li>Al ser dinámicos, coloridos y reproducir contenido multimedia tienen un mayor efecto que los rótulos estáticos.</li>
+            <li>En un solo LED tienes los 3 colores primarios para conseguir, según los estudios con los 3 colores primarios Azul, Verde y Rojo mostrarán 16777216 colores en cualquier combinación.</li>
+            <li>100.000 horas de vida útil aproximadamente del LED.</li>
+            <li>2 años de garantía.</li>
+          </ul>
+
+          <h3>Especificaciones:</h3>
+          <ul>
+            <li>Tamaño del píxel: 5 (mm)</li>
+            <li>Luminosidad: &gt;= 6500 nit</li>
+            <li>Material del panel: Acero</li>
+            <li>Resolución: 40.000 pixels/m²</li>
+            <li>Configuración del píxel: SMD 3 en1 1R1G1B</li>
+            <li>Distancia óptima de visualización: 10 - 15 metros</li>
+            <li>Tipo de LED: SMD2727</li>
+            <li>Nivel de brillo (Ajustable): 0-100%</li>
+            <li>Modo de escaneo: 1/8s</li>
+            <li>Escala de gris por color: 2096 niveles</li>
+            <li>Colores: Full Color, 281 Trillones de colores</li>
+            <li>Ángulo de visión (H/V): 140° / 120°</li>
+            <li>Protección: Para exterior</li>
+            <li>Consumo de energía (promedio): 400 W/m²</li>
+            <li>Voltaje de entrada (CA): 110V – 240V</li>
+            <li>Temperatura de funcionamiento: 20ºC – +50ºC</li>
+            <li>Humedad de operación: 10% – 90%</li>
+          </ul>
+          <p><em>Tipos de archivos soportados: Texto, formatos de imágenes (BMP, JPG, GIF, PCX...) y vídeos (MPG, MPEG, MPV, MPA, AVI, VCD, SWF, RM, RA, RMJ, ASF...)</em></p>
+          <p><a href="contacto.html">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+
+          <h3>Opciones de instalación:</h3>
+          <ul>
+            <li>En exterior pegado a la pared.</li>
+            <li>En exterior perpendicular a la pared como banderola electrónica.</li>
+            <li>En interior con kit de suspensión para escaparates.</li>
+          </ul>
+          <p><em>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios.</em></p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">P5 EXTERIOR FULL COLOR</span>
+          </div>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Tamaño del píxel (mm)</th><td>5</td></tr>
+              <tr><th>Luminosidad</th><td>&gt;= 6500 nit</td></tr>
+              <tr><th>Material del panel</th><td>Acero</td></tr>
+              <tr><th>Resolución</th><td>40.000 pixels/m²</td></tr>
+              <tr><th>Configuración del píxel</th><td>SMD 3 en1 1R1G1B</td></tr>
+              <tr><th>Distancia óptima de visualización</th><td>10 - 15 metros</td></tr>
+              <tr><th>Tipo de LED</th><td>SMD2727</td></tr>
+              <tr><th>Nivel de brillo (Ajustable)</th><td>0-100%</td></tr>
+              <tr><th>Modo de escaneo</th><td>1/8s</td></tr>
+              <tr><th>Escala de gris por color</th><td>2096 niveles</td></tr>
+              <tr><th>Colores</th><td>Full Color: 281 Trillones de colores</td></tr>
+              <tr><th>Ángulo de visión (H/V)</th><td>140° / 120°</td></tr>
+              <tr><th>Protección</th><td>Para exterior</td></tr>
+              <tr><th>Consumo de energía (promedio)</th><td>400 W/m²</td></tr>
+              <tr><th>Voltaje de entrada (CA)</th><td>110V – 240V</td></tr>
+              <tr><th>Temperatura de funcionamiento</th><td>20ºC – +50ºC</td></tr>
+              <tr><th>Humedad de operación</th><td>10% – 90%</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
