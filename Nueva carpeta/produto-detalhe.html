@@ -1241,46 +1241,95 @@
                </div>
              </section>` : '';
 
-        // Tabs — soporta formato array [{id,label,html}] y formato objeto {desc,details,...}
+        // Tabs — soporta formato array [{id,label,html}], objeto {desc,details,...} o auto-generación
+        const isAccessory = (p.tags || []).includes('Accesorio');
+
+        function autoDetailsTable(prod) {
+          const tags = prod.tags || [];
+          const isFC = tags.some(t => t.includes('Full Color'));
+          const pixSep = tags.some(t => t === 'P5') ? 5 : tags.some(t => t === 'P6') ? 6 : 10;
+          const pixDens = pixSep === 5 ? '40.000' : pixSep === 6 ? '27.777' : '10.000';
+          const pixConst = isFC ? 'Full Color RGB' : tags.some(t => t === 'R5') ? 'RGB R5' : 'RGB';
+          const isAcc = tags.includes('Accesorio');
+          return `
+            <div class="tab-referencia">
+              <span class="tab-ref-label">Referencia</span>
+              <span class="tab-ref-val">${prod.title.toUpperCase()}</span>
+            </div>
+            <table class="tab-specs-table"><tbody>
+              ${isAcc ? `
+              <tr><th>Descripción</th><td>${prod.desc}</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+              ` : `
+              <tr><th>Separación entre píxeles (mm)</th><td>${pixSep}</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m²)</th><td>${pixDens}</td></tr>
+              <tr><th>Pixel constitución</th><td>${pixConst}</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+              <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB</td></tr>
+              <tr><th>Peso (Kg)</th><td>*Consultar</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+              `}
+            </tbody></table>`;
+        }
+
+        function buildTabsHtml(tabs) {
+          return `<section class="detalhe-tabs-section">
+            <div class="container">
+              <div class="tabs-nav">
+                ${tabs.map((tab, i) =>
+                  `<button class="tab-btn${i === 0 ? ' active' : ''}" data-tab="${tab.id}">${tab.label}</button>`
+                ).join('')}
+              </div>
+              <div class="tabs-content">
+                ${tabs.map((tab, i) =>
+                  `<div class="tab-content${i === 0 ? ' active' : ''}" id="tab-${tab.id}">
+                    ${tab.html || '<p class="detalhe-tab-empty">No hay contenido disponible aún.</p>'}
+                  </div>`
+                ).join('')}
+              </div>
+            </div>
+          </section>`;
+        }
+
         let tabsHtml = '';
         if (p.tabs && Array.isArray(p.tabs) && p.tabs.length > 0) {
-          tabsHtml = `<section class="detalhe-tabs-section">
-               <div class="container">
-                 <div class="tabs-nav">
-                   ${p.tabs.map((tab, i) =>
-                     `<button class="tab-btn${i === 0 ? ' active' : ''}" data-tab="${tab.id}">${tab.label}</button>`
-                   ).join('')}
-                 </div>
-                 <div class="tabs-content">
-                   ${p.tabs.map((tab, i) =>
-                     `<div class="tab-content${i === 0 ? ' active' : ''}" id="tab-${tab.id}">
-                       ${tab.html || '<p>No hay contenido disponible aún.</p>'}
-                     </div>`
-                   ).join('')}
-                 </div>
-               </div>
-             </section>`;
+          tabsHtml = buildTabsHtml(p.tabs);
         } else if (p.tabs && !Array.isArray(p.tabs)) {
-          const descContent = p.tabs.desc || '<p>Descripción no disponible por el momento.</p>';
-          const detailsContent = p.tabs.details || '<p>Detalles del producto no disponibles.</p>';
-          const attachmentsContent = p.tabs.attachments || '<p>No hay archivos adjuntos.</p>';
-          const commentsContent = p.tabs.comments || '<p>No hay comentarios.</p>';
-          tabsHtml = `<section class="detalhe-tabs-section">
-               <div class="container">
-                 <div class="tabs-nav">
-                   <button class="tab-btn active" data-tab="desc">Descripción</button>
-                   <button class="tab-btn" data-tab="details">Detalles del producto</button>
-                   <button class="tab-btn" data-tab="attachments">Archivos adjuntos</button>
-                   <button class="tab-btn" data-tab="comments">Comentarios</button>
-                 </div>
-                 <div class="tabs-content">
-                   <div class="tab-content active" id="tab-desc">${descContent}</div>
-                   <div class="tab-content" id="tab-details">${detailsContent}</div>
-                   <div class="tab-content" id="tab-attachments">${attachmentsContent}</div>
-                   <div class="tab-content" id="tab-comments">${commentsContent}</div>
-                 </div>
-               </div>
-             </section>`;
+          const autoTabs = isAccessory
+            ? [
+                { id: 'details', label: 'Detalles del producto', html: p.tabs.details || autoDetailsTable(p) },
+                { id: 'comments', label: 'Comentarios', html: p.tabs.comments || '' }
+              ]
+            : [
+                { id: 'desc', label: 'Descripción', html: p.tabs.desc || `<p>${p.desc}</p>` },
+                { id: 'details', label: 'Detalles del producto', html: p.tabs.details || autoDetailsTable(p) },
+                { id: 'attachments', label: 'Archivos adjuntos', html: p.tabs.attachments || '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>' },
+                { id: 'comments', label: 'Comentarios', html: p.tabs.comments || '' }
+              ];
+          tabsHtml = buildTabsHtml(autoTabs);
+        } else {
+          const autoTabs = isAccessory
+            ? [
+                { id: 'details', label: 'Detalles del producto', html: autoDetailsTable(p) },
+                { id: 'comments', label: 'Comentarios', html: '' }
+              ]
+            : [
+                { id: 'descripcion', label: 'Descripción', html: `<h2>${p.title}</h2><p>${p.desc}</p>` },
+                { id: 'detalles', label: 'Detalles del producto', html: autoDetailsTable(p) },
+                { id: 'archivos', label: 'Archivos adjuntos', html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>' },
+                { id: 'comentarios', label: 'Comentarios', html: '' }
+              ];
+          tabsHtml = buildTabsHtml(autoTabs);
         }
         
         return `
