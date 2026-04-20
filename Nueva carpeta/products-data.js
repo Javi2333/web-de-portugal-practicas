@@ -4230,18 +4230,531 @@ window.PRODUCTS_DATA = [
     ]
   },
   {
-    "id": 36,
-    "title": "Letrero LED Programable para Clínicas en RGB, 1 Cara",
-    "badge": "",
-    "tags": [
-      "RGB",
-      "Clínicas",
-      "1 Cara"
+    id: 6,
+    title: "Pantalla LED Programable Full Color P6 (Exterior) 1 Cara",
+    badge: "",
+    tags: ["Full Color", "P6", "Exterior", "1 Cara"],
+    shortDesc: "Pantalla LED programable Full Color P6 para exterior, 1 cara.",
+    desc: "Pantalla LED programable Full Color P6 para exterior, 1 cara. Pixel pitch P6, equilibrio perfecto entre resolución y precio. Resistente a la intemperie IP65, colores vivos y alto brillo. Ideal para carteles publicitarios en exteriores.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 7,
+    title: "Pantalla LED Programable Full Color P5 (Interior) 1 Cara",
+    badge: "",
+    tags: ["Full Color", "P5", "Interior", "1 Cara"],
+    shortDesc: "Pantalla LED programable Full Color P5 para interior, 1 cara.",
+    desc: "Pantalla LED programable Full Color P5 para interior, 1 cara. Alta resolución con pixel pitch P5, perfecta para escaparates, stands y puntos de venta interiores. Imágenes y vídeos a todo color con gran nitidez.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 8,
+    title: "Letrero LED Programable para Parking en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Parking", "1 Cara"],
+    shortDesc: "Letrero LED programable específico para parking, en RGB, 1 cara.",
+    desc: "Letrero LED programable específico para parking, en RGB, 1 cara. Disponible en varios tamaños. Muestra mensajes de libre/completo, tarifas y horarios. Alta visibilidad día y noche. Ideal para aparcamientos públicos y privados.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 9,
+    title: "Letrero LED Programable para Autoescuelas en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Autoescuelas", "1 Cara"],
+    shortDesc: "Letrero LED programable diseñado para autoescuelas, en RGB, 1 cara.",
+    desc: "Letrero LED programable diseñado para autoescuelas, en RGB, 1 cara. Muestra horarios de clases, información de matrícula y mensajes promocionales. Alta visibilidad, programación sencilla. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 10,
+    title: "Letrero LED Programable en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "2 Caras"],
+    shortDesc: "Letrero LED programable en RGB, 2 caras. Disponible en varios tamaños.",
+    desc: "Letrero LED programable en RGB, 2 caras. Disponible en varios tamaños. Visibilidad doble para mayor impacto publicitario. Millones de colores y efectos. Ideal para negocios en calles con tráfico en ambas direcciones.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 11,
+    title: "Banderola LED Programable Full Color P5 Doble Cara",
+    badge: "",
+    tags: ["Full Color", "P5", "Doble Cara", "Banderola"],
+    shortDesc: "Banderola LED programable Full Color P5 de doble cara, para fachadas o postes.",
+    desc: "Banderola LED programable Full Color P5 de doble cara, diseñada para colgar en fachadas o postes. Alta resolución P5 con colores vivos a todo color. Ideal para centros comerciales, calles peatonales y eventos. Resistente al exterior.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 12,
+    title: "Banderola LED Programable Full Color P10 Doble Cara",
+    badge: "",
+    tags: ["Full Color", "P10", "Doble Cara", "Banderola"],
+    shortDesc: "Banderola LED programable Full Color P10 de doble cara.",
+    desc: "Banderola LED programable Full Color P10 de doble cara. Pixel pitch P10, ideal para grandes distancias de visualización. Diseñada para colgar en fachadas o postes. Resistente al exterior y de bajo consumo energético.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 13,
+    title: "Cruz LED Programable para Farmacias – Veterinarias – Clínicas, 2 Caras. Disponible en varios tamaños y colores",
+    badge: "",
+    tags: ["Cruz LED", "Farmacia", "2 Caras"],
+    shortDesc: "Cruz led programable para farmacias - veterinarias - clínicas, 2 caras. disponible en varios tamaños y colores. Envio gratis y dos años de garantia.",
+    desc: "Cruz LED programable a doble cara para farmacias y clínicas. Cruz de farmacia para darle un toque llamativo y moderno a tu negocio, además de ahorrar energía con respecto a las cruces tradicionales. Elige el color que necesites para tu farmacia o clínica y personalízala a tu gusto. Pantallas luminosas LED válidas para exterior.",
+    price: "856,68 €",
+    images: [
+      "img/producto-13/img-1.jpg",
+      "img/producto-13/img-2.jpg",
+      "img/producto-13/img-3.jpg"
     ],
-    "shortDesc": "Letrero luminoso LED programable para clínicas y farmacias a 1 cara en RGB.",
-    "desc": "Letrero luminoso LED programable para clínicas y farmacias a 1 cara en RGB. Tenemos gran variedad de pantallas luminosas LED para su farmacia o clínica. Puede mostrar en este cartel programable, varios tipos de cruces, además de texto, logos y más información. Estos rótulos electrónicos pueden colocarse pegados a la pared o perpendiculares como banderola publicitaria. Válidos para exterior.",
-    "price": "247,99 €",
-    "images": [
+    options: [
+      {
+        id: "color",
+        label: "COLOR DE LOS LEDS",
+        type: "select",
+        choices: ["Rojo", "Naranja", "Azul", "Verde", "Blanco"],
+        default: "Verde"
+      },
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "TAMAÑO CRUCES",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 64 cm de alto"
+        ],
+        default: "64 cm de ancho x 64 cm de alto"
+      }
+    ],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Cruz LED programable a doble cara para farmacias y clínicas.</h2>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Aquí puedes encontrar las mejores cruces a muy buen precio.</p>
+          <p>Trabajamos con componentes de alta calidad para conseguir cruces clínicas con alta luminosidad y de fiabilidad.</p>
+          <p>Nuestras cruces LED programables llevan la protección necesaria para instalarlas en el exterior.</p>
+          <p>Podemos hacer la cruz de color que necesites para tu negocio. Al ser fabricantes podemos ofrecerle la cruz led que su negocio necesita.</p>
+          <p>Al ser a doble cara, podrá reproducir sus mensajes y que sean visto en dos caras pudiendo reproducir lo mismo en cada cara o mensajes diferentes en cada una de ellas.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</p>
+          <p><em>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</em><br>
+          Para colocar en exterior:<br>
+          - Pegado a la pared.<br>
+          - Perpendicular a la pared como banderola electrónica.<br>
+          Para colocar en interior:<br>
+          - Kit de suspensión para colocar su letrero led en interior o escaparates.
+          </p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">CRUZ LED PROGRAMABLE</span>
+          </div>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+              <tr><th>Pixel constitución</th><td>1R</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+              <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB</td></tr>
+              <tr><th>Peso (Kg)</th><td>2,1</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 14,
+    title: "Cruz LED Programable en RGB para Farmacias – Veterinarias",
+    badge: "",
+    tags: ["Cruz LED", "RGB", "Farmacia"],
+    shortDesc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara.",
+    desc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara. Colores a todo color con millones de combinaciones. Muestra temperatura, hora y textos personalizados. Incluye soporte lateral y programación sencilla.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 15,
+    title: "Letrero LED Programable para Gasolineras en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Gasolineras", "1 Cara"],
+    shortDesc: "Letrero LED programable específico para gasolineras en RGB, 1 cara.",
+    desc: "Letrero LED programable específico para gasolineras en RGB, 1 cara. Muestra precios de combustible, ofertas y mensajes promocionales. Alta visibilidad día y noche. Disponible en varios tamaños adaptados a estaciones de servicio.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 16,
+    title: "Letrero LED Programable para Academias en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Academias", "1 Cara"],
+    shortDesc: "Letrero LED programable para academias e idiomas en RGB, 1 cara.",
+    desc: "Letrero LED programable para academias e idiomas en RGB, 1 cara. Muestra horarios, idiomas disponibles, ofertas y matrículas. Alta visibilidad para atraer nuevos alumnos. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 17,
+    title: "Letrero LED Programable para Clínicas en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Clínicas", "2 Caras"],
+    shortDesc: "Letrero LED programable para clínicas en RGB, 2 caras.",
+    desc: "Letrero LED programable para clínicas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra servicios, horarios y mensajes de salud. Disponible en varios tamaños. Incluye soporte lateral y software de programación.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 18,
+    title: "Letrero LED Programable para Clínicas en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Clínicas", "1 Cara"],
+    shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
+    desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra servicios médicos disponibles, horarios de consulta y mensajes de bienestar. Alta visibilidad y programación sencilla. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 19,
+    title: "Letrero LED Programable para Parking en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Parking", "2 Caras"],
+    shortDesc: "Letrero LED programable para parking en RGB, 2 caras.",
+    desc: "Letrero LED programable para parking en RGB, 2 caras. Visibilidad desde ambos lados, ideal para entradas de aparcamientos. Muestra información de libre/completo, tarifas y horarios. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 20,
+    title: "Letrero LED Programable para Autoescuelas en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Autoescuelas", "2 Caras"],
+    shortDesc: "Letrero LED programable para autoescuelas en RGB, 2 caras.",
+    desc: "Letrero LED programable para autoescuelas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra horarios, precios de matrícula y mensajes promocionales. Disponible en varios tamaños. Incluye soporte lateral.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 21,
+    title: "Letrero LED Programable para Academias en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Academias", "2 Caras"],
+    shortDesc: "Letrero LED programable para academias en RGB, 2 caras.",
+    desc: "Letrero LED programable para academias en RGB, 2 caras. Ideal para academias de idiomas, música, danza y formación. Doble visibilidad. Muestra horarios, idiomas disponibles y ofertas de matrícula. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 22,
+    title: "Letrero LED Programable para Clínicas Dentales en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Clínicas Dentales", "2 Caras"],
+    shortDesc: "Letrero LED programable para clínicas dentales en RGB, 2 caras.",
+    desc: "Letrero LED programable para clínicas dentales en RGB, 2 caras. Muestra servicios de odontología, horarios de cita y mensajes de salud dental. Doble visibilidad. Diseño compatible con imagen corporativa de clínicas.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 23,
+    title: "Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Hostelería", "1 Cara"],
+    shortDesc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara.",
+    desc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara. Muestra menús del día, promociones especiales, horarios y eventos. Alta visibilidad para atraer clientes. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 24,
+    title: "Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Hostelería", "2 Caras"],
+    shortDesc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 2 caras.",
+    desc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 2 caras. Mayor visibilidad desde dos ángulos. Muestra menús del día, ofertas especiales y eventos. Ideal para terrazas y locales con acceso por dos calles.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 25,
+    title: "Letrero LED Programable para Hoteles en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Hoteles", "1 Cara"],
+    shortDesc: "Letrero LED programable para hoteles en RGB, 1 cara.",
+    desc: "Letrero LED programable para hoteles en RGB, 1 cara. Muestra disponibilidad de habitaciones, eventos, restauración y bienvenida personalizada. Alta visibilidad. Disponible en varios tamaños. Perfecto para la señalización exterior de hoteles.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 26,
+    title: "Letrero LED Programable para Hoteles en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Hoteles", "2 Caras"],
+    shortDesc: "Letrero LED programable para hoteles en RGB, 2 caras.",
+    desc: "Letrero LED programable para hoteles en RGB, 2 caras. Doble visibilidad para señalización exterior completa. Muestra disponibilidad de habitaciones, servicios del hotel, eventos y mensajes de bienvenida. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 27,
+    title: "Letreros LED Programable para Discotecas – Pub en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Ocio Nocturno", "1 Cara"],
+    shortDesc: "Letrero LED programable para discotecas y pubs en RGB, 1 cara.",
+    desc: "Letrero LED programable para discotecas y pubs en RGB, 1 cara. Impacto visual máximo con animaciones y colores vivos. Muestra nombre del local, eventos, DJs y promociones. Disponible en varios tamaños para fachadas y escaparates.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 28,
+    title: "Letreros LED Programable para Discotecas – Pub en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Ocio Nocturno", "2 Caras"],
+    shortDesc: "Letrero LED programable para discotecas y pubs en RGB, 2 caras.",
+    desc: "Letrero LED programable para discotecas y pubs en RGB, 2 caras. Máxima visibilidad desde ambos lados. Impacto visual con colores y animaciones. Perfecto para festivales, eventos y locales de ocio nocturno. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 29,
+    title: "Letrero LED Programable Cronómetro Digital en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Cronómetro", "1 Cara"],
+    shortDesc: "Letrero LED programable con función de cronómetro digital en RGB, 1 cara.",
+    desc: "Letrero LED programable con función de cronómetro digital en RGB, 1 cara. Muestra cuenta atrás, cuenta progresiva, hora en tiempo real y mensajes personalizados. Ideal para gimnasios, competiciones deportivas y eventos. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 30,
+    title: "Letrero LED Programable Cronómetro Digital, 2 Caras",
+    badge: "",
+    tags: ["Cronómetro", "2 Caras"],
+    shortDesc: "Letrero LED programable con función de cronómetro digital, 2 caras.",
+    desc: "Letrero LED programable con función de cronómetro digital, 2 caras. Doble visibilidad. Cuenta atrás, cuenta progresiva y hora en tiempo real. Ideal para eventos deportivos, competiciones y espacios públicos con mucho flujo de personas.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 31,
+    title: "Letrero LED Programable para Estancos en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Estancos", "1 Cara"],
+    shortDesc: "Letrero LED programable para estancos en RGB, 1 cara.",
+    desc: "Letrero LED programable para estancos en RGB, 1 cara. Muestra precios de tabaco, loterías, servicios y promociones especiales. Alta visibilidad para atraer clientes. Disponible en varios tamaños adaptados a establecimientos estancos.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 32,
+    title: "Letrero LED Programable para Estancos en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Estancos", "2 Caras"],
+    shortDesc: "Letrero LED programable para estancos en RGB, 2 caras.",
+    desc: "Letrero LED programable para estancos en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra precios de tabaco, loterías y servicios. Disponible en varios tamaños. Ideal para estancos en zonas peatonales y esquinas.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 33,
+    title: "Letrero LED Programable para el Control de Acceso RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Control de Acceso", "1 Cara"],
+    shortDesc: "Letrero LED programable para control de acceso en RGB, 1 cara.",
+    desc: "Letrero LED programable para control de acceso en RGB, 1 cara. Muestra mensajes de PASE / ESPERE / STOP con colores diferenciados. Ideal para parkings, hospitales, supermercados y cualquier espacio con control de aforo. Programación sencilla e inmediata.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 34,
+    title: "Letrero LED Programable para el Control de Acceso Rojo-Verde, 1 Cara",
+    badge: "",
+    tags: ["Rojo-Verde", "Control de Acceso", "1 Cara"],
+    shortDesc: "Letrero LED programable para control de acceso en rojo y verde, 1 cara.",
+    desc: "Letrero LED programable para control de acceso en rojo y verde, 1 cara. Sistema sencillo con dos colores para PASE (verde) y STOP (rojo). Ideal para controlar el flujo de personas en accesos, consultas y espacios con aforo limitado.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 35,
+    title: "Cruz LED Programable R5 para Farmacias – Veterinarias",
+    badge: "",
+    tags: ["Cruz LED", "R5", "Farmacia"],
+    shortDesc: "Cruz LED programable R5 de alta resolución para farmacias y veterinarias.",
+    desc: "Cruz LED programable R5 de alta resolución para farmacias y veterinarias. Pixel pitch R5, imágenes más nítidas y detalladas. Muestra temperatura, hora, mensajes y animaciones. Incluye soporte lateral. Alta visibilidad tanto de día como de noche.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 36,
+    title: "Letrero LED Programable para Clínicas en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Clínicas", "1 Cara"],
+    shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
+    desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra especialidades médicas disponibles, horarios de consulta, avisos y mensajes de salud. Colores vivos y alta visibilidad. Disponible en varios tamaños.",
+    images: [
       "img/producto-36/letrero-led-programable-para-clinicas-rgb.jpg"
     ],
     "sizePrices": {
