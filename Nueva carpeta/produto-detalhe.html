@@ -1041,15 +1041,24 @@
       });
 
       // Price recalculation
-      let basePrice = product.price
+      const defaultBasePrice = product.price
         ? parseFloat(product.price.replace(/\./g, '').replace(',', '.').replace(/[^0-9.]/g, ''))
         : 0;
       let currentPrice = product.price || '';
 
       function recalcPrice() {
         if (!product.price) return;
-        let total = basePrice;
+        let total = defaultBasePrice;
+
         if (product.options) {
+          const sizeOpt = product.options.find(o => o.sizePrices);
+          if (sizeOpt) {
+            const selectEl = document.querySelector(`select[data-option="${sizeOpt.id}"]`);
+            if (selectEl && sizeOpt.sizePrices[selectEl.value] !== undefined) {
+              total = sizeOpt.sizePrices[selectEl.value];
+            }
+          }
+
           product.options.forEach(opt => {
             if (opt.surcharges) {
               const activeBtn = document.querySelector(`.detalhe-toggle-btn.active[data-option="${opt.id}"]`);
@@ -1057,6 +1066,7 @@
             }
           });
         }
+
         currentPrice = total.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
         const priceEl = document.getElementById('productPrice');
         if (priceEl) priceEl.textContent = currentPrice;
@@ -1070,6 +1080,11 @@
           btn.classList.add('active');
           recalcPrice();
         });
+      });
+
+      // Size select
+      document.querySelectorAll('select[data-option]').forEach(sel => {
+        sel.addEventListener('change', recalcPrice);
       });
 
       // Quantity selector
@@ -1174,7 +1189,7 @@
                    return `<div class="detalhe-option">
                      <span class="detalhe-option-label">${opt.label}</span>
                      <div class="detalhe-select-wrap">
-                       <select class="detalhe-select" id="opt_${opt.id}">
+                       <select class="detalhe-select" id="opt_${opt.id}" data-option="${opt.id}">
                          ${opt.choices.map(c => `<option value="${c}">${c}</option>`).join('')}
                        </select>
                      </div>
