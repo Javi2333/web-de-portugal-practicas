@@ -821,14 +821,110 @@ window.PRODUCTS_DATA = [
     title: "Letrero LED Programable para el Control de Acceso RGB, 1 Cara",
     badge: "",
     tags: ["RGB", "Control de Acceso", "1 Cara"],
-    shortDesc: "Letrero LED programable para control de acceso en RGB, 1 cara.",
-    desc: "Letrero LED programable para control de acceso en RGB, 1 cara. Muestra mensajes de PASE / ESPERE / STOP con colores diferenciados. Ideal para parkings, hospitales, supermercados y cualquier espacio con control de aforo. Programación sencilla e inmediata.",
-    images: [],
+    shortDesc: "Letrero luminoso LED programable a 1 cara en RGB, disponible en varios tamaños.",
+    desc: "Letrero luminoso LED programable a 1 cara en RGB, disponible en varios tamaños.\n\nDisplay de control de paso para todo tipo de negocios. Muestre en pantalla información a sus clientes para indicar cuando pueden pasar o cuando deben esperar su turno, además puede añadir más información.\n\nInforme a sus clientes para cumplir con la regulación de aforo permitida.\n\nVálidos para interior y exterior.",
+    price: "245,00 €",
+    images: [
+      "img/producto-33/letrero-acceso-rgb-32x32.jpg",
+      "img/producto-33/letrero-acceso-rgb-64x16.jpg"
+    ],
+    sizeImages: {
+      "32cm de ancho x 32 cm de alto": "img/producto-33/letrero-acceso-rgb-32x32.jpg",
+      "64cm de ancho x 16 cm de alto": "img/producto-33/letrero-acceso-rgb-64x16.jpg"
+    },
+    options: [
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "64cm de ancho x 16 cm de alto"
+        ]
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
-    related: [40, 41, 42, 37, 38, 39]
+    related: [40, 41, 42, 37, 38, 39],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Letreros LED programables RGB a una cara</h2>
+          <p><strong>Especial: Control de paso para todo tipo de negocios</strong></p>
+          <p><strong>¡Pantallas para reproducir en una sola todos los colores a tu gusto!</strong></p>
+          <ul>
+            <li>Muy fáciles de programar e instalar</li>
+            <li>Incluye mando para control del programa a mostrar en cada momento.</li>
+            <li>Al ser en RGB puedes personalizar en cada momento el color o variedad a colores que quieres que aparezcan en el letrero luminoso</li>
+            <li>Muy fáciles de instalar</li>
+            <li>Larga durabilidad</li>
+            <li>Cumple la normativa de una forma moderna: Mantén a tus clientes seguros controlando el aforo contra el Covid 19 (Coronavirus).</li>
+            <li>Alta luminosidad</li>
+            <li>Gran servicio de atención al cliente</li>
+          </ul>
+          <p>Te presentamos una pantalla LED especial para poder adaptar tu negocio a las nuevas exigencias.</p>
+          <p>Muestra en la pantalla de una forma moderna y dinámica cuando se puede pasar o cuando el aforo está lleno y se debe esperar.</p>
+          <p>Además al ser programables, son unas pantallas muy útiles:</p>
+          <p>Se pueden usar para estos mensajes pero se le pueden añadir también otros mensajes diferentes y darle uso para diferentes situaciones.</p>
+          <p>Elige entre nuestra variedad de tamaños para que puedas tener la pantalla publicitaria que más se adapte a tus necesidades. Y si el tamaño que necesita no aparece aquí, contacte con nosotros para que podamos hacerle la pantalla LED que necesita.</p>
+          <p>Todos los colores básicos (Red - Green - Blue) y sus posibles mezclas de colores básicos en una sola pantalla LED.</p>
+          <p>Somos fabricantes de rótulos electrónicos con años de experiencia, para poder ofrecerle un producto de alta calidad al mejor precio.</p>
+          <p>Además podemos ofrecerle el mejor servicio y ayuda para que consiga el mejor resultado en su cartel luminoso LED ya que contamos con un equipo cualificado y especializado en pantallas publicitarias LED programables.</p>
+          <p>Rótulos electrónicos a una cara para tiendas, locales y todo tipo de negocios. Muestra en tu pantalla programable la información que necesites, en el momento que necesites.</p>
+          <p>Puedes colocarlos como mejor te convenga (mira en los accesorios y elige el soporte para colocar tu pantalla)</p>
+          <ul>
+            <li><em>En interior con el kit de suspensión</em></li>
+            <li><em>En exterior pegado a la pared</em></li>
+            <li><em>Perpendicular a la pared como banderola publicitaria a una cara</em></li>
+          </ul>
+          <p>Con nuestros carteles publicitarios LED programables llame la atención de sus clientes gracias a su gran personalización y a la alta luminosidad de los LEDs con los que trabajamos.</p>
+          <p>Tenemos una gran variedad de pantallas LED con respecto al tamaño y al color, para que el cliente elija la que más se adapte a sus necesidades.</p>
+          <p>En nuestra web le damos la opción de que escoja sólo lo que necesite y el diseño que mas le guste de nuestros letreros luminosos.</p>
+
+          <h3>Características principales:</h3>
+          <ul>
+            <li>Nuestras pantallas son válidas para interior y exterior</li>
+            <li>Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. *Puede añadir como opcional la sonda de temperatura.</li>
+            <li>Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). * Puede añadir como opcional la programación WiFi para programar a distancia con tu ordenador, teléfono o tablet.</li>
+            <li>Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Te entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de videos para ayudarte.</li>
+            <li>Personalice el tamaño de letra y número de caracteres que desee que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</li>
+            <li>Texto estático o con movimiento.</li>
+            <li>Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias</li>
+            <li>Baja emisión de calor</li>
+            <li>Ahorro de energía</li>
+            <li>Resistente a impactos y vibraciones</li>
+            <li>Protección IP25 o exterior</li>
+            <li>Mejor relación calidad-precio del mercado.</li>
+            <li>Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
+            <li>Fácil instalación y programación.</li>
+            <li>Vida útil 100.000 horas aproximadamente.</li>
+            <li>2 años de garantía</li>
+            <li>Servicio de atención al cliente de calidad.</li>
+          </ul>
+          <p><a href="contacto.html">Consulte nuestra ficha técnica para más detalles.</a></p>
+          <p><em>*Mire en los accesorios para elegir el soporte o kit de suspensión que desea para colocar su letrero LED programable de alta luminosidad.</em></p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">ControlPaso</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ""
+      }
+    ]
   },
   {
     id: 34,
@@ -860,15 +956,16 @@ window.PRODUCTS_DATA = [
         id: "descripcion",
         label: "Descripción",
         html: `
-          <h3 style="color:red; text-align:center;">Letreros LED programables con una placa Roja y otra verde a una cara<br>Especial: Control de paso para todo tipo de negocios<br><br>Controla el paso a tu negocio para cumplir con la regulación de aforo con nuestras pantallas LED</h3>
+          <h2>Letreros LED programables con una placa Roja y otra verde a una cara</h2>
+          <p><strong>Especial: Control de paso para todo tipo de negocios<br><br>Controla el paso a tu negocio para cumplir con la regulación de aforo con nuestras pantallas LED</strong></p>
           <ul>
-            <li><strong>Muy fáciles de programar e instalar</strong></li>
-            <li><strong>Incluye mando para control del programa a mostrar en cada momento.</strong></li>
-            <li><strong>Estas pantallas están hechas con una placa en color rojo y otra en color verde, para mostrar el mensaje "No pasar" en rojo o el mensaje "Pase" en verde. *También se pueden mostrar otros mensajes diferentes, es la gran ventaja de ser programables. ¡El mensaje lo eliges tu en cada momento!</strong></li>
-            <li><strong>Larga durabilidad</strong></li>
-            <li><strong>Cumple la normativa de una forma moderna: Mantén a tus clientes seguros controlando el aforo contra el Covid 19 (Coronavirus).</strong></li>
-            <li><strong>Alta luminosidad</strong></li>
-            <li><strong>Gran servicio de atención al cliente</strong></li>
+            <li>Muy fáciles de programar e instalar</li>
+            <li>Incluye mando para control del programa a mostrar en cada momento.</li>
+            <li>Estas pantallas están hechas con una placa en color rojo y otra en color verde, para mostrar el mensaje "No pasar" en rojo o el mensaje "Pase" en verde. *También se pueden mostrar otros mensajes diferentes, es la gran ventaja de ser programables. ¡El mensaje lo eliges tu en cada momento!</li>
+            <li>Larga durabilidad</li>
+            <li>Cumple la normativa de una forma moderna: Mantén a tus clientes seguros controlando el aforo contra el Covid 19 (Coronavirus).</li>
+            <li>Alta luminosidad</li>
+            <li>Gran servicio de atención al cliente</li>
           </ul>
           <p>Te presentamos una pantalla LED especial para poder adaptar tu negocio a las nuevas exigencias.</p>
           <p>Muestra en la pantalla de una forma moderna y dinámica cuando se puede pasar o cuando el aforo está lleno y se debe esperar.</p>
@@ -888,29 +985,29 @@ window.PRODUCTS_DATA = [
           <p>Con nuestros carteles publicitarios LED programables llame la atención de sus clientes gracias a su gran personalización y a la alta luminosidad de los LEDs con los que trabajamos.</p>
           <p>Tenemos una gran variedad de pantallas LED con respecto al tamaño y al color, para que el cliente elija la que más se adapte a sus necesidades.</p>
           <p>En nuestra web le damos la opción de que escoja sólo lo que necesite y el diseño que mas le guste de nuestros letreros luminosos.</p>
-          <br>
-          <h3 style="color:#004080; text-decoration:underline;">Características principales:</h3>
+          
+          <h3>Características principales:</h3>
           <ul>
-            <li><strong>Nuestras pantallas son válidas para interior y exterior.</strong></li>
-            <li><strong>Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. *Puede añadir como opcional la sonda de temperatura.</strong></li>
-            <li><strong>Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). * Puede añadir como opcional la programación WiFi para programar a distancia con tu ordenador, teléfono o tablet.</strong></li>
-            <li><strong>Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Te entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de videos para ayudarte.</strong></li>
-            <li><strong>Personalice el tamaño de letra y número de caracteres que desee que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</strong></li>
-            <li><strong>Texto estático o con movimiento.</strong></li>
-            <li><strong>Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</strong></li>
-            <li><strong>Baja emisión de calor</strong></li>
-            <li><strong>Ahorro de energía</strong></li>
-            <li><strong>Resistente a impactos y vibraciones</strong></li>
-            <li><strong>Protección IP65 e exterior</strong></li>
-            <li><strong>Mejor relación calidad-precio del mercado.</strong></li>
-            <li><strong>Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</strong></li>
-            <li><strong>Fácil instalación y programación.</strong></li>
-            <li><strong>Vida útil 100.000 horas aproximadamente.</strong></li>
-            <li><strong>2 años de garantía</strong></li>
-            <li><strong>Servicio de atención al cliente de calidad.</strong></li>
+            <li>Nuestras pantallas son válidas para interior y exterior.</li>
+            <li>Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. *Puede añadir como opcional la sonda de temperatura.</li>
+            <li>Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). * Puede añadir como opcional la programación WiFi para programar a distancia con tu ordenador, teléfono o tablet.</li>
+            <li>Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Te entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de videos para ayudarte.</li>
+            <li>Personalice el tamaño de letra y número de caracteres que desee que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</li>
+            <li>Texto estático o con movimiento.</li>
+            <li>Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</li>
+            <li>Baja emisión de calor</li>
+            <li>Ahorro de energía</li>
+            <li>Resistente a impactos y vibraciones</li>
+            <li>Protección IP65 e exterior</li>
+            <li>Mejor relación calidad-precio del mercado.</li>
+            <li>Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
+            <li>Fácil instalación y programación.</li>
+            <li>Vida útil 100.000 horas aproximadamente.</li>
+            <li>2 años de garantía</li>
+            <li>Servicio de atención al cliente de calidad.</li>
           </ul>
-          <p><a href="contacto.html" style="color: #0088cc;">Consulte nuestra ficha técnica para más detalles.</a></p>
-          <p><em style="color:#2ca02c;">*Mire en los accesorios para elegir el soporte o kit de suspensión que desea para colocar su letrero LED programable de alta luminosidad.</em></p>
+          <p><a href="contacto.html">Consulte nuestra ficha técnica para más detalles.</a></p>
+          <p><em>*Mire en los accesorios para elegir el soporte o kit de suspensión que desea para colocar su letrero LED programable de alta luminosidad.</em></p>
         `
       },
       {
@@ -1025,93 +1122,133 @@ window.PRODUCTS_DATA = [
     title: "Letrero LED Programable para Clínicas en RGB, 1 Cara",
     badge: "",
     tags: ["RGB", "Clínicas", "1 Cara"],
-    shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
-    desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra especialidades médicas disponibles, horarios de consulta, avisos y mensajes de salud. Colores vivos y alta visibilidad. Disponible en varios tamaños.",
+    shortDesc: "Letrero luminoso LED programable para clínicas y farmacias a 1 cara en RGB.",
+    desc: "Letrero luminoso LED programable para clínicas y farmacias a 1 cara en RGB. Tenemos gran variedad de pantallas luminosas LED para su farmacia o clínica. Puede mostrar en este cartel programable, varios tipos de cruces, además de texto, logos y más información. Estos rótulos electrónicos pueden colocarse pegados a la pared o perpendiculares como banderola publicitaria. Válidos para exterior.",
+    price: "247,99 €",
     images: [
       "img/producto-36/letrero-led-programable-para-clinicas-rgb.jpg"
+    ],
+    sizePrices: {
+      "32cm de ancho x 32 cm de alto": 247.99,
+      "32cm de ancho x 48 cm de alto": 284.98,
+      "32cm de ancho x 64 cm de alto": 359.99,
+      "64cm de ancho x 32 cm de alto": 359.99,
+      "64cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 551.76,
+      "64cm de ancho x 80 cm de alto": 689.70,
+      "64cm de ancho x 96 cm de alto": 827.64,
+      "96cm de ancho x 16 cm de alto": 275.00,
+      "96cm de ancho x 32 cm de alto": 413.82
+    },
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "32cm de ancho x 48 cm de alto",
+          "32cm de ancho x 64 cm de alto",
+          "64cm de ancho x 32 cm de alto",
+          "64cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "64cm de ancho x 80 cm de alto",
+          "64cm de ancho x 96 cm de alto",
+          "96cm de ancho x 16 cm de alto",
+          "96cm de ancho x 32 cm de alto"
+        ]
+      }
     ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
-    variants: [
+    tabs: [
       {
-        label: "Sonda de Temperatura",
-        key: "sonda",
-        options: ["Sí", "No"]
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables: Especial clínicas y farmacias</h2>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestros rótulos electrónicos son muy llamativos y dinámicos.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros luminosos LED perfectos para cada negocio.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar el cartel luminoso a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada, puede añadir varios dibujos de cruces, textos, movimiento, y mucho más.</p>
+          <p>¡Al ser fabricantes nos permite ofrecerle el letrero luminoso LED programable que está buscando!</p>
+          <p>Para farmacias, veterinarias, clínicas dentales, de salud, podólogo, nutricionista, ect.</p>
+          <p>Estos paneles LED son en forma cuadrada o rectangular, en los que podrá añadir:</p>
+          <ul>
+            <li>- Logos típicos de farmacias y clínicas.</li>
+            <li>- Textos personalizados de su clínica o negocio.</li>
+            <li>- Horario, nombre, dirección, teléfono, eventos, ofertas, servicios y mucho más.</li>
+          </ul>
+
+          <h3>Especificaciones técnicas:</h3>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m2)</th><td>10.000</td></tr>
+              <tr><th>Pixel constitución</th><td>RGB</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m2)</th><td>&gt;2000</td></tr>
+              <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20ºC – +70ºC</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+              <tr><th>Peso (Kg)</th><td>2,1</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+
+          <p><a href="contacto.html">Consulte nuestra ficha técnica para más detalles.</a></p>
+
+          <h3>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</h3>
+          <h3>Para colocar en exterior:</h3>
+          <ul>
+            <li>- Pegado a la pared.</li>
+            <li>- Perpendicular a la pared como banderola electrónica.</li>
+          </ul>
+          <h3>Para colocar en interior:</h3>
+          <ul>
+            <li>- Kit de suspensión para colocar su letrero led en interior o escaparates.</li>
+          </ul>
+        `
       },
       {
-        label: "Modo de Programación",
-        key: "modo",
-        options: ["USB", "USB + Programación WiFi"]
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">Letrero led clínicas</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ""
       }
     ],
-    sizesDropdown: [
-      "32cm de ancho x 32cm de alto",
-      "64cm de ancho x 32cm de alto",
-      "64cm de ancho x 48cm de alto",
-      "64cm de ancho x 64cm de alto",
-      "96cm de ancho x 48cm de alto",
-      "96cm de ancho x 64cm de alto",
-      "128cm de ancho x 64cm de alto",
-      "128cm de ancho x 80cm de alto",
-      "160cm de ancho x 64cm de alto",
-      "160cm de ancho x 80cm de alto",
-      "192cm de ancho x 80cm de alto",
-      "192cm de ancho x 96cm de alto"
-    ],
-    tabs: {
-      desc: `
-        <h3 class="text-red">Pantallas LED programables:<br/>Especial clínicas y farmacias</h3>
-        <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
-        <p>Nuestros rótulos electrónicos son muy llamativos y dinámicos.</p>
-        <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros luminosos LED perfectos para cada negocio.</p>
-        <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar el cartel luminoso a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada, puede añadir varios dibujos de cruces, textos, movimiento, y mucho más.</p>
-        <p>¡Al ser fabricantes nos permite ofrecerle el letrero luminoso LED programable que está buscando!</p>
-        <p>Para farmacias, veterinarias, clínicas dentales, de salud, podólogo, nutricionista, ect.</p>
-        <p>Estos paneles LED son en forma cuadrada o rectangular, en los que podrá añadir:</p>
-        <ul>
-          <li>- Logos típicos de farmacias y clínicas.</li>
-          <li>- Textos personalizados de su clínica o negocio.</li>
-          <li>- Horario, nombre, dirección, teléfono, eventos, ofertas, servicios y mucho más.</li>
-        </ul>
-
-        <h4 class="text-blue">Especificaciones técnicas:</h4>
-        <div class="tab-specs-grid">
-          <div class="tab-spec-row"><span class="tab-spec-label">Separación entre píxeles (mm)</span><span class="tab-spec-val">10</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Densidad de píxeles (Puntos/m2)</span><span class="tab-spec-val">10.000</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Pixel constitución</span><span class="tab-spec-val">RGB</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Vida estimada</span><span class="tab-spec-val">100.000 Horas</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Brillo (Candelas/m2)</span><span class="tab-spec-val">>2000</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Control de brillo (Sincrónico/Asincrónico)</span><span class="tab-spec-val">16/8</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Tensión</span><span class="tab-spec-val">220V</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Frecuencia</span><span class="tab-spec-val">50 Hz</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Ángulo de visión</span><span class="tab-spec-val">120º / 60º</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Temperatura de trabajo</span><span class="tab-spec-val">-20ºC – +70ºC</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Transmisión de datos</span><span class="tab-spec-val">PC – USB (Opcional WiFi)</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Peso (Kg)</span><span class="tab-spec-val">2,1</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Protección</span><span class="tab-spec-val">Para exterior: Soporta agentes atmosféricos</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Construcción</span><span class="tab-spec-val">Aluminio / PC</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Dimensiones (cm)</span><span class="tab-spec-val">*Consultar</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Certificados</span><span class="tab-spec-val">CE-RHOS</span></div>
-          <div class="tab-spec-row"><span class="tab-spec-label">Garantía</span><span class="tab-spec-val">2 Años</span></div>
-        </div>
-
-        <a href="#" class="text-blue">Consulte nuestra ficha técnica para más detalles.</a>
-
-        <h4 class="text-green">*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</h4>
-        <h4 class="text-green">Para colocar en exterior:</h4>
-        <ul>
-          <li>- Pegado a la pared.</li>
-          <li>- Perpendicular a la pared como banderola electrónica.</li>
-        </ul>
-        <h4 class="text-green">Para colocar en interior:</h4>
-        <ul>
-          <li>- Kit de suspensión para colocar su letrero led en interior o escaparates.</li>
-        </ul>
-      `,
-      details: `<p><strong>Referencia</strong> Letrero led clínicas</p>`
-    },
     related: [40, 41, 42, 37, 38, 39]
   },
   {

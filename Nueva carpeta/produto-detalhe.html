@@ -1047,7 +1047,7 @@
         
         let extraPrice = 0;
         
-        // Lógica específica para el producto 35 de farmacias (2 caras)
+        // Producto 35: Cruz LED RGB P6 — precios por tamaño + WiFi
         if (product.id === 35) {
           const sizeSel = document.getElementById('opt_tamano');
           if (sizeSel && sizeSel.value.includes('77 cm')) {
@@ -1055,10 +1055,25 @@
           } else {
             basePrice = 726.00;
           }
-          
           const wifiBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="programacion"]');
           if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) {
             extraPrice += 18.15;
+          }
+        }
+
+        // Producto 36: Letrero clínicas — precios por tamaño + sonda + WiFi
+        if (product.id === 36 && product.sizePrices) {
+          const sizeSel = document.getElementById('opt_tamano');
+          if (sizeSel && product.sizePrices[sizeSel.value] !== undefined) {
+            basePrice = product.sizePrices[sizeSel.value];
+          }
+          const sondaBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="sonda"]');
+          if (sondaBtn && sondaBtn.dataset.value === 'Sí') {
+            extraPrice += 9.99;
+          }
+          const wifiBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="programacion"]');
+          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) {
+            extraPrice += 9.99;
           }
         }
         
@@ -1085,6 +1100,14 @@
       document.querySelectorAll('.detalhe-select').forEach(sel => {
         sel.addEventListener('change', () => {
           updateDynamicPrice();
+          // Swap main image if product has sizeImages map
+          if (product.sizeImages && sel.id === 'opt_tamano') {
+            const newSrc = product.sizeImages[sel.value];
+            if (newSrc) {
+              const mainImg = document.getElementById('mainProductImg');
+              if (mainImg) mainImg.src = newSrc;
+            }
+          }
         });
       });
 
