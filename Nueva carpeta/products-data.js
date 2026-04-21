@@ -836,13 +836,99 @@ window.PRODUCTS_DATA = [
     badge: "",
     tags: ["Rojo-Verde", "Control de Acceso", "1 Cara"],
     shortDesc: "Letrero LED programable para control de acceso en rojo y verde, 1 cara.",
-    desc: "Letrero LED programable para control de acceso en rojo y verde, 1 cara. Sistema sencillo con dos colores para PASE (verde) y STOP (rojo). Ideal para controlar el flujo de personas en accesos, consultas y espacios con aforo limitado.",
-    images: [],
+    desc: "Letrero luminoso LED programable a 1 cara: Rojo-Verde, disponible en varios tamaños.\n\nDisplay de control de paso para tu negocios. Muestre en pantalla información a sus clientes para indicar cuando pueden pasar o cuando deben esperar su turno, además puede añadir más información.\n\nInforme a sus clientes para cumplir con la regulación de aforo permitida.\n\nVálidos para interior y exterior.",
+    price: "229,90 €",
+    images: ["img/producto-34/letrero-acceso-rojo-verde.jpg"],
+    options: [
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 16 cm de alto"
+        ]
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
-    related: [40, 41, 42, 37, 38, 39]
+    related: [40, 41, 42, 37, 38, 39],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h3 style="color:red; text-align:center;">Letreros LED programables con una placa Roja y otra verde a una cara<br>Especial: Control de paso para todo tipo de negocios<br><br>Controla el paso a tu negocio para cumplir con la regulación de aforo con nuestras pantallas LED</h3>
+          <ul>
+            <li><strong>Muy fáciles de programar e instalar</strong></li>
+            <li><strong>Incluye mando para control del programa a mostrar en cada momento.</strong></li>
+            <li><strong>Estas pantallas están hechas con una placa en color rojo y otra en color verde, para mostrar el mensaje "No pasar" en rojo o el mensaje "Pase" en verde. *También se pueden mostrar otros mensajes diferentes, es la gran ventaja de ser programables. ¡El mensaje lo eliges tu en cada momento!</strong></li>
+            <li><strong>Larga durabilidad</strong></li>
+            <li><strong>Cumple la normativa de una forma moderna: Mantén a tus clientes seguros controlando el aforo contra el Covid 19 (Coronavirus).</strong></li>
+            <li><strong>Alta luminosidad</strong></li>
+            <li><strong>Gran servicio de atención al cliente</strong></li>
+          </ul>
+          <p>Te presentamos una pantalla LED especial para poder adaptar tu negocio a las nuevas exigencias.</p>
+          <p>Muestra en la pantalla de una forma moderna y dinámica cuando se puede pasar o cuando el aforo está lleno y se debe esperar.</p>
+          <p>Además al ser programables, son unas pantallas muy útiles:</p>
+          <p>Se pueden usar para estos mensajes pero se le pueden añadir también otros mensajes diferentes y darle uso para diferentes situaciones.</p>
+          <p>Elige entre nuestra variedad de tamaños para que puedas tener la pantalla publicitaria que más se adapte a tus necesidades. Y si el tamaño que necesita no aparece aquí, contacte con nosotros para que podamos hacerle la pantalla LED que necesita.</p>
+          <p>Todos los colores básicos (Red - Green - Blue) y sus posibles mezclas de colores básicos en una sola pantalla LED.</p>
+          <p>Somos fabricantes de rótulos electrónicos con años de experiencia, para poder ofrecerle un producto de alta calidad al mejor precio.</p>
+          <p>Además podemos ofrecerle el mejor servicio y ayuda para que consiga el mejor resultado en su cartel luminoso LED ya que contamos con un equipo cualificado y especializado en pantallas publicitarias LED programables.</p>
+          <p>Rótulos electrónicos a una cara para tiendas, locales y todo tipo de negocios. Muestra en tu pantalla programable la información que necesites, en el momento que necesites.</p>
+          <p>Puedes colocarlos como mejor te convenga (mira en los accesorios y elije el soporte para colocar tu pantalla)</p>
+          <ul>
+            <li><em>En interior con el kit de suspensión</em></li>
+            <li><em>En exterior pegado a la pared</em></li>
+            <li><em>Perpendicular a la pared como banderola publicitaria a una cara</em></li>
+          </ul>
+          <p>Con nuestros carteles publicitarios LED programables llame la atención de sus clientes gracias a su gran personalización y a la alta luminosidad de los LEDs con los que trabajamos.</p>
+          <p>Tenemos una gran variedad de pantallas LED con respecto al tamaño y al color, para que el cliente elija la que más se adapte a sus necesidades.</p>
+          <p>En nuestra web le damos la opción de que escoja sólo lo que necesite y el diseño que mas le guste de nuestros letreros luminosos.</p>
+          <br>
+          <h3 style="color:#004080; text-decoration:underline;">Características principales:</h3>
+          <ul>
+            <li><strong>Nuestras pantallas son válidas para interior y exterior.</strong></li>
+            <li><strong>Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. *Puede añadir como opcional la sonda de temperatura.</strong></li>
+            <li><strong>Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). * Puede añadir como opcional la programación WiFi para programar a distancia con tu ordenador, teléfono o tablet.</strong></li>
+            <li><strong>Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Te entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de videos para ayudarte.</strong></li>
+            <li><strong>Personalice el tamaño de letra y número de caracteres que desee que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</strong></li>
+            <li><strong>Texto estático o con movimiento.</strong></li>
+            <li><strong>Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</strong></li>
+            <li><strong>Baja emisión de calor</strong></li>
+            <li><strong>Ahorro de energía</strong></li>
+            <li><strong>Resistente a impactos y vibraciones</strong></li>
+            <li><strong>Protección IP65 e exterior</strong></li>
+            <li><strong>Mejor relación calidad-precio del mercado.</strong></li>
+            <li><strong>Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</strong></li>
+            <li><strong>Fácil instalación y programación.</strong></li>
+            <li><strong>Vida útil 100.000 horas aproximadamente.</strong></li>
+            <li><strong>2 años de garantía</strong></li>
+            <li><strong>Servicio de atención al cliente de calidad.</strong></li>
+          </ul>
+          <p><a href="contacto.html" style="color: #0088cc;">Consulte nuestra ficha técnica para más detalles.</a></p>
+          <p><em style="color:#2ca02c;">*Mire en los accesorios para elegir el soporte o kit de suspensión que desea para colocar su letrero LED programable de alta luminosidad.</em></p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">Letrero Control Acceso Rojo Verde</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ""
+      }
+    ]
   },
   {
     id: 35,

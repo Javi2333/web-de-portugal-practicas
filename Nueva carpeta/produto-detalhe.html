@@ -1040,14 +1040,56 @@
         });
       });
 
+      function updateDynamicPrice() {
+        if (!product.price) return;
+        let basePrice = parseFloat(product.price.replace(/[^\d,.-]/g, '').replace(',', '.'));
+        if (isNaN(basePrice)) return;
+        
+        let extraPrice = 0;
+        
+        // Lógica específica para el producto 35 de farmacias (2 caras)
+        if (product.id === 35) {
+          const sizeSel = document.getElementById('opt_tamano');
+          if (sizeSel && sizeSel.value.includes('77 cm')) {
+            basePrice = 1713.36;
+          } else {
+            basePrice = 726.00;
+          }
+          
+          const wifiBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="programacion"]');
+          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) {
+            extraPrice += 18.15;
+          }
+        }
+        
+        const formatPrice = (num) => num.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+        const finalPrice = basePrice + extraPrice;
+        
+        const priceEl = document.getElementById('dynamicPriceAmount');
+        if (priceEl) {
+          priceEl.textContent = formatPrice(finalPrice);
+        }
+      }
+
       // Toggle option buttons
       document.querySelectorAll('.detalhe-toggle-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const optId = btn.dataset.option;
           document.querySelectorAll(`.detalhe-toggle-btn[data-option="${optId}"]`).forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
+          updateDynamicPrice();
         });
       });
+
+      // Select option change
+      document.querySelectorAll('.detalhe-select').forEach(sel => {
+        sel.addEventListener('change', () => {
+          updateDynamicPrice();
+        });
+      });
+
+      // Validar el precio inicialmente al cargar el panel
+      setTimeout(updateDynamicPrice, 50);
 
       // Quantity selector
       let qty = 1;
@@ -1082,8 +1124,9 @@
             });
           }
           const image = product.images && product.images.length > 0 ? product.images[0] : null;
+          const currentPrice = document.getElementById('dynamicPriceAmount') ? document.getElementById('dynamicPriceAmount').textContent : product.price;
           for (let i = 0; i < qty; i++) {
-            addToCart(product.title, product.shortDesc || product.desc, image, product.price, selectedOptions);
+            addToCart(product.title, product.shortDesc || product.desc, image, currentPrice, selectedOptions);
           }
         });
       }
@@ -1357,7 +1400,7 @@
                 <div class="detalhe-info">
                   ${tags ? `<div class="detalhe-tags">${tags}</div>` : ''}
                   <h1 class="detalhe-title">${p.title}</h1>
-                  ${p.price ? `<p class="detalhe-price">${p.price}<span class="detalhe-price-tax">Impuestos incluidos</span></p>` : ''}
+                  ${p.price ? `<p class="detalhe-price"><span id="dynamicPriceAmount">${p.price}</span><span class="detalhe-price-tax">Impuestos incluidos</span></p>` : ''}
                   <p class="detalhe-desc">${p.desc}</p>
                   <hr class="detalhe-divider" />
                   ${specsHtml}
