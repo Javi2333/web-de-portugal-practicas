@@ -496,22 +496,24 @@ window.PRODUCTS_DATA = [
     tags: ["Full Color", "P5", "Exterior", "1 Cara"],
     shortDesc: "Pantalla LED programable Full Color P5 para exterior, 1 cara. Mayor resolución que P10 con pixel pitch P5, ideal para distancias cortas y medias.",
     desc: "Pantallas luminosas LED a todo color programables para exterior en resolución del pixel P5. Letreros luminosos full color para reproducir todo lo que necesites como texto, logos, imágenes, vídeos y muchos efectos. Fabricados con LEDs SMD, que proporcionan mayor definición y luminosidad. Estos rótulos electrónicos tienen una distancia optima de visualización desde 5 metros.",
-    price: "779,72 €",
+    price: "764,72 €",
     images: ["img/producto-3/img-1.jpg"],
     options: [
       {
         id: "sonda",
         label: "SONDA DE TEMPERATURA",
         type: "toggle",
-        choices: ["Sí", "No"],
-        default: "Sí"
+        choices: ["No", "Sí"],
+        default: "No",
+        surcharges: { "Sí": 15.00 }
       },
       {
         id: "programacion",
         label: "MODO DE PROGRAMACIÓN",
         type: "toggle",
         choices: ["USB", "USB + Programación WiFi"],
-        default: "USB"
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 15.00 }
       },
       {
         id: "tamano",
@@ -557,7 +559,48 @@ window.PRODUCTS_DATA = [
           "288 cm de ancho x 80 cm de alto",
           "288 cm de ancho x 96 cm de alto",
           "128 cm de ancho x 80 cm de alto"
-        ]
+        ],
+        sizePrices: {
+          "64cm de ancho x 64 cm de alto": 764.72,
+          "64 cm de ancho x 80 cm de alto": 955.90,
+          "64 cm de ancho x 96 cm de alto": 1147.08,
+          "96 cm de ancho x 64 cm de alto": 1147.08,
+          "96 cm de ancho x 80 cm de alto": 1433.85,
+          "96 cm de ancho x 96 cm de alto": 1720.62,
+          "128 cm de ancho x 64 cm de alto": 1529.44,
+          "128 cm de ancho x 80 cm de alto": 1911.80,
+          "128 cm de ancho x 96 cm de alto": 2294.16,
+          "160 cm de ancho x 16 cm de alto": 477.95,
+          "160 cm de ancho x 32 cm de alto": 955.90,
+          "160 cm de ancho x 48 cm de alto": 1433.85,
+          "160 cm de ancho x 64 cm de alto": 1911.80,
+          "160 cm de ancho x 80 cm de alto": 2389.75,
+          "160 cm de ancho x 96 cm de alto": 2867.70,
+          "192 cm de ancho x 16 cm de alto": 573.54,
+          "192 cm de ancho x 32 cm de alto": 1147.08,
+          "192 cm de ancho x 48 cm de alto": 1720.62,
+          "192 cm de ancho x 64 cm de alto": 2294.16,
+          "192 cm de ancho x 80 cm de alto": 2867.70,
+          "192 cm de ancho x 96 cm de alto": 3441.24,
+          "224 cm de ancho x 16 cm de alto": 669.13,
+          "224 cm de ancho x 32 cm de alto": 1338.26,
+          "224 cm de ancho x 48 cm de alto": 2007.39,
+          "224 cm de ancho x 64 cm de alto": 2676.52,
+          "224 cm de ancho x 80 cm de alto": 3345.65,
+          "224 cm de ancho x 96 cm de alto": 4014.78,
+          "256 cm de ancho x 16 cm de alto": 764.72,
+          "256 cm de ancho x 32 cm de alto": 1529.44,
+          "256 cm de ancho x 48 cm de alto": 2294.16,
+          "256 cm de ancho x 64 cm de alto": 3058.88,
+          "256 cm de ancho x 80 cm de alto": 3823.60,
+          "256 cm de ancho x 96 cm de alto": 4588.32,
+          "288 cm de ancho x 16 cm de alto": 860.31,
+          "288 cm de ancho x 32 cm de alto": 1720.62,
+          "288 cm de ancho x 48 cm de alto": 2580.93,
+          "288 cm de ancho x 64 cm de alto": 3441.24,
+          "288 cm de ancho x 80 cm de alto": 4301.55,
+          "288 cm de ancho x 96 cm de alto": 5161.86
+        }
       }
     ],
     specs: [],
