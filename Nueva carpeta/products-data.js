@@ -1267,12 +1267,120 @@ window.PRODUCTS_DATA = [
     badge: "",
     tags: ["Full Color", "P6", "Exterior", "1 Cara"],
     shortDesc: "Pantalla LED programable Full Color P6 para exterior, 1 cara.",
-    desc: "Pantalla LED programable Full Color P6 para exterior, 1 cara. Pixel pitch P6, equilibrio perfecto entre resolución y precio. Resistente a la intemperie IP65, colores vivos y alto brillo. Ideal para carteles publicitarios en exteriores.",
-    images: [],
+    desc: "Pantallas luminosas LED a todo color programables para exterior en resolución del pixel P6. Letreros luminosos full color para reproducir todo lo que necesites como texto, logos, imágenes, vídeos y muchos efectos.",
+    price: "762,30 €",
+    images: ["img/producto-6/img-1.jpg"],
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No",
+        surcharges: { "Sí": 42.35 }
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 42.35 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Ancho X Alto)",
+        type: "select",
+        choices: [
+          "57 cm de ancho x 57 cm de alto",
+          "77 cm de ancho x 77 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "192 cm de ancho x 96 cm de alto",
+          "288 cm de ancho x 96 cm de alto"
+        ],
+        default: "57 cm de ancho x 57 cm de alto",
+        sizePrices: {
+          "57 cm de ancho x 57 cm de alto": 762.30,
+          "77 cm de ancho x 77 cm de alto": 1297.12,
+          "96 cm de ancho x 96 cm de alto": 1966.25,
+          "192 cm de ancho x 96 cm de alto": 3932.50,
+          "288 cm de ancho x 96 cm de alto": 5898.75
+        }
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Letreros luminosos LED programables FULL COLOR P6 para exterior. Gran luminosidad.</h2>
+          <p><strong>Tu pantalla a todo color.</strong></p>
+          <p><strong>Descripción del producto:</strong></p>
+          <p>Os presentamos nuestras pantallas led programables para exterior P6 a todo color a doble cara para colocar como tipo banderola publicitaria.</p>
+          <p>Perfectas para texto, imágenes, logos, vídeos, y mucho más.</p>
+          <p>El tipo de led de estas pantallas es SMD para conseguir una mayor definición de la imagen. Además usamos LED de alta calidad para conseguir un excelente brillo y permiten que nuestros clientes vean nuestras imágenes con claridad.</p>
+          <p>Son pantallas de exterior, lo que les proporciona una gran luminosidad, con una visualización óptima desde los 6m.</p>
+          <p>Entre sus ventajas destaca su bajo consumo gracias a la tecnología LED (480W/m² de promedio, todo depende de lo que se reproduce en cada momento) y larga vida útil.</p>
+          <p>Ofrecemos unas pantallas muy fáciles de programar, de montar y desmontar y de su transporte.</p>
+          <p>Al ser fabricantes podemos construir, a través de nuestros módulos, la medida que más se adapte a las necesidades de nuestros clientes.</p>
+          <p>Según los expertos para que la visualización del LED en exterior sea correcta con aproximadamente 5000 nits de luminosidad son suficiente, nosotros apostamos por ello ofreciendo pantallas con una luminosidad superior a los 6000 nits.</p>
+          <p>Aquí te damos algunas de las razones por las que elegir nuestras pantallas LED full color:</p>
+          <ul>
+            <li>Captan la atención gracias a su luminosidad, efectos y movimiento.</li>
+            <li>Estas pantallas pueden reproducir efectos, vídeos, imágenes y texto en las diferentes zonas de la pantalla LED, además de poner el número de mensajes que usted desee.</li>
+            <li>Son pantallas preparadas para su instalación en exterior.</li>
+            <li>Al ser dinámicos, coloridos y reproducir contenido multimedia tienen un mayor efecto que los rótulos estáticos.</li>
+            <li>En un solo LED tienes la luz de 3 colores para conseguir, según los estudios con los 3 colores primarios Azul, Verde y Rojo mostrarán 16.777.216 colores en cualquier combinación.</li>
+            <li>100.000 horas de vida útil aproximadamente del LED.</li>
+            <li>2 años de garantía.</li>
+          </ul>
+          <h3>Especificaciones:</h3>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Tamaño del pixel</th><td>6 mm</td></tr>
+              <tr><th>Luminosidad</th><td>Mayor o igual a 6000 nit</td></tr>
+              <tr><th>Material del panel</th><td>Acero</td></tr>
+              <tr><th>Resolución</th><td>27.777 píxeles/m²</td></tr>
+              <tr><th>Configuración del pixel</th><td>SMD 3 en 1 1R1G1B</td></tr>
+              <tr><th>Distancia óptima de visualización</th><td>6-15 metros</td></tr>
+              <tr><th>Tipo de LED</th><td>SMD3535</td></tr>
+              <tr><th>Nivel de brillo (Ajustable)</th><td>0-100%</td></tr>
+              <tr><th>Modo de escaneo</th><td>1/8x</td></tr>
+              <tr><th>Escala de gris por color</th><td>2096 niveles</td></tr>
+              <tr><th>Colores</th><td>Full Color: 281 Trillones de colores</td></tr>
+              <tr><th>Ángulo de visión (H/V)</th><td>140° / 120°</td></tr>
+              <tr><th>Protección</th><td>Para exterior</td></tr>
+              <tr><th>Consumo de energía (promedio)</th><td>480 W/m²</td></tr>
+              <tr><th>Voltaje de entrada (CA)</th><td>110V ~ 240V</td></tr>
+              <tr><th>Temperatura de funcionamiento</th><td>-20°C ~ +50°C</td></tr>
+              <tr><th>Humedad de operación</th><td>30% ~ 90%</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Tipos de archivos soportados:</strong> Texto, formatos de imágenes (BMP, JPG, GIF, PCX...) y vídeos (MPG, MPEG, MPV, MPA, AVI, VCD, SWF, RM, RA, RMJ, ASF...)</p>
+          <p><a href="contacto.html">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+          <p><em>*Para letreros a una cara, añade al carrito el soporte que necesite dentro de nuestros accesorios:</em></p>
+          <ul>
+            <li><em>En exterior pegado a la pared.</em></li>
+            <li><em>Perpendicular a la pared como banderola electrónica.</em></li>
+            <li><em>Kit de suspensión para colocar su letrero led en interior o escaparates.</em></li>
+          </ul>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">P6 EXTERIOR FULL COLOR</span>
+          </div>
+        `
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
