@@ -196,23 +196,23 @@ window.PRODUCTS_DATA = [
 
           <h3>Características principales:</h3>
           <ul>
-            <li>- Nuestras pantallas son válidas para interior y exterior.</li>
-            <li>- Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. <em>*Puede añadir como opcional la sonda de temperatura.</em></li>
-            <li>- Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). <em>*Puede añadir como opcional la programación WiFi y programar a distancia con su ordenador, tableta o móvil.</em></li>
-            <li>- Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Le entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de vídeos para ayudarte.</li>
-            <li>- Elige usted el tamaño de letras y número de caracteres que deseas que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</li>
-            <li>- Texto estático o con movimiento.</li>
-            <li>- Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</li>
-            <li>- Baja emisión de calor</li>
-            <li>- Ahorro de energía</li>
-            <li>- Resistente a impactos y vibraciones</li>
-            <li>- Protección IP25 o exterior</li>
-            <li>- Mejor relación calidad-precio del mercado.</li>
-            <li>- Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
-            <li>- Fácil instalación y programación.</li>
-            <li>- Vida útil 100.000 horas aproximadamente.</li>
-            <li>- 2 años de garantía</li>
-            <li>- Servicio de atención al cliente de calidad.</li>
+            <li>Nuestras pantallas son válidas para interior y exterior.</li>
+            <li>Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. <em>*Puede añadir como opcional la sonda de temperatura.</em></li>
+            <li>Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). <em>*Puede añadir como opcional la programación WiFi y programar a distancia con su ordenador, tableta o móvil.</em></li>
+            <li>Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Le entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de vídeos para ayudarte.</li>
+            <li>Elige usted el tamaño de letras y número de caracteres que deseas que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</li>
+            <li>Texto estático o con movimiento.</li>
+            <li>Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</li>
+            <li>Baja emisión de calor</li>
+            <li>Ahorro de energía</li>
+            <li>Resistente a impactos y vibraciones</li>
+            <li>Protección IP25 o exterior</li>
+            <li>Mejor relación calidad-precio del mercado.</li>
+            <li>Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
+            <li>Fácil instalación y programación.</li>
+            <li>Vida útil 100.000 horas aproximadamente.</li>
+            <li>2 años de garantía</li>
+            <li>Servicio de atención al cliente de calidad.</li>
           </ul>
           <p><a href="contacto.html">Consulta nuestra ficha técnica para más detalles.</a></p>
           <p><em>*Mire en los accesorios para elegir el soporte o kit de suspensión que desee para colocar su letrero LED programable de alta luminosidad.</em></p>
@@ -732,19 +732,19 @@ window.PRODUCTS_DATA = [
         id: "color",
         label: "COLOR",
         type: "color",
-        choices: ["Rojo", "Naranja", "Azul", "Verde", "Azul Clarito"],
+        choices: ["Rojo", "Naranja", "Azul", "Verde", "Blanco"],
         default: "Azul",
         colorValues: {
           "Rojo": "#e53e3e",
           "Naranja": "#ed8936",
           "Azul": "#3182ce",
           "Verde": "#38a169",
-          "Azul Clarito": "#63b3ed"
+          "Blanco": "#f0f0f0"
         },
         colorImages: {
           "Azul": ["img/producto-4/img-1.jpg","img/producto-4/img-6.jpg","img/producto-4/img-11.jpg","img/producto-4/img-16.jpg","img/producto-4/img-21.jpg","img/producto-4/img-26.jpg","img/producto-4/img-31.jpg","img/producto-4/img-36.jpg","img/producto-4/img-41.jpg","img/producto-4/img-46.jpg","img/producto-4/img-51.jpg","img/producto-4/img-56.jpg","img/producto-4/img-61.jpg","img/producto-4/img-66.jpg"],
           "Rojo": ["img/producto-4/img-2.jpg","img/producto-4/img-9.jpg","img/producto-4/img-14.jpg","img/producto-4/img-19.jpg","img/producto-4/img-24.jpg","img/producto-4/img-29.jpg","img/producto-4/img-34.jpg","img/producto-4/img-39.jpg","img/producto-4/img-44.jpg","img/producto-4/img-49.jpg","img/producto-4/img-54.jpg","img/producto-4/img-59.jpg","img/producto-4/img-64.jpg","img/producto-4/img-69.jpg"],
-          "Azul Clarito": ["img/producto-4/img-3.jpg","img/producto-4/img-7.jpg","img/producto-4/img-12.jpg","img/producto-4/img-17.jpg","img/producto-4/img-22.jpg","img/producto-4/img-27.jpg","img/producto-4/img-32.jpg","img/producto-4/img-37.jpg","img/producto-4/img-42.jpg","img/producto-4/img-47.jpg","img/producto-4/img-52.jpg","img/producto-4/img-57.jpg","img/producto-4/img-62.jpg","img/producto-4/img-67.jpg"],
+          "Blanco": ["img/producto-4/img-3.jpg","img/producto-4/img-7.jpg","img/producto-4/img-12.jpg","img/producto-4/img-17.jpg","img/producto-4/img-22.jpg","img/producto-4/img-27.jpg","img/producto-4/img-32.jpg","img/producto-4/img-37.jpg","img/producto-4/img-42.jpg","img/producto-4/img-47.jpg","img/producto-4/img-52.jpg","img/producto-4/img-57.jpg","img/producto-4/img-62.jpg","img/producto-4/img-67.jpg"],
           "Naranja": ["img/producto-4/img-4.jpg","img/producto-4/img-8.jpg","img/producto-4/img-13.jpg","img/producto-4/img-18.jpg","img/producto-4/img-23.jpg","img/producto-4/img-28.jpg","img/producto-4/img-33.jpg","img/producto-4/img-38.jpg","img/producto-4/img-43.jpg","img/producto-4/img-48.jpg","img/producto-4/img-53.jpg","img/producto-4/img-58.jpg","img/producto-4/img-63.jpg","img/producto-4/img-68.jpg"],
           "Verde": ["img/producto-4/img-5.jpg","img/producto-4/img-10.jpg","img/producto-4/img-15.jpg","img/producto-4/img-20.jpg","img/producto-4/img-25.jpg","img/producto-4/img-30.jpg","img/producto-4/img-35.jpg","img/producto-4/img-40.jpg","img/producto-4/img-45.jpg","img/producto-4/img-50.jpg","img/producto-4/img-55.jpg","img/producto-4/img-60.jpg","img/producto-4/img-65.jpg","img/producto-4/img-70.jpg"]
         }
@@ -919,23 +919,23 @@ window.PRODUCTS_DATA = [
           <p>En nuestra web le damos la opción de que escoja sólo lo que necesite y el diseño que mas le guste de nuestros letreros luminosos.</p>
           <h3>Características principales:</h3>
           <ul>
-            <li>- Nuestras pantallas son válidas para interior y exterior.</li>
-            <li>- Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. <em>*Puede añadir como opcional la sonda de temperatura.</em></li>
-            <li>- Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). <em>* Puede añadir como opcional la programación WiFi para programar a distancia con su ordenador, teléfono o tablet.</em></li>
-            <li>- Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Te entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de videos para ayudarte.</li>
-            <li>- Personalice el tamaño de letra y número de caracteres que desee que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</li>
-            <li>- Texto estático o con movimiento.</li>
-            <li>- Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</li>
-            <li>- Baja emisión de calor</li>
-            <li>- Ahorro de energía</li>
-            <li>- Resistente a impactos y vibraciones</li>
-            <li>- Protección IP25 o exterior</li>
-            <li>- Mejor relación calidad-precio del mercado.</li>
-            <li>- Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
-            <li>- Fácil Instalación y programación.</li>
-            <li>- Vida útil 100.000 horas aproximadamente.</li>
-            <li>- 2 años de garantía</li>
-            <li>- Servicio de atención al cliente de calidad.</li>
+            <li>Nuestras pantallas son válidas para interior y exterior.</li>
+            <li>Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. <em>*Puede añadir como opcional la sonda de temperatura.</em></li>
+            <li>Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). <em>* Puede añadir como opcional la programación WiFi para programar a distancia con su ordenador, teléfono o tablet.</em></li>
+            <li>Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Te entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de videos para ayudarte.</li>
+            <li>Personalice el tamaño de letra y número de caracteres que desee que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</li>
+            <li>Texto estático o con movimiento.</li>
+            <li>Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</li>
+            <li>Baja emisión de calor</li>
+            <li>Ahorro de energía</li>
+            <li>Resistente a impactos y vibraciones</li>
+            <li>Protección IP25 o exterior</li>
+            <li>Mejor relación calidad-precio del mercado.</li>
+            <li>Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
+            <li>Fácil Instalación y programación.</li>
+            <li>Vida útil 100.000 horas aproximadamente.</li>
+            <li>2 años de garantía</li>
+            <li>Servicio de atención al cliente de calidad.</li>
           </ul>
           <p><a href="contacto.html">Consulte nuestra ficha técnica para más detalles.</a></p>
           <p><em>*Mire en los accesorios para elegir el soporte o kit de suspensión que desea para colocar su letrero LED programable de alta luminosidad.</em></p>
@@ -975,16 +975,290 @@ window.PRODUCTS_DATA = [
   },
   {
     id: 5,
-    title: "Letrero LED Programable, 2 Caras",
+    title: "Letrero LED Programable, 2 Caras. Disponible en varios tamaños y colores",
     badge: "",
-    tags: ["2 Caras"],
-    shortDesc: "Letrero LED programable de 2 caras, disponible en varios tamaños y colores.",
-    desc: "Letrero LED programable de 2 caras, disponible en varios tamaños y colores. Máxima visibilidad desde ambos lados, ideal para entradas, calles peatonales y espacios con tráfico en dos sentidos. Incluye soporte lateral y kit de montaje.",
-    images: [],
+    tags: ["2 Caras", "Interior / Exterior"],
+    shortDesc: "Letrero LED programable a doble cara, disponible en diferentes tamaños y colores.",
+    desc: "Letrero LED programable a doble cara, disponible en diferentes tamaños y colores (A elegir entre: Rojo, Verde, Blanco, Azul y Ámbar). Pantalla LED programable para anunciar su negocio. Es la banderola luminosa LED perfecta para personalizarla con textos, fecha, hora, animaciones (temperatura y WiFi si se le añade) y logos muy sencillos. Producto válido para usar en exterior.",
+    price: "150,00 €",
+    images: [
+      "img/producto-5/img-1.jpg","img/producto-5/img-2.jpg","img/producto-5/img-3.jpg","img/producto-5/img-4.jpg","img/producto-5/img-5.jpg",
+      "img/producto-5/img-6.jpg","img/producto-5/img-7.jpg","img/producto-5/img-8.jpg","img/producto-5/img-9.jpg","img/producto-5/img-10.jpg",
+      "img/producto-5/img-11.jpg","img/producto-5/img-12.jpg","img/producto-5/img-13.jpg","img/producto-5/img-14.jpg","img/producto-5/img-15.jpg",
+      "img/producto-5/img-16.jpg","img/producto-5/img-17.jpg","img/producto-5/img-18.jpg","img/producto-5/img-19.jpg","img/producto-5/img-20.jpg",
+      "img/producto-5/img-21.jpg","img/producto-5/img-22.jpg","img/producto-5/img-23.jpg","img/producto-5/img-24.jpg","img/producto-5/img-25.jpg",
+      "img/producto-5/img-26.jpg","img/producto-5/img-27.jpg","img/producto-5/img-28.jpg","img/producto-5/img-29.jpg","img/producto-5/img-30.jpg",
+      "img/producto-5/img-31.jpg","img/producto-5/img-32.jpg","img/producto-5/img-33.jpg","img/producto-5/img-34.jpg","img/producto-5/img-35.jpg"
+    ],
+    options: [
+      {
+        id: "color",
+        label: "COLOR",
+        type: "color",
+        choices: ["Rojo", "Naranja", "Azul", "Verde", "Blanco"],
+        default: "Azul",
+        colorValues: {
+          "Rojo": "#e53e3e",
+          "Naranja": "#ed8936",
+          "Azul": "#3182ce",
+          "Verde": "#38a169",
+          "Blanco": "#f0f0f0"
+        },
+        colorImages: {
+          "Azul":   ["img/producto-5/img-1.jpg","img/producto-5/img-10.jpg","img/producto-5/img-12.jpg","img/producto-5/img-16.jpg","img/producto-5/img-24.jpg","img/producto-5/img-29.jpg","img/producto-5/img-31.jpg"],
+          "Blanco": ["img/producto-5/img-2.jpg","img/producto-5/img-9.jpg","img/producto-5/img-13.jpg","img/producto-5/img-17.jpg","img/producto-5/img-25.jpg","img/producto-5/img-30.jpg","img/producto-5/img-32.jpg"],
+          "Naranja":["img/producto-5/img-3.jpg","img/producto-5/img-6.jpg","img/producto-5/img-14.jpg","img/producto-5/img-18.jpg","img/producto-5/img-21.jpg","img/producto-5/img-26.jpg","img/producto-5/img-33.jpg"],
+          "Rojo":   ["img/producto-5/img-4.jpg","img/producto-5/img-7.jpg","img/producto-5/img-15.jpg","img/producto-5/img-19.jpg","img/producto-5/img-22.jpg","img/producto-5/img-28.jpg","img/producto-5/img-34.jpg"],
+          "Verde":  ["img/producto-5/img-5.jpg","img/producto-5/img-8.jpg","img/producto-5/img-11.jpg","img/producto-5/img-20.jpg","img/producto-5/img-23.jpg","img/producto-5/img-27.jpg","img/producto-5/img-35.jpg"]
+        }
+      },
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No",
+        surcharges: { "Sí": 9.99 }
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 9.99 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 16 cm de alto",
+          "32 cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "32 cm de ancho x 64 cm de alto",
+          "32 cm de ancho x 80 cm de alto",
+          "32 cm de ancho x 96 cm de alto",
+          "64 cm de ancho x 16 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto",
+          "96 cm de ancho x 48 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 16 cm de alto",
+          "128 cm de ancho x 32 cm de alto",
+          "128 cm de ancho x 48 cm de alto",
+          "128 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 80 cm de alto",
+          "128 cm de ancho x 96 cm de alto",
+          "160 cm de ancho x 16 cm de alto",
+          "160 cm de ancho x 32 cm de alto",
+          "160 cm de ancho x 48 cm de alto",
+          "160 cm de ancho x 64 cm de alto",
+          "160 cm de ancho x 80 cm de alto",
+          "160 cm de ancho x 96 cm de alto",
+          "192 cm de ancho x 16 cm de alto",
+          "192 cm de ancho x 32 cm de alto",
+          "192 cm de ancho x 48 cm de alto",
+          "192 cm de ancho x 80 cm de alto",
+          "192 cm de ancho x 96 cm de alto",
+          "224 cm de ancho x 16 cm de alto",
+          "224 cm de ancho x 32 cm de alto",
+          "224 cm de ancho x 48 cm de alto",
+          "224 cm de ancho x 64 cm de alto",
+          "224 cm de ancho x 80 cm de alto",
+          "224 cm de ancho x 96 cm de alto",
+          "256 cm de ancho x 16 cm de alto",
+          "256 cm de ancho x 32 cm de alto",
+          "256 cm de ancho x 48 cm de alto",
+          "256 cm de ancho x 64 cm de alto",
+          "256 cm de ancho x 80 cm de alto",
+          "256 cm de ancho x 96 cm de alto",
+          "288 cm de ancho x 16 cm de alto",
+          "288 cm de ancho x 32 cm de alto",
+          "288 cm de ancho x 48 cm de alto",
+          "288 cm de ancho x 64 cm de alto",
+          "288 cm de ancho x 80 cm de alto",
+          "288 cm de ancho x 96 cm de alto"
+        ],
+        default: "32 cm de ancho x 16 cm de alto",
+        sizePrices: {
+          "32 cm de ancho x 16 cm de alto": 150.00,
+          "32 cm de ancho x 32 cm de alto": 170.00,
+          "32 cm de ancho x 48 cm de alto": 199.00,
+          "32 cm de ancho x 64 cm de alto": 265.00,
+          "32 cm de ancho x 80 cm de alto": 305.00,
+          "32 cm de ancho x 96 cm de alto": 339.00,
+          "64 cm de ancho x 16 cm de alto": 170.01,
+          "64 cm de ancho x 32 cm de alto": 265.00,
+          "64 cm de ancho x 48 cm de alto": 341.22,
+          "64 cm de ancho x 64 cm de alto": 454.96,
+          "64 cm de ancho x 80 cm de alto": 568.70,
+          "64 cm de ancho x 96 cm de alto": 682.44,
+          "96 cm de ancho x 16 cm de alto": 199.00,
+          "96 cm de ancho x 32 cm de alto": 341.22,
+          "96 cm de ancho x 48 cm de alto": 511.83,
+          "96 cm de ancho x 64 cm de alto": 682.44,
+          "96 cm de ancho x 80 cm de alto": 780.45,
+          "96 cm de ancho x 96 cm de alto": 936.54,
+          "128 cm de ancho x 16 cm de alto": 262.99,
+          "128 cm de ancho x 32 cm de alto": 454.96,
+          "128 cm de ancho x 48 cm de alto": 682.44,
+          "128 cm de ancho x 64 cm de alto": 832.48,
+          "128 cm de ancho x 80 cm de alto": 1040.60,
+          "128 cm de ancho x 96 cm de alto": 1190.64,
+          "160 cm de ancho x 16 cm de alto": 300.99,
+          "160 cm de ancho x 32 cm de alto": 568.70,
+          "160 cm de ancho x 48 cm de alto": 780.45,
+          "160 cm de ancho x 64 cm de alto": 1040.60,
+          "160 cm de ancho x 80 cm de alto": 1240.25,
+          "160 cm de ancho x 96 cm de alto": 1488.30,
+          "192 cm de ancho x 16 cm de alto": 354.99,
+          "192 cm de ancho x 32 cm de alto": 682.44,
+          "192 cm de ancho x 48 cm de alto": 936.54,
+          "192 cm de ancho x 80 cm de alto": 1488.30,
+          "192 cm de ancho x 96 cm de alto": 1785.96,
+          "224 cm de ancho x 16 cm de alto": 398.09,
+          "224 cm de ancho x 32 cm de alto": 728.42,
+          "224 cm de ancho x 48 cm de alto": 1041.81,
+          "224 cm de ancho x 64 cm de alto": 1389.08,
+          "224 cm de ancho x 80 cm de alto": 1736.35,
+          "224 cm de ancho x 96 cm de alto": 2083.62,
+          "256 cm de ancho x 16 cm de alto": 454.96,
+          "256 cm de ancho x 32 cm de alto": 832.48,
+          "256 cm de ancho x 48 cm de alto": 1190.64,
+          "256 cm de ancho x 64 cm de alto": 1587.52,
+          "256 cm de ancho x 80 cm de alto": 1984.40,
+          "256 cm de ancho x 96 cm de alto": 2381.28,
+          "288 cm de ancho x 16 cm de alto": 511.83,
+          "288 cm de ancho x 32 cm de alto": 936.54,
+          "288 cm de ancho x 48 cm de alto": 1339.47,
+          "288 cm de ancho x 64 cm de alto": 1785.96,
+          "288 cm de ancho x 80 cm de alto": 2232.45,
+          "288 cm de ancho x 96 cm de alto": 2678.94
+        }
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Letreros LED programables, 2 caras. Disponibles en varios colores.</h2>
+          <p><strong>¡La banderola luminosa LED que tu negocio necesita!</strong></p>
+          <ul>
+            <li><strong>Muy fáciles de programar</strong></li>
+            <li><strong>Muy fáciles de instalar</strong></li>
+            <li><strong>Larga durabilidad</strong></li>
+            <li><strong>Bajo consumo</strong></li>
+            <li><strong>Alta luminosidad</strong></li>
+            <li><strong>Gran servicio de atención al cliente</strong></li>
+          </ul>
+          <p>Letrero LED programable a doble cara, disponible en diferentes tamaños y colores (A elegir entre: Rojo, Verde, Blanco, Azul y Ámbar). Pantalla LED programable para anunciar su negocio.</p>
+          <p>Es la banderola luminosa LED perfecta para personalizarla con textos, fecha, hora, animaciones (temperatura y WiFi si se le añade) y logos muy sencillos. Producto válido para usar en exterior.</p>
+          <p>Puedes colocarlos como mejor te convenga (mira en los accesorios y elige el soporte para colocar tu pantalla)</p>
+          <ul>
+            <li><em>En interior con el kit de suspensión</em></li>
+            <li><em>En exterior pegado a la pared</em></li>
+            <li><em>Perpendicular a la pared como banderola publicitaria a dos caras</em></li>
+          </ul>
+          <p>Con nuestros carteles publicitarios LED programables llame la atención de sus clientes gracias a su gran personalización y a la alta luminosidad de los LEDs con los que trabajamos.</p>
+          <p>Tenemos una gran variedad de pantallas LED con respecto al tamaño y al color, para que el cliente elija la que más se adapte a sus necesidades.</p>
+          <h3>Características principales:</h3>
+          <ul>
+            <li>Nuestras pantallas son válidas para interior y exterior.</li>
+            <li>Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. <em>*Puede añadir como opcional la sonda de temperatura.</em></li>
+            <li>Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). <em>* Puede añadir como opcional la programación WiFi para programar a distancia con su ordenador, teléfono o tablet.</em></li>
+            <li>Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Te entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español.</li>
+            <li>Personalice el tamaño de letra y número de caracteres que desee que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</li>
+            <li>Texto estático o con movimiento.</li>
+            <li>Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias.</li>
+            <li>Baja emisión de calor</li>
+            <li>Ahorro de energía</li>
+            <li>Resistente a impactos y vibraciones</li>
+            <li>Protección IP25 o exterior</li>
+            <li>Mejor relación calidad-precio del mercado.</li>
+            <li>Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
+            <li>Fácil Instalación y programación.</li>
+            <li>Vida útil 100.000 horas aproximadamente.</li>
+            <li>2 años de garantía</li>
+            <li>Servicio de atención al cliente de calidad.</li>
+          </ul>
+          <p><a href="contacto.html">Consulte nuestra ficha técnica para más detalles.</a></p>
+          <p><em>*Mire en los accesorios para elegir el soporte o kit de suspensión que desea para colocar su letrero LED programable de alta luminosidad.</em></p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">PANTALLA LED MONOCOLOR</span>
+          </div>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+              <tr><th>Pixel constitución</th><td>1R</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+              <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB</td></tr>
+              <tr><th>Peso (Kg)</th><td>2,1</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: `
+          <div class="tab-file-card">
+            <div class="tab-file-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="tab-file-info">
+              <p class="tab-file-name">Dossier Letreros LED Programables Monocolor</p>
+              <p class="tab-file-meta">PDF · Ficha técnica completa</p>
+            </div>
+            <a href="docs/Web_Dossier_Letreros_LED_Programables_Monocolor.pdf" class="btn btn-outline tab-file-btn" download target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Descargar
+            </a>
+          </div>
+        `
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
