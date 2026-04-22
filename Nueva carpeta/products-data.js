@@ -1389,12 +1389,189 @@ window.PRODUCTS_DATA = [
     badge: "",
     tags: ["Full Color", "P5", "Interior", "1 Cara"],
     shortDesc: "Pantalla LED programable Full Color P5 para interior, 1 cara.",
-    desc: "Pantalla LED programable Full Color P5 para interior, 1 cara. Alta resolución con pixel pitch P5, perfecta para escaparates, stands y puntos de venta interiores. Imágenes y vídeos a todo color con gran nitidez.",
-    images: [],
+    desc: "Pantallas luminosas LED a todo color programables para interior en resolución del pixel P5. Letreros luminosos full color para reproducir todo lo que necesites como texto, logos, imágenes, vídeos y muchos efectos.",
+    price: "667,92 €",
+    images: ["img/producto-7/img-1.jpg"],
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No",
+        surcharges: { "Sí": 42.25 }
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 42.25 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 80 cm de alto",
+          "128 cm de ancho x 96 cm de alto",
+          "160 cm de ancho x 64 cm de alto",
+          "160 cm de ancho x 80 cm de alto",
+          "160 cm de ancho x 96 cm de alto",
+          "192 cm de ancho x 64 cm de alto",
+          "192 cm de ancho x 80 cm de alto",
+          "192 cm de ancho x 96 cm de alto",
+          "224 cm de ancho x 64 cm de alto",
+          "224 cm de ancho x 80 cm de alto",
+          "224 cm de ancho x 96 cm de alto",
+          "256 cm de ancho x 64 cm de alto",
+          "256 cm de ancho x 80 cm de alto",
+          "256 cm de ancho x 96 cm de alto",
+          "288 cm de ancho x 64 cm de alto",
+          "288 cm de ancho x 80 cm de alto",
+          "288 cm de ancho x 96 cm de alto"
+        ],
+        default: "64 cm de ancho x 64 cm de alto",
+        sizePrices: {
+          "64 cm de ancho x 64 cm de alto": 667.92,
+          "64 cm de ancho x 80 cm de alto": 834.90,
+          "64 cm de ancho x 96 cm de alto": 1001.88,
+          "96 cm de ancho x 64 cm de alto": 1001.88,
+          "96 cm de ancho x 80 cm de alto": 1179.75,
+          "96 cm de ancho x 96 cm de alto": 1415.70,
+          "128 cm de ancho x 64 cm de alto": 1258.40,
+          "128 cm de ancho x 80 cm de alto": 1573.00,
+          "128 cm de ancho x 96 cm de alto": 1829.52,
+          "160 cm de ancho x 64 cm de alto": 1573.00,
+          "160 cm de ancho x 80 cm de alto": 1905.75,
+          "160 cm de ancho x 96 cm de alto": 2286.90,
+          "192 cm de ancho x 64 cm de alto": 1887.60,
+          "192 cm de ancho x 80 cm de alto": 2286.90,
+          "192 cm de ancho x 96 cm de alto": 2613.60,
+          "224 cm de ancho x 64 cm de alto": 2134.44,
+          "224 cm de ancho x 80 cm de alto": 2541.00,
+          "224 cm de ancho x 96 cm de alto": 3049.20,
+          "256 cm de ancho x 64 cm de alto": 2323.20,
+          "256 cm de ancho x 80 cm de alto": 2904.00,
+          "256 cm de ancho x 96 cm de alto": 3484.80,
+          "288 cm de ancho x 64 cm de alto": 2613.60,
+          "288 cm de ancho x 80 cm de alto": 3267.00,
+          "288 cm de ancho x 96 cm de alto": 3920.40
+        }
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables FULL COLOR P5 para interior.</h2>
+          <p><strong>Tu pantalla a todo color.</strong></p>
+          <p>Os presentamos nuestras pantallas led programables para interior P5 a todo color. Perfectas para texto, imágenes, logos, vídeos, y mucho más.</p>
+          <p>El tipo de led de estas pantallas es SMD para conseguir una mejor definición de la imagen. Además usamos LED de alta calidad para conseguir un excelente brillo y permiten que nuestros clientes vean nuestras imágenes con claridad.</p>
+          <p>Son pantallas de interior con una visualización óptima desde los 5 m hasta más de 50 m.</p>
+          <p>Entre sus ventajas destaca su bajo consumo gracias a la tecnología LED (300W/m2) y larga vida útil.</p>
+          <p>Ofrecemos unas pantallas muy fáciles de programar, de montar y desmontar y de su transporte.</p>
+          <p>Tienen un ángulo amplio de visualización superior a los 120º.</p>
+          <p>Al ser fabricantes podemos construir, a través de nuestros módulos, la medida que más se adapte a las necesidades de nuestros clientes.</p>
+          <p>Según los expertos para que la visualización del LED en interior sea correcta con 1000-1500 nits de luminosidad son suficiente, nosotros apostamos con ello ofreciendo pantallas con una luminosidad aproximada de 1500 nits.</p>
+
+          <p>Aquí te damos algunas de las razones por las que elegir nuestras pantallas LED full color:</p>
+          <ul>
+            <li>Captan la atención gracias a su luminosidad, efectos y movimiento.</li>
+            <li>Somos fabricantes, podemos ofrecerle una pantalla del tamaño que se adapta a sus necesidades.</li>
+            <li>Estas pantallas pueden reproducir efectos, video, imágenes y texto en las diferentes zonas de la pantalla led, además de poner el número de mensajes que usted desee.</li>
+            <li>Al ser dinámicos, coloridos y reproducir contenido multimedia tienen un mayor efecto que los rótulos estáticos.</li>
+            <li>Al ser de LED ofrece grandes ventajas, como bajo consumo, baja emisión de calor y radiación.</li>
+            <li>En un solo LED tienes los 3 colores primarios para conseguir, según los estudios con los 3 colores primarios Azul, Verde y Rojo mostrarán 16.777.216 colores en cualquier combinación.</li>
+            <li>100.000 horas de vida útil aproximadamente del LED.</li>
+            <li>2 años de garantía.</li>
+          </ul>
+
+          <h3>Especificaciones:</h3>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Tamaño del pixel</th><td>5 (mm)</td></tr>
+              <tr><th>Luminosidad</th><td>Aprox. 1500 nits</td></tr>
+              <tr><th>Material del panel</th><td>Acero</td></tr>
+              <tr><th>Resolución</th><td>40.000 píxeles/m²</td></tr>
+              <tr><th>Configuración del pixel</th><td>SMD 3 en1 1R1G1B</td></tr>
+              <tr><th>Distancia óptima de visualización</th><td>A partir de 5 metros</td></tr>
+              <tr><th>Nivel de brillo (Ajustable)</th><td>0-100%</td></tr>
+              <tr><th>Modo de escaneo</th><td>V/16x</td></tr>
+              <tr><th>Escala de gris por color</th><td>2048 niveles</td></tr>
+              <tr><th>Colores</th><td>Full Color: 16.777.216 colores</td></tr>
+              <tr><th>Ángulo de visión (H/V)</th><td>120° / 120°</td></tr>
+              <tr><th>Protección</th><td>IP31/IP54</td></tr>
+              <tr><th>Consumo de energía (promedio)</th><td>300 W/m²</td></tr>
+              <tr><th>Voltaje de entrada (CA)</th><td>110V ~ 240V</td></tr>
+              <tr><th>Temperatura de funcionamiento</th><td>20°C ~ +50°C</td></tr>
+              <tr><th>Humedad de operación</th><td>10% ~ 90%</td></tr>
+            </tbody>
+          </table>
+
+          <p><strong>Tipos de archivos soportados:</strong> Texto; formatos de imágenes (BMP, JPG, GIF, PCX...) y vídeos (MPG, MPEG, MPV, MP4, AVI, VCD, SWF, RM, RA, RM, ASF...).</p>
+          <p><a href="docs/Web_Ficha_Tecnica_Pantallas_LED_FULL_COLOR_P5_Interior.pdf" target="_blank" rel="noopener">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+
+          <p><em>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</em></p>
+          <p><strong>Para colocar en interior:</strong></p>
+          <ul>
+            <li>Kit de suspensión para colocar su letrero led en interior o escaparates.</li>
+          </ul>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">P5 INTERIOR FULL COLOR</span>
+          </div>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: `
+          <div class="tab-file-card">
+            <div class="tab-file-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="tab-file-info">
+              <p class="tab-file-name">Ficha Técnica Pantallas LED FULL COLOR P5 Interior</p>
+              <p class="tab-file-meta">PDF · Ficha técnica completa</p>
+            </div>
+            <a href="docs/Web_Ficha_Tecnica_Pantallas_LED_FULL_COLOR_P5_Interior.pdf" class="btn btn-outline tab-file-btn" download target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Descargar
+            </a>
+          </div>
+        `
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
