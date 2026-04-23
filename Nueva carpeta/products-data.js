@@ -776,16 +776,65 @@ window.PRODUCTS_DATA = [
   },
   {
     id: 30,
-    title: "Letrero LED Programable Cronómetro Digital, 2 Caras",
+    title: "LETRERO LED PROGRAMABLE CRONÓMETRO DIGITAL, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["Cronómetro", "2 Caras"],
-    shortDesc: "Letrero LED programable con función de cronómetro digital, 2 caras.",
-    desc: "Letrero LED programable con función de cronómetro digital, 2 caras. Doble visibilidad. Cuenta atrás, cuenta progresiva y hora en tiempo real. Ideal para eventos deportivos, competiciones y espacios públicos con mucho flujo de personas.",
-    images: [],
+    tags: ["Cronómetro", "2 Caras", "RGB"],
+    shortDesc: "Banderolas luminosas LED programables a 2 cara en RGB para usarlas, como una de sus tantas funciones, de cronómetro digital LED.",
+    desc: "Banderolas luminosas LED programables a 2 cara en RGB para usarlas, como una de sus tantas funciones, de cronómetro digital LED. Además puedes programarlo y usarlo de una forma muy sencilla. Muestra lo que desee en el color que desee. En nuestros rótulos electrónicos puede tener un cartel luminoso y a la vez un cronómetro, todo en una sola pantalla LED. Producto válido para exterior.",
+    price: "469,98 €",
+    images: [
+      "img/producto-30/letrero-led-programable-cronometro-digital-2-caras.jpg"
+    ],
+    sizePrices: {
+      "64 cm de ancho x 16 cm de alto": 469.98,
+      "64 cm de ancho x 32 cm de alto": 551.76,
+      "64 cm de ancho x 64 cm de alto": 1026.08,
+      "96 cm de ancho x 16 cm de alto": 413.82,
+      "96 cm de ancho x 32 cm de alto": 827.64
+    },
+    options: [
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 16 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "64 cm de ancho x 16 cm de alto"
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETRERO LED PROGRAMABLE CRONÓMETRO DIGITAL</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
@@ -793,28 +842,370 @@ window.PRODUCTS_DATA = [
     title: "Letrero LED Programable para Estancos en RGB, 1 Cara",
     badge: "",
     tags: ["RGB", "Estancos", "1 Cara"],
-    shortDesc: "Letrero LED programable para estancos en RGB, 1 cara.",
-    desc: "Letrero LED programable para estancos en RGB, 1 cara. Muestra precios de tabaco, loterías, servicios y promociones especiales. Alta visibilidad para atraer clientes. Disponible en varios tamaños adaptados a establecimientos estancos.",
-    images: [],
+    shortDesc: "Letrero luminoso LED programable para estancos a 1 cara en RGB. Mire nuestra variedad de pantallas luminosas.",
+    desc: "Letrero luminoso LED programable para estancos a 1 cara en RGB. Mire nuestra variedad de pantallas luminosas LED para su negocio y personalice su cartel luminoso a su gusto. Introduzca el logo de estanco o el suyo personalizado, textos, y toda la información que desee transmitir. Pueden colocarse pegados a la pared o perpendiculares como banderola publicitaria. Producto válido para exterior.",
+    price: "199,00 €",
+    images: [
+      "img/producto-31/letrero-led-programable-para-estancos-en-rgb.jpg",
+      "img/producto-31/letrero-led-programable-para-estancos-en-rgb (1).jpg",
+      "img/producto-31/letrero-led-programable-para-estancos-en-rgb (2).jpg",
+      "img/producto-31/letrero-led-programable-para-estancos-en-rgb (3).jpg",
+      "img/producto-31/letrero-led-programable-para-estancos-en-rgb (4).jpg",
+      "img/producto-31/letrero-led-programable-para-estancos-en-rgb (5).jpg"
+    ],
+    sizePrices: {
+      "32cm de ancho x 32 cm de alto": 199.00,
+      "32 cm de ancho x 48 cm de alto": 284.98,
+      "64 cm de ancho x 32 cm de alto": 309.00,
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 551.76,
+      "64 cm de ancho x 80 cm de alto": 689.70,
+      "64 cm de ancho x 96 cm de alto": 827.64,
+      "96 cm de ancho x 16 cm de alto": 275.00,
+      "96 cm de ancho x 32 cm de alto": 413.82
+    },
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ]
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
-    related: [40, 41, 42, 37, 38, 39]
+    related: [40, 41, 42, 37, 38, 39],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables:</h2>
+          <h3>Para Estancos / Expendeduría / Artículos del fumador</h3>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>En este caso, nuestras pantallas en RGB pueden reproducir logos y algunas imágenes, lo que le permite poner el logo típico de estanco o el suyo propio, además de añadirle texto, fecha, hora y como opcional la temperatura.</p>
+          <p>También puede ponerle otro logo suyo personalizado.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>La programación es muy cómoda:</p>
+          <p>Haces el programa en el ordenador y lo transmites a tu pantalla. (Seleccione en su compra si solo quiere USB o si desea además el WiFi).</p>
+          <p>Nuestras pantallas LED son válidas para exterior e interior. ¡Colócala dónde quieras!</p>
+          <p>Además disponemos de pantallas a una cara y a doble cara para colocar como banderola publicitaria.</p>
+          <p>En los accesorios puedes ver las opciones de soportes para colocarlos.</p>
+          <p>Nuestra experiencia en el sector nos avala, y le dará tranquilidad adquirir nuestros productos, ya que trabajamos con componentes de alta calidad.</p>
+          <p>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</p>
+          
+          <h3>Especificaciones técnicas:</h3>
+          <table class="produto-specs">
+            <tbody>
+              <tr>
+                <td><strong>Separación entre píxeles (mm)</strong></td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td><strong>Densidad de píxeles (Puntos/m2)</strong></td>
+                <td>10.000</td>
+              </tr>
+              <tr>
+                <td><strong>Pixel constitución</strong></td>
+                <td>1R1G1B</td>
+              </tr>
+              <tr>
+                <td><strong>Tipo de LED</strong></td>
+                <td>SMD3535</td>
+              </tr>
+              <tr>
+                <td><strong>Vida estimada</strong></td>
+                <td>100.000 Horas</td>
+              </tr>
+              <tr>
+                <td><strong>Brillo (Candelas/m2)</strong></td>
+                <td>>6000</td>
+              </tr>
+              <tr>
+                <td><strong>Tensión</strong></td>
+                <td>220V</td>
+              </tr>
+              <tr>
+                <td><strong>Tasa de refresco</strong></td>
+                <td>1920 Hz</td>
+              </tr>
+              <tr>
+                <td><strong>Ángulo de visión</strong></td>
+                <td>120º / 60º</td>
+              </tr>
+              <tr>
+                <td><strong>Temperatura de trabajo</strong></td>
+                <td>-20ºC ~ +70ºC</td>
+              </tr>
+              <tr>
+                <td><strong>Transmisión de datos</strong></td>
+                <td>PC – USB (Opcional WiFi)</td>
+              </tr>
+              <tr>
+                <td><strong>Consumo medio (por m2)</strong></td>
+                <td>400 W/m2</td>
+              </tr>
+              <tr>
+                <td><strong>Protección</strong></td>
+                <td>Para exterior: Soporta agentes atmosféricos</td>
+              </tr>
+              <tr>
+                <td><strong>Construcción</strong></td>
+                <td>Aluminio / PC</td>
+              </tr>
+              <tr>
+                <td><strong>Dimensiones (cm)</strong></td>
+                <td>*Consultar</td>
+              </tr>
+              <tr>
+                <td><strong>Certificados</strong></td>
+                <td>CE-RHOS</td>
+              </tr>
+              <tr>
+                <td><strong>Garantía</strong></td>
+                <td>2 Años</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><a href="contacto.html">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+          <p><em>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</em></p>
+          <p><strong>Para colocar en exterior:</strong></p>
+          <p>- Pegado a la pared.</p>
+          <p>- Perpendicular a la pared como banderola electrónica.</p>
+          <p><strong>Para colocar en interior:</strong></p>
+          <p>- Kit de suspensión para colocar su letrero led en interior o escaparates.</p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">Estancos</span>
+          </div>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: ""
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ""
+      }
+    ]
   },
   {
     id: 32,
     title: "Letrero LED Programable para Estancos en RGB, 2 Caras",
     badge: "",
     tags: ["RGB", "Estancos", "2 Caras"],
-    shortDesc: "Letrero LED programable para estancos en RGB, 2 caras.",
-    desc: "Letrero LED programable para estancos en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra precios de tabaco, loterías y servicios. Disponible en varios tamaños. Ideal para estancos en zonas peatonales y esquinas.",
-    images: [],
+    shortDesc: "Banderola LED programable para estancos a doble cara en RGB. Mire nuestra variedad de pantallas luminosas.",
+    desc: "Banderola LED programable para estancos a doble cara en RGB. Mire nuestra variedad de pantallas luminosas LED para su negocio y personalice su cartel luminoso a su gusto. Introduzca el logo de estanco o el suyo personalizado, textos, y toda la información que desee transmitir. Pueden colocarse pegados a la pared o perpendiculares como banderola publicitaria. Producto válido para exterior.",
+    price: "375,00 €",
+    images: [
+      "img/producto-32/letrero-led-programable-para-estancos-en-rgb.jpg",
+      "img/producto-32/letrero-led-programable-para-estancos-en-rgb (1).jpg",
+      "img/producto-32/letrero-led-programable-para-estancos-en-rgb (2).jpg",
+      "img/producto-32/letrero-led-programable-para-estancos-en-rgb (3).jpg",
+      "img/producto-32/letrero-led-programable-para-estancos-en-rgb (4).jpg",
+      "img/producto-32/letrero-led-programable-para-estancos-en-rgb(5).jpg"
+    ],
+    sizePrices: {
+      "32cm de ancho x 32 cm de alto": 375.00,
+      "32 cm de ancho x 48 cm de alto": 413.82,
+      "64 cm de ancho x 32 cm de alto": 551.76,
+      "64 cm de ancho x 48 cm de alto": 827.64,
+      "64cm de ancho x 64 cm de alto": 1026.08,
+      "64 cm de ancho x 80 cm de alto": 1282.60,
+      "96 cm de ancho x 16 cm de alto": 410.00,
+      "96 cm de ancho x 32 cm de alto": 827.64
+    },
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ]
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
-    related: [40, 41, 42, 37, 38, 39]
+    related: [40, 41, 42, 37, 38, 39],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Banderolas LED programables:</h2>
+          <h3>Para Estancos / Expendeduría / Artículos del fumador</h3>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>En este caso, nuestras pantallas en RGB pueden reproducir logos y algunas imágenes, lo que le permite poner el logo típico de estanco o el suyo propio, además de añadirle texto, fecha, hora y como opcional la temperatura.</p>
+          <p>También puede ponerle otro logo suyo personalizado.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>La programación es muy cómoda:</p>
+          <p>Haces el programa en el ordenador y lo transmites a tu pantalla. (Seleccione en su compra si solo quiere USB o si desea además el WiFi).</p>
+          <p>Nuestras pantallas LED son válidas para exterior e interior. ¡Colócala dónde quieras!</p>
+          <p>Además disponemos de pantallas a una cara y a doble cara para colocar como banderola publicitaria.</p>
+          <p>En los accesorios puedes ver las opciones de soportes para colocarlos.</p>
+          <p>Nuestra experiencia en el sector nos avala, y le dará tranquilidad adquirir nuestros productos, ya que trabajamos con componentes de alta calidad.</p>
+          <p>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</p>
+          
+          <h3>Especificaciones técnicas:</h3>
+          <table class="produto-specs">
+            <tbody>
+              <tr>
+                <td><strong>Separación entre píxeles (mm)</strong></td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td><strong>Densidad de píxeles (Puntos/m2)</strong></td>
+                <td>10.000</td>
+              </tr>
+              <tr>
+                <td><strong>Pixel constitución</strong></td>
+                <td>1R1G1B</td>
+              </tr>
+              <tr>
+                <td><strong>Tipo de LED</strong></td>
+                <td>SMD3535</td>
+              </tr>
+              <tr>
+                <td><strong>Vida estimada</strong></td>
+                <td>100.000 Horas</td>
+              </tr>
+              <tr>
+                <td><strong>Brillo (Candelas/m2)</strong></td>
+                <td>>6000</td>
+              </tr>
+              <tr>
+                <td><strong>Tensión</strong></td>
+                <td>220V</td>
+              </tr>
+              <tr>
+                <td><strong>Tasa de refresco</strong></td>
+                <td>1920 Hz</td>
+              </tr>
+              <tr>
+                <td><strong>Ángulo de visión</strong></td>
+                <td>120º / 60º</td>
+              </tr>
+              <tr>
+                <td><strong>Temperatura de trabajo</strong></td>
+                <td>-20ºC ~ +70ºC</td>
+              </tr>
+              <tr>
+                <td><strong>Transmisión de datos</strong></td>
+                <td>PC – USB (Opcional WiFi)</td>
+              </tr>
+              <tr>
+                <td><strong>Consumo medio (por m2)</strong></td>
+                <td>400 W/m2</td>
+              </tr>
+              <tr>
+                <td><strong>Protección</strong></td>
+                <td>Para exterior: Soporta agentes atmosféricos</td>
+              </tr>
+              <tr>
+                <td><strong>Construcción</strong></td>
+                <td>Aluminio / PC</td>
+              </tr>
+              <tr>
+                <td><strong>Dimensiones (cm)</strong></td>
+                <td>*Consultar</td>
+              </tr>
+              <tr>
+                <td><strong>Certificados</strong></td>
+                <td>CE-RHOS</td>
+              </tr>
+              <tr>
+                <td><strong>Garantía</strong></td>
+                <td>2 Años</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><a href="contacto.html">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+          <p><em>*En los tamaños de banderolas luminosas a doble cara, el soporte para colocar su pantalla perpendicular a la pared en forma de banderola publicitaria está incluido gratis.</em></p>
+          <p>Si desea algún otro tipo de soporte, por favor, contacte con nosotros.</p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">Estancos</span>
+          </div>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: ""
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ""
+      }
+    ]
   },
   {
     id: 33,

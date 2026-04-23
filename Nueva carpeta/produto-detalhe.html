@@ -1061,8 +1061,8 @@
           }
         }
 
-        // Producto 36: Letrero clínicas — precios por tamaño + sonda + WiFi
-        if (product.id === 36 && product.sizePrices) {
+        // Producto 36, 32, 31 y 30: Letreros con precios por tamaño + sonda + WiFi
+        if ((product.id === 36 || product.id === 32 || product.id === 31 || product.id === 30) && product.sizePrices) {
           const sizeSel = document.getElementById('opt_tamano');
           if (sizeSel && product.sizePrices[sizeSel.value] !== undefined) {
             basePrice = product.sizePrices[sizeSel.value];
@@ -1072,6 +1072,7 @@
             extraPrice += 9.99;
           }
           const wifiBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="programacion"]');
+          // For product 32 and 36, checking for "wifi" is correct.
           if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) {
             extraPrice += 9.99;
           }
