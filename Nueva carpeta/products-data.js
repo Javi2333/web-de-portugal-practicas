@@ -1580,12 +1580,163 @@ window.PRODUCTS_DATA = [
     badge: "",
     tags: ["RGB", "Parking", "1 Cara"],
     shortDesc: "Letrero LED programable específico para parking, en RGB, 1 cara.",
-    desc: "Letrero LED programable específico para parking, en RGB, 1 cara. Disponible en varios tamaños. Muestra mensajes de libre/completo, tarifas y horarios. Alta visibilidad día y noche. Ideal para aparcamientos públicos y privados.",
-    images: [],
+    desc: "Letrero luminoso LED programable para Parking a 1 cara en RGB. Mire nuestra variedad de pantallas luminosas LED para su negocio y personalice su cartel luminoso a su gusto. Introduzca el logo de parking, textos, y toda la información que desee transmitir. Nuestros rótulos electrónicos pueden colocarse pegados a la pared o perpendiculares como banderola publicitaria. Producto válido para exterior.",
+    price: "242,00 €",
+    images: [
+      "img/producto-8/img-1.jpg",
+      "img/producto-8/img-2.jpg",
+      "img/producto-8/img-3.jpg",
+      "img/producto-8/img-4.jpg",
+      "img/producto-8/img-5.jpg",
+      "img/producto-8/img-6.jpg"
+    ],
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No",
+        surcharges: { "Sí": 18.15 }
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 18.15 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32 cm de ancho x 32 cm de alto",
+        sizePrices: {
+          "32 cm de ancho x 32 cm de alto": 242.00,
+          "32 cm de ancho x 48 cm de alto": 344.85,
+          "64 cm de ancho x 32 cm de alto": 435.60,
+          "64 cm de ancho x 48 cm de alto": 508.20,
+          "64 cm de ancho x 64 cm de alto": 677.60,
+          "64 cm de ancho x 80 cm de alto": 847.00,
+          "64 cm de ancho x 96 cm de alto": 1016.40,
+          "96 cm de ancho x 16 cm de alto": 344.85,
+          "96 cm de ancho x 32 cm de alto": 508.20
+        }
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables:</h2>
+          <p><strong>Para Parking / Garaje / Aparcamiento</strong></p>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>En este caso, nuestras pantallas en RGB pueden reproducir logos y algunas imágenes, lo que le permite poner el logo típico de la P de parking, además de añadirle texto, fecha, hora y como opcional la temperatura.</p>
+          <p>También puede ponerle otro logo suyo personalizado.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>La programación es muy cómoda:</p>
+          <p>Haces el programa en el ordenador y lo transmites a tu pantalla. (Seleccione en su compra si solo quiere USB o si desea además el WiFi).</p>
+          <p>Nuestras pantallas LED son válidas para exterior e interior. ¡Colócala donde quieras!</p>
+          <p>Además disponemos de pantallas a una cara y a doble cara.</p>
+          <p>En los accesorios puedes ver las opciones de soportes para colocarlos.</p>
+          <p>Nuestra experiencia en el sector nos avala, y le dará tranquilidad adquirir nuestros productos, ya que trabajamos con componentes de alta calidad.</p>
+          <p><strong>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</strong></p>
+
+          <h3>Especificaciones</h3>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+              <tr><th>Pixel constitución</th><td>1R</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+              <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120° / 60°</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20°C — +70°C</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB</td></tr>
+              <tr><th>Peso (Kg)</th><td>2,1</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+
+          <p><a href="docs/LP_Dossier_Letreros_LED_Programables_Parking.pdf" target="_blank" rel="noopener">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+
+          <p><em>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</em></p>
+          <p><strong>Para colocar en exterior:</strong></p>
+          <ul>
+            <li>Pegado a la pared.</li>
+            <li>Perpendicular a la pared como banderola electrónica.</li>
+          </ul>
+          <p><strong>Para colocar en interior:</strong></p>
+          <ul>
+            <li>Kit de suspensión para colocar su letrero led en interior o escaparates.</li>
+          </ul>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">parking</span>
+          </div>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: `
+          <div class="tab-file-card">
+            <div class="tab-file-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="tab-file-info">
+              <p class="tab-file-name">Dossier Letreros LED Programables Parking</p>
+              <p class="tab-file-meta">PDF · Ficha técnica completa</p>
+            </div>
+            <a href="docs/LP_Dossier_Letreros_LED_Programables_Parking.pdf" class="btn btn-outline tab-file-btn" download target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Descargar
+            </a>
+          </div>
+        `
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
@@ -1594,12 +1745,66 @@ window.PRODUCTS_DATA = [
     badge: "",
     tags: ["RGB", "Autoescuelas", "1 Cara"],
     shortDesc: "Letrero LED programable diseñado para autoescuelas, en RGB, 1 cara.",
-    desc: "Letrero LED programable diseñado para autoescuelas, en RGB, 1 cara. Muestra horarios de clases, información de matrícula y mensajes promocionales. Alta visibilidad, programación sencilla. Disponible en varios tamaños.",
-    images: [],
+    desc: "Letrero luminoso LED programable para Autoescuelas a 1 cara en RGB. Con nuestras pantallas luminosas LED, podrá transmitir toda la información que necesite a sus clientes. Además son carteles luminosos personalizables para que añada el logo de autoescuela, textos, fecha y mucho más. Nuestros rótulos luminosos son válidos para colocar en exterior.",
+    price: "242,00 €",
+    images: [
+      "img/producto-9/img-1.jpg",
+      "img/producto-9/img-2.jpg",
+      "img/producto-9/img-3.jpg",
+      "img/producto-9/img-4.jpg",
+      "img/producto-9/img-5.jpg",
+      "img/producto-9/img-6.jpg",
+      "img/producto-9/img-7.jpg"
+    ],
+    options: [
+      {
+        id: "sonda",
+        label: "Sonda de Temperatura",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No",
+        surcharges: { "Sí": 18.15 }
+      },
+      {
+        id: "programacion",
+        label: "Modo de Programación",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 18.15 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32 cm de ancho x 32 cm de alto",
+        sizePrices: {
+          "32 cm de ancho x 32 cm de alto": 242.00,
+          "32 cm de ancho x 48 cm de alto": 344.85,
+          "64 cm de ancho x 48 cm de alto": 508.20,
+          "64 cm de ancho x 64 cm de alto": 677.60,
+          "64 cm de ancho x 80 cm de alto": 847.00,
+          "64 cm de ancho x 96 cm de alto": 1016.40,
+          "96 cm de ancho x 16 cm de alto": 344.85,
+          "96 cm de ancho x 32 cm de alto": 508.20
+        }
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
