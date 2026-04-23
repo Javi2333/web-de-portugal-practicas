@@ -1804,7 +1804,103 @@ window.PRODUCTS_DATA = [
     sizes: [],
     features: [],
     extra: null,
-    tabs: [],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables:</h2>
+          <p><strong>Para Autoescuelas</strong></p>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>En este caso, nuestras pantallas en RGB pueden reproducir logos y algunas imágenes, lo que le permite poner el logo típico de las autoescuelas además de añadirle texto, fecha, hora y como opcional la temperatura.</p>
+          <p>También puede ponerle otro logo suyo personalizado.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>La programación es muy cómoda:</p>
+          <p>Haces el programa en el ordenador y lo transmites a tu pantalla. (Seleccione en su compra si solo quiere USB o si desea además el WiFi).</p>
+          <p>Nuestras pantallas LED son válidas para exterior e interior. ¡Colócala donde quieras!</p>
+          <p>Además disponemos de pantallas a una cara y a doble cara.</p>
+          <p>En los accesorios puedes ver las opciones de soportes para colocarlos.</p>
+          <p>Nuestra experiencia en el sector nos avala, y le dará tranquilidad adquirir nuestros productos, ya que trabajamos con componentes de alta calidad.</p>
+          <p><strong>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</strong></p>
+
+          <h3>Especificaciones técnicas</h3>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+              <tr><th>Pixel constitución</th><td>1R1G1B</td></tr>
+              <tr><th>Tipo de LED</th><td>SMD3535</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m²)</th><td>&gt;6000</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Tasa de refresco</th><td>1920 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120° / 60°</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20°C — +70°C</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+              <tr><th>Consumo medio (por m²)</th><td>400 W/m²</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+
+          <p><a href="docs/LP_Dossier_Letreros_LED_Programables_Autoescuelas.pdf" target="_blank" rel="noopener">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+
+          <p><em>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</em></p>
+          <p><strong>Para colocar en exterior:</strong></p>
+          <ul>
+            <li>Pegado a la pared.</li>
+            <li>Perpendicular a la pared como banderola electrónica.</li>
+          </ul>
+          <p><strong>Para colocar en interior:</strong></p>
+          <ul>
+            <li>Kit de suspensión para colocar su letrero led en interior o escaparates.</li>
+          </ul>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">autoescuela</span>
+          </div>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: `
+          <div class="tab-file-card">
+            <div class="tab-file-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="tab-file-info">
+              <p class="tab-file-name">Dossier Letreros LED Programables Autoescuelas</p>
+              <p class="tab-file-meta">PDF · Ficha técnica completa</p>
+            </div>
+            <a href="docs/LP_Dossier_Letreros_LED_Programables_Autoescuelas.pdf" class="btn btn-outline tab-file-btn" download target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Descargar
+            </a>
+          </div>
+        `
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
