@@ -1061,8 +1061,8 @@
           }
         }
 
-        // Producto 36, 32, 31 y 30: Letreros con precios por tamaño + sonda + WiFi
-        if ((product.id === 36 || product.id === 32 || product.id === 31 || product.id === 30) && product.sizePrices) {
+        // Producto 36, 32, 31, 30, 29, 28, 27, 26 y 25: Letreros con precios por tamaño + sonda + WiFi
+        if ((product.id === 36 || product.id === 32 || product.id === 31 || product.id === 30 || product.id === 29 || product.id === 28 || product.id === 27 || product.id === 26 || product.id === 25) && product.sizePrices) {
           const sizeSel = document.getElementById('opt_tamano');
           if (sizeSel && product.sizePrices[sizeSel.value] !== undefined) {
             basePrice = product.sizePrices[sizeSel.value];

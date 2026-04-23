@@ -706,72 +706,620 @@ window.PRODUCTS_DATA = [
   },
   {
     id: 25,
-    title: "Letrero LED Programable para Hoteles en RGB, 1 Cara",
+    title: "LETRERO LED PROGRAMABLE PARA HOTELES EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Hoteles", "1 Cara"],
-    shortDesc: "Letrero LED programable para hoteles en RGB, 1 cara.",
-    desc: "Letrero LED programable para hoteles en RGB, 1 cara. Muestra disponibilidad de habitaciones, eventos, restauración y bienvenida personalizada. Alta visibilidad. Disponible en varios tamaños. Perfecto para la señalización exterior de hoteles.",
-    images: [],
+    tags: ["RGB", "Hoteles", "2 Caras"],
+    shortDesc: "Banderolas luminosas LED programables a 2 caras en RGB para hoteles, hostales, pensiones y más. Mire nuestra variedad de letreros luminosos para negocios y tiendas y podrá personalizarlo a su gusto cada vez que lo desee. Introduzca logo, textos, y toda la información que desee transmitir. Los mejores carteles digitales de alta luminosidad. Productos válidos para exterior.",
+    desc: "Banderolas luminosas LED programables a 2 caras en RGB para hoteles, hostales, pensiones y más. Mire nuestra variedad de letreros luminosos para negocios y tiendas y podrá personalizarlo a su gusto cada vez que lo desee. Introduzca logo, textos, y toda la información que desee transmitir. Los mejores carteles digitales de alta luminosidad. Productos válidos para exterior.",
+    price: "339,00 €",
+    images: [
+      "img/producto-25/letrero-led-programable-para-hoteles-rgb.jpg",
+      "img/producto-25/letrero-led-programable-para-hoteles-rgb (1).jpg"
+    ],
+    sizePrices: {
+      "32 cm de ancho x 32 cm de alto": 339.00,
+      "32 cm de ancho x 48 cm de alto": 419.00,
+      "64 cm de ancho x 32 cm de alto": 549.00,
+      "64 cm de ancho x 48 cm de alto": 799.00,
+      "64 cm de ancho x 64 cm de alto": 999.00,
+      "64 cm de ancho x 80 cm de alto": 1235.00,
+      "64 cm de ancho x 96 cm de alto": 1481.00,
+      "96 cm de ancho x 16 cm de alto": 423.81,
+      "96 cm de ancho x 32 cm de alto": 827.64
+    },
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "Sí"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32 cm de ancho x 32 cm de alto"
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Banderolas luminosas LED programables:<br>Para Hoteles / Hostales / Pensiones</h2>
+          <p>Somos fabricantes y distribuidores de banderolas publicitarias LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>En este caso, nuestras pantallas en RGB pueden reproducir logos y algunas imágenes, lo que le permite poner el logo típico de los hoteles y hostales, además de añadirle texto, fecha, hora y como opcional la temperatura.</p>
+          <p>También puede ponerle otro logo suyo personalizado.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>La programación es muy cómoda:</p>
+          <p>Haces el programa en el ordenador y lo transmites a tu pantalla. (Seleccione en su compra si solo quiere USB o si desea además el WIFI).</p>
+          <p>Nuestras pantallas LED son válidas para exterior e interior. ¡Colócala donde quieras!</p>
+          <p>Además disponemos de pantallas a una cara y a doble cara.</p>
+          <p>En los accesorios puedes ver las opciones de soportes para colocarlos.</p>
+          <p>Nuestra experiencia en el sector nos avala, y le dará tranquilidad adquirir nuestros productos, ya que trabajamos con componentes de alta calidad.</p>
+          <p><strong>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</strong></p>
+
+          <h3>Especificaciones</h3>
+          <ul>
+            <li>- Separación entre píxeles (mm): 10</li>
+            <li>- Densidad de píxeles (Puntos/m2): 10.000</li>
+            <li>- Pixel constitución: 1R</li>
+            <li>- Vida estimada: 100.000 Horas</li>
+            <li>- Brillo (Candelas/m2): &gt;2000</li>
+            <li>- Control de brillo (Sincrónico/Asincrónico): 16/8</li>
+            <li>- Tensión: 220V</li>
+            <li>- Frecuencia: 50 Hz</li>
+            <li>- Ángulo de visión: 120º / 60º</li>
+            <li>- Temperatura de trabajo: -20ºC ~ +70ºC</li>
+            <li>- Transmisión de datos: PC – USB</li>
+            <li>- Peso (Kg): 2,1</li>
+            <li>- Protección: Para exterior: Soporta agentes atmosféricos</li>
+            <li>- Construcción: Aluminio / PC</li>
+            <li>- Dimensiones (cm): *Consultar</li>
+            <li>- Certificados: CE-RHOS</li>
+            <li>- Garantía: 2 Años</li>
+          </ul>
+
+          <p><a href="#">Consulte nuestra ficha técnica para más detalles.</a></p>
+          <p><strong>*En los tamaños de banderolas luminosas a doble cara, el soporte para colocar su pantalla perpendicular a la pared en forma de banderola publicitaria está incluido gratis.</strong></p>
+          <p>Si desea algún otro tipo de soporte, por favor, contacte con nosotros.</p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETRERO LED PROGRAMABLE PARA HOTELES EN RGB</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 26,
-    title: "Letrero LED Programable para Hoteles en RGB, 2 Caras",
+    title: "LETREROS LED PROGRAMABLE PARA DISCOTECAS - PUB EN RGB, 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Hoteles", "2 Caras"],
-    shortDesc: "Letrero LED programable para hoteles en RGB, 2 caras.",
-    desc: "Letrero LED programable para hoteles en RGB, 2 caras. Doble visibilidad para señalización exterior completa. Muestra disponibilidad de habitaciones, servicios del hotel, eventos y mensajes de bienvenida. Disponible en varios tamaños.",
-    images: [],
+    tags: ["RGB", "Discotecas", "1 Cara"],
+    shortDesc: "Letreros luminosos LED programables para discotecas y Pub. Llame la atención de su negocio con nuestros rótulos electrónicos. Carteles digitales de alta luminosidad para colocar en exterior o en interior y mostrar logos, textos e información de una forma moderna y dinámica. Puede colocarlo como cartel publicitario pegado a la pared o perpendicular como banderola luminosa.",
+    desc: "Letreros luminosos LED programables para discotecas y Pub. Llame la atención de su negocio con nuestros rótulos electrónicos. Carteles digitales de alta luminosidad para colocar en exterior o en interior y mostrar logos, textos e información de una forma moderna y dinámica. Puede colocarlo como cartel publicitario pegado a la pared o perpendicular como banderola luminosa.",
+    price: "199,00 €",
+    images: [
+      "img/producto-26/letreros-led-programable-para-discotecas-pub-rgb.jpg",
+      "img/producto-26/letreros-led-programable-para-discotecas-pub-rgb (1).jpg",
+      "img/producto-26/letreros-led-programable-para-discotecas-pub-rgb (2).jpg",
+      "img/producto-26/letreros-led-programable-para-discotecas-pub-rgb (3).jpg"
+    ],
+    sizePrices: {
+      "32 cm de ancho x 32 cm de alto": 199.00,
+      "32 cm de ancho x 48 cm de alto": 229.00,
+      "64 cm de ancho x 32 cm de alto": 309.00,
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64 cm de ancho x 64 cm de alto": 542.00,
+      "64 cm de ancho x 80 cm de alto": 622.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82
+    },
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "Sí"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32 cm de ancho x 32 cm de alto"
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables:<br>Para Discotecas / Pub</h2>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Con nuestros letreros luminosos programables, podemos conseguir con un solo producto, un cartel led para cada tipo de negocio.</p>
+          <p>¿Tiene una discoteca o pub y quiere llamar la atención, informar de ofertas, fiestas o eventos? Con nuestros letreros LED programables puede conseguirlo de una forma muy fácil.</p>
+          <p>Son pantallas LED muy fáciles de programar e instalar, además nosotros le asesoramos y ayudamos en lo que necesite.</p>
+          <p>Carteles luminosos muy modernos, además al ser en RGB le permiten poner logos y el color de texto que desee en cada momento.</p>
+          <p>Mire todas las ventajas de tener un letrero LED programable en su negocio: fácil programación, alta luminosidad, bajo consumo, alta durabilidad del LED, etc.</p>
+
+          <h3>Especificaciones</h3>
+          <ul>
+            <li>- Separación entre píxeles (mm): 10</li>
+            <li>- Densidad de píxeles (Puntos/m2): 10.000</li>
+            <li>- Pixel constitución: 1R</li>
+            <li>- Vida estimada: 100.000 Horas</li>
+            <li>- Brillo (Candelas/m2): &gt;2000</li>
+            <li>- Control de brillo (Sincrónico/Asincrónico): 16/8</li>
+            <li>- Tensión: 220V</li>
+            <li>- Frecuencia: 50 Hz</li>
+            <li>- Ángulo de visión: 120º / 60º</li>
+            <li>- Temperatura de trabajo: -20ºC ~ +70ºC</li>
+            <li>- Transmisión de datos: PC – USB</li>
+            <li>- Peso (Kg): 2,1</li>
+            <li>- Protección: Para exterior: Soporta agentes atmosféricos</li>
+            <li>- Construcción: Aluminio / PC</li>
+            <li>- Dimensiones (cm): *Consultar</li>
+            <li>- Certificados: CE-RHOS</li>
+            <li>- Garantía: 2 Años</li>
+          </ul>
+
+          <p><a href="#">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+          
+          <h3>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</h3>
+          
+          <p>Para colocar en exterior:</p>
+          <ul>
+            <li>- Pegado a la pared.</li>
+            <li>- Perpendicular a la pared como banderola electrónica.</li>
+          </ul>
+
+          <p>Para colocar en interior:</p>
+          <ul>
+            <li>- Kit de suspensión para colocar su letrero led en interior o escaparates.</li>
+          </ul>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETREROS LED PROGRAMABLE PARA DISCOTECAS</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 27,
-    title: "Letreros LED Programable para Discotecas – Pub en RGB, 1 Cara",
+    title: "LETREROS LED PROGRAMABLE PARA DISCOTECAS - PUB EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Ocio Nocturno", "1 Cara"],
-    shortDesc: "Letrero LED programable para discotecas y pubs en RGB, 1 cara.",
-    desc: "Letrero LED programable para discotecas y pubs en RGB, 1 cara. Impacto visual máximo con animaciones y colores vivos. Muestra nombre del local, eventos, DJs y promociones. Disponible en varios tamaños para fachadas y escaparates.",
-    images: [],
+    tags: ["RGB", "Discotecas", "2 Caras"],
+    shortDesc: "Banderola luminosa LED programable a 2 caras en RGB para discotecas y Pub. Llame la atención de su negocio con nuestros rótulos electrónicos. Carteles digitales de alta luminosidad para colocar en exterior o en interior y mostrar logos, textos e información de una forma moderna y dinámica. Son visibles desde largas distancias gracias a su alta luminosidad. Válidas para exterior.",
+    desc: "Banderola luminosa LED programable a 2 caras en RGB para discotecas y Pub. Llame la atención de su negocio con nuestros rótulos electrónicos. Carteles digitales de alta luminosidad para colocar en exterior o en interior y mostrar logos, textos e información de una forma moderna y dinámica. Son visibles desde largas distancias gracias a su alta luminosidad. Válidas para exterior.",
+    price: "339,00 €",
+    images: [
+      "img/producto-27/letreros-led-programable-para-discotecas-pub-rgb.jpg"
+    ],
+    sizePrices: {
+      "32 cm de ancho x 32 cm de alto": 339.00,
+      "32 cm de ancho x 48 cm de alto": 419.00,
+      "64 cm de ancho x 32 cm de alto": 549.00,
+      "64 cm de ancho x 48 cm de alto": 799.00,
+      "64 cm de ancho x 64 cm de alto": 999.00,
+      "64 cm de ancho x 80 cm de alto": 1235.00,
+      "96 cm de ancho x 16 cm de alto": 423.81,
+      "96 cm de ancho x 32 cm de alto": 827.64
+    },
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "Sí"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32 cm de ancho x 32 cm de alto"
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Banderolas luminosas LED programables:<br>Para Discotecas / Pub</h2>
+          <p>Somos fabricantes y distribuidores de banderolas publicitarias LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>En este caso, nuestras pantallas en RGB pueden reproducir logos y algunas imágenes, además de añadirle texto, fecha, hora y como opcional la temperatura.</p>
+          <p>También puede ponerle otro logo suyo personalizado.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>La programación es muy cómoda:</p>
+          <p>Haces el programa en el ordenador y lo transmites a tu pantalla. (Seleccione en su compra si solo quiere USB o si desea además el WIFI).</p>
+          <p>Nuestras pantallas LED son válidas para exterior e interior. ¡Colócala donde quieras!</p>
+          <p>Además disponemos de pantallas a una cara y a doble cara.</p>
+          <p>En los accesorios puedes ver las opciones de soportes para colocarlos.</p>
+          <p>Nuestra experiencia en el sector nos avala, y le dará tranquilidad adquirir nuestros productos, ya que trabajamos con componentes de alta calidad.</p>
+          <p><strong>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</strong></p>
+
+          <h3>Especificaciones</h3>
+          <ul>
+            <li>- Separación entre píxeles (mm): 10</li>
+            <li>- Densidad de píxeles (Puntos/m2): 10.000</li>
+            <li>- Pixel constitución: 1R</li>
+            <li>- Vida estimada: 100.000 Horas</li>
+            <li>- Brillo (Candelas/m2): &gt;2000</li>
+            <li>- Control de brillo (Sincrónico/Asincrónico): 16/8</li>
+            <li>- Tensión: 220V</li>
+            <li>- Frecuencia: 50 Hz</li>
+            <li>- Ángulo de visión: 120º / 60º</li>
+            <li>- Temperatura de trabajo: -20ºC ~ +70ºC</li>
+            <li>- Transmisión de datos: PC – USB</li>
+            <li>- Peso (Kg): 2,1</li>
+            <li>- Protección: Para exterior: Soporta agentes atmosféricos</li>
+            <li>- Construcción: Aluminio / PC</li>
+            <li>- Dimensiones (cm): *Consultar</li>
+            <li>- Certificados: CE-RHOS</li>
+            <li>- Garantía: 2 Años</li>
+          </ul>
+
+          <p><a href="#">Consulte nuestra ficha técnica para más detalles.</a></p>
+          <p><strong>*En los tamaños de banderolas luminosas a doble cara, el soporte para colocar su pantalla perpendicular a la pared en forma de banderola publicitaria está incluido gratis.</strong></p>
+          <p>Si desea algún otro tipo de soporte, por favor, contacte con nosotros.</p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETREROS LED PROGRAMABLE PARA DISCOTECAS</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 28,
-    title: "Letreros LED Programable para Discotecas – Pub en RGB, 2 Caras",
+    title: "LETRERO LED PROGRAMABLE PARA CLÍNICAS EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Ocio Nocturno", "2 Caras"],
-    shortDesc: "Letrero LED programable para discotecas y pubs en RGB, 2 caras.",
-    desc: "Letrero LED programable para discotecas y pubs en RGB, 2 caras. Máxima visibilidad desde ambos lados. Impacto visual con colores y animaciones. Perfecto para festivales, eventos y locales de ocio nocturno. Disponible en varios tamaños.",
-    images: [],
+    tags: ["RGB", "Clínicas", "2 Caras"],
+    shortDesc: "Banderola luminosa LED programable para clínicas y farmacias a 2 cara en RGB. Tenemos gran variedad de pantallas luminosas LED para su farmacia o clínica. Puede mostrar en este cartel programable, varios tipos de cruces, además de texto, logos y más información. Estos rótulos electrónicos son de lata luminosidad para ser visibles desde largas distancias. Válidos para exterior.",
+    desc: "Banderola luminosa LED programable para clínicas y farmacias a 2 cara en RGB. Tenemos gran variedad de pantallas luminosas LED para su farmacia o clínica. Puede mostrar en este cartel programable, varios tipos de cruces, además de texto, logos y más información. Estos rótulos electrónicos son de lata luminosidad para ser visibles desde largas distancias. Válidos para exterior.",
+    price: "495,98 €",
+    images: [
+      "img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras.jpg",
+      "img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras (1).jpg",
+      "img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras (2).jpg",
+      "img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras (3).jpg",
+      "img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras (4).jpg",
+      "img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras (5).jpg",
+      "img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras (6).jpg",
+      "img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras (7).jpg"
+    ],
+    sizePrices: {
+      "32cm de ancho x 32 cm de alto": 495.98,
+      "32 cm de ancho x 48 cm de alto": 413.82,
+      "32 cm de ancho x 64 cm de alto": 551.76,
+      "64 cm de ancho x 32 cm de alto": 551.76,
+      "64 cm de ancho x 48 cm de alto": 827.64,
+      "64cm de ancho x 64 cm de alto": 1026.08,
+      "64 cm de ancho x 80 cm de alto": 1282.60,
+      "64 cm de ancho x 96 cm de alto": 1481.04,
+      "96 cm de ancho x 16 cm de alto": 413.82,
+      "96 cm de ancho x 32 cm de alto": 827.64
+    },
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "Sí"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "32 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32cm de ancho x 32 cm de alto"
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Banderolas luminosas LED programables a doble cara en RGB:<br>Especial clínicas y farmacias</h2>
+          <p>Somos fabricantes y distribuidores de banderolas publicitarias LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestros rótulos electrónicos son muy llamativos y dinámicos.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros luminosos LED perfectos para cada negocio.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar el cartel luminoso a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada, puede añadir varios dibujos de cruces, textos, movimiento, y mucho más.</p>
+          <p><strong>¡Al ser fabricantes nos permite ofrecerle el letrero luminoso LED programable que está buscando!</strong></p>
+          <p>Para farmacias, veterinarias, clínicas dentales, de salud, podólogo, nutricionista, ect.</p>
+          <p>Estos paneles LED son en forma cuadrada o rectangular, en los que podrá añadir:</p>
+          <ul>
+            <li>- Logos típicos de farmacias y clínicas.</li>
+            <li>- Textos personalizados de su clínica o negocio.</li>
+            <li>- Horario, nombre, dirección, teléfono, eventos, ofertas, servicios y mucho más.</li>
+          </ul>
+
+          <h3>Especificaciones técnicas:</h3>
+          <ul>
+            <li>- Separación entre píxeles (mm): 10</li>
+            <li>- Densidad de píxeles (Puntos/m2): 10.000</li>
+            <li>- Pixel constitución: 1R</li>
+            <li>- Vida estimada: 100.000 Horas</li>
+            <li>- Brillo (Candelas/m2): &gt;2000</li>
+            <li>- Control de brillo (Sincrónico/Asincrónico): 16/8</li>
+            <li>- Tensión: 220V</li>
+            <li>- Frecuencia: 50 Hz</li>
+            <li>- Ángulo de visión: 120º / 60º</li>
+            <li>- Temperatura de trabajo: -20ºC ~ +70ºC</li>
+            <li>- Transmisión de datos: PC – USB (Opcional WIFI)</li>
+            <li>- Peso (Kg): 2,1</li>
+            <li>- Protección: Para exterior: Soporta agentes atmosféricos</li>
+            <li>- Construcción: Aluminio / PC</li>
+            <li>- Dimensiones (cm): *Consultar</li>
+            <li>- Certificados: CE-RHOS</li>
+            <li>- Garantía: 2 Años</li>
+          </ul>
+
+          <p><a href="#">Consulte nuestra ficha técnica para más detalles.</a></p>
+          <p><strong>*En los tamaños de banderolas luminosas a doble cara, el soporte para colocar su pantalla perpendicular a la pared en forma de banderola publicitaria está incluido gratis.</strong></p>
+          <p>Si desea algún otro tipo de soporte, por favor, contacte con nosotros.</p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETRERO LED PROGRAMABLE PARA CLÍNICAS</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 29,
-    title: "Letrero LED Programable Cronómetro Digital en RGB, 1 Cara",
+    title: "LETRERO LED PROGRAMABLE CRONÓMETRO DIGITAL EN RGB, 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
     tags: ["RGB", "Cronómetro", "1 Cara"],
-    shortDesc: "Letrero LED programable con función de cronómetro digital en RGB, 1 cara.",
-    desc: "Letrero LED programable con función de cronómetro digital en RGB, 1 cara. Muestra cuenta atrás, cuenta progresiva, hora en tiempo real y mensajes personalizados. Ideal para gimnasios, competiciones deportivas y eventos. Disponible en varios tamaños.",
-    images: [],
+    shortDesc: "Letreros luminosos LED programables 1 cara en RGB para usarlas, como una de sus tantas funciones, de cronómetro digital LED. Además puedes programarlo y usarlo de una forma muy sencilla. Muestra lo que desee en el color que desee. En nuestros rótulos electrónicos puede tener un cartel luminoso y a la vez un cronómetro, todo en una sola pantalla LED. Producto válido para exterior.",
+    desc: "Letreros luminosos LED programables 1 cara en RGB para usarlas, como una de sus tantas funciones, de cronómetro digital LED. Además puedes programarlo y usarlo de una forma muy sencilla. Muestra lo que desee en el color que desee. En nuestros rótulos electrónicos puede tener un cartel luminoso y a la vez un cronómetro, todo en una sola pantalla LED. Producto válido para exterior.",
+    price: "199,00 €",
+    images: [
+      "img/producto-29/letrero-led-programable-cronometro-digital.jpg",
+      "img/producto-29/letrero-led-programable-cronometro-digital (1).jpg",
+      "img/producto-29/letrero-led-programable-cronometro-digital (2).jpg"
+    ],
+    sizePrices: {
+      "64 cm de ancho x 16 cm de alto": 199.00,
+      "64 cm de ancho x 32 cm de alto": 309.00,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82
+    },
+    options: [
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 16 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "64 cm de ancho x 16 cm de alto"
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables: Cronómetros digitales LED</h2>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>Con nuestros luminosos publicitarios, además de texto, fecha, hora, etc, puedes añadir la función de cronómetro y cuenta atrás para mostrar en pantalla.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>La programación es muy cómoda:</p>
+          <p>Haces el programa en el ordenador y lo transmites a tu pantalla. (Seleccione en su compra si solo quiere USB o si desea además el WIFI).</p>
+          <p>Nuestras pantallas LED son válidas para exterior e interior. ¡Colócala donde quieras!</p>
+          <p>En los accesorios puedes ver las opciones de soportes para colocarlos.</p>
+          <p>Nuestra experiencia en el sector nos avala, y le dará tranquilidad adquirir nuestros productos, ya que trabajamos con componentes de alta calidad.</p>
+          <p><strong>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</strong></p>
+          
+          <h3>Especificaciones:</h3>
+          <ul>
+            <li>- Separación entre píxeles (mm): 10</li>
+            <li>- Densidad de píxeles (Puntos/m2): 10.000</li>
+            <li>- Pixel constitución: 1R1G1B</li>
+            <li>- Vida estimada: 100.000 Horas</li>
+            <li>- Brillo (Candelas/m2): &gt;2000</li>
+            <li>- Control de brillo (Sincrónico/Asincrónico): 16/8</li>
+            <li>- Tensión: 220V</li>
+            <li>- Frecuencia: 50 Hz</li>
+            <li>- Ángulo de visión: 120º / 60º</li>
+            <li>- Temperatura de trabajo: -20ºC ~ +70ºC</li>
+            <li>- Transmisión de datos: PC – USB</li>
+            <li>- Peso (Kg): 2,1</li>
+            <li>- Protección: Para exterior: Soporta agentes atmosféricos</li>
+            <li>- Construcción: Aluminio / PC</li>
+            <li>- Dimensiones (cm): *Consultar</li>
+            <li>- Certificados: CE-RHOS</li>
+            <li>- Garantía: 2 Años</li>
+          </ul>
+          
+          <p><a href="#">Descargue la ficha técnica para ver más detalles y especificaciones.</a></p>
+          
+          <h3>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</h3>
+          <p>Para colocar en exterior:</p>
+          <ul>
+            <li>- Pegado a la pared.</li>
+            <li>- Perpendicular a la pared como banderola electrónica.</li>
+          </ul>
+          <p>Para colocar en interior:</p>
+          <ul>
+            <li>- Kit de suspensión para colocar su letrero led en interior o escaparates.</li>
+          </ul>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETRERO LED PROGRAMABLE CRONÓMETRO DIGITAL</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ``
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
