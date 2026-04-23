@@ -2884,76 +2884,161 @@ window.PRODUCTS_DATA = [
   {
     id: 38,
     title: "Programación por WiFi",
-    badge: "",
+    badge: "ACCESORIO",
     price: "50,00 €",
     tags: ["Accesorio"],
     shortDesc: "Programa tu pantalla electrónica en la distancia con ordenador o móvil.",
     desc: "Además de la programación por defecto con memoria USB... ¿Quieres programar tu pantalla electrónica en la distancia con ordenador o móvil? Añade la tarjeta WiFi a tu pedido para poder disfrutar de ella.",
-    images: [],
+    images: ["img/producto-38/img-1.jpg"],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">PROGRAMACIÓN POR WIFI</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 39,
     title: "Fuente de Alimentación 12/24 V",
-    badge: "",
+    badge: "ACCESORIO",
     price: "0,00 €",
     tags: ["Accesorio"],
     shortDesc: "Fuente de alimentación para conectar tu letrero a baterías o vehículos.",
     desc: "¿Quieres alimentar tu letrero programable con 12/24 voltios? Esta es tu fuente de alimentación, para conectar en baterías, vehículos, etc.",
-    images: [],
+    images: ["img/producto-39/img-1.jpg"],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">FUENTE DE ALIMENTACIÓN 12/24V</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 40,
     title: "Soporte para Banderola",
-    badge: "",
+    badge: "ACCESORIO",
     price: "44,99 €",
     tags: ["Accesorio", "Soporte"],
     shortDesc: "La mejor forma de colocar tu banderola LED programable perpendicular a la pared.",
     desc: "La mejor forma de colocar tu banderola LED programable perpendicular a la pared. *Añade este producto a tu carrito si tu compra no lo incluye.",
-    images: [],
+    images: ["img/producto-40/img-1.jpg"],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">SOPORTE PARA BANDEROLA</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 41,
     title: "Soportes Traseros (2U)",
-    badge: "",
+    badge: "ACCESORIO",
     price: "44,99 €",
     tags: ["Accesorio", "Soporte"],
     shortDesc: "Los mejores anclajes para colocar tu letrero LED programable pegado a la pared.",
     desc: "Los mejores anclajes para colocar tu letrero LED programable pegado a la pared, tanto en exterior como en interior. Hacen que la instalación de nuestros carteles sea muy sencilla.",
-    images: [],
+    images: ["img/producto-41/img-1.jpg"],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">SOPORTES TRASEROS (2U)</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 42,
     title: "Kit de Suspensión para Colgado en Interior",
-    badge: "",
+    badge: "ACCESORIO",
     price: "14,99 €",
     tags: ["Accesorio", "Soporte"],
     shortDesc: "La mejor forma de colocar tu pantalla LED programable colgada en interior.",
     desc: "La mejor forma de colocar tu pantalla LED programable colgada en interior. Gracias a este kit, colocar tu pantalla en el interior es muy fácil. Añade este producto si es así como quieres colocar tu cartel publicitario.",
-    images: [],
+    images: ["img/producto-42/img-1.jpg"],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">KIT DE SUSPENSIÓN PARA COLGADO EN INTERIOR</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   }
 ];
