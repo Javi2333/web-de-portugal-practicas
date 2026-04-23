@@ -969,6 +969,11 @@ window.PRODUCTS_DATA = [
             </a>
           </div>
         `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
       }
     ],
     related: [40, 41, 42, 37, 38, 39]
@@ -1257,6 +1262,11 @@ window.PRODUCTS_DATA = [
             </a>
           </div>
         `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
       }
     ],
     related: [40, 41, 42, 37, 38, 39]
@@ -1379,6 +1389,11 @@ window.PRODUCTS_DATA = [
             <span class="tab-ref-val">P6 EXTERIOR FULL COLOR</span>
           </div>
         `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
       }
     ],
     related: [40, 41, 42, 37, 38, 39]
@@ -1570,6 +1585,11 @@ window.PRODUCTS_DATA = [
             </a>
           </div>
         `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
       }
     ],
     related: [40, 41, 42, 37, 38, 39]
@@ -1735,6 +1755,11 @@ window.PRODUCTS_DATA = [
             </a>
           </div>
         `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
       }
     ],
     related: [40, 41, 42, 37, 38, 39]
@@ -1899,6 +1924,11 @@ window.PRODUCTS_DATA = [
             </a>
           </div>
         `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
       }
     ],
     related: [40, 41, 42, 37, 38, 39]
@@ -2168,6 +2198,11 @@ window.PRODUCTS_DATA = [
             </a>
           </div>
         `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
       }
     ],
     related: [40, 41, 42, 37, 38, 39]
@@ -2178,12 +2213,134 @@ window.PRODUCTS_DATA = [
     badge: "",
     tags: ["Full Color", "P5", "Doble Cara", "Banderola"],
     shortDesc: "Banderola LED programable Full Color P5 de doble cara, para fachadas o postes.",
-    desc: "Banderola LED programable Full Color P5 de doble cara, diseñada para colgar en fachadas o postes. Alta resolución P5 con colores vivos a todo color. Ideal para centros comerciales, calles peatonales y eventos. Resistente al exterior.",
-    images: [],
+    desc: "Pantallas luminosas LED a todo color programables para exterior en resolución del pixel P5. Letreros luminosos full color para reproducir todo lo que necesites como texto, logos, imágenes, vídeos y muchos efectos. Fabricados con LEDs SMD, que proporcionan mayor definición y luminosidad. Estos rótulos electrónicos tienen una distancia optima de visualización desde 5 metros.",
+    price: "1.529,44 €",
+    images: [
+      "img/producto-11/img-1.jpg"
+    ],
+    options: [
+      {
+        id: "sonda",
+        label: "Sonda de Temperatura",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No",
+        surcharges: { "Sí": 15.00 }
+      },
+      {
+        id: "programacion",
+        label: "Modo de Programación",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 15.00 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 80 cm de alto",
+          "128 cm de ancho x 96 cm de alto",
+          "160 cm de ancho x 64 cm de alto",
+          "160 cm de ancho x 80 cm de alto",
+          "160 cm de ancho x 96 cm de alto"
+        ],
+        default: "64 cm de ancho x 64 cm de alto",
+        sizePrices: {
+          "64 cm de ancho x 64 cm de alto": 1529.44,
+          "64 cm de ancho x 80 cm de alto": 1911.80,
+          "64 cm de ancho x 96 cm de alto": 2294.16,
+          "96 cm de ancho x 64 cm de alto": 2294.16,
+          "96 cm de ancho x 80 cm de alto": 2867.70,
+          "96 cm de ancho x 96 cm de alto": 3441.24,
+          "128 cm de ancho x 64 cm de alto": 3058.88,
+          "128 cm de ancho x 80 cm de alto": 3823.60,
+          "128 cm de ancho x 96 cm de alto": 4588.32,
+          "160 cm de ancho x 64 cm de alto": 3823.60,
+          "160 cm de ancho x 80 cm de alto": 4779.50,
+          "160 cm de ancho x 96 cm de alto": 5735.40
+        }
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Banderolas a doble cara LED programables FULL COLOR P5 para exterior. Gran luminosidad.</h2>
+          <p><strong>Tu pantalla a todo color.</strong></p>
+
+          <p><strong>Descripción del producto:</strong></p>
+          <p>Os presentamos nuestras pantallas led programables para exterior P5 a todo color a doble cara para colocar como tipo banderola publicitaria.</p>
+          <p>Perfectas para texto, imágenes, logos, vídeos, y mucho más.</p>
+          <p>El tipo de led de estas pantallas es SMD para conseguir una mejor definición de la imagen. Además usamos LED de alta calidad para conseguir un excelente brillo y permiten que nuestros clientes vean nuestras imágenes con claridad.</p>
+          <p>Son pantallas de exterior, lo que les proporciona una gran luminosidad, con una visualización óptima desde los 5m hasta más de 50m.</p>
+          <p>Entre sus ventajas destaca el bajo consumo gracias a la tecnología LED (300W/m2) y larga vida útil.</p>
+          <p>Ofrecemos unas pantallas muy fáciles de programar, de montar y desmontar y de su transporte.</p>
+          <p>Tienen un ángulo amplio de visualización superior a los 120°.</p>
+          <p>Al ser fabricantes podemos construir, a través de nuestros módulos, la medida que más se adapte a las necesidades de nuestros clientes.</p>
+          <p>Según los expertos para que la visualización del LED en exterior sea correcta con aproximadamente 5000 nits de luminosidad son suficiente, nosotros apostamos con ello ofreciendo pantallas con una luminosidad aproximada de 6000-6500 nits.</p>
+          <p>Aquí te damos algunas de las razones por las que elegir nuestras pantallas LED full color:</p>
+          <ul>
+            <li>Captan la atención gracias a su luminosidad, efectos y movimiento.</li>
+            <li>Estas pantallas pueden reproducir efectos, vídeos, imágenes y texto en las diferentes zonas de la pantalla LED, además de poner el número de mensajes que usted desee.</li>
+            <li>Son pantallas preparadas para su instalación en exterior.</li>
+            <li>Al ser dinámicos, coloridos y reproducir contenido multimedia tienen un mayor efecto que los rótulos estáticos.</li>
+            <li>En un solo LED tienes los 3 colores primarios para conseguir, según los estudios con los 3 colores primarios Azul, Verde y Rojo mostrarán 16777216 colores en cualquier combinación.</li>
+          </ul>
+
+          <h3>Especificaciones</h3>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Tamaño del pixel</th><td>5 mm</td></tr>
+              <tr><th>Luminosidad</th><td>6000-6500 nit</td></tr>
+              <tr><th>Material del panel</th><td>Acero</td></tr>
+              <tr><th>Peso</th><td>55 lbs</td></tr>
+              <tr><th>Configuración del pixel</th><td>SMD 3 en 1 1R1G1B</td></tr>
+              <tr><th>Dimensiones de los módulos (PxA)</th><td>320×160 mm</td></tr>
+              <tr><th>Matriz del pixel por panel</th><td>160×160 píxeles</td></tr>
+              <tr><th>Densidad del pixel</th><td>40.000 píxeles/m²</td></tr>
+              <tr><th>Tasa de actualización</th><td>≥960 Hz</td></tr>
+              <tr><th>Escala de gris por color</th><td>2048 niveles</td></tr>
+              <tr><th>Colores</th><td>Full Color (A todo color)</td></tr>
+              <tr><th>Ángulo de visión (H/V)</th><td>120/120°</td></tr>
+              <tr><th>Protección</th><td>Para exterior</td></tr>
+              <tr><th>Consumo de energía (máx./promedio)</th><td>300 W/m²</td></tr>
+              <tr><th>Voltaje de entrada (CA)</th><td>110V – 240V</td></tr>
+              <tr><th>Temperatura de funcionamiento</th><td>20°C – +50°C</td></tr>
+              <tr><th>Humedad de operación</th><td>10% – 90%</td></tr>
+            </tbody>
+          </table>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">BANDEROLA P5 EXTERIOR FULL COLOR</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
@@ -2695,16 +2852,33 @@ window.PRODUCTS_DATA = [
   {
     id: 37,
     title: "Sonda de Temperatura",
-    badge: "",
+    badge: "ACCESORIO",
     price: "30,00 €",
     tags: ["Accesorio"],
     shortDesc: "Muestre la temperatura añadiendo la sonda a su compra.",
     desc: "Muestre la temperatura añadiendo la sonda a su compra. Podrá mostrar en su pantalla la temperatura actual. Nosotros instalamos la sonda dentro de su letrero, usted solo tiene que configurar la programación ¡Y es muy fácil!",
-    images: [],
+    images: ["img/producto-37/img-1.jpg"],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">SONDA DE TEMPERATURA</span>
+          </div>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
