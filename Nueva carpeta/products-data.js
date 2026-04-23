@@ -1909,12 +1909,267 @@ window.PRODUCTS_DATA = [
     badge: "",
     tags: ["RGB", "2 Caras"],
     shortDesc: "Letrero LED programable en RGB, 2 caras. Disponible en varios tamaños.",
-    desc: "Letrero LED programable en RGB, 2 caras. Disponible en varios tamaños. Visibilidad doble para mayor impacto publicitario. Millones de colores y efectos. Ideal para negocios en calles con tráfico en ambas direcciones.",
-    images: [],
+    desc: "Letrero luminoso LED programable a 1 cara en RGB, disponible en varios tamaños. Banderolas luminosas fabricadas con LEDs SMD para conseguir una gran definición a la vez que una alta luminosidad. Son los mejores rótulos electrónicos para textos, fecha, hora, (temperatura y wifi si se le añade el complemento), logos muy sencillos. Carteles digitales válidos para exterior.",
+    price: "181,50 €",
+    images: [
+      "img/producto-10/img-1.jpg"
+    ],
+    options: [
+      {
+        id: "sonda",
+        label: "Sonda de Temperatura",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "No",
+        surcharges: { "Sí": 9.99 }
+      },
+      {
+        id: "programacion",
+        label: "Modo de Programación",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 9.99 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 16 cm de alto",
+          "32 cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "32 cm de ancho x 64 cm de alto",
+          "32 cm de ancho x 80 cm de alto",
+          "32 cm de ancho x 96 cm de alto",
+          "64 cm de ancho x 16 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto",
+          "96 cm de ancho x 48 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 16 cm de alto",
+          "128 cm de ancho x 32 cm de alto",
+          "128 cm de ancho x 48 cm de alto",
+          "128 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 80 cm de alto",
+          "128 cm de ancho x 96 cm de alto",
+          "160 cm de ancho x 16 cm de alto",
+          "160 cm de ancho x 32 cm de alto",
+          "160 cm de ancho x 48 cm de alto",
+          "160 cm de ancho x 64 cm de alto",
+          "160 cm de ancho x 80 cm de alto",
+          "160 cm de ancho x 96 cm de alto",
+          "192 cm de ancho x 16 cm de alto",
+          "192 cm de ancho x 32 cm de alto",
+          "192 cm de ancho x 48 cm de alto",
+          "192 cm de ancho x 64 cm de alto",
+          "192 cm de ancho x 80 cm de alto",
+          "192 cm de ancho x 96 cm de alto",
+          "224 cm de ancho x 16 cm de alto",
+          "224 cm de ancho x 32 cm de alto",
+          "224 cm de ancho x 48 cm de alto",
+          "224 cm de ancho x 64 cm de alto",
+          "224 cm de ancho x 80 cm de alto",
+          "224 cm de ancho x 96 cm de alto",
+          "256 cm de ancho x 16 cm de alto",
+          "256 cm de ancho x 32 cm de alto",
+          "256 cm de ancho x 48 cm de alto",
+          "256 cm de ancho x 64 cm de alto",
+          "256 cm de ancho x 80 cm de alto",
+          "256 cm de ancho x 96 cm de alto",
+          "288 cm de ancho x 16 cm de alto",
+          "288 cm de ancho x 32 cm de alto",
+          "288 cm de ancho x 48 cm de alto",
+          "288 cm de ancho x 64 cm de alto",
+          "288 cm de ancho x 80 cm de alto",
+          "288 cm de ancho x 96 cm de alto"
+        ],
+        default: "32 cm de ancho x 16 cm de alto",
+        sizePrices: {
+          "32 cm de ancho x 16 cm de alto": 181.50,
+          "32 cm de ancho x 32 cm de alto": 375.00,
+          "32 cm de ancho x 48 cm de alto": 413.82,
+          "32 cm de ancho x 64 cm de alto": 551.76,
+          "32 cm de ancho x 80 cm de alto": 689.70,
+          "32 cm de ancho x 96 cm de alto": 827.64,
+          "64 cm de ancho x 16 cm de alto": 350.00,
+          "64 cm de ancho x 32 cm de alto": 551.76,
+          "64 cm de ancho x 48 cm de alto": 827.64,
+          "64 cm de ancho x 64 cm de alto": 1026.08,
+          "64 cm de ancho x 80 cm de alto": 1282.60,
+          "64 cm de ancho x 96 cm de alto": 1481.04,
+          "96 cm de ancho x 16 cm de alto": 410.00,
+          "96 cm de ancho x 32 cm de alto": 827.64,
+          "96 cm de ancho x 48 cm de alto": 1154.34,
+          "96 cm de ancho x 64 cm de alto": 1481.04,
+          "96 cm de ancho x 80 cm de alto": 1851.30,
+          "96 cm de ancho x 96 cm de alto": 2178.00,
+          "128 cm de ancho x 16 cm de alto": 551.76,
+          "128 cm de ancho x 32 cm de alto": 1026.08,
+          "128 cm de ancho x 48 cm de alto": 1481.04,
+          "128 cm de ancho x 64 cm de alto": 1936.00,
+          "128 cm de ancho x 80 cm de alto": 2420.00,
+          "128 cm de ancho x 96 cm de alto": 2904.00,
+          "160 cm de ancho x 16 cm de alto": 689.70,
+          "160 cm de ancho x 32 cm de alto": 1282.60,
+          "160 cm de ancho x 48 cm de alto": 1851.30,
+          "160 cm de ancho x 64 cm de alto": 2420.00,
+          "160 cm de ancho x 80 cm de alto": 3025.00,
+          "160 cm de ancho x 96 cm de alto": 4235.00,
+          "192 cm de ancho x 16 cm de alto": 827.64,
+          "192 cm de ancho x 32 cm de alto": 1481.04,
+          "192 cm de ancho x 48 cm de alto": 2178.00,
+          "192 cm de ancho x 64 cm de alto": 2904.00,
+          "192 cm de ancho x 80 cm de alto": 3630.00,
+          "192 cm de ancho x 96 cm de alto": 4356.00,
+          "224 cm de ancho x 16 cm de alto": 897.82,
+          "224 cm de ancho x 32 cm de alto": 1727.88,
+          "224 cm de ancho x 48 cm de alto": 2541.00,
+          "224 cm de ancho x 64 cm de alto": 3388.00,
+          "224 cm de ancho x 80 cm de alto": 4235.00,
+          "224 cm de ancho x 96 cm de alto": 5082.00,
+          "256 cm de ancho x 16 cm de alto": 1026.08,
+          "256 cm de ancho x 32 cm de alto": 1936.00,
+          "256 cm de ancho x 48 cm de alto": 2904.00,
+          "256 cm de ancho x 64 cm de alto": 3872.00,
+          "256 cm de ancho x 80 cm de alto": 4840.00,
+          "256 cm de ancho x 96 cm de alto": 5808.00,
+          "288 cm de ancho x 16 cm de alto": 1154.34,
+          "288 cm de ancho x 32 cm de alto": 2178.00,
+          "288 cm de ancho x 48 cm de alto": 3267.00,
+          "288 cm de ancho x 64 cm de alto": 4356.00,
+          "288 cm de ancho x 80 cm de alto": 5445.00,
+          "288 cm de ancho x 96 cm de alto": 6534.00
+        }
+      }
+    ],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables:</h2>
+          <p><strong>Banderolas publicitarias LED programables RGB a doble cara</strong></p>
+          <p>¡Pantallas para reproducir en una sola todos los colores a tu gusto!</p>
+          <ul>
+            <li><strong>Muy fáciles de programar e instalar</strong></li>
+            <li><strong>Al ser en RGB puedes personalizar en cada momento el color o variedad de colores que quieres que aparezcan en el letrero luminoso</strong></li>
+            <li><strong>Muy fáciles de instalar</strong></li>
+            <li><strong>Larga durabilidad</strong></li>
+            <li><strong>Bajo consumo</strong></li>
+            <li><strong>Alta luminosidad</strong></li>
+            <li><strong>Gran servicio de atención al cliente</strong></li>
+          </ul>
+          <p>Elige entre nuestra gran variedad de tamaños para que puedas tener la banderola publicitaria que más se adapte a tus necesidades.</p>
+          <p>Todos los colores básicos (Red - Green - Blue) y sus posibles mezclas de colores básicos en una sola pantalla LED.</p>
+          <p>Somos fabricantes de rótulos electrónicos con años de experiencia, para poder ofrecerle un producto de alta calidad al mejor precio.</p>
+          <p>Además podemos ofrecerle el mejor servicio y ayuda para que consiga el mejor resultado en su cartel luminoso LED ya que contamos con un equipo cualificado y especializado en pantallas publicitarias LED programables.</p>
+          <p>Banderolas luminosas LED a doble cara para tiendas, locales y todo tipo de negocios. Muestra en tu pantalla programable la información que necesites, en el momento que necesites.</p>
+          <p>Son banderolas programables visibles por dos caras.</p>
+          <p>Con nuestras banderolas electrónicas LED programables llame la atención de sus clientes gracias a su gran personalización y a la alta luminosidad de los LEDs con los que trabajamos.</p>
+          <p>Tenemos una gran variedad de pantallas LED con respecto al tamaño y al color, para que el cliente elija la que más se adapte a sus necesidades.</p>
+          <p>En nuestra web le damos la opción de que escoja sólo lo que necesite y el diseño que mas le guste de nuestros letreros luminosos.</p>
+
+          <h3>Características principales:</h3>
+          <ul>
+            <li>Nuestras pantallas son válidas para interior y exterior</li>
+            <li><strong>Letreros electrónicos que permiten poner texto, fecha, hora, y cualquier información que se desee. *Puede añadir como opcional la sonda de temperatura.</strong></li>
+            <li><strong>Letreros LED muy fáciles de programar: Programación con ordenador PC mediante memoria USB. (No necesita cables ni conexiones raras). * Puede añadir como opcional la programación WiFi para programar a distancia con su ordenador, teléfono o tablet.</strong></li>
+            <li>Puede programar infinidad de cosas y nosotros le ayudamos a que todo sea mucho más fácil. Te entregamos el programa para que lo instales en tu ordenador y el tutorial de utilización en español. Además en todos nuestros canales y redes sociales disponemos de vídeos para ayudarte.</li>
+            <li><strong>Personalice el tamaño de letra y número de caracteres que desee que aparezcan en la pantalla. Varios mensajes en una pantalla o pasando varios mensajes.</strong></li>
+            <li><strong>Texto estático o con movimiento.</strong></li>
+            <li>Alta definición y calidad del LED: Con ello conseguimos alta luminosidad y gran visibilidad desde largas distancias</li>
+            <li>Baja emisión de calor</li>
+            <li>Ahorro de energía</li>
+            <li>Resistente a impactos y vibraciones</li>
+            <li>Protección IP25 o exterior</li>
+            <li><strong>Mejor relación calidad-precio del mercado.</strong></li>
+            <li>Retorno de inversión por pautas publicitarias las 24 horas al día los 365 días del año</li>
+            <li>Fácil Instalación y programación.</li>
+            <li><strong>Vida útil 100.000 horas aproximadamente.</strong></li>
+            <li>2 años de garantía</li>
+            <li>Servicio de atención al cliente de calidad.</li>
+          </ul>
+
+          <p><a href="docs/Web_Dossier_Letreros_LED_Programables_RGB.pdf" target="_blank" rel="noopener">Consulte nuestra ficha técnica para más detalles.</a></p>
+
+          <h3>Especificaciones técnicas</h3>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+              <tr><th>Pixel constitución</th><td>1R</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+              <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120° / 60°</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20°C — +70°C</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+              <tr><th>Peso (Kg)</th><td>2,1</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+
+          <p><em>*En los tamaños de banderolas luminosas a doble cara, el soporte para colocar su pantalla perpendicular a la pared en forma de banderola publicitaria está incluido gratis. Si desea algún otro tipo de soporte, por favor, contacte con nosotros.</em></p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETRERO LED RGB 2 CARAS</span>
+          </div>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: `
+          <div class="tab-file-card">
+            <div class="tab-file-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="tab-file-info">
+              <p class="tab-file-name">Dossier Letreros LED Programables RGB</p>
+              <p class="tab-file-meta">PDF · Ficha técnica completa</p>
+            </div>
+            <a href="docs/Web_Dossier_Letreros_LED_Programables_RGB.pdf" class="btn btn-outline tab-file-btn" download target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Descargar
+            </a>
+          </div>
+        `
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
