@@ -524,16 +524,127 @@ window.PRODUCTS_DATA = [
   },
   {
     id: 12,
-    title: "Banderola LED Programable Full Color P10 Doble Cara",
+    title: "PANTALLA LED PROGRAMABLE FULL COLOR P10 (EXTERIOR) 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["Full Color", "P10", "Doble Cara", "Banderola"],
-    shortDesc: "Banderola LED programable Full Color P10 de doble cara.",
-    desc: "Banderola LED programable Full Color P10 de doble cara. Pixel pitch P10, ideal para grandes distancias de visualización. Diseñada para colgar en fachadas o postes. Resistente al exterior y de bajo consumo energético.",
-    images: [],
+    tags: ["Full Color", "P10", "Exterior", "1 Cara"],
+    shortDesc: "Pantallas luminosas LED a todo color programables para exterior en resolución del pixel P10.",
+    desc: "Pantalla LED programable a todo color (Full Color P10) para instalación en exterior. Perfecta para texto, imágenes, logos y vídeos con gran luminosidad, fabricada con LEDs SMD de alta definición. Distancia de visualización óptima de 10 a 15 metros. 2 años de garantía.",
+    price: "159,99 €",
+    images: ["img/producto-12/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "32 cm de ancho x 80 cm de alto",
+                  "32 cm de ancho x 96 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "64 cm de ancho x 96 cm de alto",
+                  "96 cm de ancho x 16 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 96 cm de alto",
+                  "128 cm de ancho x 16 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 80 cm de alto",
+                  "128 cm de ancho x 96 cm de alto",
+                  "160 cm de ancho x 16 cm de alto",
+                  "160 cm de ancho x 32 cm de alto",
+                  "160 cm de ancho x 48 cm de alto",
+                  "160 cm de ancho x 64 cm de alto",
+                  "160 cm de ancho x 80 cm de alto",
+                  "160 cm de ancho x 96 cm de alto",
+                  "192 cm de ancho x 16 cm de alto",
+                  "192 cm de ancho x 32 cm de alto",
+                  "192 cm de ancho x 48 cm de alto",
+                  "192 cm de ancho x 64 cm de alto",
+                  "192 cm de ancho x 80 cm de alto",
+                  "192 cm de ancho x 96 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Pantallas LED programables FULL COLOR P10 para exterior.</h2> <p><strong>¡Tu pantalla a todo color con gran luminosidad!</strong></p> <p>Perfectas para texto, imágenes, logos, vídeos, y mucho más. El tipo de LED es SMD para conseguir una mejor definición de la imagen y un excelente brillo.</p> <ul>   <li>Captan la atención gracias a su luminosidad, efectos y movimiento.</li>   <li>Pueden reproducir efectos, vídeos, imágenes y texto en diferentes zonas.</li>   <li>Son pantallas preparadas para su instalación en exterior.</li>   <li>Distancia óptima de visualización: 10 - 15 metros.</li>   <li>100.000 horas de vida útil aproximadamente del LED.</li>   <li>2 años de garantía.</li> </ul> <p>La programación es muy cómoda: haces el programa en el ordenador y lo transmites a tu pantalla por USB (o WiFi si lo añades como opcional).</p>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">P10 EXTERIOR FULL COLOR</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
@@ -541,167 +652,1360 @@ window.PRODUCTS_DATA = [
     title: "Cruz LED Programable para Farmacias – Veterinarias – Clínicas, 2 Caras",
     badge: "",
     tags: ["Cruz LED", "Farmacia", "2 Caras"],
-    shortDesc: "Cruz LED programable de 2 caras para farmacias, veterinarias y clínicas.",
-    desc: "Cruz LED programable de 2 caras para farmacias, veterinarias y clínicas. Gran visibilidad desde ambos lados. Muestra temperatura, hora y mensajes personalizados. Disponible en verde monocor o RGB. Incluye soporte lateral.",
-    images: [],
+    shortDesc: "Cruz LED programable de 2 caras para farmacias, veterinarias y clínicas. Disponible en varios colores y tamaños. 2 años de garantía.",
+    desc: "Cruz LED programable de doble cara para farmacias, veterinarias y clínicas. Alta luminosidad para exterior, disponible en varios colores (rojo, naranja, azul, verde y blanco) y tamaños a medida. Reproduce lo mismo o mensajes diferentes en cada cara. 2 años de garantía.",
+    price: "856,68 €",
+    images: ["img/producto-13/img-1.jpg", "img/producto-13/img-2.jpg", "img/producto-13/img-3.jpg"],
+    options: [
+      {
+            "id": "color",
+            "label": "COLOR DE LOS LEDS",
+            "type": "select",
+            "choices": [
+                  "Rojo",
+                  "Naranja",
+                  "Azul",
+                  "Verde",
+                  "Blanco"
+            ],
+            "default": "Verde"
+      },
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "64 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 96 cm de alto"
+            ],
+            "default": "64 cm de ancho x 64 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Cruz LED programable a doble cara para farmacias y clínicas.</h2> <p>Somos fabricantes y distribuidores de cruces LED programables de alta calidad y luminosidad.</p> <ul>   <li>Alta luminosidad y fiabilidad para exterior.</li>   <li>A doble cara: reproduce lo mismo o mensajes diferentes en cada cara.</li>   <li>Disponible en el color que necesites para tu negocio.</li>   <li>Software de programación moderno e intuitivo.</li>   <li>2 años de garantía.</li> </ul> <p>Para colocar en exterior pegada a la pared o perpendicular como banderola, o en interior con kit de suspensión.</p>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">CRUZ LED PROGRAMABLE</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 14,
-    title: "Cruz LED Programable en RGB para Farmacias – Veterinarias",
+    title: "CRUZ LED PROGRAMABLE EN RGB PARA FARMACIAS - VETERINARIAS - CLÍNICAS, 2 CARAS",
     badge: "",
-    tags: ["Cruz LED", "RGB", "Farmacia"],
-    shortDesc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara.",
-    desc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara. Colores a todo color con millones de combinaciones. Muestra temperatura, hora y textos personalizados. Incluye soporte lateral y programación sencilla.",
-    images: [],
+    tags: ["Cruz LED", "RGB", "Farmacia", "2 Caras"],
+    shortDesc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 2 caras. Reproduzca todos los colores en su cruz.",
+    desc: "Cruz LED programable en RGB de doble cara para farmacias, veterinarias y clínicas. Elija el color que desee en cada momento gracias a la tecnología RGB. Protección necesaria para exterior, muestra mensajes en ambas caras con software de programación intuitivo. 2 años de garantía.",
+    price: "950,00 €",
+    images: ["img/producto-14/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "64 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 96 cm de alto"
+            ],
+            "default": "64 cm de ancho x 64 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Cruz LED programable en RGB para farmacias, veterinarias y clínicas.</h2> <p>Somos fabricantes y distribuidores de cruces LED programables de alta calidad. Con nuestras cruces RGB puedes elegir el color en cada momento.</p> <ul>   <li>Protección necesaria para exterior.</li>   <li>A doble cara: muestra mensajes en ambas caras.</li>   <li>Reproducción de todos los colores en RGB.</li>   <li>Software de programación moderno e intuitivo.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">CRUZ LED RGB PROGRAMABLE</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 15,
-    title: "Letrero LED Programable para Gasolineras en RGB, 1 Cara",
+    title: "LETRERO LED PROGRAMABLE PARA GASOLINERAS EN RGB, 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
     tags: ["RGB", "Gasolineras", "1 Cara"],
-    shortDesc: "Letrero LED programable específico para gasolineras en RGB, 1 cara.",
-    desc: "Letrero LED programable específico para gasolineras en RGB, 1 cara. Muestra precios de combustible, ofertas y mensajes promocionales. Alta visibilidad día y noche. Disponible en varios tamaños adaptados a estaciones de servicio.",
-    images: [],
+    shortDesc: "Letrero LED programable para gasolineras en RGB, 1 cara. Muestra precios, productos y mensajes de su estación de servicio.",
+    desc: "Letrero LED programable en RGB diseñado para gasolineras y estaciones de servicio. Muestra precios de combustibles, logos personalizados y toda la información de su negocio en millones de colores. Válido para exterior e interior, programación sencilla por USB o WiFi. 2 años de garantía.",
+    price: "208,99 €",
+    images: ["img/producto-15/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "32 cm de ancho x 80 cm de alto",
+                  "32 cm de ancho x 96 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "64 cm de ancho x 96 cm de alto",
+                  "96 cm de ancho x 16 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 96 cm de alto",
+                  "128 cm de ancho x 16 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 80 cm de alto",
+                  "128 cm de ancho x 96 cm de alto",
+                  "160 cm de ancho x 16 cm de alto",
+                  "160 cm de ancho x 32 cm de alto",
+                  "160 cm de ancho x 48 cm de alto",
+                  "160 cm de ancho x 64 cm de alto",
+                  "160 cm de ancho x 80 cm de alto",
+                  "160 cm de ancho x 96 cm de alto",
+                  "192 cm de ancho x 16 cm de alto",
+                  "192 cm de ancho x 32 cm de alto",
+                  "192 cm de ancho x 48 cm de alto",
+                  "192 cm de ancho x 64 cm de alto",
+                  "192 cm de ancho x 80 cm de alto",
+                  "192 cm de ancho x 96 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Letreros LED programables RGB para Gasolineras / Estaciones de servicio.</h2> <p>Nuestras pantallas en RGB pueden reproducir logos e imágenes, mostrando precios, productos y toda la información que desee de su gasolinera.</p> <ul>   <li>Válidas para exterior e interior.</li>   <li>Programación cómoda: haz el programa en el ordenador y transmítelo por USB o WiFi.</li>   <li>También puede añadir logos personalizados.</li>   <li>Disponible a una cara y a doble cara.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">LETRERO LED GASOLINERAS RGB</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 16,
-    title: "Letrero LED Programable para Academias en RGB, 1 Cara",
+    title: "LETRERO LED PROGRAMABLE PARA ACADEMIAS EN RGB, 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
     tags: ["RGB", "Academias", "1 Cara"],
-    shortDesc: "Letrero LED programable para academias e idiomas en RGB, 1 cara.",
-    desc: "Letrero LED programable para academias e idiomas en RGB, 1 cara. Muestra horarios, idiomas disponibles, ofertas y matrículas. Alta visibilidad para atraer nuevos alumnos. Disponible en varios tamaños.",
-    images: [],
+    shortDesc: "Letrero LED programable para academias y centros de formación en RGB, 1 cara. Muestra horarios, logos y mensajes personalizados.",
+    desc: "Letrero LED programable en RGB para academias y centros de formación. Reproduzca logos, horarios de clases, matrículas y mensajes personalizados en millones de colores RGB. Válido para exterior e interior, programación sencilla por USB o WiFi. 2 años de garantía.",
+    price: "208,99 €",
+    images: ["img/producto-16/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "32 cm de ancho x 80 cm de alto",
+                  "32 cm de ancho x 96 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "64 cm de ancho x 96 cm de alto",
+                  "96 cm de ancho x 16 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 96 cm de alto",
+                  "128 cm de ancho x 16 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 80 cm de alto",
+                  "128 cm de ancho x 96 cm de alto",
+                  "160 cm de ancho x 16 cm de alto",
+                  "160 cm de ancho x 32 cm de alto",
+                  "160 cm de ancho x 48 cm de alto",
+                  "160 cm de ancho x 64 cm de alto",
+                  "160 cm de ancho x 80 cm de alto",
+                  "160 cm de ancho x 96 cm de alto",
+                  "192 cm de ancho x 16 cm de alto",
+                  "192 cm de ancho x 32 cm de alto",
+                  "192 cm de ancho x 48 cm de alto",
+                  "192 cm de ancho x 64 cm de alto",
+                  "192 cm de ancho x 80 cm de alto",
+                  "192 cm de ancho x 96 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Letreros LED programables RGB para Academias / Centros de formación.</h2> <p>Nuestras pantallas en RGB pueden reproducir logos típicos de academias además de texto, fecha, hora y temperatura (opcional).</p> <ul>   <li>Personalización total con software moderno e intuitivo.</li>   <li>Programación por USB o WiFi opcional.</li>   <li>Válidas para exterior e interior.</li>   <li>Disponible a una cara y a doble cara.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">LETRERO LED ACADEMIAS RGB</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 17,
-    title: "Letrero LED Programable para Clínicas en RGB, 2 Caras",
+    title: "LETRERO LED PROGRAMABLE PARA CLÍNICAS EN RGB, 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Clínicas", "2 Caras"],
-    shortDesc: "Letrero LED programable para clínicas en RGB, 2 caras.",
-    desc: "Letrero LED programable para clínicas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra servicios, horarios y mensajes de salud. Disponible en varios tamaños. Incluye soporte lateral y software de programación.",
-    images: [],
+    tags: ["RGB", "Clínicas", "1 Cara"],
+    shortDesc: "Letrero LED programable para clínicas y farmacias en RGB, 1 cara. Añada logos, horarios, texto y mucho más.",
+    desc: "Letrero LED programable en RGB para clínicas, farmacias, veterinarias y centros de salud. Añada logos de cruces, horarios de consulta, nombre del centro, teléfono y servicios disponibles con total personalización. Válido para exterior e interior. 2 años de garantía.",
+    price: "208,99 €",
+    images: ["img/producto-17/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "32 cm de ancho x 80 cm de alto",
+                  "32 cm de ancho x 96 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "64 cm de ancho x 96 cm de alto",
+                  "96 cm de ancho x 16 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 96 cm de alto",
+                  "128 cm de ancho x 16 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 80 cm de alto",
+                  "128 cm de ancho x 96 cm de alto",
+                  "160 cm de ancho x 16 cm de alto",
+                  "160 cm de ancho x 32 cm de alto",
+                  "160 cm de ancho x 48 cm de alto",
+                  "160 cm de ancho x 64 cm de alto",
+                  "160 cm de ancho x 80 cm de alto",
+                  "160 cm de ancho x 96 cm de alto",
+                  "192 cm de ancho x 16 cm de alto",
+                  "192 cm de ancho x 32 cm de alto",
+                  "192 cm de ancho x 48 cm de alto",
+                  "192 cm de ancho x 64 cm de alto",
+                  "192 cm de ancho x 80 cm de alto",
+                  "192 cm de ancho x 96 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Letreros LED programables RGB para clínicas y farmacias.</h2> <p>Para farmacias, veterinarias, clínicas dentales, de salud, podólogo, nutricionista, etc. Puede añadir logos de cruces, textos personalizados, horarios, nombre, dirección, teléfono y mucho más.</p> <ul>   <li>Software de programación moderno e intuitivo.</li>   <li>Transmisión de datos PC – USB (Opcional WiFi).</li>   <li>Válidas para exterior e interior.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">LETRERO LED CLÍNICAS RGB</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 18,
-    title: "Letrero LED Programable para Clínicas en RGB, 1 Cara",
+    title: "LETRERO LED PROGRAMABLE PARA PARKING EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Clínicas", "1 Cara"],
-    shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
-    desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra servicios médicos disponibles, horarios de consulta y mensajes de bienestar. Alta visibilidad y programación sencilla. Disponible en varios tamaños.",
-    images: [],
+    tags: ["RGB", "Parking", "2 Caras"],
+    shortDesc: "Banderola LED programable para parking/garaje en RGB, 2 caras. Soporte de banderola incluido gratis.",
+    desc: "Banderola LED programable en RGB de doble cara para parking, garaje y aparcamiento. Muestra mensajes de libre/completo, tarifas, horarios y logos con máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
+    price: "191,49 €",
+    images: ["img/producto-18/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Banderolas LED programables para Parking / Garaje / Aparcamiento en RGB.</h2> <p>Nuestras pantallas en RGB reproducen logos típicos de parking además de texto, fecha, hora y temperatura (opcional). A doble cara para máxima visibilidad.</p> <ul>   <li>Soporte de banderola incluido gratis en tamaños doble cara.</li>   <li>Programación cómoda por USB o WiFi opcional.</li>   <li>Válidas para exterior e interior.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">BANDEROLA LED PARKING RGB</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 19,
-    title: "Letrero LED Programable para Parking en RGB, 2 Caras",
+    title: "LETRERO LED PROGRAMABLE PARA AUTOESCUELAS EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Parking", "2 Caras"],
-    shortDesc: "Letrero LED programable para parking en RGB, 2 caras.",
-    desc: "Letrero LED programable para parking en RGB, 2 caras. Visibilidad desde ambos lados, ideal para entradas de aparcamientos. Muestra información de libre/completo, tarifas y horarios. Disponible en varios tamaños.",
-    images: [],
+    tags: ["RGB", "Autoescuelas", "2 Caras"],
+    shortDesc: "Banderola LED programable para autoescuelas en RGB, 2 caras. Soporte de banderola incluido gratis.",
+    desc: "Banderola LED programable en RGB de doble cara para autoescuelas. Reproduzca logos, horarios de exámenes, información de matrículas y mensajes con colores RGB y máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
+    price: "191,49 €",
+    images: ["img/producto-19/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Banderolas LED programables para Autoescuelas en RGB.</h2> <p>Nuestras pantallas en RGB reproducen logos típicos de autoescuelas además de texto, fecha, hora y temperatura (opcional). A doble cara para máxima visibilidad desde ambos lados.</p> <ul>   <li>Soporte de banderola incluido gratis en tamaños doble cara.</li>   <li>Programación por USB o WiFi opcional.</li>   <li>Válidas para exterior e interior.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">BANDEROLA LED AUTOESCUELAS RGB</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 20,
-    title: "Letrero LED Programable para Autoescuelas en RGB, 2 Caras",
+    title: "LETRERO LED PROGRAMABLE PARA ACADEMIAS EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Autoescuelas", "2 Caras"],
-    shortDesc: "Letrero LED programable para autoescuelas en RGB, 2 caras.",
-    desc: "Letrero LED programable para autoescuelas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra horarios, precios de matrícula y mensajes promocionales. Disponible en varios tamaños. Incluye soporte lateral.",
-    images: [],
+    tags: ["RGB", "Academias", "2 Caras"],
+    shortDesc: "Banderola LED programable para academias en RGB, 2 caras. Soporte de banderola incluido gratis.",
+    desc: "Banderola LED programable en RGB de doble cara para academias y centros de formación. Muestre horarios, logos, matrículas y promociones con máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
+    price: "191,49 €",
+    images: ["img/producto-20/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Banderolas LED programables para Academias / Centros de formación en RGB.</h2> <p>Nuestras pantallas en RGB reproducen logos de academias además de texto, fecha, hora y temperatura. A doble cara para máxima visibilidad.</p> <ul>   <li>Soporte de banderola incluido gratis en tamaños doble cara.</li>   <li>Programación por USB o WiFi opcional.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">BANDEROLA LED ACADEMIAS RGB 2C</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 21,
-    title: "Letrero LED Programable para Academias en RGB, 2 Caras",
+    title: "LETRERO LED PROGRAMABLE PARA CLÍNICAS EN RGB, 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Academias", "2 Caras"],
-    shortDesc: "Letrero LED programable para academias en RGB, 2 caras.",
-    desc: "Letrero LED programable para academias en RGB, 2 caras. Ideal para academias de idiomas, música, danza y formación. Doble visibilidad. Muestra horarios, idiomas disponibles y ofertas de matrícula. Disponible en varios tamaños.",
-    images: [],
+    tags: ["RGB", "Clínicas", "1 Cara"],
+    shortDesc: "Letrero LED programable para clínicas y farmacias en RGB, 1 cara. Versión premium con más opciones de tamaño.",
+    desc: "Letrero LED programable en RGB para clínicas y farmacias, con una mayor variedad de tamaños disponibles. Ideal para farmacias, veterinarias, clínicas dentales y centros de salud. Muestre logos, horarios de consulta y servicios. 2 años de garantía.",
+    price: "208,99 €",
+    images: ["img/producto-17/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "32 cm de ancho x 80 cm de alto",
+                  "32 cm de ancho x 96 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "64 cm de ancho x 96 cm de alto",
+                  "96 cm de ancho x 16 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 96 cm de alto",
+                  "128 cm de ancho x 16 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 80 cm de alto",
+                  "128 cm de ancho x 96 cm de alto",
+                  "160 cm de ancho x 16 cm de alto",
+                  "160 cm de ancho x 32 cm de alto",
+                  "160 cm de ancho x 48 cm de alto",
+                  "160 cm de ancho x 64 cm de alto",
+                  "160 cm de ancho x 80 cm de alto",
+                  "160 cm de ancho x 96 cm de alto",
+                  "192 cm de ancho x 16 cm de alto",
+                  "192 cm de ancho x 32 cm de alto",
+                  "192 cm de ancho x 48 cm de alto",
+                  "192 cm de ancho x 64 cm de alto",
+                  "192 cm de ancho x 80 cm de alto",
+                  "192 cm de ancho x 96 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Letreros LED programables RGB para clínicas y farmacias — 1 cara.</h2> <p>Para farmacias, veterinarias, clínicas dentales, de salud, podólogo, nutricionista, etc. Puede añadir logos, textos, horarios y servicios personalizados.</p> <ul>   <li>Software de programación moderno e intuitivo.</li>   <li>Transmisión de datos PC – USB (Opcional WiFi).</li>   <li>Válidas para exterior e interior.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">LETRERO LED CLÍNICAS RGB 1C</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 22,
-    title: "Letrero LED Programable para Clínicas Dentales en RGB, 2 Caras",
+    title: "LETRERO LED PROGRAMABLE PARA BARES - RESTAURANTES - CAFETERÍAS EN RGB, 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Clínicas Dentales", "2 Caras"],
-    shortDesc: "Letrero LED programable para clínicas dentales en RGB, 2 caras.",
-    desc: "Letrero LED programable para clínicas dentales en RGB, 2 caras. Muestra servicios de odontología, horarios de cita y mensajes de salud dental. Doble visibilidad. Diseño compatible con imagen corporativa de clínicas.",
-    images: [],
+    tags: ["RGB", "Restaurantes", "1 Cara"],
+    shortDesc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara. Muestre menús, ofertas y promociones.",
+    desc: "Letrero LED programable en RGB para bares, restaurantes y cafeterías. Muestre menús del día, ofertas especiales, horarios y logos en millones de colores para atraer más clientes. Válido para exterior e interior. 2 años de garantía.",
+    price: "208,99 €",
+    images: ["img/producto-22/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "32 cm de ancho x 80 cm de alto",
+                  "32 cm de ancho x 96 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "64 cm de ancho x 96 cm de alto",
+                  "96 cm de ancho x 16 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 96 cm de alto",
+                  "128 cm de ancho x 16 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 80 cm de alto",
+                  "128 cm de ancho x 96 cm de alto",
+                  "160 cm de ancho x 16 cm de alto",
+                  "160 cm de ancho x 32 cm de alto",
+                  "160 cm de ancho x 48 cm de alto",
+                  "160 cm de ancho x 64 cm de alto",
+                  "160 cm de ancho x 80 cm de alto",
+                  "160 cm de ancho x 96 cm de alto",
+                  "192 cm de ancho x 16 cm de alto",
+                  "192 cm de ancho x 32 cm de alto",
+                  "192 cm de ancho x 48 cm de alto",
+                  "192 cm de ancho x 64 cm de alto",
+                  "192 cm de ancho x 80 cm de alto",
+                  "192 cm de ancho x 96 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Letreros LED programables RGB para Restaurantes / Bares / Cafeterías.</h2> <p>Nuestras pantallas en RGB reproducen logos e imágenes, mostrando menús, ofertas especiales y toda la información que desee de su negocio.</p> <ul>   <li>Personalización total: texto, logos, fecha, hora y temperatura (opcional).</li>   <li>Programación por USB o WiFi opcional.</li>   <li>Válidas para exterior e interior.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">LETRERO LED RESTAURANTES RGB</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 23,
-    title: "Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 1 Cara",
+    title: "LETRERO LED PROGRAMABLE PARA BARES - RESTAURANTES - CAFETERÍAS EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Hostelería", "1 Cara"],
-    shortDesc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara.",
-    desc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara. Muestra menús del día, promociones especiales, horarios y eventos. Alta visibilidad para atraer clientes. Disponible en varios tamaños.",
-    images: [],
+    tags: ["RGB", "Restaurantes", "2 Caras"],
+    shortDesc: "Banderola LED programable para bares, restaurantes y cafeterías en RGB, 2 caras. Soporte incluido gratis.",
+    desc: "Banderola LED programable en RGB de doble cara para bares, restaurantes y cafeterías. Máxima visibilidad desde ambos lados para mostrar menús, ofertas y promociones de su negocio. Soporte de banderola incluido gratis. 2 años de garantía.",
+    price: "191,49 €",
+    images: ["img/producto-23/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Banderolas LED programables para Restaurantes / Bares / Cafeterías en RGB.</h2> <p>A doble cara para máxima visibilidad desde ambos lados. Muestre menús, ofertas, logos y toda la información de su negocio.</p> <ul>   <li>Soporte de banderola incluido gratis en tamaños doble cara.</li>   <li>Programación por USB o WiFi opcional.</li>   <li>Válidas para exterior e interior.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">BANDEROLA LED RESTAURANTES RGB</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
     id: 24,
-    title: "Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 2 Caras",
+    title: "LETRERO LED PROGRAMABLE PARA HOTELES EN RGB, 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
     badge: "",
-    tags: ["RGB", "Hostelería", "2 Caras"],
-    shortDesc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 2 caras.",
-    desc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 2 caras. Mayor visibilidad desde dos ángulos. Muestra menús del día, ofertas especiales y eventos. Ideal para terrazas y locales con acceso por dos calles.",
-    images: [],
+    tags: ["RGB", "Hoteles", "1 Cara"],
+    shortDesc: "Letrero LED programable para hoteles, hostales y pensiones en RGB, 1 cara. Alta luminosidad visible desde largas distancias.",
+    desc: "Letrero LED programable en RGB para hoteles, hostales y pensiones. Muestre disponibilidad de habitaciones, servicios del hotel, mensajes de bienvenida y logos con alta luminosidad visible desde largas distancias. 2 años de garantía.",
+    price: "208,99 €",
+    images: ["img/producto-24/img-1.jpg"],
+    options: [
+      {
+            "id": "sonda",
+            "label": "SONDA DE TEMPERATURA",
+            "type": "toggle",
+            "choices": [
+                  "No",
+                  "Sí"
+            ],
+            "default": "No"
+      },
+      {
+            "id": "programacion",
+            "label": "MODO DE PROGRAMACIÓN",
+            "type": "toggle",
+            "choices": [
+                  "USB",
+                  "USB + Programación WiFi"
+            ],
+            "default": "USB"
+      },
+      {
+            "id": "tamano",
+            "label": "TAMAÑO (LARGO × ALTO)",
+            "type": "select",
+            "choices": [
+                  "32 cm de ancho x 16 cm de alto",
+                  "32 cm de ancho x 32 cm de alto",
+                  "32 cm de ancho x 48 cm de alto",
+                  "32 cm de ancho x 64 cm de alto",
+                  "32 cm de ancho x 80 cm de alto",
+                  "32 cm de ancho x 96 cm de alto",
+                  "64 cm de ancho x 16 cm de alto",
+                  "64 cm de ancho x 32 cm de alto",
+                  "64 cm de ancho x 48 cm de alto",
+                  "64 cm de ancho x 64 cm de alto",
+                  "64 cm de ancho x 80 cm de alto",
+                  "64 cm de ancho x 96 cm de alto",
+                  "96 cm de ancho x 16 cm de alto",
+                  "96 cm de ancho x 32 cm de alto",
+                  "96 cm de ancho x 48 cm de alto",
+                  "96 cm de ancho x 64 cm de alto",
+                  "96 cm de ancho x 80 cm de alto",
+                  "96 cm de ancho x 96 cm de alto",
+                  "128 cm de ancho x 16 cm de alto",
+                  "128 cm de ancho x 32 cm de alto",
+                  "128 cm de ancho x 48 cm de alto",
+                  "128 cm de ancho x 64 cm de alto",
+                  "128 cm de ancho x 80 cm de alto",
+                  "128 cm de ancho x 96 cm de alto",
+                  "160 cm de ancho x 16 cm de alto",
+                  "160 cm de ancho x 32 cm de alto",
+                  "160 cm de ancho x 48 cm de alto",
+                  "160 cm de ancho x 64 cm de alto",
+                  "160 cm de ancho x 80 cm de alto",
+                  "160 cm de ancho x 96 cm de alto",
+                  "192 cm de ancho x 16 cm de alto",
+                  "192 cm de ancho x 32 cm de alto",
+                  "192 cm de ancho x 48 cm de alto",
+                  "192 cm de ancho x 64 cm de alto",
+                  "192 cm de ancho x 80 cm de alto",
+                  "192 cm de ancho x 96 cm de alto"
+            ],
+            "default": "32 cm de ancho x 16 cm de alto"
+      }
+],
     specs: [],
     sizes: [],
     features: [],
     extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `<h2>Letreros LED programables RGB para Hoteles / Hostales / Pensiones.</h2> <p>Nuestras pantallas en RGB pueden reproducir logos de hoteles además de texto, fecha, hora y temperatura (opcional). Alta luminosidad visible desde largas distancias.</p> <ul>   <li>Colores RGB: elige el color que desees en cada momento.</li>   <li>Programación por USB o WiFi opcional.</li>   <li>Válidas para exterior e interior.</li>   <li>2 años de garantía.</li> </ul>`
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+      <div class="tab-referencia">
+        <span class="tab-ref-label">Referencia</span>
+        <span class="tab-ref-val">LETRERO LED HOTELES RGB</span>
+      </div>
+      <table class="tab-specs-table"><tbody>
+        <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+        <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+        <tr><th>Pixel constitución</th><td>RGB</td></tr>
+        <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+        <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+        <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+        <tr><th>Tensión</th><td>220V</td></tr>
+        <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+        <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+        <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+        <tr><th>Transmisión de datos</th><td>PC – USB (Opcional WiFi)</td></tr>
+        <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+        <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+        <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+        <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+        <tr><th>Garantía</th><td>2 Años</td></tr>
+      </tbody></table>`
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: '<p class="detalhe-tab-empty">No hay archivos adjuntos disponibles actualmente.</p>'
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
     related: [40, 41, 42, 37, 38, 39]
   },
   {
@@ -952,7 +2256,16785 @@ window.PRODUCTS_DATA = [
       {
         label: "Sonda de Temperatura",
         key: "sonda",
-        options: ["Sí", "No"]
+        options: ["Sí", "No"],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 218.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 304.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 194.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 224.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 433.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 364.68
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 420.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 502.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2179.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2611.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3352.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1686.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3548.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 199
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 284.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 359.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 400.39
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 175
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 205
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 344.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1542.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 458.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 482.79
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1295.91
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2159.85
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2591.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3332.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1666.17
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3528.36
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 354.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 384.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 360
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 3034.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3639.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2550.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3397.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4849.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5817.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3276.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5454.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 394.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1871.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1955.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1871.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2439.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4254.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2560.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3407.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4254.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 5101.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1955.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3891.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4859.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5827.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3286.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4375.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5464.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6553.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 375
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 350
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 410
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2178
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1936
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2904
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4235
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3630
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4356
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2541
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3388
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1936
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2904
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3872
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4840
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2178
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3267
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4356
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6534
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2420
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 384.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 360
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 419.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 3034.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3639.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2550.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3397.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 5091.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3881.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4849.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5817.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3276.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5454.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6543.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2429.99
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 218.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 304.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 194.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 224.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 433.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 364.68
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 420.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 502.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2179.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2611.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3352.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1686.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3548.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 199
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 284.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 359.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 400.39
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 175
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 205
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 344.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1542.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 458.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 482.79
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1295.91
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2159.85
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2591.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3332.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1666.17
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3528.36
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 354.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 218.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 304.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 194.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 224.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 433.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 364.68
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 420.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 502.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2179.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2611.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3352.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1686.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3548.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 199
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 284.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 359.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 400.39
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 175
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 205
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 344.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1542.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 458.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 482.79
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1295.91
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2159.85
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2591.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3332.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1666.17
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3528.36
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 354.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 384.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 360
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 3034.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3639.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2550.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3397.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4849.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5817.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3276.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5454.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 394.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1871.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1955.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1871.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2439.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4254.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2560.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3407.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4254.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 5101.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1955.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3891.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4859.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5827.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3286.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4375.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5464.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6553.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 375
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 350
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 410
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2178
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1936
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2904
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4235
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3630
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4356
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2541
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3388
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1936
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2904
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3872
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4840
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2178
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3267
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4356
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6534
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2420
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 384.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 360
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 419.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 3034.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3639.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2550.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3397.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 5091.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3881.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4849.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5817.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3276.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5454.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6543.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2429.99
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 384.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 360
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 3034.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3639.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2550.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3397.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4849.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5817.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3276.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5454.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 394.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1871.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1955.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1871.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2439.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4254.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2560.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3407.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4254.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 5101.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1955.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3891.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4859.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5827.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3286.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4375.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5464.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6553.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 375
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 350
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 410
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2178
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1936
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2904
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4235
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3630
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4356
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2541
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3388
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1936
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2904
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3872
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4840
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2178
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3267
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4356
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6534
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2420
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 384.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 360
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 419.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 3034.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3639.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2550.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3397.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 5091.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3881.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4849.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5817.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3276.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5454.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6543.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2429.99
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 384.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 360
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 3034.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3639.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2550.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3397.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4849.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5817.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3276.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5454.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 394.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1871.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1955.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1871.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2439.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4254.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2560.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3407.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4254.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 5101.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1955.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2923.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3891.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4859.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5827.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2197.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3286.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4375.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5464.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6553.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 375
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 350
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 410
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2178
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1936
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2904
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4235
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3630
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4356
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2541
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3388
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1936
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2904
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3872
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4840
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2178
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3267
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4356
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6534
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2420
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 384.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 360
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 419.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 2429.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 3034.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 3639.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 2550.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 3397.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 4244.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 5091.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1945.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 2913.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 3881.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 4849.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 5817.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 2187.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 3276.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 4365.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 5454.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 6543.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 2429.99
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 218.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 304.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 194.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 224.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 433.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 364.68
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 420.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 502.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2179.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2611.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3352.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1686.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3548.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 199
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 284.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 359.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 400.39
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 175
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 205
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 344.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1542.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 458.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 482.79
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1295.91
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2159.85
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2591.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3332.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1666.17
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3528.36
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 354.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 218.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 304.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 194.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 224.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 433.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 364.68
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 420.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 502.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2179.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2611.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3352.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1686.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3548.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 199
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 284.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 359.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 400.39
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 175
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 205
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 344.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1542.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 458.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 482.79
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1295.91
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2159.85
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2591.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3332.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1666.17
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3528.36
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 354.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 201.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 218.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 304.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 194.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 379.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 224.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 433.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 364.68
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 571.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 847.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 420.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 709.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 502.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 917.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1747.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2179.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2611.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1046.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1501.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3352.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 640.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1174.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1686.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2241.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2796.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3548.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1302.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 181.5
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 199
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 284.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 359.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 400.39
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 175
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 689.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 205
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 413.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 344.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 961.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1542.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 458.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 827.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1851.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 482.79
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 897.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1295.91
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1727.88
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2159.85
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2591.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 551.76
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1026.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1481.04
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3332.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 620.73
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1154.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1666.17
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2221.56
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2776.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3528.36
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1282.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 191.49
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 294.97
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 185
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 369.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 214.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 423.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 354.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 410.38
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 699.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 971.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1292.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1552.74
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 468.14
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 837.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1861.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 492.78
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 907.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1305.9
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1737.87
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 2169.84
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2601.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 561.75
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 1036.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1491.03
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 3342.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 630.72
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 1164.33
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1676.16
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 2231.55
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2786.94
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 3538.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1292.59
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB"
+            },
+            "price": 950
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi"
+            },
+            "price": 1000
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB"
+            },
+            "price": 985
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi"
+            },
+            "price": 1035
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB"
+            },
+            "price": 1150
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi"
+            },
+            "price": 1200
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB"
+            },
+            "price": 1185
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi"
+            },
+            "price": 1235
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Rojo"
+            },
+            "price": 856.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Rojo"
+            },
+            "price": 906.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Rojo"
+            },
+            "price": 891.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Rojo"
+            },
+            "price": 941.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Naranja"
+            },
+            "price": 856.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Naranja"
+            },
+            "price": 906.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Naranja"
+            },
+            "price": 891.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Naranja"
+            },
+            "price": 941.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Azul"
+            },
+            "price": 856.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Azul"
+            },
+            "price": 906.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Azul"
+            },
+            "price": 891.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Azul"
+            },
+            "price": 941.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Verde"
+            },
+            "price": 856.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Verde"
+            },
+            "price": 906.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Verde"
+            },
+            "price": 891.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Verde"
+            },
+            "price": 941.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Blanco"
+            },
+            "price": 856.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Blanco"
+            },
+            "price": 906.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Blanco"
+            },
+            "price": 891.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "64 cm de ancho x 64 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Blanco"
+            },
+            "price": 941.68
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Rojo"
+            },
+            "price": 1056.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Rojo"
+            },
+            "price": 1106.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Rojo"
+            },
+            "price": 1091.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Rojo"
+            },
+            "price": 1141.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Naranja"
+            },
+            "price": 1056.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Naranja"
+            },
+            "price": 1106.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Naranja"
+            },
+            "price": 1091.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Naranja"
+            },
+            "price": 1141.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Azul"
+            },
+            "price": 1056.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Azul"
+            },
+            "price": 1106.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Azul"
+            },
+            "price": 1091.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Azul"
+            },
+            "price": 1141.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Verde"
+            },
+            "price": 1056.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Verde"
+            },
+            "price": 1106.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Verde"
+            },
+            "price": 1091.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Verde"
+            },
+            "price": 1141.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Blanco"
+            },
+            "price": 1056.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "No",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Blanco"
+            },
+            "price": 1106.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB",
+                  "COLOR DE LOS LEDS": "Blanco"
+            },
+            "price": 1091.6799999999998
+      },
+      {
+            "combinations": {
+                  "TAMAÑO (LARGO × ALTO)": "96 cm de ancho x 96 cm de alto",
+                  "SONDA DE TEMPERATURA": "Sí",
+                  "MODO DE PROGRAMACIÓN": "USB + Programación WiFi",
+                  "COLOR DE LOS LEDS": "Blanco"
+            },
+            "price": 1141.6799999999998
+      }
+],
+    combinations: [
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 159.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 179.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 274.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 314.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 348.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 180
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 274.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 351.21
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 464.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 578.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 692.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 351.21
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 521.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 692.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 790.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 946.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 272.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 464.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 692.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 842.47
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1200.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 310.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 578.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 790.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1050.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1250.24
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1498.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 364.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 692.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 946.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1200.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1498.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 1795.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 408.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 738.41
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1051.8
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1399.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2093.61
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 464.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 842.47
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 1597.51
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 521.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 946.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1349.46
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2242.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 2688.93
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 169.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 218.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 284.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 358.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 190
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 284.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 361.21
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 474.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 588.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 702.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 218.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 531.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 702.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 800.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 956.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 282.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 474.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 702.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 852.47
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1210.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 320.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 588.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 800.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1060.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1260.24
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1508.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 374.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 702.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 956.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1210.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 1805.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 418.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 748.41
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1409.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 1756.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2103.61
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 474.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1210.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 1607.51
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 2004.39
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 2401.27
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 531.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 956.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2252.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 2698.93
+      },
+      {
+            "combinations": {
+                  "group[6]": "Sí",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1060.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 150
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 170
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 199
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 64 cm de alto"
+            },
+            "price": 265
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 305
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 339
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 170.01
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 265
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 341.22
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 454.96
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 568.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 682.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 341.22
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 511.83
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 682.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 780.45
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 936.54
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 262.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 454.96
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 682.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 832.48
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1190.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 568.7
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 780.45
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1040.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1488.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 354.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 682.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 936.54
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1488.3
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 1785.96
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 398.09
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 728.42
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1041.81
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1389.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 1736.35
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2083.62
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1190.64
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 1587.52
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 1984.4
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 2381.28
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 511.83
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 936.54
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1339.47
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 1785.96
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1040.6
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x16 cm de alto"
+            },
+            "price": 159.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32cm de ancho x 32 cm de alto"
+            },
+            "price": 179.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 48 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 80 cm de alto"
+            },
+            "price": 314.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "32 cm de ancho x 96 cm de alto"
+            },
+            "price": 348.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 16 cm de alto"
+            },
+            "price": 180
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 32 cm de alto"
+            },
+            "price": 274.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 48 cm de alto"
+            },
+            "price": 351.21
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64cm de ancho x 64 cm de alto"
+            },
+            "price": 464.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 80 cm de alto"
+            },
+            "price": 578.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "64 cm de ancho x 96 cm de alto"
+            },
+            "price": 692.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 16 cm de alto"
+            },
+            "price": 208.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 32 cm de alto"
+            },
+            "price": 351.21
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 48 cm de alto"
+            },
+            "price": 521.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 64 cm de alto"
+            },
+            "price": 692.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 80 cm de alto"
+            },
+            "price": 790.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "96 cm de ancho x 96 cm de alto"
+            },
+            "price": 946.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 16 cm de alto"
+            },
+            "price": 272.99
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 32 cm de alto"
+            },
+            "price": 464.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 48 cm de alto"
+            },
+            "price": 692.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 64 cm de alto"
+            },
+            "price": 842.47
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 96 cm de alto"
+            },
+            "price": 1200.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 16 cm de alto"
+            },
+            "price": 310.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 32 cm de alto"
+            },
+            "price": 578.69
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 48 cm de alto"
+            },
+            "price": 790.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 64 cm de alto"
+            },
+            "price": 1050.59
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 80 cm de alto"
+            },
+            "price": 1250.24
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "160 cm de ancho x 96 cm de alto"
+            },
+            "price": 1498.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 16 cm de alto"
+            },
+            "price": 364.98
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 32 cm de alto"
+            },
+            "price": 692.43
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 48 cm de alto"
+            },
+            "price": 946.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 64 cm de alto"
+            },
+            "price": 1200.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 80 cm de alto"
+            },
+            "price": 1498.29
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "192 cm de ancho x 96 cm de alto"
+            },
+            "price": 1795.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 16 cm de alto"
+            },
+            "price": 408.08
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 32 cm de alto"
+            },
+            "price": 738.41
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 48 cm de alto"
+            },
+            "price": 1051.8
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 64 cm de alto"
+            },
+            "price": 1399.07
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 80 cm de alto"
+            },
+            "price": 1746.34
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "224 cm de ancho x 96 cm de alto"
+            },
+            "price": 2093.61
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 16 cm de alto"
+            },
+            "price": 464.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 32 cm de alto"
+            },
+            "price": 842.47
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 48 cm de alto"
+            },
+            "price": 1200.63
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 64 cm de alto"
+            },
+            "price": 1597.51
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 80 cm de alto"
+            },
+            "price": 1994.39
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "256 cm de ancho x 96 cm de alto"
+            },
+            "price": 2391.27
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 16 cm de alto"
+            },
+            "price": 521.82
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 32 cm de alto"
+            },
+            "price": 946.53
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 48 cm de alto"
+            },
+            "price": 1349.46
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 64 cm de alto"
+            },
+            "price": 1795.95
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 80 cm de alto"
+            },
+            "price": 2242.44
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "288 cm de ancho x 96 cm de alto"
+            },
+            "price": 2688.93
+      },
+      {
+            "combinations": {
+                  "group[6]": "No",
+                  "group[7]": "USB + Programación WiFi",
+                  "group[11]": "128 cm de ancho x 80 cm de alto"
+            },
+            "price": 1050.59
+      }
+]
       },
       {
         label: "Modo de Programación",

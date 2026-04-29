@@ -1046,8 +1046,64 @@
           const optId = btn.dataset.option;
           document.querySelectorAll(`.detalhe-toggle-btn[data-option="${optId}"]`).forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
+          if (typeof updateDynamicPrice === 'function') updateDynamicPrice();
         });
       });
+      
+      // Select changes
+      document.querySelectorAll('.detalhe-size-select, .detalhe-select').forEach(sel => {
+        sel.addEventListener('change', () => {
+          if (typeof updateDynamicPrice === 'function') updateDynamicPrice();
+        });
+      });
+
+      function updateDynamicPrice() {
+        if (!product.combinations || product.combinations.length === 0) return;
+        
+        const selectedValues = [];
+        
+        // Tamaños (el select especial)
+        const sizeSel = document.getElementById('sizeSelect');
+        if (sizeSel) selectedValues.push(sizeSel.value.trim().toLowerCase());
+        
+        // Otras opciones
+        if (product.options) {
+          product.options.forEach(opt => {
+            if (opt.type === 'toggle') {
+              const activeBtn = document.querySelector(`.detalhe-toggle-btn.active[data-option="${opt.id}"]`);
+              if (activeBtn) selectedValues.push(activeBtn.dataset.value.trim().toLowerCase());
+            } else if (opt.type === 'select') {
+              const sel = document.getElementById(`opt_${opt.id}`);
+              if (sel) selectedValues.push(sel.value.trim().toLowerCase());
+            }
+          });
+        }
+        
+        // Buscar combinación
+        const match = product.combinations.find(c => {
+          // c.combinations es algo como {'group[6]': 'Sí', 'group[7]': 'USB', ...}
+          // Para los productos 13 y 14 que son simulados, las keys son "TAMAÑO...", etc.
+          // En cualquier caso, los valores deben coincidir con selectedValues
+          const combVals = Object.values(c.combinations).map(v => v.trim().toLowerCase());
+          
+          // Todas las opciones seleccionadas deben estar dentro de la combinación
+          // (relajamos espacios o pequeños typos reemplazando espacios múltiples)
+          for (let sVal of selectedValues) {
+            sVal = sVal.replace(/\s+/g, ' ');
+            const found = combVals.some(cV => cV.replace(/\s+/g, ' ') === sVal || cV.includes(sVal) || sVal.includes(cV));
+            if (!found) return false;
+          }
+          return true;
+        });
+        
+        if (match) {
+          const priceEl = document.getElementById('dynamicPrice');
+          if (priceEl) {
+            priceEl.innerHTML = match.price.toFixed(2).replace('.', ',') + ' €<span class="detalhe-price-tax">Impuestos incluidos</span>';
+          }
+          product.price = match.price.toFixed(2).replace('.', ',') + ' €'; // Update internal price for cart
+        }
+      }
 
       // Quantity selector
       let qty = 1;
@@ -1357,7 +1413,7 @@
                 <div class="detalhe-info">
                   ${tags ? `<div class="detalhe-tags">${tags}</div>` : ''}
                   <h1 class="detalhe-title">${p.title}</h1>
-                  ${p.price ? `<p class="detalhe-price">${p.price}<span class="detalhe-price-tax">Impuestos incluidos</span></p>` : ''}
+                  ${p.price ? `<p class="detalhe-price" id="dynamicPrice">${p.price}<span class="detalhe-price-tax">Impuestos incluidos</span></p>` : ''}
                   <p class="detalhe-desc">${p.desc}</p>
                   <hr class="detalhe-divider" />
                   ${specsHtml}
