@@ -183,7 +183,7 @@
       display: flex;
       align-items: stretch;
     }
-    .size-input-wrap input {
+    .size-input-wrap select {
       flex: 1;
       background: var(--dark-3);
       border: 1px solid var(--border);
@@ -193,11 +193,18 @@
       color: var(--white);
       font-size: 1rem;
       font-family: inherit;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
     }
-    .size-input-wrap input:focus {
+    .size-input-wrap select:focus {
       outline: none;
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(0,102,255,0.15);
+    }
+    .size-input-wrap select option {
+      background: var(--dark-2, #0d1224);
+      color: var(--white);
     }
     .size-unit {
       background: var(--dark-3);
@@ -606,10 +613,10 @@
                 <span class="opt-label">P5</span>
                 <span class="opt-sub">Alta resolución. Ideal para locales donde el cliente pasa cerca.</span>
               </div>
-              <div class="config-opt" data-val="P25">
+              <div class="config-opt" data-val="P2.5">
                 <span class="opt-icon">🏟️</span>
-                <span class="opt-label">P25</span>
-                <span class="opt-sub">Gran distancia de visualización. Económico para grandes formatos exteriores.</span>
+                <span class="opt-label">P2.5</span>
+                <span class="opt-sub">Alta resolución para visualización de cerca. Ideal para interiores donde el cliente está muy próximo al letrero.</span>
               </div>
             </div>
           </div>
@@ -644,25 +651,26 @@
             </div>
             <div class="size-inputs">
               <div class="size-field">
-                <label for="inputAncho">Ancho</label>
+                <label for="selectAncho">Ancho</label>
                 <div class="size-input-wrap">
-                  <input type="number" id="inputAncho" min="1" placeholder="ej. 128" />
+                  <select id="selectAncho">
+                    <option value="">Selecciona ancho…</option>
+                  </select>
                   <span class="size-unit">cm</span>
                 </div>
               </div>
               <span class="size-x">×</span>
               <div class="size-field">
-                <label for="inputAlto">Alto</label>
+                <label for="selectAlto">Alto</label>
                 <div class="size-input-wrap">
-                  <input type="number" id="inputAlto" min="1" placeholder="ej. 32" />
+                  <select id="selectAlto">
+                    <option value="">Selecciona alto…</option>
+                  </select>
                   <span class="size-unit">cm</span>
                 </div>
               </div>
             </div>
-            <div class="size-error" id="sizeError">⚠️ Las medidas no son válidas. Revisa las restricciones.</div>
-            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:14px;">
-              Máximo permitido: <strong style="color:var(--white)">200 cm × 100 cm</strong>
-            </p>
+            <div class="size-error" id="sizeError">⚠️ Selecciona ancho y alto para continuar.</div>
           </div>
 
         </div><!-- /config-steps -->
@@ -747,7 +755,7 @@
     const pitchRules = {
       P10:  { plateW: 32, plateH: 16, multiple: 16  },
       P5:   { plateW: 32, plateH: 16, multiple: 16  },
-      P25:  { plateW: 32, plateH: 16, multiple: 16  },
+      'P2.5':  { plateW: 32, plateH: 16, multiple: 16  },
       P6:   { plateW: 19.2, plateH: 19.2, multiple: 19.2 }
     };
     const MAX_W = 200, MAX_H = 100; // cm
@@ -755,12 +763,12 @@
     // ── Color → available pitches ──
     const colorPitchMap = {
       monocolor: ['P10', 'P6'],
-      rgb:       ['P10', 'P6', 'P5', 'P25'],
-      fullcolor: ['P10', 'P6', 'P5', 'P25']
+      rgb:       ['P10', 'P6', 'P5', 'P2.5'],
+      fullcolor: ['P10', 'P6', 'P5', 'P2.5']
     };
 
     // ── Pitches with interior/exterior option ──
-    const pitchHasUbicacion = ['P5', 'P25'];
+    const pitchHasUbicacion = ['P5', 'P2.5'];
 
     // ── DOM refs ──
     const steps        = document.querySelectorAll('.config-step');
@@ -806,14 +814,9 @@
     }
 
     function validateSizes() {
-      const w = parseFloat(document.getElementById('inputAncho').value);
-      const h = parseFloat(document.getElementById('inputAlto').value);
-      const rule = pitchRules[state.pitch];
-      if (!rule || !w || !h) return false;
-      if (w > MAX_W || h > MAX_H) return false;
-      const mult = rule.multiple;
-      const ok = (Math.round(w * 10) % Math.round(mult * 10) === 0) &&
-                 (Math.round(h * 10) % Math.round(mult * 10) === 0);
+      const w = parseFloat(document.getElementById('selectAncho').value);
+      const h = parseFloat(document.getElementById('selectAlto').value);
+      const ok = w > 0 && h > 0;
       document.getElementById('sizeError').style.display = ok ? 'none' : 'block';
       return ok;
     }
@@ -834,13 +837,32 @@
       });
     }
 
+    // ── Populate size dropdowns based on selected pitch ──
+    function populateSizeSelects() {
+      const rule = pitchRules[state.pitch];
+      if (!rule) return;
+      const mult = rule.multiple;
+      const widths = [], heights = [];
+      for (let i = 1; i * mult <= MAX_W; i++) widths.push(Math.round(i * mult * 10) / 10);
+      for (let i = 1; i * mult <= MAX_H; i++) heights.push(Math.round(i * mult * 10) / 10);
+
+      const selAncho = document.getElementById('selectAncho');
+      const selAlto  = document.getElementById('selectAlto');
+      selAncho.innerHTML = '<option value="">Selecciona ancho…</option>' +
+        widths.map(w => `<option value="${w}">${w} cm</option>`).join('');
+      selAlto.innerHTML  = '<option value="">Selecciona alto…</option>' +
+        heights.map(h => `<option value="${h}">${h} cm</option>`).join('');
+      state.ancho = null;
+      state.alto  = null;
+    }
+
     // ── Update size rules info ──
     function updateSizeInfo() {
       const rule = pitchRules[state.pitch];
       if (!rule) return;
-      const m = rule.multiple;
       document.getElementById('sizeRuleInfo').innerHTML =
-        `Con <strong>${state.pitch}</strong>: las placas miden <strong>${rule.plateW} × ${rule.plateH} cm</strong>. Las dimensiones que elijas deben ser <strong>múltiplos de ${m} cm</strong>. Máximo <strong>${MAX_W} × ${MAX_H} cm</strong>`;
+        `Con <strong>${state.pitch}</strong>: placas de <strong>${rule.plateW} × ${rule.plateH} cm</strong>. Elige entre las medidas disponibles a continuación.`;
+      populateSizeSelects();
     }
 
     // ── Update step 4 visibility based on pitch ──
@@ -870,12 +892,14 @@
     bindOpts('opts-pitch',    'pitch');
     bindOpts('opts-ubicacion','ubicacion');
 
-    // Size inputs
-    ['inputAncho','inputAlto'].forEach(id => {
-      document.getElementById(id).addEventListener('input', () => {
-        state[id === 'inputAncho' ? 'ancho' : 'alto'] = parseFloat(document.getElementById(id).value);
-        validateSizes();
-      });
+    // Size selects
+    document.getElementById('selectAncho').addEventListener('change', () => {
+      state.ancho = parseFloat(document.getElementById('selectAncho').value) || null;
+      validateSizes();
+    });
+    document.getElementById('selectAlto').addEventListener('change', () => {
+      state.alto = parseFloat(document.getElementById('selectAlto').value) || null;
+      validateSizes();
     });
 
     // ── Navigation ──
@@ -1000,11 +1024,11 @@
         listEl.innerHTML = matchIds.slice(0,4).map(id => {
           const p = productNames[id];
           if (!p) return '';
-          return `<a href="produtos.html" class="result-product-card">
+          return `<a href="produto-detalhe.html?id=${id}" class="result-product-card">
             <div class="result-product-card-icon">${p.icon}</div>
             <div class="result-product-info">
               <strong>${p.name}</strong>
-              <span>Categoría: ${p.cat} · Haz clic para verlo en el catálogo</span>
+              <span>Haz clic para ver este producto →</span>
             </div>
             <span class="result-product-arrow">→</span>
           </a>`;
