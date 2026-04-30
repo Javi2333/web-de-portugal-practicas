@@ -3040,5 +3040,319 @@ window.PRODUCTS_DATA = [
       }
     ],
     related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 43,
+    title: "Letrero LED Programable para Vehículos, 1 Cara",
+    badge: "",
+    tags: ["Vehículos", "1 Cara", "Especial Vehículos"],
+    shortDesc: "Letrero LED programable de 1 cara especial para autobuses y vehículos.",
+    desc: "Pantallas LED programables especiales para autobuses y todo tipo de vehículos, con fuente a 12/24 V. Programación por USB, WiFi o mando de infrarrojos. Alta luminosidad y resistencia para exterior.",
+    price: "0,00 €",
+    images: ["img/producto-43/img-1.jpg","img/producto-43/img-2.jpg","img/producto-43/img-3.jpg","img/producto-43/img-4.jpg","img/producto-43/img-5.png"],
+    options: [
+      {
+        id: "sonda",
+        label: "Sonda de Temperatura",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No",
+        surcharges: { "Sí": 25.00 }
+      },
+      {
+        id: "programacion",
+        label: "Modo de Programación",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 25.00 }
+      },
+      {
+        id: "mando",
+        label: "Mando con Infrarrojos",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No",
+        surcharges: { "Sí": 25.00 }
+      },
+      {
+        id: "anclajes",
+        label: "Anclajes para Sujeción al Vehículo",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No",
+        surcharges: { "Sí": 25.00 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "32 cm de ancho x 16 cm de alto",
+          "64 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "128 cm de ancho x 16 cm de alto",
+          "92 cm de ancho x 32 cm de alto",
+          "128 cm de ancho x 32 cm de alto"
+        ],
+        default: "32 cm de ancho x 16 cm de alto",
+        sizePrices: {
+          "32 cm de ancho x 16 cm de alto": 0.00,
+          "64 cm de ancho x 16 cm de alto": 0.00,
+          "96 cm de ancho x 16 cm de alto": 0.00,
+          "128 cm de ancho x 16 cm de alto": 0.00,
+          "92 cm de ancho x 32 cm de alto": 0.00,
+          "128 cm de ancho x 32 cm de alto": 0.00
+        }
+      }
+    ],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables: Especial vehículos</h2>
+          <p><strong>LETRERO LED VEHÍCULOS 1 CARA</strong></p>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>Además tenemos nuestro departamento especializado en pantallas LED programables para autobuses y todo tipo de vehículos, con fuentes a 12/24 V.</p>
+          <p>Con posibilidad de programación con mando a través de infrarrojos o con el teléfono o portátil a través de WiFi.</p>
+          <p>Podemos adaptar el letrero a la curvatura del autobús o vehículo, consulte con nosotros para más información.</p>
+          <p>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</p>
+
+          <h3>Características principales:</h3>
+          <ul>
+            <li>Colores disponibles: Rojo, Blanco, Naranja ámbar, Verde, Azul, Multicolor, RGB</li>
+            <li>Texto personalizado con diferentes tamaños y tipos de letra</li>
+            <li>Fecha y hora (Reloj)</li>
+            <li>Temperatura (con sensor opcional)</li>
+            <li>Fondos y bordes animados</li>
+            <li>Conteo ascendente y descendente</li>
+            <li>Logotipos sencillos monocolor</li>
+            <li>Posibilidad de insertar cruces sanitarias</li>
+            <li>Colocación en horizontal y en vertical</li>
+            <li>Compatible con fuente 12/24V para vehículos</li>
+            <li>Programación por USB, WiFi o mando infrarrojos</li>
+          </ul>
+
+          <h3>Especificaciones técnicas:</h3>
+          <div class="tab-spec-table">
+            <div class="tab-spec-row"><span class="tab-spec-label">Separación entre píxeles</span><span class="tab-spec-val">10 mm</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Densidad de píxeles</span><span class="tab-spec-val">10.000 Puntos/m²</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Pixel constitución</span><span class="tab-spec-val">1W (Depende del color)</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Tipo de LED</span><span class="tab-spec-val">DIP546</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Vida estimada</span><span class="tab-spec-val">100.000 Horas</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Brillo (Candelas/m²)</span><span class="tab-spec-val">8.000</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Tensión</span><span class="tab-spec-val">220V</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Tasa de refresco</span><span class="tab-spec-val">1.920 Hz</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Ángulo de visión</span><span class="tab-spec-val">120º / 60º</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Temperatura de trabajo</span><span class="tab-spec-val">-20ºC – +70ºC</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Transmisión de datos</span><span class="tab-spec-val">PC – USB (Opcional WiFi)</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Protección</span><span class="tab-spec-val">Para exterior: Soporta agentes atmosféricos</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Construcción</span><span class="tab-spec-val">Aluminio / PC</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Dimensiones (cm)</span><span class="tab-spec-val">*Consultar</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Certificados</span><span class="tab-spec-val">CE-RHOS</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Garantía</span><span class="tab-spec-val">2 Años</span></div>
+          </div>
+
+          <p><em>* Anclajes para sujeción al vehículo disponibles como accesorio adicional.</em></p>
+        `
+      },
+      {
+        id: "programacion-tab",
+        label: "Programación",
+        html: `
+          <h3>Programación:</h3>
+          <p>Esta es una de las grandes ventajas de estas pantallas, ¡Son muy fáciles de programar!</p>
+          <ul>
+            <li>Se programan a través de USB, no necesitas tener la pantalla conectada al ordenador.</li>
+            <li>Haces tú programa, lo exportas a una memoria USB, conectas la memoria USB a la pantalla, ¡y listo! La pantalla reconoce el programa y ya puedes retirar en unos segundos la memoria USB.</li>
+            <li>Te proporcionamos el programa, con manual y tutoriales en español.</li>
+            <li>Te asesoramos siempre que lo necesites.</li>
+          </ul>
+          <p>Una vez tenemos el programa hecho, conectamos la memoria USB al letrero y con el mando infrarrojos podemos ir seleccionando el programa que deseemos que aparezca. (El letrero tiene memoria, por lo que si apaga el letrero, al encenderlo, aparecerá el mensaje que le dejemos seleccionado).</p>
+          <p>Si eliges la opción WiFi: Haces el programa y directamente desde el ordenador o el móvil lo mandas al letrero.</p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETRERO LED VEHÍCULOS 1 CARA</span>
+          </div>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: `
+          <a href="docs/LP_Dossier_Letreros_LED_Programables_Vehiculos.pdf" class="tab-download-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            LP_Dossier_Letreros_LED_Programables_Vehiculos.pdf
+          </a>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 44,
+    title: "Letrero LED Programable Curvo para Vehículos",
+    badge: "",
+    tags: ["Vehículos", "Curvo", "Especial Vehículos"],
+    shortDesc: "Letrero LED programable curvo especial para autobuses y vehículos.",
+    desc: "Letrero LED programable curvo adaptado a la curvatura del autobús o vehículo, con fuente a 12/24 V. Programación por USB, WiFi o mando de infrarrojos. Alta luminosidad y resistencia para exterior.",
+    price: "0,00 €",
+    images: ["img/producto-44/img-1.jpg","img/producto-44/img-2.png","img/producto-44/img-3.png","img/producto-44/img-4.jpg"],
+    options: [
+      {
+        id: "sonda",
+        label: "Sonda de Temperatura",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No",
+        surcharges: { "Sí": 25.00 }
+      },
+      {
+        id: "programacion",
+        label: "Modo de Programación",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB",
+        surcharges: { "USB + Programación WiFi": 25.00 }
+      },
+      {
+        id: "mando",
+        label: "Mando con Infrarrojos",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No",
+        surcharges: { "Sí": 25.00 }
+      },
+      {
+        id: "anclajes",
+        label: "Anclajes para Sujeción al Vehículo",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No",
+        surcharges: { "Sí": 25.00 }
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (Largo X Alto)",
+        type: "select",
+        choices: [
+          "96 cm de ancho x 16 cm de alto",
+          "128 cm de ancho x 16 cm de alto"
+        ],
+        default: "96 cm de ancho x 16 cm de alto",
+        sizePrices: {
+          "96 cm de ancho x 16 cm de alto": 0.00,
+          "128 cm de ancho x 16 cm de alto": 0.00
+        }
+      }
+    ],
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Pantallas LED programables: Especial vehículos</h2>
+          <p><strong>LETRERO LED VEHÍCULOS CURVO</strong></p>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>Además tenemos nuestro departamento especializado en pantallas LED programables para autobuses y todo tipo de vehículos, con fuentes a 12/24 V.</p>
+          <p>Con posibilidad de programación con mando a través de infrarrojos o con el teléfono o portátil a través de WiFi.</p>
+          <p>Podemos adaptar el letrero a la curvatura del autobús o vehículo, consulte con nosotros para más información.</p>
+          <p>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</p>
+
+          <h3>Características principales:</h3>
+          <ul>
+            <li>Adaptado a la curvatura del autobús o vehículo</li>
+            <li>Colores disponibles: Rojo, Blanco, Naranja ámbar, Verde, Azul, Multicolor, RGB</li>
+            <li>Texto personalizado con diferentes tamaños y tipos de letra</li>
+            <li>Fecha y hora (Reloj)</li>
+            <li>Temperatura (con sensor opcional)</li>
+            <li>Fondos y bordes animados</li>
+            <li>Logotipos sencillos monocolor</li>
+            <li>Compatible con fuente 12/24V para vehículos</li>
+            <li>Programación por USB, WiFi o mando infrarrojos</li>
+          </ul>
+
+          <h3>Especificaciones técnicas:</h3>
+          <div class="tab-spec-table">
+            <div class="tab-spec-row"><span class="tab-spec-label">Separación entre píxeles</span><span class="tab-spec-val">10 mm</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Densidad de píxeles</span><span class="tab-spec-val">10.000 Puntos/m²</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Pixel constitución</span><span class="tab-spec-val">1W (Depende del color)</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Tipo de LED</span><span class="tab-spec-val">DIP546</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Vida estimada</span><span class="tab-spec-val">100.000 Horas</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Brillo (Candelas/m²)</span><span class="tab-spec-val">8.000</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Tensión</span><span class="tab-spec-val">220V</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Tasa de refresco</span><span class="tab-spec-val">1.920 Hz</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Ángulo de visión</span><span class="tab-spec-val">120º / 60º</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Temperatura de trabajo</span><span class="tab-spec-val">-20ºC – +70ºC</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Transmisión de datos</span><span class="tab-spec-val">PC – USB (Opcional WiFi)</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Protección</span><span class="tab-spec-val">Para exterior: Soporta agentes atmosféricos</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Construcción</span><span class="tab-spec-val">Aluminio / PC</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Dimensiones (cm)</span><span class="tab-spec-val">*Consultar</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Certificados</span><span class="tab-spec-val">CE-RHOS</span></div>
+            <div class="tab-spec-row"><span class="tab-spec-label">Garantía</span><span class="tab-spec-val">2 Años</span></div>
+          </div>
+
+          <p><em>* Anclajes para sujeción al vehículo disponibles como accesorio adicional.</em></p>
+        `
+      },
+      {
+        id: "programacion-tab",
+        label: "Programación",
+        html: `
+          <h3>Programación:</h3>
+          <p>Esta es una de las grandes ventajas de estas pantallas, ¡Son muy fáciles de programar!</p>
+          <ul>
+            <li>Se programan a través de USB, no necesitas tener la pantalla conectada al ordenador.</li>
+            <li>Haces tú programa, lo exportas a una memoria USB, conectas la memoria USB a la pantalla, ¡y listo! La pantalla reconoce el programa y ya puedes retirar en unos segundos la memoria USB.</li>
+            <li>Te proporcionamos el programa, con manual y tutoriales en español.</li>
+            <li>Te asesoramos siempre que lo necesites.</li>
+          </ul>
+          <p>Una vez tenemos el programa hecho, conectamos la memoria USB al letrero y con el mando infrarrojos podemos ir seleccionando el programa que deseemos que aparezca. (El letrero tiene memoria, por lo que si apaga el letrero, al encenderlo, aparecerá el mensaje que le dejemos seleccionado).</p>
+          <p>Si eliges la opción WiFi: Haces el programa y directamente desde el ordenador o el móvil lo mandas al letrero.</p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">LETRERO LED VEHÍCULOS CURVO</span>
+          </div>
+        `
+      },
+      {
+        id: "archivos",
+        label: "Archivos adjuntos",
+        html: `
+          <a href="docs/LP_Dossier_Letreros_LED_Programables_Vehiculos.pdf" class="tab-download-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            LP_Dossier_Letreros_LED_Programables_Vehiculos.pdf
+          </a>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: `<p class="detalhe-tab-empty">No hay ninguna opinión por el momento.</p>`
+      }
+    ],
+    related: [40, 41, 42, 37, 38, 39]
   }
 ];
