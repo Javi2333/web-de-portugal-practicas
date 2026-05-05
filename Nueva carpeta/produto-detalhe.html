@@ -1464,15 +1464,15 @@
           const sizeSel = document.getElementById('opt_tamano');
           if (sizeSel && sizeSel.value.includes('77 cm')) { total = 1713.36; } else { total = 726.00; }
           const wifiBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="programacion"]');
-          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) total += 18.15;
+          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) total += 25;
         } else if (product.sizePrices) {
           // Case 3: product-level sizePrices map
           const sizeSel = document.getElementById('opt_tamano');
           if (sizeSel && product.sizePrices[sizeSel.value] !== undefined) total = product.sizePrices[sizeSel.value];
           const sondaBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="sonda"]');
-          if (sondaBtn && sondaBtn.dataset.value === 'Sí') total += 9.99;
+          if (sondaBtn && sondaBtn.dataset.value === 'Sí') total += 25;
           const wifiBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="programacion"]');
-          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) total += 9.99;
+          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) total += 25;
         } else if (product.options) {
           // Case 4: sizePrices inside an option object + surcharges on toggle options
           const sizeOpt = product.options.find(o => o.sizePrices);
