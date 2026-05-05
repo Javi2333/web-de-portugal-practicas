@@ -1424,34 +1424,9 @@
       const defaultBasePrice = product.price
         ? parseFloat(product.price.replace(/\./g, '').replace(',', '.').replace(/[^0-9.]/g, ''))
         : 0;
-      let currentPrice = product.price || '';
 
-      function recalcPrice() {
-        if (!product.price) return;
-        let total = defaultBasePrice;
-
-        if (product.options) {
-          const sizeOpt = product.options.find(o => o.sizePrices);
-          if (sizeOpt) {
-            const selectEl = document.querySelector(`select[data-option="${sizeOpt.id}"]`);
-            if (selectEl && sizeOpt.sizePrices[selectEl.value] !== undefined) {
-              total = sizeOpt.sizePrices[selectEl.value];
-            }
-          }
-
-          product.options.forEach(opt => {
-            if (opt.surcharges) {
-              const activeBtn = document.querySelector(`.detalhe-toggle-btn.active[data-option="${opt.id}"]`);
-              if (activeBtn) total += opt.surcharges[activeBtn.dataset.value] || 0;
-            }
-          });
-        }
-
-        currentPrice = total.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
-        const priceEl = document.getElementById('dynamicPrice');
-        if (priceEl) priceEl.innerHTML = currentPrice + '<span class="detalhe-price-tax">Impuestos incluidos</span>';
-      }
       function updateDynamicPrice() {
+        // Case 1: product has a combinations matrix (price per combination of options)
         if (product.combinations && product.combinations.length > 0) {
           const selectedValues = [];
           if (product.options) {
@@ -1482,36 +1457,41 @@
           }
           return;
         }
-        if (!product.price) return;
-        let basePrice = parseFloat(product.price.replace(/[^\d,.-]/g, '').replace(',', '.'));
-        if (isNaN(basePrice)) return;
-        let extraPrice = 0;
+
+        // Case 2: product 35 has hardcoded size prices
+        let total = defaultBasePrice;
         if (product.id === 35) {
           const sizeSel = document.getElementById('opt_tamano');
-          if (sizeSel && sizeSel.value.includes('77 cm')) {
-            basePrice = 1713.36;
-          } else {
-            basePrice = 726.00;
-          }
+          if (sizeSel && sizeSel.value.includes('77 cm')) { total = 1713.36; } else { total = 726.00; }
           const wifiBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="programacion"]');
-          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) {
-            extraPrice += 18.15;
-          }
+          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) total += 25;
         } else if (product.sizePrices) {
+          // Case 3: product-level sizePrices map
           const sizeSel = document.getElementById('opt_tamano');
-          if (sizeSel && product.sizePrices[sizeSel.value] !== undefined) {
-            basePrice = product.sizePrices[sizeSel.value];
-          }
+          if (sizeSel && product.sizePrices[sizeSel.value] !== undefined) total = product.sizePrices[sizeSel.value];
           const sondaBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="sonda"]');
-          if (sondaBtn && sondaBtn.dataset.value === 'Sí') {
-            extraPrice += 9.99;
-          }
+          if (sondaBtn && sondaBtn.dataset.value === 'Sí') total += 25;
           const wifiBtn = document.querySelector('.detalhe-toggle-btn.active[data-option="programacion"]');
-          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) {
-            extraPrice += 9.99;
+          if (wifiBtn && wifiBtn.dataset.value.toLowerCase().includes('wifi')) total += 25;
+        } else if (product.options) {
+          // Case 4: sizePrices inside an option object + surcharges on toggle options
+          const sizeOpt = product.options.find(o => o.sizePrices);
+          if (sizeOpt) {
+            const selectEl = document.getElementById(`opt_${sizeOpt.id}`);
+            if (selectEl && sizeOpt.sizePrices[selectEl.value] !== undefined) {
+              total = sizeOpt.sizePrices[selectEl.value];
+            }
           }
+          product.options.forEach(opt => {
+            if (opt.surcharges) {
+              const activeBtn = document.querySelector(`.detalhe-toggle-btn.active[data-option="${opt.id}"]`);
+              if (activeBtn) total += opt.surcharges[activeBtn.dataset.value] || 0;
+            }
+          });
         }
-        const formatted = (basePrice + extraPrice).toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+
+        if (total === 0) return;
+        const formatted = total.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
         const priceEl = document.getElementById('dynamicPrice');
         if (priceEl) priceEl.innerHTML = formatted + '<span class="detalhe-price-tax">Impuestos incluidos</span>';
         product.price = formatted;
@@ -1523,13 +1503,8 @@
           const optId = btn.dataset.option;
           document.querySelectorAll(`.detalhe-toggle-btn[data-option="${optId}"]`).forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          recalcPrice();
+          updateDynamicPrice();
         });
-      });
-
-      // Size select
-      document.querySelectorAll('select[data-option]').forEach(sel => {
-        sel.addEventListener('change', recalcPrice);
       });
 
       // Color buttons
@@ -1693,9 +1668,6 @@
                  }
                  return '';
                }).join('')}
-            }
-            return '';
-          }).join('')}
              </div>` : '';
 
         // Specs
