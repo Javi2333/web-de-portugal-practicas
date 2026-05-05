@@ -39,7 +39,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 9.99
+          "Sí": 25
         }
       },
       {
@@ -52,7 +52,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 9.99
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -235,7 +235,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 18.15
+          "Sí": 25
         }
       },
       {
@@ -248,7 +248,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 18.15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -380,7 +380,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 15
+          "Sí": 25
         }
       },
       {
@@ -393,7 +393,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -829,7 +829,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 9.99
+          "Sí": 25
         }
       },
       {
@@ -842,7 +842,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 9.99
+          "USB + Programación WiFi": 25
         }
       }
     ],
@@ -1002,7 +1002,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 9.99
+          "Sí": 25
         }
       },
       {
@@ -1015,7 +1015,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 9.99
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1197,7 +1197,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 42.35
+          "Sí": 25
         }
       },
       {
@@ -1210,7 +1210,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 42.35
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1291,7 +1291,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 42.25
+          "Sí": 25
         }
       },
       {
@@ -1304,7 +1304,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 42.25
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1432,7 +1432,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 18.15
+          "Sí": 25
         }
       },
       {
@@ -1445,7 +1445,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 18.15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1544,7 +1544,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 18.15
+          "Sí": 25
         }
       },
       {
@@ -1557,7 +1557,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 18.15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1647,7 +1647,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 9.99
+          "Sí": 25
         }
       },
       {
@@ -1660,7 +1660,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 9.99
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1844,7 +1844,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 15
+          "Sí": 25
         }
       },
       {
@@ -1857,7 +1857,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1927,17 +1927,17 @@ window.PRODUCTS_DATA = [
   },
   {
     "id": 12,
-    "title": "PANTALLA LED PROGRAMABLE FULL COLOR P10 (EXTERIOR) 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
+    "title": "BANDEROLA LED PROGRAMABLE FULL COLOR P10 DOBLE CARA",
     "badge": "",
     "tags": [
       "Full Color",
       "P10",
-      "Exterior",
-      "1 Cara"
+      "Doble Cara",
+      "Banderola"
     ],
-    "shortDesc": "Pantallas luminosas LED a todo color programables para exterior en resolución del pixel P10.",
-    "desc": "Pantalla LED programable a todo color (Full Color P10) para instalación en exterior. Perfecta para texto, imágenes, logos y vídeos con gran luminosidad, fabricada con LEDs SMD de alta definición. Distancia de visualización óptima de 10 a 15 metros. 2 años de garantía.",
-    "price": "159,99 €",
+    "shortDesc": "Banderola LED programable Full Color P10 de doble cara.",
+    "desc": "Banderola LED programable Full Color P10 de doble cara. Pixel pitch P10, ideal para grandes distancias de visualización. Diseñada para colgar en fachadas o postes. Resistente al exterior y de bajo consumo energético.",
+    "price": "1.276,55 €",
     "images": [
       "img/producto-12/img-1.jpg"
     ],
@@ -1946,67 +1946,51 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["Sí", "No"],
+        "default": "Sí"
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB"
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
-          "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
-          "64 cm de ancho x 32 cm de alto",
-          "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
           "64 cm de ancho x 96 cm de alto",
-          "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
           "96 cm de ancho x 64 cm de alto",
           "96 cm de ancho x 80 cm de alto",
           "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
           "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
           "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
           "160 cm de ancho x 64 cm de alto",
           "160 cm de ancho x 80 cm de alto",
           "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "128 cm de ancho x 80 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "64cm de ancho x 64 cm de alto"
       }
     ],
+    "sizePrices": {
+      "64cm de ancho x 64 cm de alto": 1276.55,
+      "64 cm de ancho x 80 cm de alto": 1591.15,
+      "64 cm de ancho x 96 cm de alto": 1905.75,
+      "96 cm de ancho x 64 cm de alto": 1905.75,
+      "96 cm de ancho x 80 cm de alto": 2377.65,
+      "96 cm de ancho x 96 cm de alto": 2849.55,
+      "128 cm de ancho x 64 cm de alto": 2534.95,
+      "128 cm de ancho x 96 cm de alto": 3793.35,
+      "160 cm de ancho x 64 cm de alto": 3164.15,
+      "160 cm de ancho x 80 cm de alto": 3950.65,
+      "160 cm de ancho x 96 cm de alto": 4737.15,
+      "128 cm de ancho x 80 cm de alto": 3164.15
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2081,7 +2065,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2091,7 +2078,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2104,6 +2094,10 @@ window.PRODUCTS_DATA = [
         "default": "64 cm de ancho x 64 cm de alto"
       }
     ],
+    "sizePrices": {
+      "64 cm de ancho x 64 cm de alto": 856.68,
+      "96 cm de ancho x 96 cm de alto": 1427.80
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2151,7 +2145,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 2 caras. Reproduzca todos los colores en su cruz.",
     "desc": "Cruz LED programable en RGB de doble cara para farmacias, veterinarias y clínicas. Elija el color que desee en cada momento gracias a la tecnología RGB. Protección necesaria para exterior, muestra mensajes en ambas caras con software de programación intuitivo. 2 años de garantía.",
-    "price": "950,00 €",
+    "price": "1.119,25 €",
     "images": [
       "img/producto-14/img-1.jpg"
     ],
@@ -2164,7 +2158,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2174,7 +2171,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2187,6 +2187,10 @@ window.PRODUCTS_DATA = [
         "default": "64 cm de ancho x 64 cm de alto"
       }
     ],
+    "sizePrices": {
+      "64 cm de ancho x 64 cm de alto": 1119.25,
+      "96 cm de ancho x 96 cm de alto": 1845.25
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2233,7 +2237,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para gasolineras en RGB, 1 cara. Muestra precios, productos y mensajes de su estación de servicio.",
     "desc": "Letrero LED programable en RGB diseñado para gasolineras y estaciones de servicio. Muestra precios de combustibles, logos personalizados y toda la información de su negocio en millones de colores. Válido para exterior e interior, programación sencilla por USB o WiFi. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "413,82 €",
     "images": [
       "img/producto-15/img-1.jpg"
     ],
@@ -2242,67 +2246,53 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
-          "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
-          "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "64 cm de ancho x 96 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "96 cm de ancho x 16 cm de alto",
           "96 cm de ancho x 32 cm de alto",
           "96 cm de ancho x 48 cm de alto",
           "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
           "128 cm de ancho x 16 cm de alto",
           "128 cm de ancho x 32 cm de alto",
           "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
           "160 cm de ancho x 16 cm de alto",
           "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "160 cm de ancho x 48 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "64 cm de ancho x 48 cm de alto"
       }
     ],
+    "sizePrices": {
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82,
+      "96 cm de ancho x 48 cm de alto": 598.00,
+      "96 cm de ancho x 64 cm de alto": 827.64,
+      "128 cm de ancho x 16 cm de alto": 339.00,
+      "128 cm de ancho x 32 cm de alto": 549.00,
+      "128 cm de ancho x 48 cm de alto": 827.64,
+      "160 cm de ancho x 16 cm de alto": 400.39,
+      "160 cm de ancho x 32 cm de alto": 689.70,
+      "160 cm de ancho x 48 cm de alto": 961.95
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2349,7 +2339,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para academias y centros de formación en RGB, 1 cara. Muestra horarios, logos y mensajes personalizados.",
     "desc": "Letrero LED programable en RGB para academias y centros de formación. Reproduzca logos, horarios de clases, matrículas y mensajes personalizados en millones de colores RGB. Válido para exterior e interior, programación sencilla por USB o WiFi. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "199,00 €",
     "images": [
       "img/producto-16/img-1.jpg"
     ],
@@ -2358,67 +2348,45 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
           "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "64 cm de ancho x 96 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 199.00,
+      "32 cm de ancho x 48 cm de alto": 239.00,
+      "64 cm de ancho x 16 cm de alto": 199.00,
+      "64 cm de ancho x 32 cm de alto": 319.00,
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2465,7 +2433,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para clínicas y farmacias en RGB, 1 cara. Añada logos, horarios, texto y mucho más.",
     "desc": "Letrero LED programable en RGB para clínicas, farmacias, veterinarias y centros de salud. Añada logos de cruces, horarios de consulta, nombre del centro, teléfono y servicios disponibles con total personalización. Válido para exterior e interior. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "257,98 €",
     "images": [
       "img/producto-17/img-1.jpg"
     ],
@@ -2474,67 +2442,49 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
           "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
           "64 cm de ancho x 96 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 257.98,
+      "32 cm de ancho x 48 cm de alto": 294.97,
+      "32 cm de ancho x 64 cm de alto": 369.98,
+      "64 cm de ancho x 32 cm de alto": 369.98,
+      "64 cm de ancho x 48 cm de alto": 423.81,
+      "64cm de ancho x 64 cm de alto": 561.75,
+      "64 cm de ancho x 80 cm de alto": 699.69,
+      "64 cm de ancho x 96 cm de alto": 837.63,
+      "96 cm de ancho x 16 cm de alto": 284.99,
+      "96 cm de ancho x 32 cm de alto": 423.81
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2581,7 +2531,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Banderola LED programable para parking/garaje en RGB, 2 caras. Soporte de banderola incluido gratis.",
     "desc": "Banderola LED programable en RGB de doble cara para parking, garaje y aparcamiento. Muestra mensajes de libre/completo, tarifas, horarios y logos con máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
-    "price": "191,49 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-18/img-1.jpg"
     ],
@@ -2590,46 +2540,47 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto"
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 32 cm de alto": 558.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "64 cm de ancho x 80 cm de alto": 1244.99,
+      "64 cm de ancho x 96 cm de alto": 1491.03,
+      "96 cm de ancho x 16 cm de alto": 423.81,
+      "96 cm de ancho x 32 cm de alto": 837.63
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2676,7 +2627,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Banderola LED programable para autoescuelas en RGB, 2 caras. Soporte de banderola incluido gratis.",
     "desc": "Banderola LED programable en RGB de doble cara para autoescuelas. Reproduzca logos, horarios de exámenes, información de matrículas y mensajes con colores RGB y máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
-    "price": "191,49 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-19/img-1.jpg"
     ],
@@ -2685,46 +2636,43 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
-          "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto"
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "64 cm de ancho x 80 cm de alto": 1244.99,
+      "64 cm de ancho x 96 cm de alto": 1491.03,
+      "96 cm de ancho x 32 cm de alto": 837.63
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2771,7 +2719,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Banderola LED programable para academias en RGB, 2 caras. Soporte de banderola incluido gratis.",
     "desc": "Banderola LED programable en RGB de doble cara para academias y centros de formación. Muestre horarios, logos, matrículas y promociones con máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
-    "price": "191,49 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-20/img-1.jpg"
     ],
@@ -2780,46 +2728,45 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
           "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto"
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 16 cm de alto": 348.99,
+      "64 cm de ancho x 32 cm de alto": 558.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "96 cm de ancho x 16 cm de alto": 433.80,
+      "96 cm de ancho x 32 cm de alto": 837.63
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2866,7 +2813,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para clínicas y farmacias en RGB, 1 cara. Versión premium con más opciones de tamaño.",
     "desc": "Letrero LED programable en RGB para clínicas y farmacias, con una mayor variedad de tamaños disponibles. Ideal para farmacias, veterinarias, clínicas dentales y centros de salud. Muestre logos, horarios de consulta y servicios. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-17/img-1.jpg"
     ],
@@ -2875,67 +2822,47 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
           "64 cm de ancho x 96 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 32 cm de alto": 558.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "64 cm de ancho x 80 cm de alto": 1244.99,
+      "64 cm de ancho x 96 cm de alto": 1490.99,
+      "96 cm de ancho x 16 cm de alto": 433.80,
+      "96 cm de ancho x 32 cm de alto": 837.62
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2991,67 +2918,45 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
           "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "64 cm de ancho x 96 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 208.99,
+      "32 cm de ancho x 48 cm de alto": 238.99,
+      "64 cm de ancho x 16 cm de alto": 208.99,
+      "64 cm de ancho x 32 cm de alto": 318.99,
+      "64 cm de ancho x 48 cm de alto": 423.81,
+      "64cm de ancho x 64 cm de alto": 551.99,
+      "96 cm de ancho x 16 cm de alto": 238.99,
+      "96 cm de ancho x 32 cm de alto": 423.81
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -3098,7 +3003,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Banderola LED programable para bares, restaurantes y cafeterías en RGB, 2 caras. Soporte incluido gratis.",
     "desc": "Banderola LED programable en RGB de doble cara para bares, restaurantes y cafeterías. Máxima visibilidad desde ambos lados para mostrar menús, ofertas y promociones de su negocio. Soporte de banderola incluido gratis. 2 años de garantía.",
-    "price": "191,49 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-23/img-1.jpg"
     ],
@@ -3107,46 +3012,45 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
           "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto"
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 16 cm de alto": 348.99,
+      "64 cm de ancho x 32 cm de alto": 558.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "96 cm de ancho x 16 cm de alto": 433.80,
+      "96 cm de ancho x 32 cm de alto": 837.63
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -3193,7 +3097,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para hoteles, hostales y pensiones en RGB, 1 cara. Alta luminosidad visible desde largas distancias.",
     "desc": "Letrero LED programable en RGB para hoteles, hostales y pensiones. Muestre disponibilidad de habitaciones, servicios del hotel, mensajes de bienvenida y logos con alta luminosidad visible desde largas distancias. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "260,15 €",
     "images": [
       "img/producto-24/img-1.jpg"
     ],
@@ -3202,67 +3106,47 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No"
+        "choices": ["No", "Sí"],
+        "default": "No",
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB"
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB",
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
           "64 cm de ancho x 96 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 260.15,
+      "32 cm de ancho x 48 cm de alto": 363.00,
+      "64 cm de ancho x 32 cm de alto": 453.75,
+      "64 cm de ancho x 48 cm de alto": 526.35,
+      "64cm de ancho x 64 cm de alto": 695.75,
+      "64 cm de ancho x 80 cm de alto": 865.15,
+      "64 cm de ancho x 96 cm de alto": 1034.55,
+      "96 cm de ancho x 16 cm de alto": 363.00,
+      "96 cm de ancho x 32 cm de alto": 526.35
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -3334,7 +3218,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "Sí"
+        "default": "Sí",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3344,7 +3231,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3431,7 +3321,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "Sí"
+        "default": "Sí",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3441,7 +3334,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3524,7 +3420,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "Sí"
+        "default": "Sí",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3534,7 +3433,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3626,7 +3528,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "Sí"
+        "default": "Sí",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3636,7 +3541,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3720,7 +3628,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3797,7 +3708,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3878,7 +3792,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3888,7 +3805,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3981,7 +3901,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3991,7 +3914,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -4187,7 +4113,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -4315,12 +4244,63 @@ window.PRODUCTS_DATA = [
   },
   {
     id: 12,
-    title: "Banderola LED Programable Full Color P10 Doble Cara",
+    title: "BANDEROLA LED PROGRAMABLE FULL COLOR P10 DOBLE CARA",
     badge: "",
     tags: ["Full Color", "P10", "Doble Cara", "Banderola"],
     shortDesc: "Banderola LED programable Full Color P10 de doble cara.",
     desc: "Banderola LED programable Full Color P10 de doble cara. Pixel pitch P10, ideal para grandes distancias de visualización. Diseñada para colgar en fachadas o postes. Resistente al exterior y de bajo consumo energético.",
+    price: "1.276,55 €",
     images: [],
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "Sí"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (largo x alto)",
+        type: "select",
+        choices: [
+          "64cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 96 cm de alto",
+          "160 cm de ancho x 64 cm de alto",
+          "160 cm de ancho x 80 cm de alto",
+          "160 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 80 cm de alto"
+        ],
+        default: "64cm de ancho x 64 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "64cm de ancho x 64 cm de alto": 1276.55,
+      "64 cm de ancho x 80 cm de alto": 1591.15,
+      "64 cm de ancho x 96 cm de alto": 1905.75,
+      "96 cm de ancho x 64 cm de alto": 1905.75,
+      "96 cm de ancho x 80 cm de alto": 2377.65,
+      "96 cm de ancho x 96 cm de alto": 2849.55,
+      "128 cm de ancho x 64 cm de alto": 2534.95,
+      "128 cm de ancho x 96 cm de alto": 3793.35,
+      "160 cm de ancho x 64 cm de alto": 3164.15,
+      "160 cm de ancho x 80 cm de alto": 3950.65,
+      "160 cm de ancho x 96 cm de alto": 4737.15,
+      "128 cm de ancho x 80 cm de alto": 3164.15
+    },
     specs: [],
     sizes: [],
     features: [],
@@ -4367,11 +4347,16 @@ window.PRODUCTS_DATA = [
         label: "TAMAÑO CRUCES",
         type: "select",
         choices: [
-          "64 cm de ancho x 64 cm de alto"
+          "64 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 96 cm de alto"
         ],
         default: "64 cm de ancho x 64 cm de alto"
       }
     ],
+    sizePrices: {
+      "64 cm de ancho x 64 cm de alto": 856.68,
+      "96 cm de ancho x 96 cm de alto": 1427.80
+    },
     specs: [],
     sizes: [],
     features: [],
@@ -4446,7 +4431,24 @@ window.PRODUCTS_DATA = [
     tags: ["Cruz LED", "RGB", "Farmacia"],
     shortDesc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara.",
     desc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara. Colores a todo color con millones de combinaciones. Muestra temperatura, hora y textos personalizados. Incluye soporte lateral y programación sencilla.",
+    price: "1.119,25 €",
     images: [],
+    options: [
+      {
+        id: "tamano",
+        label: "TAMAÑO CRUCES",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 96 cm de alto"
+        ],
+        default: "64 cm de ancho x 64 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "64 cm de ancho x 64 cm de alto": 1119.25,
+      "96 cm de ancho x 96 cm de alto": 1845.25
+    },
     specs: [],
     sizes: [],
     features: [],
@@ -4460,7 +4462,44 @@ window.PRODUCTS_DATA = [
     tags: ["RGB", "Gasolineras", "1 Cara"],
     shortDesc: "Letrero LED programable específico para gasolineras en RGB, 1 cara.",
     desc: "Letrero LED programable específico para gasolineras en RGB, 1 cara. Muestra precios de combustible, ofertas y mensajes promocionales. Alta visibilidad día y noche. Disponible en varios tamaños adaptados a estaciones de servicio.",
+    price: "413,82 €",
     images: [],
+    options: [
+      {
+        id: "tamano",
+        label: "Tamaño (largo x alto)",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto",
+          "96 cm de ancho x 48 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 16 cm de alto",
+          "128 cm de ancho x 32 cm de alto",
+          "128 cm de ancho x 48 cm de alto",
+          "160 cm de ancho x 16 cm de alto",
+          "160 cm de ancho x 32 cm de alto",
+          "160 cm de ancho x 48 cm de alto"
+        ],
+        default: "64 cm de ancho x 48 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82,
+      "96 cm de ancho x 48 cm de alto": 598.00,
+      "96 cm de ancho x 64 cm de alto": 827.64,
+      "128 cm de ancho x 16 cm de alto": 339.00,
+      "128 cm de ancho x 32 cm de alto": 549.00,
+      "128 cm de ancho x 48 cm de alto": 827.64,
+      "160 cm de ancho x 16 cm de alto": 400.39,
+      "160 cm de ancho x 32 cm de alto": 689.70,
+      "160 cm de ancho x 48 cm de alto": 961.95
+    },
     specs: [],
     sizes: [],
     features: [],
@@ -4474,7 +4513,36 @@ window.PRODUCTS_DATA = [
     tags: ["RGB", "Academias", "1 Cara"],
     shortDesc: "Letrero LED programable para academias e idiomas en RGB, 1 cara.",
     desc: "Letrero LED programable para academias e idiomas en RGB, 1 cara. Muestra horarios, idiomas disponibles, ofertas y matrículas. Alta visibilidad para atraer nuevos alumnos. Disponible en varios tamaños.",
+    price: "199,00 €",
     images: [],
+    options: [
+      {
+        id: "tamano",
+        label: "Tamaño (largo x alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 16 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32cm de ancho x 32 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "32cm de ancho x 32 cm de alto": 199.00,
+      "32 cm de ancho x 48 cm de alto": 239.00,
+      "64 cm de ancho x 16 cm de alto": 199.00,
+      "64 cm de ancho x 32 cm de alto": 319.00,
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82
+    },
     specs: [],
     sizes: [],
     features: [],
@@ -4488,7 +4556,40 @@ window.PRODUCTS_DATA = [
     tags: ["RGB", "Clínicas", "2 Caras"],
     shortDesc: "Letrero LED programable para clínicas en RGB, 2 caras.",
     desc: "Letrero LED programable para clínicas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra servicios, horarios y mensajes de salud. Disponible en varios tamaños. Incluye soporte lateral y software de programación.",
+    price: "257,98 €",
     images: [],
+    options: [
+      {
+        id: "tamano",
+        label: "Tamaño (largo x alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "32 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32cm de ancho x 32 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "32cm de ancho x 32 cm de alto": 257.98,
+      "32 cm de ancho x 48 cm de alto": 294.97,
+      "32 cm de ancho x 64 cm de alto": 369.98,
+      "64 cm de ancho x 32 cm de alto": 369.98,
+      "64 cm de ancho x 48 cm de alto": 423.81,
+      "64cm de ancho x 64 cm de alto": 561.75,
+      "64 cm de ancho x 80 cm de alto": 699.69,
+      "64 cm de ancho x 96 cm de alto": 837.63,
+      "96 cm de ancho x 16 cm de alto": 284.99,
+      "96 cm de ancho x 32 cm de alto": 423.81
+    },
     specs: [],
     sizes: [],
     features: [],
@@ -4778,7 +4879,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -4788,7 +4892,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
