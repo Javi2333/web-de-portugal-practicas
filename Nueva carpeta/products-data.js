@@ -39,7 +39,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 9.99
+          "Sí": 25
         }
       },
       {
@@ -52,7 +52,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 9.99
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -235,7 +235,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 18.15
+          "Sí": 25
         }
       },
       {
@@ -248,7 +248,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 18.15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -380,7 +380,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 15
+          "Sí": 25
         }
       },
       {
@@ -393,7 +393,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -829,7 +829,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 9.99
+          "Sí": 25
         }
       },
       {
@@ -842,7 +842,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 9.99
+          "USB + Programación WiFi": 25
         }
       }
     ],
@@ -1002,7 +1002,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 9.99
+          "Sí": 25
         }
       },
       {
@@ -1015,7 +1015,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 9.99
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1197,7 +1197,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 42.35
+          "Sí": 25
         }
       },
       {
@@ -1210,7 +1210,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 42.35
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1291,7 +1291,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 42.25
+          "Sí": 25
         }
       },
       {
@@ -1304,7 +1304,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 42.25
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1432,7 +1432,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 18.15
+          "Sí": 25
         }
       },
       {
@@ -1445,7 +1445,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 18.15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1544,7 +1544,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 18.15
+          "Sí": 25
         }
       },
       {
@@ -1557,7 +1557,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 18.15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1647,7 +1647,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 9.99
+          "Sí": 25
         }
       },
       {
@@ -1660,7 +1660,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 9.99
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1844,7 +1844,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "No",
         "surcharges": {
-          "Sí": 15
+          "Sí": 25
         }
       },
       {
@@ -1857,7 +1857,7 @@ window.PRODUCTS_DATA = [
         ],
         "default": "USB",
         "surcharges": {
-          "USB + Programación WiFi": 15
+          "USB + Programación WiFi": 25
         }
       },
       {
@@ -1950,7 +1950,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -1960,7 +1963,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2081,7 +2087,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2091,7 +2100,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2164,7 +2176,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2174,7 +2189,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2246,7 +2264,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2256,7 +2277,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2362,7 +2386,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2372,7 +2399,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2478,7 +2508,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2488,7 +2521,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2594,7 +2630,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2604,7 +2643,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2689,7 +2731,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2699,7 +2744,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2784,7 +2832,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2794,7 +2845,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2879,7 +2933,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -2889,7 +2946,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -2995,7 +3055,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3005,7 +3068,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3111,7 +3177,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3121,7 +3190,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3206,7 +3278,10 @@ window.PRODUCTS_DATA = [
           "No",
           "Sí"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3216,7 +3291,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3334,7 +3412,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "Sí"
+        "default": "Sí",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3344,7 +3425,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3431,7 +3515,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "Sí"
+        "default": "Sí",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3441,7 +3528,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3524,7 +3614,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "Sí"
+        "default": "Sí",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3534,7 +3627,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3626,7 +3722,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "Sí"
+        "default": "Sí",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3636,7 +3735,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3720,7 +3822,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3797,7 +3902,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3878,7 +3986,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3888,7 +3999,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -3981,7 +4095,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -3991,7 +4108,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -4187,7 +4307,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
@@ -4265,7 +4388,10 @@ window.PRODUCTS_DATA = [
           "Sí",
           "No"
         ],
-        "default": "No"
+        "default": "No",
+        "surcharges": {
+          "Sí": 25
+        }
       },
       {
         "id": "programacion",
@@ -4275,7 +4401,10 @@ window.PRODUCTS_DATA = [
           "USB",
           "USB + Programación WiFi"
         ],
-        "default": "USB"
+        "default": "USB",
+        "surcharges": {
+          "USB + Programación WiFi": 25
+        }
       },
       {
         "id": "tamano",
