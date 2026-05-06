@@ -4287,12 +4287,6 @@ window.PRODUCTS_DATA = [
         default: "64cm de ancho x 64 cm de alto"
       }
     ],
-<<<<<<< HEAD
-    "shortDesc": "Letrero luminoso LED programable para clínicas y farmacias a 1 cara en RGB.",
-    "desc": "Letrero luminoso LED programable para clínicas y farmacias a 1 cara en RGB. Tenemos gran variedad de pantallas luminosas LED para su farmacia o clínica. Puede mostrar en este cartel programable, varios tipos de cruces, además de texto, logos y más información. Estos rótulos electrónicos pueden colocarse pegados a la pared o perpendiculares como banderola publicitaria. Válidos para exterior.",
-    "price": "257,98 €",
-    "images": [
-=======
     sizePrices: {
       "64cm de ancho x 64 cm de alto": 1276.55,
       "64 cm de ancho x 80 cm de alto": 1591.15,
@@ -4862,7 +4856,6 @@ window.PRODUCTS_DATA = [
     shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
     desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra especialidades médicas disponibles, horarios de consulta, avisos y mensajes de salud. Colores vivos y alta visibilidad. Disponible en varios tamaños.",
     images: [
->>>>>>> 1d211b899512f817c9e9079f00db8330327593f0
       "img/producto-36/letrero-led-programable-para-clinicas-rgb.jpg"
     ],
     "sizePrices": {
