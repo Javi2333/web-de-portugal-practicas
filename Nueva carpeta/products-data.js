@@ -3852,8 +3852,8 @@ window.PRODUCTS_DATA = [
       },
       {
         "id": "archivos",
-        "label": "Archivos adjuntos",
-        "html": ""
+        "label": "Archivo adjunto",
+        "html": "\n          <div class=\"tab-file-card\">\n            <div class=\"tab-file-icon\">\n              <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" width=\"36\" height=\"36\">\n                <path d=\"M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z\"/>\n                <polyline points=\"14 2 14 8 20 8\"/>\n                <line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/>\n                <line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/>\n                <polyline points=\"10 9 9 9 8 9\"/>\n              </svg>\n            </div>\n            <div class=\"tab-file-info\">\n              <p class=\"tab-file-name\">Dossier Letreros LED Programables para Estancos</p>\n              <p class=\"tab-file-meta\">PDF · Ficha técnica completa</p>\n            </div>\n            <a href=\"docs/1.LP_Dossier_Letreros_LED_Programables_Estancos.pdf\" class=\"btn btn-outline tab-file-btn\" download target=\"_blank\" rel=\"noopener\">\n              <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" width=\"16\" height=\"16\">\n                <path d=\"M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4\"/>\n                <polyline points=\"7 10 12 15 17 10\"/>\n                <line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\"/>\n              </svg>\n              Descargar\n            </a>\n          </div>\n        "
       },
       {
         "id": "comentarios",
@@ -3960,8 +3960,8 @@ window.PRODUCTS_DATA = [
       },
       {
         "id": "archivos",
-        "label": "Archivos adjuntos",
-        "html": ""
+        "label": "Archivo adjunto",
+        "html": "\n          <div class=\"tab-file-card\">\n            <div class=\"tab-file-icon\">\n              <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" width=\"36\" height=\"36\">\n                <path d=\"M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z\"/>\n                <polyline points=\"14 2 14 8 20 8\"/>\n                <line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/>\n                <line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/>\n                <polyline points=\"10 9 9 9 8 9\"/>\n              </svg>\n            </div>\n            <div class=\"tab-file-info\">\n              <p class=\"tab-file-name\">Dossier Letreros LED Programables para Estancos</p>\n              <p class=\"tab-file-meta\">PDF · Ficha técnica completa</p>\n            </div>\n            <a href=\"docs/1.LP_Dossier_Letreros_LED_Programables_Estancos.pdf\" class=\"btn btn-outline tab-file-btn\" download target=\"_blank\" rel=\"noopener\">\n              <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" width=\"16\" height=\"16\">\n                <path d=\"M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4\"/>\n                <polyline points=\"7 10 12 15 17 10\"/>\n                <line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\"/>\n              </svg>\n              Descargar\n            </a>\n          </div>\n        "
       },
       {
         "id": "comentarios",
@@ -4924,6 +4924,11 @@ window.PRODUCTS_DATA = [
         "id": "detalles",
         "label": "Detalles del producto",
         "html": "\n          <div class=\"tab-referencia\">\n            <span class=\"tab-ref-label\">Referencia</span>\n            <span class=\"tab-ref-val\">Letrero led clínicas</span>\n          </div>\n        "
+      },
+      {
+        "id": "archivos",
+        "label": "Archivo adjunto",
+        "html": "\n          <div class=\"tab-file-card\">\n            <div class=\"tab-file-icon\">\n              <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" width=\"36\" height=\"36\">\n                <path d=\"M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z\"/>\n                <polyline points=\"14 2 14 8 20 8\"/>\n                <line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/>\n                <line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/>\n                <polyline points=\"10 9 9 9 8 9\"/>\n              </svg>\n            </div>\n            <div class=\"tab-file-info\">\n              <p class=\"tab-file-name\">Dossier Letreros LED Programables para Farmacias y Clínicas</p>\n              <p class=\"tab-file-meta\">PDF · Ficha técnica completa</p>\n            </div>\n            <a href=\"docs/Dossier_Letreros_LED_Programables_FarmaciasClinicas.pdf\" class=\"btn btn-outline tab-file-btn\" download target=\"_blank\" rel=\"noopener\">\n              <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" width=\"16\" height=\"16\">\n                <path d=\"M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4\"/>\n                <polyline points=\"7 10 12 15 17 10\"/>\n                <line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\"/>\n              </svg>\n              Descargar\n            </a>\n          </div>\n        "
       },
       {
         "id": "comentarios",

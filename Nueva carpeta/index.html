@@ -97,15 +97,50 @@
           </div>
         </div>
         <div class="hero-side">
-          <a href="recomendador.html" class="hero-recommender-card">
-            <span class="hero-recommender-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-            </span>
-            <span class="hero-recommender-text">
-              <strong>¿No sabes qué letrero necesitas?</strong>
-              <span>Rellena el configurador y te recomendamos el producto ideal →</span>
-            </span>
-          </a>
+          <div class="hero-finder-card">
+            <span class="hero-finder-badge">Configurador rápido</span>
+            <h3 class="hero-finder-title">Encuentra tu letrero ideal</h3>
+            <p class="hero-finder-subtitle">Responde 3 preguntas y te mostramos los mejores modelos para tu negocio</p>
+
+            <div class="hero-finder-field">
+              <label>Tipo de negocio</label>
+              <div class="hero-finder-chips" id="heroBusinessChips">
+                <button class="chip active">Restaurante</button>
+                <button class="chip">Farmacia</button>
+                <button class="chip">Tienda</button>
+                <button class="chip">Parking</button>
+                <button class="chip">Otro</button>
+              </div>
+            </div>
+
+            <div class="hero-finder-field">
+              <label>Instalación</label>
+              <div class="hero-finder-toggle" id="heroInstallToggle">
+                <button class="toggle-btn active">Interior</button>
+                <button class="toggle-btn">Exterior</button>
+                <button class="toggle-btn">Ambos</button>
+              </div>
+            </div>
+
+            <div class="hero-finder-field">
+              <label>Tamaño deseado</label>
+              <div class="hero-finder-toggle" id="heroSizeToggle">
+                <button class="toggle-btn">Pequeño</button>
+                <button class="toggle-btn active">Mediano</button>
+                <button class="toggle-btn">Grande</button>
+              </div>
+            </div>
+
+            <a href="recomendador.html" class="hero-finder-btn">
+              Ver mis recomendaciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <div class="hero-finder-footer">
+              <span><span class="check">✓</span> Sin compromiso</span>
+              <span><span class="check">✓</span> Respuesta en 24h</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -231,5 +266,23 @@
   </a>
 
   <script src="main.js"></script>
+  <script>
+    document.querySelectorAll('.hero-finder-chips').forEach(function(group) {
+      group.addEventListener('click', function(e) {
+        var chip = e.target.closest('.chip');
+        if (!chip) return;
+        group.querySelectorAll('.chip').forEach(function(c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+      });
+    });
+    document.querySelectorAll('.hero-finder-toggle').forEach(function(group) {
+      group.addEventListener('click', function(e) {
+        var btn = e.target.closest('.toggle-btn');
+        if (!btn) return;
+        group.querySelectorAll('.toggle-btn').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
