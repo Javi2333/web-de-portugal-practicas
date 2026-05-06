@@ -1922,17 +1922,17 @@ window.PRODUCTS_DATA = [
   },
   {
     "id": 12,
-    "title": "PANTALLA LED PROGRAMABLE FULL COLOR P10 (EXTERIOR) 1 CARA. DISPONIBLE EN VARIOS TAMAÑOS",
+    "title": "BANDEROLA LED PROGRAMABLE FULL COLOR P10 DOBLE CARA",
     "badge": "",
     "tags": [
       "Full Color",
       "P10",
-      "Exterior",
-      "1 Cara"
+      "Doble Cara",
+      "Banderola"
     ],
-    "shortDesc": "Pantallas luminosas LED a todo color programables para exterior en resolución del pixel P10.",
-    "desc": "Pantalla LED programable a todo color (Full Color P10) para instalación en exterior. Perfecta para texto, imágenes, logos y vídeos con gran luminosidad, fabricada con LEDs SMD de alta definición. Distancia de visualización óptima de 10 a 15 metros. 2 años de garantía.",
-    "price": "159,99 €",
+    "shortDesc": "Banderola LED programable Full Color P10 de doble cara.",
+    "desc": "Banderola LED programable Full Color P10 de doble cara. Pixel pitch P10, ideal para grandes distancias de visualización. Diseñada para colgar en fachadas o postes. Resistente al exterior y de bajo consumo energético.",
+    "price": "1.276,55 €",
     "images": [
       "img/producto-12/img-1.jpg"
     ],
@@ -1941,73 +1941,51 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
-        "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "choices": ["Sí", "No"],
+        "default": "Sí"
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
-        "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "choices": ["USB", "USB + Programación WiFi"],
+        "default": "USB"
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
-          "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
-          "64 cm de ancho x 32 cm de alto",
-          "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
           "64 cm de ancho x 96 cm de alto",
-          "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
           "96 cm de ancho x 64 cm de alto",
           "96 cm de ancho x 80 cm de alto",
           "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
           "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
           "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
           "160 cm de ancho x 64 cm de alto",
           "160 cm de ancho x 80 cm de alto",
           "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "128 cm de ancho x 80 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "64cm de ancho x 64 cm de alto"
       }
     ],
+    "sizePrices": {
+      "64cm de ancho x 64 cm de alto": 1276.55,
+      "64 cm de ancho x 80 cm de alto": 1591.15,
+      "64 cm de ancho x 96 cm de alto": 1905.75,
+      "96 cm de ancho x 64 cm de alto": 1905.75,
+      "96 cm de ancho x 80 cm de alto": 2377.65,
+      "96 cm de ancho x 96 cm de alto": 2849.55,
+      "128 cm de ancho x 64 cm de alto": 2534.95,
+      "128 cm de ancho x 96 cm de alto": 3793.35,
+      "160 cm de ancho x 64 cm de alto": 3164.15,
+      "160 cm de ancho x 80 cm de alto": 3950.65,
+      "160 cm de ancho x 96 cm de alto": 4737.15,
+      "128 cm de ancho x 80 cm de alto": 3164.15
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2111,6 +2089,10 @@ window.PRODUCTS_DATA = [
         "default": "64 cm de ancho x 64 cm de alto"
       }
     ],
+    "sizePrices": {
+      "64 cm de ancho x 64 cm de alto": 856.68,
+      "96 cm de ancho x 96 cm de alto": 1427.80
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2158,7 +2140,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 2 caras. Reproduzca todos los colores en su cruz.",
     "desc": "Cruz LED programable en RGB de doble cara para farmacias, veterinarias y clínicas. Elija el color que desee en cada momento gracias a la tecnología RGB. Protección necesaria para exterior, muestra mensajes en ambas caras con software de programación intuitivo. 2 años de garantía.",
-    "price": "950,00 €",
+    "price": "1.119,25 €",
     "images": [
       "img/producto-14/img-1.jpg"
     ],
@@ -2200,6 +2182,10 @@ window.PRODUCTS_DATA = [
         "default": "64 cm de ancho x 64 cm de alto"
       }
     ],
+    "sizePrices": {
+      "64 cm de ancho x 64 cm de alto": 1119.25,
+      "96 cm de ancho x 96 cm de alto": 1845.25
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2246,7 +2232,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para gasolineras en RGB, 1 cara. Muestra precios, productos y mensajes de su estación de servicio.",
     "desc": "Letrero LED programable en RGB diseñado para gasolineras y estaciones de servicio. Muestra precios de combustibles, logos personalizados y toda la información de su negocio en millones de colores. Válido para exterior e interior, programación sencilla por USB o WiFi. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "413,82 €",
     "images": [
       "img/producto-15/img-1.jpg"
     ],
@@ -2255,73 +2241,53 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
-          "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
-          "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "64 cm de ancho x 96 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "96 cm de ancho x 16 cm de alto",
           "96 cm de ancho x 32 cm de alto",
           "96 cm de ancho x 48 cm de alto",
           "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
           "128 cm de ancho x 16 cm de alto",
           "128 cm de ancho x 32 cm de alto",
           "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
           "160 cm de ancho x 16 cm de alto",
           "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "160 cm de ancho x 48 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "64 cm de ancho x 48 cm de alto"
       }
     ],
+    "sizePrices": {
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82,
+      "96 cm de ancho x 48 cm de alto": 598.00,
+      "96 cm de ancho x 64 cm de alto": 827.64,
+      "128 cm de ancho x 16 cm de alto": 339.00,
+      "128 cm de ancho x 32 cm de alto": 549.00,
+      "128 cm de ancho x 48 cm de alto": 827.64,
+      "160 cm de ancho x 16 cm de alto": 400.39,
+      "160 cm de ancho x 32 cm de alto": 689.70,
+      "160 cm de ancho x 48 cm de alto": 961.95
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2368,7 +2334,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para academias y centros de formación en RGB, 1 cara. Muestra horarios, logos y mensajes personalizados.",
     "desc": "Letrero LED programable en RGB para academias y centros de formación. Reproduzca logos, horarios de clases, matrículas y mensajes personalizados en millones de colores RGB. Válido para exterior e interior, programación sencilla por USB o WiFi. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "199,00 €",
     "images": [
       "img/producto-16/img-1.jpg"
     ],
@@ -2377,73 +2343,45 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
           "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "64 cm de ancho x 96 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 199.00,
+      "32 cm de ancho x 48 cm de alto": 239.00,
+      "64 cm de ancho x 16 cm de alto": 199.00,
+      "64 cm de ancho x 32 cm de alto": 319.00,
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2490,7 +2428,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para clínicas y farmacias en RGB, 1 cara. Añada logos, horarios, texto y mucho más.",
     "desc": "Letrero LED programable en RGB para clínicas, farmacias, veterinarias y centros de salud. Añada logos de cruces, horarios de consulta, nombre del centro, teléfono y servicios disponibles con total personalización. Válido para exterior e interior. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "257,98 €",
     "images": [
       "img/producto-17/img-1.jpg"
     ],
@@ -2499,73 +2437,49 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
           "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
           "64 cm de ancho x 96 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 257.98,
+      "32 cm de ancho x 48 cm de alto": 294.97,
+      "32 cm de ancho x 64 cm de alto": 369.98,
+      "64 cm de ancho x 32 cm de alto": 369.98,
+      "64 cm de ancho x 48 cm de alto": 423.81,
+      "64cm de ancho x 64 cm de alto": 561.75,
+      "64 cm de ancho x 80 cm de alto": 699.69,
+      "64 cm de ancho x 96 cm de alto": 837.63,
+      "96 cm de ancho x 16 cm de alto": 284.99,
+      "96 cm de ancho x 32 cm de alto": 423.81
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2612,7 +2526,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Banderola LED programable para parking/garaje en RGB, 2 caras. Soporte de banderola incluido gratis.",
     "desc": "Banderola LED programable en RGB de doble cara para parking, garaje y aparcamiento. Muestra mensajes de libre/completo, tarifas, horarios y logos con máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
-    "price": "191,49 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-18/img-1.jpg"
     ],
@@ -2621,52 +2535,47 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto"
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 32 cm de alto": 558.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "64 cm de ancho x 80 cm de alto": 1244.99,
+      "64 cm de ancho x 96 cm de alto": 1491.03,
+      "96 cm de ancho x 16 cm de alto": 423.81,
+      "96 cm de ancho x 32 cm de alto": 837.63
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2713,7 +2622,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Banderola LED programable para autoescuelas en RGB, 2 caras. Soporte de banderola incluido gratis.",
     "desc": "Banderola LED programable en RGB de doble cara para autoescuelas. Reproduzca logos, horarios de exámenes, información de matrículas y mensajes con colores RGB y máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
-    "price": "191,49 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-19/img-1.jpg"
     ],
@@ -2722,52 +2631,43 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
-          "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto"
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "64 cm de ancho x 80 cm de alto": 1244.99,
+      "64 cm de ancho x 96 cm de alto": 1491.03,
+      "96 cm de ancho x 32 cm de alto": 837.63
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2814,7 +2714,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Banderola LED programable para academias en RGB, 2 caras. Soporte de banderola incluido gratis.",
     "desc": "Banderola LED programable en RGB de doble cara para academias y centros de formación. Muestre horarios, logos, matrículas y promociones con máxima visibilidad desde ambos lados. Soporte de banderola incluido gratis. 2 años de garantía.",
-    "price": "191,49 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-20/img-1.jpg"
     ],
@@ -2823,52 +2723,45 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
           "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto"
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 16 cm de alto": 348.99,
+      "64 cm de ancho x 32 cm de alto": 558.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "96 cm de ancho x 16 cm de alto": 433.80,
+      "96 cm de ancho x 32 cm de alto": 837.63
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -2915,7 +2808,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para clínicas y farmacias en RGB, 1 cara. Versión premium con más opciones de tamaño.",
     "desc": "Letrero LED programable en RGB para clínicas y farmacias, con una mayor variedad de tamaños disponibles. Ideal para farmacias, veterinarias, clínicas dentales y centros de salud. Muestre logos, horarios de consulta y servicios. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-17/img-1.jpg"
     ],
@@ -2924,73 +2817,47 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
           "64 cm de ancho x 96 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 32 cm de alto": 558.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "64 cm de ancho x 80 cm de alto": 1244.99,
+      "64 cm de ancho x 96 cm de alto": 1490.99,
+      "96 cm de ancho x 16 cm de alto": 433.80,
+      "96 cm de ancho x 32 cm de alto": 837.62
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -3046,73 +2913,45 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
           "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "64 cm de ancho x 96 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 208.99,
+      "32 cm de ancho x 48 cm de alto": 238.99,
+      "64 cm de ancho x 16 cm de alto": 208.99,
+      "64 cm de ancho x 32 cm de alto": 318.99,
+      "64 cm de ancho x 48 cm de alto": 423.81,
+      "64cm de ancho x 64 cm de alto": 551.99,
+      "96 cm de ancho x 16 cm de alto": 238.99,
+      "96 cm de ancho x 32 cm de alto": 423.81
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -3159,7 +2998,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Banderola LED programable para bares, restaurantes y cafeterías en RGB, 2 caras. Soporte incluido gratis.",
     "desc": "Banderola LED programable en RGB de doble cara para bares, restaurantes y cafeterías. Máxima visibilidad desde ambos lados para mostrar menús, ofertas y promociones de su negocio. Soporte de banderola incluido gratis. 2 años de garantía.",
-    "price": "191,49 €",
+    "price": "348,99 €",
     "images": [
       "img/producto-23/img-1.jpg"
     ],
@@ -3168,52 +3007,45 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
           "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
-          "64 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto"
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 348.99,
+      "32 cm de ancho x 48 cm de alto": 428.99,
+      "64 cm de ancho x 16 cm de alto": 348.99,
+      "64 cm de ancho x 32 cm de alto": 558.99,
+      "64 cm de ancho x 48 cm de alto": 808.99,
+      "64cm de ancho x 64 cm de alto": 1008.99,
+      "96 cm de ancho x 16 cm de alto": 433.80,
+      "96 cm de ancho x 32 cm de alto": 837.63
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -3260,7 +3092,7 @@ window.PRODUCTS_DATA = [
     ],
     "shortDesc": "Letrero LED programable para hoteles, hostales y pensiones en RGB, 1 cara. Alta luminosidad visible desde largas distancias.",
     "desc": "Letrero LED programable en RGB para hoteles, hostales y pensiones. Muestre disponibilidad de habitaciones, servicios del hotel, mensajes de bienvenida y logos con alta luminosidad visible desde largas distancias. 2 años de garantía.",
-    "price": "208,99 €",
+    "price": "260,15 €",
     "images": [
       "img/producto-24/img-1.jpg"
     ],
@@ -3269,73 +3101,47 @@ window.PRODUCTS_DATA = [
         "id": "sonda",
         "label": "SONDA DE TEMPERATURA",
         "type": "toggle",
-        "choices": [
-          "No",
-          "Sí"
-        ],
+        "choices": ["No", "Sí"],
         "default": "No",
-        "surcharges": {
-          "Sí": 25
-        }
+        "surcharges": { "Sí": 25 }
       },
       {
         "id": "programacion",
         "label": "MODO DE PROGRAMACIÓN",
         "type": "toggle",
-        "choices": [
-          "USB",
-          "USB + Programación WiFi"
-        ],
+        "choices": ["USB", "USB + Programación WiFi"],
         "default": "USB",
-        "surcharges": {
-          "USB + Programación WiFi": 25
-        }
+        "surcharges": { "USB + Programación WiFi": 25 }
       },
       {
         "id": "tamano",
-        "label": "TAMAÑO (LARGO × ALTO)",
+        "label": "Tamaño (largo x alto)",
         "type": "select",
         "choices": [
-          "32 cm de ancho x 16 cm de alto",
-          "32 cm de ancho x 32 cm de alto",
+          "32cm de ancho x 32 cm de alto",
           "32 cm de ancho x 48 cm de alto",
-          "32 cm de ancho x 64 cm de alto",
-          "32 cm de ancho x 80 cm de alto",
-          "32 cm de ancho x 96 cm de alto",
-          "64 cm de ancho x 16 cm de alto",
           "64 cm de ancho x 32 cm de alto",
           "64 cm de ancho x 48 cm de alto",
-          "64 cm de ancho x 64 cm de alto",
+          "64cm de ancho x 64 cm de alto",
           "64 cm de ancho x 80 cm de alto",
           "64 cm de ancho x 96 cm de alto",
           "96 cm de ancho x 16 cm de alto",
-          "96 cm de ancho x 32 cm de alto",
-          "96 cm de ancho x 48 cm de alto",
-          "96 cm de ancho x 64 cm de alto",
-          "96 cm de ancho x 80 cm de alto",
-          "96 cm de ancho x 96 cm de alto",
-          "128 cm de ancho x 16 cm de alto",
-          "128 cm de ancho x 32 cm de alto",
-          "128 cm de ancho x 48 cm de alto",
-          "128 cm de ancho x 64 cm de alto",
-          "128 cm de ancho x 80 cm de alto",
-          "128 cm de ancho x 96 cm de alto",
-          "160 cm de ancho x 16 cm de alto",
-          "160 cm de ancho x 32 cm de alto",
-          "160 cm de ancho x 48 cm de alto",
-          "160 cm de ancho x 64 cm de alto",
-          "160 cm de ancho x 80 cm de alto",
-          "160 cm de ancho x 96 cm de alto",
-          "192 cm de ancho x 16 cm de alto",
-          "192 cm de ancho x 32 cm de alto",
-          "192 cm de ancho x 48 cm de alto",
-          "192 cm de ancho x 64 cm de alto",
-          "192 cm de ancho x 80 cm de alto",
-          "192 cm de ancho x 96 cm de alto"
+          "96 cm de ancho x 32 cm de alto"
         ],
-        "default": "32 cm de ancho x 16 cm de alto"
+        "default": "32cm de ancho x 32 cm de alto"
       }
     ],
+    "sizePrices": {
+      "32cm de ancho x 32 cm de alto": 260.15,
+      "32 cm de ancho x 48 cm de alto": 363.00,
+      "64 cm de ancho x 32 cm de alto": 453.75,
+      "64 cm de ancho x 48 cm de alto": 526.35,
+      "64cm de ancho x 64 cm de alto": 695.75,
+      "64 cm de ancho x 80 cm de alto": 865.15,
+      "64 cm de ancho x 96 cm de alto": 1034.55,
+      "96 cm de ancho x 16 cm de alto": 363.00,
+      "96 cm de ancho x 32 cm de alto": 526.35
+    },
     "specs": [],
     "sizes": [],
     "features": [],
@@ -4353,18 +4159,710 @@ window.PRODUCTS_DATA = [
     ]
   },
   {
-    "id": 36,
-    "title": "Letrero LED Programable para Clínicas en RGB, 1 Cara",
-    "badge": "",
-    "tags": [
-      "RGB",
-      "Clínicas",
-      "1 Cara"
+    id: 6,
+    title: "Pantalla LED Programable Full Color P6 (Exterior) 1 Cara",
+    badge: "",
+    tags: ["Full Color", "P6", "Exterior", "1 Cara"],
+    shortDesc: "Pantalla LED programable Full Color P6 para exterior, 1 cara.",
+    desc: "Pantalla LED programable Full Color P6 para exterior, 1 cara. Pixel pitch P6, equilibrio perfecto entre resolución y precio. Resistente a la intemperie IP65, colores vivos y alto brillo. Ideal para carteles publicitarios en exteriores.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 7,
+    title: "Pantalla LED Programable Full Color P5 (Interior) 1 Cara",
+    badge: "",
+    tags: ["Full Color", "P5", "Interior", "1 Cara"],
+    shortDesc: "Pantalla LED programable Full Color P5 para interior, 1 cara.",
+    desc: "Pantalla LED programable Full Color P5 para interior, 1 cara. Alta resolución con pixel pitch P5, perfecta para escaparates, stands y puntos de venta interiores. Imágenes y vídeos a todo color con gran nitidez.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 8,
+    title: "Letrero LED Programable para Parking en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Parking", "1 Cara"],
+    shortDesc: "Letrero LED programable específico para parking, en RGB, 1 cara.",
+    desc: "Letrero LED programable específico para parking, en RGB, 1 cara. Disponible en varios tamaños. Muestra mensajes de libre/completo, tarifas y horarios. Alta visibilidad día y noche. Ideal para aparcamientos públicos y privados.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 9,
+    title: "Letrero LED Programable para Autoescuelas en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Autoescuelas", "1 Cara"],
+    shortDesc: "Letrero LED programable diseñado para autoescuelas, en RGB, 1 cara.",
+    desc: "Letrero LED programable diseñado para autoescuelas, en RGB, 1 cara. Muestra horarios de clases, información de matrícula y mensajes promocionales. Alta visibilidad, programación sencilla. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 10,
+    title: "Letrero LED Programable en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "2 Caras"],
+    shortDesc: "Letrero LED programable en RGB, 2 caras. Disponible en varios tamaños.",
+    desc: "Letrero LED programable en RGB, 2 caras. Disponible en varios tamaños. Visibilidad doble para mayor impacto publicitario. Millones de colores y efectos. Ideal para negocios en calles con tráfico en ambas direcciones.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 11,
+    title: "Banderola LED Programable Full Color P5 Doble Cara",
+    badge: "",
+    tags: ["Full Color", "P5", "Doble Cara", "Banderola"],
+    shortDesc: "Banderola LED programable Full Color P5 de doble cara, para fachadas o postes.",
+    desc: "Banderola LED programable Full Color P5 de doble cara, diseñada para colgar en fachadas o postes. Alta resolución P5 con colores vivos a todo color. Ideal para centros comerciales, calles peatonales y eventos. Resistente al exterior.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 12,
+    title: "BANDEROLA LED PROGRAMABLE FULL COLOR P10 DOBLE CARA",
+    badge: "",
+    tags: ["Full Color", "P10", "Doble Cara", "Banderola"],
+    shortDesc: "Banderola LED programable Full Color P10 de doble cara.",
+    desc: "Banderola LED programable Full Color P10 de doble cara. Pixel pitch P10, ideal para grandes distancias de visualización. Diseñada para colgar en fachadas o postes. Resistente al exterior y de bajo consumo energético.",
+    price: "1.276,55 €",
+    images: [],
+    options: [
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["Sí", "No"],
+        default: "Sí"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "Tamaño (largo x alto)",
+        type: "select",
+        choices: [
+          "64cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 80 cm de alto",
+          "96 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 96 cm de alto",
+          "160 cm de ancho x 64 cm de alto",
+          "160 cm de ancho x 80 cm de alto",
+          "160 cm de ancho x 96 cm de alto",
+          "128 cm de ancho x 80 cm de alto"
+        ],
+        default: "64cm de ancho x 64 cm de alto"
+      }
     ],
+<<<<<<< HEAD
     "shortDesc": "Letrero luminoso LED programable para clínicas y farmacias a 1 cara en RGB.",
     "desc": "Letrero luminoso LED programable para clínicas y farmacias a 1 cara en RGB. Tenemos gran variedad de pantallas luminosas LED para su farmacia o clínica. Puede mostrar en este cartel programable, varios tipos de cruces, además de texto, logos y más información. Estos rótulos electrónicos pueden colocarse pegados a la pared o perpendiculares como banderola publicitaria. Válidos para exterior.",
     "price": "257,98 €",
     "images": [
+=======
+    sizePrices: {
+      "64cm de ancho x 64 cm de alto": 1276.55,
+      "64 cm de ancho x 80 cm de alto": 1591.15,
+      "64 cm de ancho x 96 cm de alto": 1905.75,
+      "96 cm de ancho x 64 cm de alto": 1905.75,
+      "96 cm de ancho x 80 cm de alto": 2377.65,
+      "96 cm de ancho x 96 cm de alto": 2849.55,
+      "128 cm de ancho x 64 cm de alto": 2534.95,
+      "128 cm de ancho x 96 cm de alto": 3793.35,
+      "160 cm de ancho x 64 cm de alto": 3164.15,
+      "160 cm de ancho x 80 cm de alto": 3950.65,
+      "160 cm de ancho x 96 cm de alto": 4737.15,
+      "128 cm de ancho x 80 cm de alto": 3164.15
+    },
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 13,
+    title: "Cruz LED Programable para Farmacias – Veterinarias – Clínicas, 2 Caras. Disponible en varios tamaños y colores",
+    badge: "",
+    tags: ["Cruz LED", "Farmacia", "2 Caras"],
+    shortDesc: "Cruz led programable para farmacias - veterinarias - clínicas, 2 caras. disponible en varios tamaños y colores. Envio gratis y dos años de garantia.",
+    desc: "Cruz LED programable a doble cara para farmacias y clínicas. Cruz de farmacia para darle un toque llamativo y moderno a tu negocio, además de ahorrar energía con respecto a las cruces tradicionales. Elige el color que necesites para tu farmacia o clínica y personalízala a tu gusto. Pantallas luminosas LED válidas para exterior.",
+    price: "856,68 €",
+    images: [
+      "img/producto-13/img-1.jpg",
+      "img/producto-13/img-2.jpg",
+      "img/producto-13/img-3.jpg"
+    ],
+    options: [
+      {
+        id: "color",
+        label: "COLOR DE LOS LEDS",
+        type: "select",
+        choices: ["Rojo", "Naranja", "Azul", "Verde", "Blanco"],
+        default: "Verde"
+      },
+      {
+        id: "sonda",
+        label: "SONDA DE TEMPERATURA",
+        type: "toggle",
+        choices: ["No", "Sí"],
+        default: "No"
+      },
+      {
+        id: "programacion",
+        label: "MODO DE PROGRAMACIÓN",
+        type: "toggle",
+        choices: ["USB", "USB + Programación WiFi"],
+        default: "USB"
+      },
+      {
+        id: "tamano",
+        label: "TAMAÑO CRUCES",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 96 cm de alto"
+        ],
+        default: "64 cm de ancho x 64 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "64 cm de ancho x 64 cm de alto": 856.68,
+      "96 cm de ancho x 96 cm de alto": 1427.80
+    },
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    tabs: [
+      {
+        id: "descripcion",
+        label: "Descripción",
+        html: `
+          <h2>Cruz LED programable a doble cara para farmacias y clínicas.</h2>
+          <p>Somos fabricantes y distribuidores de pantallas LED programables de alta calidad y luminosidad.</p>
+          <p>Aquí puedes encontrar las mejores cruces a muy buen precio.</p>
+          <p>Trabajamos con componentes de alta calidad para conseguir cruces clínicas con alta luminosidad y de fiabilidad.</p>
+          <p>Nuestras cruces LED programables llevan la protección necesaria para instalarlas en el exterior.</p>
+          <p>Podemos hacer la cruz de color que necesites para tu negocio. Al ser fabricantes podemos ofrecerle la cruz led que su negocio necesita.</p>
+          <p>Al ser a doble cara, podrá reproducir sus mensajes y que sean visto en dos caras pudiendo reproducir lo mismo en cada cara o mensajes diferentes en cada una de ellas.</p>
+          <p>Nuestro objetivo es satisfacer las necesidades de nuestros clientes, y para ello tenemos los letreros LED perfectos para cada negocio.</p>
+          <p>Al usar un software de programación moderno e intuitivo, nos permite personalizar la pantalla a nuestro gusto, cada negocio tiene sus necesidades, este letrero te permite personalizarlo para cada momento y así poder informar a sus clientes y todo de forma actualizada.</p>
+          <p>¡Al ser fabricantes nos permite ofrecerle la pantalla que está buscando!</p>
+          <p><em>*Para letreros a una cara, añada al carrito el soporte que necesite dentro de nuestros accesorios:</em><br>
+          Para colocar en exterior:<br>
+          - Pegado a la pared.<br>
+          - Perpendicular a la pared como banderola electrónica.<br>
+          Para colocar en interior:<br>
+          - Kit de suspensión para colocar su letrero led en interior o escaparates.
+          </p>
+        `
+      },
+      {
+        id: "detalles",
+        label: "Detalles del producto",
+        html: `
+          <div class="tab-referencia">
+            <span class="tab-ref-label">Referencia</span>
+            <span class="tab-ref-val">CRUZ LED PROGRAMABLE</span>
+          </div>
+          <table class="tab-specs-table">
+            <tbody>
+              <tr><th>Separación entre píxeles (mm)</th><td>10</td></tr>
+              <tr><th>Densidad de píxeles (Puntos/m²)</th><td>10.000</td></tr>
+              <tr><th>Pixel constitución</th><td>1R</td></tr>
+              <tr><th>Vida estimada</th><td>100.000 Horas</td></tr>
+              <tr><th>Brillo (Candelas/m²)</th><td>&gt;2000</td></tr>
+              <tr><th>Control de brillo (Sincrónico/Asincrónico)</th><td>16/8</td></tr>
+              <tr><th>Tensión</th><td>220V</td></tr>
+              <tr><th>Frecuencia</th><td>50 Hz</td></tr>
+              <tr><th>Ángulo de visión</th><td>120º / 60º</td></tr>
+              <tr><th>Temperatura de trabajo</th><td>-20ºC — +70ºC</td></tr>
+              <tr><th>Transmisión de datos</th><td>PC – USB</td></tr>
+              <tr><th>Peso (Kg)</th><td>2,1</td></tr>
+              <tr><th>Protección</th><td>Para exterior: Soporta agentes atmosféricos</td></tr>
+              <tr><th>Construcción</th><td>Aluminio / PC</td></tr>
+              <tr><th>Dimensiones (cm)</th><td>*Consultar</td></tr>
+              <tr><th>Certificados</th><td>CE-RHOS</td></tr>
+              <tr><th>Garantía</th><td>2 Años</td></tr>
+            </tbody>
+          </table>
+        `
+      },
+      {
+        id: "comentarios",
+        label: "Comentarios",
+        html: ''
+      }
+    ],
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 14,
+    title: "Cruz LED Programable en RGB para Farmacias – Veterinarias",
+    badge: "",
+    tags: ["Cruz LED", "RGB", "Farmacia"],
+    shortDesc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara.",
+    desc: "Cruz LED programable en RGB para farmacias, veterinarias y clínicas, 1 cara. Colores a todo color con millones de combinaciones. Muestra temperatura, hora y textos personalizados. Incluye soporte lateral y programación sencilla.",
+    price: "1.119,25 €",
+    images: [],
+    options: [
+      {
+        id: "tamano",
+        label: "TAMAÑO CRUCES",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 96 cm de alto"
+        ],
+        default: "64 cm de ancho x 64 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "64 cm de ancho x 64 cm de alto": 1119.25,
+      "96 cm de ancho x 96 cm de alto": 1845.25
+    },
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 15,
+    title: "Letrero LED Programable para Gasolineras en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Gasolineras", "1 Cara"],
+    shortDesc: "Letrero LED programable específico para gasolineras en RGB, 1 cara.",
+    desc: "Letrero LED programable específico para gasolineras en RGB, 1 cara. Muestra precios de combustible, ofertas y mensajes promocionales. Alta visibilidad día y noche. Disponible en varios tamaños adaptados a estaciones de servicio.",
+    price: "413,82 €",
+    images: [],
+    options: [
+      {
+        id: "tamano",
+        label: "Tamaño (largo x alto)",
+        type: "select",
+        choices: [
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto",
+          "96 cm de ancho x 48 cm de alto",
+          "96 cm de ancho x 64 cm de alto",
+          "128 cm de ancho x 16 cm de alto",
+          "128 cm de ancho x 32 cm de alto",
+          "128 cm de ancho x 48 cm de alto",
+          "160 cm de ancho x 16 cm de alto",
+          "160 cm de ancho x 32 cm de alto",
+          "160 cm de ancho x 48 cm de alto"
+        ],
+        default: "64 cm de ancho x 48 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82,
+      "96 cm de ancho x 48 cm de alto": 598.00,
+      "96 cm de ancho x 64 cm de alto": 827.64,
+      "128 cm de ancho x 16 cm de alto": 339.00,
+      "128 cm de ancho x 32 cm de alto": 549.00,
+      "128 cm de ancho x 48 cm de alto": 827.64,
+      "160 cm de ancho x 16 cm de alto": 400.39,
+      "160 cm de ancho x 32 cm de alto": 689.70,
+      "160 cm de ancho x 48 cm de alto": 961.95
+    },
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 16,
+    title: "Letrero LED Programable para Academias en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Academias", "1 Cara"],
+    shortDesc: "Letrero LED programable para academias e idiomas en RGB, 1 cara.",
+    desc: "Letrero LED programable para academias e idiomas en RGB, 1 cara. Muestra horarios, idiomas disponibles, ofertas y matrículas. Alta visibilidad para atraer nuevos alumnos. Disponible en varios tamaños.",
+    price: "199,00 €",
+    images: [],
+    options: [
+      {
+        id: "tamano",
+        label: "Tamaño (largo x alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "64 cm de ancho x 16 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32cm de ancho x 32 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "32cm de ancho x 32 cm de alto": 199.00,
+      "32 cm de ancho x 48 cm de alto": 239.00,
+      "64 cm de ancho x 16 cm de alto": 199.00,
+      "64 cm de ancho x 32 cm de alto": 319.00,
+      "64 cm de ancho x 48 cm de alto": 413.82,
+      "64cm de ancho x 64 cm de alto": 542.00,
+      "96 cm de ancho x 16 cm de alto": 229.00,
+      "96 cm de ancho x 32 cm de alto": 413.82
+    },
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 17,
+    title: "Letrero LED Programable para Clínicas en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Clínicas", "2 Caras"],
+    shortDesc: "Letrero LED programable para clínicas en RGB, 2 caras.",
+    desc: "Letrero LED programable para clínicas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra servicios, horarios y mensajes de salud. Disponible en varios tamaños. Incluye soporte lateral y software de programación.",
+    price: "257,98 €",
+    images: [],
+    options: [
+      {
+        id: "tamano",
+        label: "Tamaño (largo x alto)",
+        type: "select",
+        choices: [
+          "32cm de ancho x 32 cm de alto",
+          "32 cm de ancho x 48 cm de alto",
+          "32 cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 32 cm de alto",
+          "64 cm de ancho x 48 cm de alto",
+          "64cm de ancho x 64 cm de alto",
+          "64 cm de ancho x 80 cm de alto",
+          "64 cm de ancho x 96 cm de alto",
+          "96 cm de ancho x 16 cm de alto",
+          "96 cm de ancho x 32 cm de alto"
+        ],
+        default: "32cm de ancho x 32 cm de alto"
+      }
+    ],
+    sizePrices: {
+      "32cm de ancho x 32 cm de alto": 257.98,
+      "32 cm de ancho x 48 cm de alto": 294.97,
+      "32 cm de ancho x 64 cm de alto": 369.98,
+      "64 cm de ancho x 32 cm de alto": 369.98,
+      "64 cm de ancho x 48 cm de alto": 423.81,
+      "64cm de ancho x 64 cm de alto": 561.75,
+      "64 cm de ancho x 80 cm de alto": 699.69,
+      "64 cm de ancho x 96 cm de alto": 837.63,
+      "96 cm de ancho x 16 cm de alto": 284.99,
+      "96 cm de ancho x 32 cm de alto": 423.81
+    },
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 18,
+    title: "Letrero LED Programable para Clínicas en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Clínicas", "1 Cara"],
+    shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
+    desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra servicios médicos disponibles, horarios de consulta y mensajes de bienestar. Alta visibilidad y programación sencilla. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 19,
+    title: "Letrero LED Programable para Parking en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Parking", "2 Caras"],
+    shortDesc: "Letrero LED programable para parking en RGB, 2 caras.",
+    desc: "Letrero LED programable para parking en RGB, 2 caras. Visibilidad desde ambos lados, ideal para entradas de aparcamientos. Muestra información de libre/completo, tarifas y horarios. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 20,
+    title: "Letrero LED Programable para Autoescuelas en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Autoescuelas", "2 Caras"],
+    shortDesc: "Letrero LED programable para autoescuelas en RGB, 2 caras.",
+    desc: "Letrero LED programable para autoescuelas en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra horarios, precios de matrícula y mensajes promocionales. Disponible en varios tamaños. Incluye soporte lateral.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 21,
+    title: "Letrero LED Programable para Academias en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Academias", "2 Caras"],
+    shortDesc: "Letrero LED programable para academias en RGB, 2 caras.",
+    desc: "Letrero LED programable para academias en RGB, 2 caras. Ideal para academias de idiomas, música, danza y formación. Doble visibilidad. Muestra horarios, idiomas disponibles y ofertas de matrícula. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 22,
+    title: "Letrero LED Programable para Clínicas Dentales en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Clínicas Dentales", "2 Caras"],
+    shortDesc: "Letrero LED programable para clínicas dentales en RGB, 2 caras.",
+    desc: "Letrero LED programable para clínicas dentales en RGB, 2 caras. Muestra servicios de odontología, horarios de cita y mensajes de salud dental. Doble visibilidad. Diseño compatible con imagen corporativa de clínicas.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 23,
+    title: "Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Hostelería", "1 Cara"],
+    shortDesc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara.",
+    desc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 1 cara. Muestra menús del día, promociones especiales, horarios y eventos. Alta visibilidad para atraer clientes. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 24,
+    title: "Letrero LED Programable para Bares – Restaurantes – Cafeterías en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Hostelería", "2 Caras"],
+    shortDesc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 2 caras.",
+    desc: "Letrero LED programable para bares, restaurantes y cafeterías en RGB, 2 caras. Mayor visibilidad desde dos ángulos. Muestra menús del día, ofertas especiales y eventos. Ideal para terrazas y locales con acceso por dos calles.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 25,
+    title: "Letrero LED Programable para Hoteles en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Hoteles", "1 Cara"],
+    shortDesc: "Letrero LED programable para hoteles en RGB, 1 cara.",
+    desc: "Letrero LED programable para hoteles en RGB, 1 cara. Muestra disponibilidad de habitaciones, eventos, restauración y bienvenida personalizada. Alta visibilidad. Disponible en varios tamaños. Perfecto para la señalización exterior de hoteles.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 26,
+    title: "Letrero LED Programable para Hoteles en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Hoteles", "2 Caras"],
+    shortDesc: "Letrero LED programable para hoteles en RGB, 2 caras.",
+    desc: "Letrero LED programable para hoteles en RGB, 2 caras. Doble visibilidad para señalización exterior completa. Muestra disponibilidad de habitaciones, servicios del hotel, eventos y mensajes de bienvenida. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 27,
+    title: "Letreros LED Programable para Discotecas – Pub en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Ocio Nocturno", "1 Cara"],
+    shortDesc: "Letrero LED programable para discotecas y pubs en RGB, 1 cara.",
+    desc: "Letrero LED programable para discotecas y pubs en RGB, 1 cara. Impacto visual máximo con animaciones y colores vivos. Muestra nombre del local, eventos, DJs y promociones. Disponible en varios tamaños para fachadas y escaparates.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 28,
+    title: "Letreros LED Programable para Discotecas – Pub en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Ocio Nocturno", "2 Caras"],
+    shortDesc: "Letrero LED programable para discotecas y pubs en RGB, 2 caras.",
+    desc: "Letrero LED programable para discotecas y pubs en RGB, 2 caras. Máxima visibilidad desde ambos lados. Impacto visual con colores y animaciones. Perfecto para festivales, eventos y locales de ocio nocturno. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 29,
+    title: "Letrero LED Programable Cronómetro Digital en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Cronómetro", "1 Cara"],
+    shortDesc: "Letrero LED programable con función de cronómetro digital en RGB, 1 cara.",
+    desc: "Letrero LED programable con función de cronómetro digital en RGB, 1 cara. Muestra cuenta atrás, cuenta progresiva, hora en tiempo real y mensajes personalizados. Ideal para gimnasios, competiciones deportivas y eventos. Disponible en varios tamaños.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 30,
+    title: "Letrero LED Programable Cronómetro Digital, 2 Caras",
+    badge: "",
+    tags: ["Cronómetro", "2 Caras"],
+    shortDesc: "Letrero LED programable con función de cronómetro digital, 2 caras.",
+    desc: "Letrero LED programable con función de cronómetro digital, 2 caras. Doble visibilidad. Cuenta atrás, cuenta progresiva y hora en tiempo real. Ideal para eventos deportivos, competiciones y espacios públicos con mucho flujo de personas.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 31,
+    title: "Letrero LED Programable para Estancos en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Estancos", "1 Cara"],
+    shortDesc: "Letrero LED programable para estancos en RGB, 1 cara.",
+    desc: "Letrero LED programable para estancos en RGB, 1 cara. Muestra precios de tabaco, loterías, servicios y promociones especiales. Alta visibilidad para atraer clientes. Disponible en varios tamaños adaptados a establecimientos estancos.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 32,
+    title: "Letrero LED Programable para Estancos en RGB, 2 Caras",
+    badge: "",
+    tags: ["RGB", "Estancos", "2 Caras"],
+    shortDesc: "Letrero LED programable para estancos en RGB, 2 caras.",
+    desc: "Letrero LED programable para estancos en RGB, 2 caras. Doble visibilidad para máximo impacto. Muestra precios de tabaco, loterías y servicios. Disponible en varios tamaños. Ideal para estancos en zonas peatonales y esquinas.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 33,
+    title: "Letrero LED Programable para el Control de Acceso RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Control de Acceso", "1 Cara"],
+    shortDesc: "Letrero LED programable para control de acceso en RGB, 1 cara.",
+    desc: "Letrero LED programable para control de acceso en RGB, 1 cara. Muestra mensajes de PASE / ESPERE / STOP con colores diferenciados. Ideal para parkings, hospitales, supermercados y cualquier espacio con control de aforo. Programación sencilla e inmediata.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 34,
+    title: "Letrero LED Programable para el Control de Acceso Rojo-Verde, 1 Cara",
+    badge: "",
+    tags: ["Rojo-Verde", "Control de Acceso", "1 Cara"],
+    shortDesc: "Letrero LED programable para control de acceso en rojo y verde, 1 cara.",
+    desc: "Letrero LED programable para control de acceso en rojo y verde, 1 cara. Sistema sencillo con dos colores para PASE (verde) y STOP (rojo). Ideal para controlar el flujo de personas en accesos, consultas y espacios con aforo limitado.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 35,
+    title: "Cruz LED Programable R5 para Farmacias – Veterinarias",
+    badge: "",
+    tags: ["Cruz LED", "R5", "Farmacia"],
+    shortDesc: "Cruz LED programable R5 de alta resolución para farmacias y veterinarias.",
+    desc: "Cruz LED programable R5 de alta resolución para farmacias y veterinarias. Pixel pitch R5, imágenes más nítidas y detalladas. Muestra temperatura, hora, mensajes y animaciones. Incluye soporte lateral. Alta visibilidad tanto de día como de noche.",
+    images: [],
+    specs: [],
+    sizes: [],
+    features: [],
+    extra: null,
+    related: [40, 41, 42, 37, 38, 39]
+  },
+  {
+    id: 36,
+    title: "Letrero LED Programable para Clínicas en RGB, 1 Cara",
+    badge: "",
+    tags: ["RGB", "Clínicas", "1 Cara"],
+    shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
+    desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra especialidades médicas disponibles, horarios de consulta, avisos y mensajes de salud. Colores vivos y alta visibilidad. Disponible en varios tamaños.",
+    images: [
+>>>>>>> 1d211b899512f817c9e9079f00db8330327593f0
       "img/producto-36/letrero-led-programable-para-clinicas-rgb.jpg"
     ],
     "sizePrices": {
