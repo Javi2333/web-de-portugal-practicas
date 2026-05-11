@@ -4855,6 +4855,7 @@ window.PRODUCTS_DATA = [
     tags: ["RGB", "Clínicas", "1 Cara"],
     shortDesc: "Letrero LED programable para clínicas en RGB, 1 cara.",
     desc: "Letrero LED programable para clínicas en RGB, 1 cara. Muestra especialidades médicas disponibles, horarios de consulta, avisos y mensajes de salud. Colores vivos y alta visibilidad. Disponible en varios tamaños.",
+    price: "257,98 €",
     images: [
       "img/producto-36/letrero-led-programable-para-clinicas-rgb.jpg"
     ],
@@ -4901,6 +4902,7 @@ window.PRODUCTS_DATA = [
         "id": "tamano",
         "label": "Tamaño (Largo X Alto)",
         "type": "select",
+        "default": "32cm de ancho x 32 cm de alto",
         "choices": [
           "32cm de ancho x 32 cm de alto",
           "32cm de ancho x 48 cm de alto",
