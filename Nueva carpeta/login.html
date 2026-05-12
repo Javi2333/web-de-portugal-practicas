@@ -329,7 +329,64 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="main.js"></script>
+  <script>
+    const SUPABASE_URL = 'https://jnztchhwexxfjlrfgcvy.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_kDE5uKip-61WwoUl1YpvHw_8W5CWhNR';
+    const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    function showMsg(msg, isError = true) {
+      let el = document.getElementById('auth-msg');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'auth-msg';
+        el.style.cssText = 'padding:12px 16px;border-radius:8px;font-size:0.88rem;font-weight:500;';
+        const btn = document.querySelector('.auth-submit');
+        btn.parentNode.insertBefore(el, btn);
+      }
+      el.textContent = msg;
+      el.style.background = isError ? 'rgba(255,60,60,0.12)' : 'rgba(0,212,100,0.12)';
+      el.style.border = isError ? '1px solid rgba(255,60,60,0.3)' : '1px solid rgba(0,212,100,0.3)';
+      el.style.color = isError ? '#ff6b6b' : '#4ade80';
+    }
+
+    document.querySelector('.auth-form').addEventListener('submit', async () => {
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPass').value;
+      const btn = document.querySelector('.auth-submit');
+
+      if (!email || !password) return showMsg('Por favor rellena todos los campos.');
+      btn.textContent = 'Iniciando sesión...';
+      btn.disabled = true;
+
+      const { error } = await _supabase.auth.signInWithPassword({ email, password });
+
+      if (error) {
+        btn.textContent = 'Iniciar Sesión';
+        btn.disabled = false;
+        if (error.message.includes('Invalid login credentials')) {
+          showMsg('Email o contraseña incorrectos.');
+        } else if (error.message.includes('Email not confirmed')) {
+          showMsg('Confirma tu email antes de iniciar sesión. Revisa tu bandeja de entrada.');
+        } else {
+          showMsg(error.message);
+        }
+      } else {
+        showMsg('¡Sesión iniciada! Redirigiendo...', false);
+        setTimeout(() => window.location.href = 'index.html', 1200);
+      }
+    });
+
+    document.querySelector('.auth-forgot a').addEventListener('click', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      if (!email) return showMsg('Escribe tu email primero y luego haz clic en "¿Olvidaste tu contraseña?".');
+      const { error } = await _supabase.auth.resetPasswordForEmail(email);
+      if (error) showMsg(error.message);
+      else showMsg('Te hemos enviado un email para restablecer tu contraseña.', false);
+    });
+  </script>
 </body>
 
 </html>
