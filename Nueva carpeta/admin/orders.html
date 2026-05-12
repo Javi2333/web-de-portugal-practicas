@@ -33,9 +33,10 @@
 
     <div class="admin-content">
       <div class="admin-filters">
-        <input type="search" class="admin-search" id="orderSearch" placeholder="Buscar por ID…" oninput="filterOrders()"/>
+        <input type="search" class="admin-search" id="orderSearch" placeholder="Buscar por referencia o email…" oninput="filterOrders()"/>
         <select class="admin-select" id="statusFilter" onchange="loadOrders()">
           <option value="">Todos los estados</option>
+          <option value="pending_payment">Pendiente pago</option>
           <option value="pending">Pendiente</option>
           <option value="processing">Procesando</option>
           <option value="shipped">Enviado</option>
@@ -49,8 +50,9 @@
           <table class="admin-table">
             <thead>
               <tr>
-                <th>Pedido #</th>
+                <th>Referencia</th>
                 <th>Cliente</th>
+                <th>Email</th>
                 <th>Fecha</th>
                 <th>Total</th>
                 <th>Estado</th>
@@ -58,7 +60,7 @@
               </tr>
             </thead>
             <tbody id="ordersBody">
-              <tr><td colspan="6" style="text-align:center;padding:32px;color:var(--text-muted)">Cargando…</td></tr>
+              <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted)">Cargando…</td></tr>
             </tbody>
           </table>
         </div>
@@ -67,9 +69,60 @@
   </div>
 </div>
 
+<!-- Modal de seguimiento -->
+<div id="trackingOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;display:none;align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark-3);border:1px solid var(--border);border-radius:var(--radius-lg);width:100%;max-width:540px;max-height:90vh;overflow-y:auto">
+    <div class="modal-header" style="display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--border)">
+      <span class="modal-title" id="trackingModalTitle">Enviar seguimiento</span>
+      <button class="modal-close-btn" onclick="closeTrackingModal()">✕</button>
+    </div>
+    <div style="padding:24px">
+      <!-- Datos del pedido (solo lectura) -->
+      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:20px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:0.83rem">
+          <div><span style="color:var(--text-muted);display:block;font-size:0.73rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">Referencia</span><strong id="trkRef" style="color:var(--white)">—</strong></div>
+          <div><span style="color:var(--text-muted);display:block;font-size:0.73rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">Total</span><strong id="trkTotal" style="color:var(--white)">—</strong></div>
+          <div><span style="color:var(--text-muted);display:block;font-size:0.73rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">Cliente</span><span id="trkName" style="color:var(--text)">—</span></div>
+          <div><span style="color:var(--text-muted);display:block;font-size:0.73rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">Email</span><span id="trkEmail" style="color:var(--text)">—</span></div>
+        </div>
+      </div>
+
+      <!-- Formulario de seguimiento -->
+      <div class="form-group" style="margin-bottom:14px">
+        <label class="form-label">Empresa de transporte</label>
+        <input class="form-input" id="trkCarrier" placeholder="Ej: Correos, MRW, SEUR, DHL…"/>
+      </div>
+      <div class="form-group" style="margin-bottom:14px">
+        <label class="form-label">Número de seguimiento</label>
+        <input class="form-input" id="trkNumber" placeholder="Ej: ES123456789ES"/>
+      </div>
+      <div class="form-group" style="margin-bottom:14px">
+        <label class="form-label">URL de seguimiento</label>
+        <input class="form-input" id="trkUrl" type="url" placeholder="https://www.correos.es/seguimiento?tracking=…"/>
+      </div>
+      <div class="form-group" style="margin-bottom:20px">
+        <label class="form-label">Mensaje adicional (opcional)</label>
+        <textarea class="form-input" id="trkMessage" rows="3" placeholder="Ej: El paquete saldrá esta tarde…" style="resize:vertical;min-height:72px"></textarea>
+      </div>
+
+      <div id="trkMsg" style="display:none;font-size:0.84rem;padding:10px 14px;border-radius:8px;margin-bottom:14px"></div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn-admin btn-admin-ghost" onclick="closeTrackingModal()" style="flex:1">Cancelar</button>
+        <button class="btn-admin btn-admin-ghost" id="trkSaveBtn" onclick="saveTracking(false)" style="flex:1">Guardar</button>
+        <button class="btn-admin btn-admin-primary" id="trkSendBtn" onclick="saveTracking(true)" style="flex:2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Guardar y enviar email
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="admin.js"></script>
 <script>
 let _allOrders = [];
+let _currentTrackingOrder = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   renderSidebar('orders');
@@ -83,33 +136,40 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function loadOrders() {
   const status = document.getElementById('statusFilter').value;
   const tbody = document.getElementById('ordersBody');
-  tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:24px;color:var(--text-muted)">Cargando…</td></tr>`;
+  tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:24px;color:var(--text-muted)">Cargando…</td></tr>`;
   try {
     _allOrders = await adminGetOrders(status) || [];
     filterOrders();
   } catch(e) {
-    tbody.innerHTML = `<tr><td colspan="6" style="padding:24px;text-align:center;color:#ff6666">Error: ${e.message}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="7" style="padding:24px;text-align:center;color:#ff6666">Error: ${e.message}</td></tr>`;
   }
 }
 
 function filterOrders() {
   const q = document.getElementById('orderSearch').value.toLowerCase();
-  const filtered = q ? _allOrders.filter(o => String(o.id).includes(q)) : _allOrders;
+  const filtered = q
+    ? _allOrders.filter(o =>
+        String(o.id).includes(q) ||
+        (o.order_reference || '').toLowerCase().includes(q) ||
+        (o.customer_email  || '').toLowerCase().includes(q) ||
+        (o.customer_name   || '').toLowerCase().includes(q))
+    : _allOrders;
   renderOrdersTable(filtered);
 }
 
 function renderOrdersTable(orders) {
   const tbody = document.getElementById('ordersBody');
   if (!orders.length) {
-    tbody.innerHTML = `<tr><td colspan="6"><div class="admin-empty">
+    tbody.innerHTML = `<tr><td colspan="7"><div class="admin-empty">
       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
       <p>Sin pedidos</p></div></td></tr>`;
     return;
   }
   tbody.innerHTML = orders.map(o => `
     <tr>
-      <td class="text-bold">#${o.id}</td>
-      <td class="text-muted">${o.user_id ? o.user_id.substring(0,8) + '…' : '—'}</td>
+      <td class="text-bold">${o.order_reference || ('#' + o.id)}</td>
+      <td>${o.customer_name || '<span class="text-muted">—</span>'}</td>
+      <td class="text-muted" style="font-size:0.83rem">${o.customer_email || '—'}</td>
       <td class="text-muted">${fmtDate(o.created_at)}</td>
       <td class="text-bold">${fmtPrice(o.total)}</td>
       <td>${orderBadge(o.status)}</td>
@@ -117,6 +177,9 @@ function renderOrdersTable(orders) {
         <div class="cell-actions">
           <button class="btn-admin btn-admin-ghost btn-icon" onclick="openOrderDetail(${o.id})" title="Ver detalle">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <button class="btn-admin btn-admin-ghost btn-icon" onclick="openTrackingModal(${o.id})" title="Enviar seguimiento" style="color:var(--accent)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
           <button class="btn-admin btn-admin-ghost btn-icon" onclick="openChangeStatus(${o.id}, '${o.status}')" title="Cambiar estado">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
@@ -131,11 +194,14 @@ async function openOrderDetail(id) {
   try { items = await adminGetOrderItems(id) || []; } catch(e) {}
   const order = _allOrders.find(o => o.id === id);
 
-  showModal('Pedido #' + id, `
-    <div style="margin-bottom:16px;display:flex;gap:12px;flex-wrap:wrap">
+  showModal('Pedido ' + (order?.order_reference || '#' + id), `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px">
       <div><span class="form-label">Estado</span><br>${orderBadge(order?.status)}</div>
       <div><span class="form-label">Total</span><br><strong>${fmtPrice(order?.total)}</strong></div>
-      <div><span class="form-label">Fecha</span><br>${fmtDate(order?.created_at)}</div>
+      <div><span class="form-label">Fecha</span><br><span class="text-muted">${fmtDate(order?.created_at)}</span></div>
+      <div><span class="form-label">Email</span><br><span class="text-muted" style="font-size:0.83rem">${order?.customer_email || '—'}</span></div>
+      ${order?.customer_name  ? `<div><span class="form-label">Nombre</span><br>${order.customer_name}</div>` : ''}
+      ${order?.customer_phone ? `<div><span class="form-label">Teléfono</span><br>${order.customer_phone}</div>` : ''}
     </div>
     ${order?.notes ? `<div class="form-group"><label class="form-label">Notas</label><p style="font-size:0.85rem;color:var(--text-muted)">${order.notes}</p></div>` : ''}
     <label class="form-label">Líneas de pedido</label>
@@ -145,7 +211,7 @@ async function openOrderDetail(id) {
         <tbody>
           ${items.length ? items.map(i => `
             <tr>
-              <td>${i.product_title || ('Producto #' + i.product_id)}</td>
+              <td>${i.product_title || ('Producto #' + i.product_id)}${i.variant_label ? `<br><span class="text-muted" style="font-size:0.78rem">${i.variant_label}</span>` : ''}</td>
               <td>${i.quantity}</td>
               <td>${fmtPrice(i.unit_price)}</td>
               <td>${fmtPrice((i.quantity || 0) * (i.unit_price || 0))}</td>
@@ -163,7 +229,7 @@ function openChangeStatus(orderId, currentStatus) {
   const statusOptions = Object.entries(ORDER_STATUS).map(([val, s]) =>
     `<option value="${val}" ${val === currentStatus ? 'selected' : ''}>${s.label}</option>`).join('');
 
-  showModal('Cambiar estado del pedido #' + orderId, `
+  showModal('Cambiar estado — pedido #' + orderId, `
     <div class="form-group">
       <label class="form-label">Nuevo estado</label>
       <select class="form-select" id="newStatus">${statusOptions}</select>
@@ -178,6 +244,115 @@ function openChangeStatus(orderId, currentStatus) {
       } catch(e) { showToast('Error: ' + e.message, 'error'); }
     }
   );
+}
+
+// ── Modal de seguimiento ──────────────────────────────────────────
+
+async function openTrackingModal(orderId) {
+  const order = _allOrders.find(o => o.id === orderId);
+  if (!order) return;
+  _currentTrackingOrder = order;
+
+  document.getElementById('trackingModalTitle').textContent =
+    'Seguimiento — ' + (order.order_reference || '#' + orderId);
+  document.getElementById('trkRef').textContent   = order.order_reference || ('#' + orderId);
+  document.getElementById('trkTotal').textContent = fmtPrice(order.total);
+  document.getElementById('trkName').textContent  = order.customer_name  || '—';
+  document.getElementById('trkEmail').textContent = order.customer_email || '—';
+
+  // Limpiar campos
+  document.getElementById('trkCarrier').value = '';
+  document.getElementById('trkNumber').value  = '';
+  document.getElementById('trkUrl').value     = '';
+  document.getElementById('trkMessage').value = '';
+  document.getElementById('trkMsg').style.display = 'none';
+
+  // Pre-rellenar si ya hay un envío
+  try {
+    const sh = await adminGetShipmentByOrderId(orderId);
+    if (sh) {
+      document.getElementById('trkCarrier').value = sh.carrier        || '';
+      document.getElementById('trkNumber').value  = sh.tracking_number || '';
+      document.getElementById('trkUrl').value     = sh.tracking_url   || '';
+    }
+  } catch(e) {}
+
+  const overlay = document.getElementById('trackingOverlay');
+  overlay.style.display = 'flex';
+}
+
+function closeTrackingModal() {
+  document.getElementById('trackingOverlay').style.display = 'none';
+  _currentTrackingOrder = null;
+}
+
+function showTrkMsg(msg, isError) {
+  const el = document.getElementById('trkMsg');
+  el.textContent = msg;
+  el.style.background = isError ? 'rgba(255,68,68,0.1)' : 'rgba(0,200,100,0.1)';
+  el.style.color  = isError ? '#ff6666' : '#00c864';
+  el.style.border = isError ? '1px solid rgba(255,68,68,0.25)' : '1px solid rgba(0,200,100,0.25)';
+  el.style.display = 'block';
+}
+
+async function saveTracking(sendEmail) {
+  if (!_currentTrackingOrder) return;
+
+  const carrier  = document.getElementById('trkCarrier').value.trim();
+  const tracking = document.getElementById('trkNumber').value.trim();
+  const url      = document.getElementById('trkUrl').value.trim();
+  const message  = document.getElementById('trkMessage').value.trim();
+  const orderId  = _currentTrackingOrder.id;
+
+  if (!carrier || !tracking) {
+    showTrkMsg('Rellena al menos la empresa de transporte y el número de seguimiento.', true);
+    return;
+  }
+  if (sendEmail && !_currentTrackingOrder.customer_email) {
+    showTrkMsg('Este pedido no tiene email de cliente. No se puede enviar el correo.', true);
+    return;
+  }
+
+  const saveBtn = document.getElementById('trkSaveBtn');
+  const sendBtn = document.getElementById('trkSendBtn');
+  saveBtn.disabled = sendBtn.disabled = true;
+
+  try {
+    // 1. Guardar/actualizar envío en Supabase
+    await adminUpsertShipment(orderId, {
+      carrier,
+      tracking_number: tracking,
+      tracking_url:    url      || null,
+      shipping_status: 'shipped',
+      shipped_at:      new Date().toISOString()
+    });
+
+    // 2. Si hay que enviar email, llamar al servidor
+    if (sendEmail) {
+      await adminSendTrackingEmail({
+        orderId,
+        to:             _currentTrackingOrder.customer_email,
+        customerName:   _currentTrackingOrder.customer_name  || '',
+        orderReference: _currentTrackingOrder.order_reference || ('#' + orderId),
+        carrier,
+        trackingNumber: tracking,
+        trackingUrl:    url || null,
+        message:        message || null
+      });
+      showTrkMsg('✓ Seguimiento guardado y email enviado al cliente.', false);
+    } else {
+      showTrkMsg('✓ Seguimiento guardado correctamente.', false);
+    }
+
+    // Actualizar estado del pedido a "shipped" (internamente)
+    try { await adminUpdateOrderStatus(orderId, 'shipped'); } catch(e) {}
+    await loadOrders();
+
+  } catch(err) {
+    showTrkMsg(err.message, true);
+  } finally {
+    saveBtn.disabled = sendBtn.disabled = false;
+  }
 }
 </script>
 </body>

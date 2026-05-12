@@ -306,64 +306,6 @@
       }
     });
   })();
-    const SUPABASE_URL = 'https://jnztchhwexxfjlrfgcvy.supabase.co';
-    const SUPABASE_KEY = 'sb_publishable_kDE5uKip-61WwoUl1YpvHw_8W5CWhNR';
-    const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
-    function showMsg(msg, isError = true) {
-      let el = document.getElementById('auth-msg');
-      if (!el) {
-        el = document.createElement('div');
-        el.id = 'auth-msg';
-        el.style.cssText = 'padding:12px 16px;border-radius:8px;font-size:0.88rem;font-weight:500;';
-        const btn = document.querySelector('.auth-submit');
-        btn.parentNode.insertBefore(el, btn);
-      }
-      el.textContent = msg;
-      el.style.background = isError ? 'rgba(255,60,60,0.12)' : 'rgba(0,212,100,0.12)';
-      el.style.border = isError ? '1px solid rgba(255,60,60,0.3)' : '1px solid rgba(0,212,100,0.3)';
-      el.style.color = isError ? '#ff6b6b' : '#4ade80';
-    }
-
-    document.querySelector('.auth-form').addEventListener('submit', async () => {
-      const name = document.getElementById('regName').value.trim();
-      const surname = document.getElementById('regSurname').value.trim();
-      const email = document.getElementById('regEmail').value.trim();
-      const phone = document.getElementById('regPhone').value.trim();
-      const password = document.getElementById('regPass').value;
-      const password2 = document.getElementById('regPass2').value;
-      const terms = document.getElementById('regTerms').checked;
-      const btn = document.querySelector('.auth-submit');
-
-      if (!name || !surname || !email || !password) return showMsg('Por favor rellena todos los campos obligatorios.');
-      if (password !== password2) return showMsg('Las contraseñas no coinciden.');
-      if (password.length < 8) return showMsg('La contraseña debe tener al menos 8 caracteres.');
-      if (!terms) return showMsg('Debes aceptar los Términos y Condiciones.');
-
-      btn.textContent = 'Creando cuenta...';
-      btn.disabled = true;
-
-      const { error } = await _supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          data: { full_name: `${name} ${surname}`, phone: phone || null }
-        }
-      });
-
-      if (error) {
-        btn.textContent = 'Crear cuenta gratuita';
-        btn.disabled = false;
-        if (error.message.includes('already registered')) {
-          showMsg('Este email ya está registrado. ¿Quieres iniciar sesión?');
-        } else {
-          showMsg(error.message);
-        }
-      } else {
-        showMsg('¡Cuenta creada! Revisa tu email para confirmarla.', false);
-        btn.textContent = 'Cuenta creada ✓';
-      }
-    });
   </script>
 </body>
 </html>

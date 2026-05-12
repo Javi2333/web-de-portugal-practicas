@@ -1288,6 +1288,32 @@ ul { list-style: none; }
 .nav-user-option--primary { color: var(--primary-light); font-weight: 600; }
 .nav-user-option--primary:hover { background: rgba(0,102,255,0.12); color: var(--primary-light); }
 .nav-user-divider { height: 1px; background: var(--border); margin: 4px 0; }
+.nav-user-btn--avatar {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-color: transparent;
+  border-radius: 50%;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+.nav-user-btn--avatar:hover,
+.nav-user-wrap:hover .nav-user-btn--avatar {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  border-color: transparent;
+  color: var(--white);
+  transform: scale(1.08);
+}
+.nav-user-option--danger {
+  color: #ff6b6b;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+.nav-user-option--danger:hover { background: rgba(255,68,68,0.1); color: #ff6b6b; }
 
 /* ===== CART NAV BUTTON ===== */
 

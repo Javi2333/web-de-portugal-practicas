@@ -274,7 +274,37 @@ async function adminDeleteVariant(id) {
 async function adminGetOrders(status = '') {
   let q = '/orders?order=created_at.desc';
   if (status) q += '&status=eq.' + status;
-  return await _sbFetch(q + '&select=id,status,total,created_at,user_id,notes');
+  return await _sbFetch(q + '&select=id,status,total,created_at,user_id,customer_name,customer_email,customer_phone,order_reference,notes');
+}
+
+async function adminGetShipmentByOrderId(orderId) {
+  const rows = await _sbFetch('/shipments?order_id=eq.' + orderId + '&limit=1');
+  return rows && rows.length ? rows[0] : null;
+}
+
+async function adminUpsertShipment(orderId, data) {
+  const existing = await adminGetShipmentByOrderId(orderId);
+  if (existing && existing.id) {
+    const fields = { ...data };
+    delete fields.order_id;
+    return await _sbFetch('/shipments?id=eq.' + existing.id, { method: 'PATCH', body: JSON.stringify(fields) });
+  }
+  return await _sbFetch('/shipments', { method: 'POST', body: JSON.stringify({ order_id: orderId, ...data }) });
+}
+
+async function adminSendTrackingEmail(payload) {
+  const session = _getSession();
+  const res = await fetch('/admin/send-tracking-email', {
+    method:  'POST',
+    headers: {
+      'Content-Type':  'application/json',
+      'Authorization': 'Bearer ' + (session ? session.access_token : '')
+    },
+    body: JSON.stringify(payload)
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Error al enviar el email');
+  return data;
 }
 
 async function adminGetOrderItems(orderId) {

@@ -407,6 +407,60 @@ renderCarritoPage();
     });
 })();
 
+// ── User state: show avatar initial when logged in ────────────────
+(function initUserState() {
+    let session;
+    try { session = JSON.parse(sessionStorage.getItem('sb_session')); } catch(e) { session = null; }
+    if (!session || !session.access_token) return;
+
+    const wrap = document.getElementById('navUserWrap');
+    const btn  = document.getElementById('navUserBtn');
+    const drop = document.getElementById('navUserDropdown');
+    if (!wrap || !btn || !drop) return;
+
+    const email = (session.user && session.user.email) ? session.user.email : '';
+
+    function setAvatar(letter) {
+        btn.className = 'nav-user-btn nav-user-btn--avatar';
+        btn.textContent = letter;
+        drop.innerHTML =
+            '<a href="mi-cuenta.html" class="nav-user-option nav-user-option--primary">' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' +
+                ' Mi cuenta' +
+            '</a>' +
+            '<div class="nav-user-divider"></div>' +
+            '<button class="nav-user-option nav-user-option--danger" id="navLogoutBtn">' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>' +
+                ' Cerrar sesión' +
+            '</button>';
+        const logoutBtn = document.getElementById('navLogoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', () => {
+                sessionStorage.removeItem('sb_session');
+                window.location.href = 'index.html';
+            });
+        }
+    }
+
+    setAvatar(email.charAt(0).toUpperCase() || '?');
+
+    const SB_URL = 'https://jnztchhwexxfjlrfgcvy.supabase.co/rest/v1';
+    const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuenRjaGh3ZXh4ZmpscmZnY3Z5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNDc2MTYsImV4cCI6MjA5MzYyMzYxNn0.6Ihq0BrTmcodWGpegdpcCi3MT3K6MnPj7lgIN6HnSE8';
+
+    if (session.user && session.user.id) {
+        fetch(`${SB_URL}/profiles?id=eq.${session.user.id}&select=full_name&limit=1`, {
+            headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + session.access_token }
+        })
+        .then(r => r.ok ? r.json() : null)
+        .then(rows => {
+            if (rows && rows.length && rows[0].full_name) {
+                setAvatar(rows[0].full_name.charAt(0).toUpperCase());
+            }
+        })
+        .catch(() => {});
+    }
+})();
+
 // ── Category Sidebar Logic ──────────────────────────────────────
 (function initCategoryFilter() {
     const sidebar = document.getElementById('catSidebar');
