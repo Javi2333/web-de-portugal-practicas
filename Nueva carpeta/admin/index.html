@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<div id="adminLoading" class="admin-loading">
+  <div class="admin-spinner"></div> Cargando panel…
+</div>
+
+<div id="adminApp" class="admin-layout" style="display:none">
+  <!-- Overlay móvil -->
+  <div class="admin-sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+  <!-- Main -->
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div class="admin-topbar-left">
+        <button class="sidebar-toggle-btn" onclick="openSidebar()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <span class="admin-page-title">Dashboard</span>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <!-- Stats -->
+      <div class="admin-stats-grid" id="statsGrid">
+        <div class="stat-card blue">
+          <div class="stat-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div class="stat-card-value" id="statProducts">—</div>
+          <div class="stat-card-label">Productos activos</div>
+        </div>
+        <div class="stat-card green">
+          <div class="stat-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+          </div>
+          <div class="stat-card-value" id="statOrders">—</div>
+          <div class="stat-card-label">Pedidos totales</div>
+        </div>
+        <div class="stat-card amber">
+          <div class="stat-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="stat-card-value" id="statPending">—</div>
+          <div class="stat-card-label">Pedidos pendientes</div>
+        </div>
+        <div class="stat-card red">
+          <div class="stat-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div class="stat-card-value" id="statCustomers">—</div>
+          <div class="stat-card-label">Clientes registrados</div>
+        </div>
+      </div>
+
+      <!-- Recent orders -->
+      <div class="admin-section-header">
+        <span class="admin-section-title">Pedidos recientes</span>
+        <a href="orders.html" class="btn-admin btn-admin-ghost">Ver todos →</a>
+      </div>
+      <div class="admin-card">
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="recentOrdersBody">
+              <tr><td colspan="6" style="text-align:center;padding:32px;color:var(--text-muted)">Cargando…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  renderSidebar('dashboard');
+  const ok = await checkAdminAuth();
+  if (!ok) return;
+
+  document.getElementById('adminLoading').style.display = 'none';
+  document.getElementById('adminApp').style.display = 'flex';
+
+  // Cargar stats
+  try {
+    const stats = await loadDashboardStats();
+    document.getElementById('statProducts').textContent  = stats.totalProducts;
+    document.getElementById('statOrders').textContent    = stats.totalOrders;
+    document.getElementById('statPending').textContent   = stats.pendingOrders;
+    document.getElementById('statCustomers').textContent = stats.totalCustomers;
+  } catch(e) {
+    console.warn('Stats error:', e);
+  }
+
+  // Pedidos recientes
+  try {
+    const orders = await loadRecentOrders();
+    const tbody = document.getElementById('recentOrdersBody');
+    if (!orders || !orders.length) {
+      tbody.innerHTML = `<tr><td colspan="6" class="admin-empty"><p>No hay pedidos aún</p></td></tr>`;
+    } else {
+      tbody.innerHTML = orders.map(o => `
+        <tr>
+          <td class="text-bold">#${o.id}</td>
+          <td class="text-muted">${o.user_id ? o.user_id.substring(0,8) + '…' : '—'}</td>
+          <td class="text-muted">${fmtDate(o.created_at)}</td>
+          <td class="text-bold">${fmtPrice(o.total)}</td>
+          <td>${orderBadge(o.status)}</td>
+          <td><a href="orders.html" class="btn-admin btn-admin-ghost btn-icon" title="Ver pedidos">→</a></td>
+        </tr>`).join('');
+    }
+  } catch(e) {
+    document.getElementById('recentOrdersBody').innerHTML =
+      `<tr><td colspan="6" style="padding:24px;text-align:center;color:#ff6666">Error al cargar pedidos: ${e.message}</td></tr>`;
+  }
+});
+</script>
+</body>
+</html>

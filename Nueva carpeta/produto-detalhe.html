@@ -1356,20 +1356,46 @@
   </a>
 
   <script src="products-data.js"></script>
+  <script src="supabase-client.js"></script>
   <script src="main.js"></script>
   <script>
-    (function () {
+    (async function () {
       // Read product id from URL ?id=N
       const params = new URLSearchParams(window.location.search);
       const id = parseInt(params.get('id'), 10);
       const main = document.getElementById('detalheMain');
 
-      if (!id || !window.PRODUCTS_DATA) {
+      if (!id) {
         main.innerHTML = renderNotFound();
         return;
       }
 
-      const product = window.PRODUCTS_DATA.find(p => p.id === id);
+      let product = null;
+
+      // Try Supabase first
+      try {
+        product = await window.SupabaseProducts.getProductById(id);
+        if (product) {
+          const sizePrices = await window.SupabaseProducts.getProductVariants(id);
+          if (Object.keys(sizePrices).length > 0) {
+            product.sizePrices = sizePrices;
+            // Also inject size choices into the tamano option if it exists but has no choices
+            const tamanoOpt = product.options && product.options.find(function(o) { return o.id === 'tamano'; });
+            if (tamanoOpt && (!tamanoOpt.choices || tamanoOpt.choices.length === 0)) {
+              tamanoOpt.choices = Object.keys(sizePrices);
+              if (!tamanoOpt.default) tamanoOpt.default = tamanoOpt.choices[0];
+            }
+          }
+        }
+      } catch (e) {
+        console.warn('[Supabase] Carga fallida, usando fallback local:', e.message);
+        product = null;
+      }
+
+      // Fallback to local products-data.js
+      if (!product && window.PRODUCTS_DATA) {
+        product = window.PRODUCTS_DATA.find(function(p) { return p.id === id; }) || null;
+      }
 
       if (!product) {
         main.innerHTML = renderNotFound();

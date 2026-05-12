@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<div id="adminLoading" class="admin-loading">
+  <div class="admin-spinner"></div> Cargando…
+</div>
+
+<div id="adminApp" class="admin-layout" style="display:none">
+  <div class="admin-sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+  <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div class="admin-topbar-left">
+        <button class="sidebar-toggle-btn" onclick="openSidebar()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <span class="admin-page-title">Productos</span>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <div class="admin-filters">
+        <input type="search" class="admin-search" id="productSearch" placeholder="Buscar por título…" oninput="filterProducts()"/>
+        <select class="admin-select" id="productStatusFilter" onchange="filterProducts()">
+          <option value="">Todos</option>
+          <option value="true">Activos</option>
+          <option value="false">Inactivos</option>
+        </select>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Título</th>
+                <th>Precio base</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="productsBody">
+              <tr><td colspan="6" style="text-align:center;padding:32px;color:var(--text-muted)">Cargando…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+<script>
+let _allProducts = [];
+
+document.addEventListener('DOMContentLoaded', async () => {
+  renderSidebar('products');
+  const ok = await checkAdminAuth();
+  if (!ok) return;
+  document.getElementById('adminLoading').style.display = 'none';
+  document.getElementById('adminApp').style.display = 'flex';
+  await loadProducts();
+});
+
+async function loadProducts() {
+  try {
+    _allProducts = await adminGetProducts() || [];
+    renderProductsTable(_allProducts);
+  } catch(e) {
+    document.getElementById('productsBody').innerHTML =
+      `<tr><td colspan="6" style="padding:24px;text-align:center;color:#ff6666">Error: ${e.message}</td></tr>`;
+  }
+}
+
+function filterProducts() {
+  const q = document.getElementById('productSearch').value.toLowerCase();
+  const s = document.getElementById('productStatusFilter').value;
+  const filtered = _allProducts.filter(p => {
+    const matchQ = !q || p.title.toLowerCase().includes(q);
+    const matchS = s === '' || String(p.active) === s;
+    return matchQ && matchS;
+  });
+  renderProductsTable(filtered);
+}
+
+function renderProductsTable(products) {
+  const tbody = document.getElementById('productsBody');
+  if (!products.length) {
+    tbody.innerHTML = `<tr><td colspan="6"><div class="admin-empty"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg><p>Sin productos</p></div></td></tr>`;
+    return;
+  }
+  tbody.innerHTML = products.map(p => {
+    const imgSrc = p.images && p.images.length ? p.images[0] : null;
+    const thumb = imgSrc
+      ? `<img class="product-thumb" src="../${imgSrc}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+      : '';
+    const placeholder = `<div class="product-thumb-placeholder" ${imgSrc ? 'style="display:none"' : ''}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      </div>`;
+    return `<tr>
+      <td class="text-muted">${p.id}</td>
+      <td>${thumb}${placeholder}</td>
+      <td class="text-bold">${p.title}</td>
+      <td>${fmtPrice(p.base_price)}</td>
+      <td>${activeBadge(p.active)}</td>
+      <td>
+        <div class="cell-actions">
+          <button class="btn-admin btn-admin-ghost btn-icon" onclick="openEditProduct(${p.id})" title="Editar">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="btn-admin btn-admin-ghost btn-icon" onclick="openVariants(${p.id}, '${escHtml(p.title)}')" title="Variantes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </button>
+          <button class="btn-admin btn-icon ${p.active ? 'btn-admin-danger' : 'btn-admin-ghost'}" onclick="toggleProductActive(${p.id}, ${!p.active})" title="${p.active ? 'Desactivar' : 'Activar'}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${p.active ? '<path d="M18.36 6.64A9 9 0 015.64 19.36"/><path d="M6.34 6.34A9 9 0 0019.66 17.66"/><line x1="2" y1="2" x2="22" y2="22"/>' : '<path d="M18.36 6.64a9 9 0 010 10.72M5.64 6.64a9 9 0 000 10.72M12 2v2M12 20v2"/>'}</svg>
+          </button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function escHtml(s) { return String(s).replace(/'/g, "\\'"); }
+
+async function openEditProduct(id) {
+  let p;
+  try { p = await adminGetProductById(id); } catch(e) { showToast('Error: ' + e.message, 'error'); return; }
+  if (!p) return;
+
+  showModal('Editar producto #' + id, `
+    <div class="form-group">
+      <label class="form-label">Título</label>
+      <input class="form-input" id="editTitle" value="${(p.title||'').replace(/"/g,'&quot;')}"/>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Precio base (€)</label>
+        <input class="form-input" id="editPrice" type="number" step="0.01" value="${p.base_price || ''}"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Badge</label>
+        <input class="form-input" id="editBadge" value="${(p.badge||'').replace(/"/g,'&quot;')}"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Slug</label>
+      <input class="form-input" id="editSlug" value="${(p.slug||'').replace(/"/g,'&quot;')}"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Descripción corta</label>
+      <textarea class="form-textarea" id="editShortDesc">${p.short_desc||''}</textarea>
+    </div>
+    <div class="form-group">
+      <div class="toggle-wrap">
+        <input type="checkbox" class="toggle-input" id="editActive" ${p.active ? 'checked' : ''}>
+        <label class="toggle-label" for="editActive"></label>
+        <span class="toggle-text">Producto activo</span>
+      </div>
+    </div>`,
+    async () => {
+      const fields = {
+        title:      document.getElementById('editTitle').value,
+        base_price: parseFloat(document.getElementById('editPrice').value) || null,
+        badge:      document.getElementById('editBadge').value,
+        slug:       document.getElementById('editSlug').value,
+        short_desc: document.getElementById('editShortDesc').value,
+        active:     document.getElementById('editActive').checked,
+      };
+      try {
+        await adminUpdateProduct(id, fields);
+        showToast('Producto actualizado', 'success');
+        closeModal();
+        await loadProducts();
+      } catch(e) { showToast('Error: ' + e.message, 'error'); }
+    }
+  );
+}
+
+async function toggleProductActive(id, newVal) {
+  try {
+    await adminUpdateProduct(id, { active: newVal });
+    showToast(newVal ? 'Producto activado' : 'Producto desactivado', 'success');
+    await loadProducts();
+  } catch(e) { showToast('Error: ' + e.message, 'error'); }
+}
+
+async function openVariants(productId, productTitle) {
+  let variants = [];
+  try { variants = await adminGetVariants(productId) || []; } catch(e) { showToast('Error: ' + e.message, 'error'); return; }
+
+  const tableRows = variants.map(v => `
+    <tr id="vrow-${v.id}">
+      <td><input class="form-input" style="padding:4px 8px;font-size:0.82rem" id="vlabel-${v.id}" value="${(v.size_label||'').replace(/"/g,'&quot;')}"/></td>
+      <td><input class="form-input" style="padding:4px 8px;font-size:0.82rem;width:90px" id="vprice-${v.id}" type="number" step="0.01" value="${v.price || ''}"/></td>
+      <td>
+        <div class="toggle-wrap">
+          <input type="checkbox" class="toggle-input" id="vactive-${v.id}" ${v.active ? 'checked' : ''}>
+          <label class="toggle-label" for="vactive-${v.id}"></label>
+        </div>
+      </td>
+      <td>
+        <div class="cell-actions">
+          <button class="btn-admin btn-admin-ghost btn-icon" onclick="saveVariantRow(${v.id})" title="Guardar">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+          <button class="btn-admin btn-admin-danger btn-icon" onclick="deleteVariantRow(${v.id}, ${productId}, '${escHtml(productTitle)}')" title="Eliminar">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>
+          </button>
+        </div>
+      </td>
+    </tr>`).join('');
+
+  showModal(`Variantes — ${productTitle}`, `
+    <div class="admin-table-wrap">
+      <table class="admin-table">
+        <thead><tr><th>Tamaño</th><th>Precio</th><th>Activo</th><th></th></tr></thead>
+        <tbody id="variantsBody">
+          ${tableRows || `<tr><td colspan="4" style="text-align:center;padding:16px;color:var(--text-muted)">Sin variantes</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+      <p class="form-label" style="margin-bottom:10px">Añadir nueva variante</p>
+      <div class="form-row">
+        <input class="form-input" id="newVLabel" placeholder="Ej: 64 cm x 32 cm"/>
+        <input class="form-input" id="newVPrice" type="number" step="0.01" placeholder="Precio €"/>
+      </div>
+    </div>`,
+    async () => {
+      const label = document.getElementById('newVLabel')?.value.trim();
+      const price = parseFloat(document.getElementById('newVPrice')?.value);
+      if (!label || isNaN(price)) { showToast('Rellena tamaño y precio', 'error'); return; }
+      try {
+        await adminCreateVariant({ product_id: productId, size_label: label, price, active: true, sort_order: variants.length });
+        showToast('Variante añadida', 'success');
+        closeModal();
+        openVariants(productId, productTitle);
+      } catch(e) { showToast('Error: ' + e.message, 'error'); }
+    },
+    'Añadir variante'
+  );
+}
+
+async function saveVariantRow(id) {
+  const label  = document.getElementById('vlabel-'  + id)?.value;
+  const price  = parseFloat(document.getElementById('vprice-'  + id)?.value);
+  const active = document.getElementById('vactive-' + id)?.checked;
+  try {
+    await adminSaveVariant(id, { size_label: label, price, active });
+    showToast('Variante guardada', 'success');
+  } catch(e) { showToast('Error: ' + e.message, 'error'); }
+}
+
+async function deleteVariantRow(id, productId, productTitle) {
+  if (!confirm('¿Eliminar esta variante?')) return;
+  try {
+    await adminDeleteVariant(id);
+    showToast('Variante eliminada', 'success');
+    closeModal();
+    openVariants(productId, productTitle);
+  } catch(e) { showToast('Error: ' + e.message, 'error'); }
+}
+</script>
+</body>
+</html>

@@ -201,5 +201,110 @@
   </div>
 
   <script src="main.js"></script>
+  <script>
+  (function () {
+    const SB_BASE = 'https://jnztchhwexxfjlrfgcvy.supabase.co';
+    const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuenRjaGh3ZXh4ZmpscmZnY3Z5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNDc2MTYsImV4cCI6MjA5MzYyMzYxNn0.6Ihq0BrTmcodWGpegdpcCi3MT3K6MnPj7lgIN6HnSE8';
+
+    function showMsg(msg, isError) {
+      let el = document.getElementById('regMsg');
+      if (!el) {
+        el = document.createElement('p');
+        el.id = 'regMsg';
+        el.style.cssText = 'font-size:0.85rem;text-align:center;margin-top:-4px;padding:10px 14px;border-radius:8px;';
+        document.querySelector('.auth-submit').before(el);
+      }
+      el.textContent = msg;
+      el.style.background = isError ? 'rgba(255,68,68,0.1)'  : 'rgba(0,200,100,0.1)';
+      el.style.color       = isError ? '#ff6666'              : '#00c864';
+      el.style.border      = isError ? '1px solid rgba(255,68,68,0.25)' : '1px solid rgba(0,200,100,0.25)';
+    }
+
+    document.querySelector('.auth-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const name      = document.getElementById('regName').value.trim();
+      const surname   = document.getElementById('regSurname').value.trim();
+      const email     = document.getElementById('regEmail').value.trim();
+      const phone     = document.getElementById('regPhone').value.trim();
+      const pass      = document.getElementById('regPass').value;
+      const pass2     = document.getElementById('regPass2').value;
+      const terms     = document.getElementById('regTerms').checked;
+      const btn       = document.querySelector('.auth-submit');
+
+      // Validaciones
+      if (!name || !email || !pass)         { showMsg('Rellena los campos obligatorios.', true); return; }
+      if (pass.length < 8)                  { showMsg('La contraseña debe tener al menos 8 caracteres.', true); return; }
+      if (pass !== pass2)                   { showMsg('Las contraseñas no coinciden.', true); return; }
+      if (!terms)                           { showMsg('Debes aceptar los Términos y Condiciones.', true); return; }
+
+      btn.disabled    = true;
+      btn.textContent = 'Creando cuenta…';
+
+      try {
+        // 1. Crear usuario en Supabase Auth
+        const signupRes = await fetch(SB_BASE + '/auth/v1/signup', {
+          method:  'POST',
+          headers: { 'apikey': SB_KEY, 'Content-Type': 'application/json' },
+          body:    JSON.stringify({ email, password: pass })
+        });
+
+        const signupData = await signupRes.json();
+
+        if (!signupRes.ok) {
+          throw new Error(signupData.msg || signupData.error_description || 'Error al crear la cuenta');
+        }
+
+        const fullName = (name + ' ' + surname).trim();
+
+        // 2a. Si hay sesión inmediata (confirmación de email desactivada)
+        if (signupData.access_token) {
+          sessionStorage.setItem('sb_session', JSON.stringify({
+            access_token:  signupData.access_token,
+            refresh_token: signupData.refresh_token,
+            user: { id: signupData.user.id, email: signupData.user.email }
+          }));
+
+          // Insertar perfil en la tabla profiles
+          await fetch(SB_BASE + '/rest/v1/profiles', {
+            method:  'POST',
+            headers: {
+              'apikey':        SB_KEY,
+              'Authorization': 'Bearer ' + signupData.access_token,
+              'Content-Type':  'application/json',
+              'Prefer':        'return=minimal'
+            },
+            body: JSON.stringify({
+              id:        signupData.user.id,
+              email:     email,
+              full_name: fullName,
+              phone:     phone || null,
+              role:      'customer'
+            })
+          });
+
+          showMsg('¡Cuenta creada! Redirigiendo…', false);
+          setTimeout(() => { window.location.href = 'index.html'; }, 1200);
+
+        } else {
+          // 2b. Confirmación de email requerida — guardar datos para cuando confirme
+          sessionStorage.setItem('sb_pending_profile', JSON.stringify({
+            id:        signupData.user?.id,
+            email:     email,
+            full_name: fullName,
+            phone:     phone || null
+          }));
+
+          btn.style.display = 'none';
+          showMsg('✓ Cuenta creada. Revisa tu email y haz clic en el enlace de confirmación para activarla.', false);
+        }
+
+      } catch (err) {
+        showMsg(err.message, true);
+        btn.disabled    = false;
+        btn.textContent = 'Crear cuenta gratuita';
+      }
+    });
+  })();
+  </script>
 </body>
 </html>

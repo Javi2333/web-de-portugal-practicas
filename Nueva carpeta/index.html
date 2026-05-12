@@ -231,5 +231,66 @@
   </a>
 
   <script src="main.js"></script>
+  <script>
+  // Captura el token de confirmación de email que manda Supabase en la URL (#access_token=...)
+  (function () {
+    const hash = window.location.hash;
+    if (!hash.includes('access_token=')) return;
+
+    const params = new URLSearchParams(hash.replace('#', ''));
+    const access_token  = params.get('access_token');
+    const refresh_token = params.get('refresh_token');
+    const type          = params.get('type'); // 'signup' o 'recovery'
+    if (!access_token) return;
+
+    const SB_BASE = 'https://jnztchhwexxfjlrfgcvy.supabase.co';
+    const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuenRjaGh3ZXh4ZmpscmZnY3Z5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNDc2MTYsImV4cCI6MjA5MzYyMzYxNn0.6Ihq0BrTmcodWGpegdpcCi3MT3K6MnPj7lgIN6HnSE8';
+
+    // Limpiar el hash de la URL para que no se vea el token
+    history.replaceState(null, '', window.location.pathname);
+
+    (async function () {
+      try {
+        // Obtener datos del usuario con el token
+        const userRes = await fetch(SB_BASE + '/auth/v1/user', {
+          headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + access_token }
+        });
+        if (!userRes.ok) return;
+        const user = await userRes.json();
+
+        // Guardar sesión
+        sessionStorage.setItem('sb_session', JSON.stringify({
+          access_token, refresh_token,
+          user: { id: user.id, email: user.email }
+        }));
+
+        // Si es registro, crear perfil si no existe
+        if (type === 'signup') {
+          const profRes = await fetch(SB_BASE + '/rest/v1/profiles?id=eq.' + user.id + '&select=id&limit=1', {
+            headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + access_token }
+          });
+          const profiles = profRes.ok ? await profRes.json() : [];
+          if (!profiles.length) {
+            const pending = JSON.parse(sessionStorage.getItem('sb_pending_profile') || 'null');
+            await fetch(SB_BASE + '/rest/v1/profiles', {
+              method: 'POST',
+              headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + access_token, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+              body: JSON.stringify({
+                id:        user.id,
+                email:     user.email,
+                full_name: pending?.full_name || '',
+                phone:     pending?.phone || null,
+                role:      'customer'
+              })
+            });
+            sessionStorage.removeItem('sb_pending_profile');
+          }
+        }
+      } catch (e) {
+        console.warn('Auth callback error:', e);
+      }
+    })();
+  })();
+  </script>
 </body>
 </html>

@@ -330,6 +330,106 @@
   </div>
 
   <script src="main.js"></script>
+  <script>
+  (function () {
+    const SB_BASE = 'https://jnztchhwexxfjlrfgcvy.supabase.co';
+    const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuenRjaGh3ZXh4ZmpscmZnY3Z5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNDc2MTYsImV4cCI6MjA5MzYyMzYxNn0.6Ihq0BrTmcodWGpegdpcCi3MT3K6MnPj7lgIN6HnSE8';
+
+    function showLoginError(msg) {
+      let el = document.getElementById('loginError');
+      if (!el) {
+        el = document.createElement('p');
+        el.id = 'loginError';
+        el.style.cssText = 'color:#ff6666;font-size:0.85rem;text-align:center;margin-top:-6px;';
+        document.querySelector('.auth-submit').before(el);
+      }
+      el.textContent = msg;
+    }
+
+    document.querySelector('.auth-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const email    = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPass').value;
+      const btn      = document.querySelector('.auth-submit');
+
+      if (!email || !password) { showLoginError('Introduce email y contraseña.'); return; }
+
+      btn.disabled    = true;
+      btn.textContent = 'Entrando…';
+      const errEl = document.getElementById('loginError');
+      if (errEl) errEl.textContent = '';
+
+      try {
+        // 1. Autenticar con Supabase
+        const authRes = await fetch(SB_BASE + '/auth/v1/token?grant_type=password', {
+          method:  'POST',
+          headers: { 'apikey': SB_KEY, 'Content-Type': 'application/json' },
+          body:    JSON.stringify({ email, password })
+        });
+
+        if (!authRes.ok) {
+          const err = await authRes.json().catch(() => ({}));
+          throw new Error(err.error_description || err.msg || 'Email o contraseña incorrectos');
+        }
+
+        const session = await authRes.json();
+        // Guardar sesión
+        sessionStorage.setItem('sb_session', JSON.stringify({
+          access_token:  session.access_token,
+          refresh_token: session.refresh_token,
+          user: { id: session.user.id, email: session.user.email }
+        }));
+
+        // 2. Comprobar/crear perfil
+        let role = 'customer';
+        try {
+          const profRes = await fetch(SB_BASE + '/rest/v1/profiles?id=eq.' + session.user.id + '&select=role&limit=1', {
+            headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + session.access_token }
+          });
+          if (profRes.ok) {
+            const profiles = await profRes.json();
+            if (profiles.length) {
+              role = profiles[0].role;
+            } else {
+              // Primera vez que inicia sesión — crear perfil (viene de registro con confirmación email)
+              const pending = JSON.parse(sessionStorage.getItem('sb_pending_profile') || 'null');
+              await fetch(SB_BASE + '/rest/v1/profiles', {
+                method:  'POST',
+                headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + session.access_token, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+                body: JSON.stringify({
+                  id:        session.user.id,
+                  email:     session.user.email,
+                  full_name: pending?.full_name || '',
+                  phone:     pending?.phone || null,
+                  role:      'customer'
+                })
+              });
+              sessionStorage.removeItem('sb_pending_profile');
+            }
+          }
+        } catch (_) {}
+
+        // 3. Redirigir
+        const params = new URLSearchParams(window.location.search);
+        if (role === 'admin') {
+          window.location.href = 'admin/index.html';
+        } else if (params.get('next') === 'admin') {
+          showLoginError('No tienes permisos de administrador.');
+          sessionStorage.removeItem('sb_session');
+          btn.disabled = false;
+          btn.textContent = 'Iniciar Sesión';
+        } else {
+          window.location.href = 'index.html';
+        }
+
+      } catch (err) {
+        showLoginError(err.message);
+        btn.disabled    = false;
+        btn.textContent = 'Iniciar Sesión';
+      }
+    });
+  })();
+  </script>
 </body>
 
 </html>

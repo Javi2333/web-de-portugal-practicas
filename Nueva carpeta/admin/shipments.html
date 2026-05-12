@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Envíos — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<div id="adminLoading" class="admin-loading">
+  <div class="admin-spinner"></div> Cargando…
+</div>
+
+<div id="adminApp" class="admin-layout" style="display:none">
+  <div class="admin-sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+  <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div class="admin-topbar-left">
+        <button class="sidebar-toggle-btn" onclick="openSidebar()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <span class="admin-page-title">Envíos</span>
+      </div>
+      <div class="admin-topbar-right">
+        <button class="btn-admin btn-admin-primary" onclick="openNewShipment()">+ Nuevo envío</button>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <div class="admin-filters">
+        <input type="search" class="admin-search" id="shipmentSearch" placeholder="Buscar por pedido o tracking…" oninput="filterShipments()"/>
+        <select class="admin-select" id="shipStatusFilter" onchange="filterShipments()">
+          <option value="">Todos los estados</option>
+          <option value="pending">Pendiente</option>
+          <option value="shipped">Enviado</option>
+          <option value="in_transit">En tránsito</option>
+          <option value="delivered">Entregado</option>
+        </select>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Pedido #</th>
+                <th>Transportista</th>
+                <th>Nº tracking</th>
+                <th>Estado</th>
+                <th>Fecha envío</th>
+                <th>Entrega</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="shipmentsBody">
+              <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted)">Cargando…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+<script>
+let _allShipments = [];
+
+document.addEventListener('DOMContentLoaded', async () => {
+  renderSidebar('shipments');
+  const ok = await checkAdminAuth();
+  if (!ok) return;
+  document.getElementById('adminLoading').style.display = 'none';
+  document.getElementById('adminApp').style.display = 'flex';
+  await loadShipments();
+});
+
+async function loadShipments() {
+  try {
+    _allShipments = await adminGetShipments() || [];
+    filterShipments();
+  } catch(e) {
+    document.getElementById('shipmentsBody').innerHTML =
+      `<tr><td colspan="7" style="padding:24px;text-align:center;color:#ff6666">Error: ${e.message}</td></tr>`;
+  }
+}
+
+function filterShipments() {
+  const q = document.getElementById('shipmentSearch').value.toLowerCase();
+  const s = document.getElementById('shipStatusFilter').value;
+  const filtered = _allShipments.filter(sh => {
+    const matchQ = !q || String(sh.order_id).includes(q) || (sh.tracking_number||'').toLowerCase().includes(q);
+    const matchS = !s || sh.status === s;
+    return matchQ && matchS;
+  });
+  renderShipmentsTable(filtered);
+}
+
+function renderShipmentsTable(shipments) {
+  const tbody = document.getElementById('shipmentsBody');
+  if (!shipments.length) {
+    tbody.innerHTML = `<tr><td colspan="7"><div class="admin-empty">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      <p>Sin envíos</p></div></td></tr>`;
+    return;
+  }
+  tbody.innerHTML = shipments.map(sh => `
+    <tr>
+      <td class="text-bold">#${sh.order_id}</td>
+      <td>${sh.carrier || '—'}</td>
+      <td>
+        ${sh.tracking_number
+          ? `<span style="font-family:monospace;font-size:0.82rem;color:var(--primary-light)">${sh.tracking_number}</span>`
+          : '<span class="text-muted">—</span>'}
+      </td>
+      <td>${shipBadge(sh.status)}</td>
+      <td class="text-muted">${fmtDate(sh.shipped_at)}</td>
+      <td class="text-muted">${fmtDate(sh.delivered_at)}</td>
+      <td>
+        <div class="cell-actions">
+          <button class="btn-admin btn-admin-ghost btn-icon" onclick="openEditShipment(${sh.id})" title="Editar">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+        </div>
+      </td>
+    </tr>`).join('');
+}
+
+function openNewShipment() {
+  openShipmentModal({});
+}
+
+function openEditShipment(id) {
+  const sh = _allShipments.find(s => s.id === id);
+  if (!sh) return;
+  openShipmentModal(sh);
+}
+
+function openShipmentModal(sh) {
+  const isEdit = !!sh.id;
+  const statusOptions = Object.entries(SHIP_STATUS).map(([val, s]) =>
+    `<option value="${val}" ${val === (sh.status || 'pending') ? 'selected' : ''}>${s.label}</option>`).join('');
+
+  showModal(isEdit ? 'Editar envío' : 'Nuevo envío', `
+    ${!isEdit ? `<div class="form-group">
+      <label class="form-label">Pedido # (ID)</label>
+      <input class="form-input" id="shOrderId" type="number" placeholder="ID del pedido" value="${sh.order_id || ''}"/>
+    </div>` : `<p class="text-muted" style="margin-bottom:16px;font-size:0.85rem">Pedido #${sh.order_id}</p>`}
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Transportista</label>
+        <input class="form-input" id="shCarrier" placeholder="Ej: Correos, UPS, DHL" value="${sh.carrier || ''}"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Estado</label>
+        <select class="form-select" id="shStatus">${statusOptions}</select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Número de seguimiento</label>
+      <input class="form-input" id="shTracking" placeholder="Ej: ES123456789" value="${sh.tracking_number || ''}"/>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Fecha de envío</label>
+        <input class="form-input" id="shShippedAt" type="date" value="${sh.shipped_at ? sh.shipped_at.substring(0,10) : ''}"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Fecha de entrega</label>
+        <input class="form-input" id="shDeliveredAt" type="date" value="${sh.delivered_at ? sh.delivered_at.substring(0,10) : ''}"/>
+      </div>
+    </div>`,
+    async () => {
+      const data = {
+        carrier:          document.getElementById('shCarrier').value.trim() || null,
+        tracking_number:  document.getElementById('shTracking').value.trim() || null,
+        status:           document.getElementById('shStatus').value,
+        shipped_at:       document.getElementById('shShippedAt').value || null,
+        delivered_at:     document.getElementById('shDeliveredAt').value || null,
+      };
+      if (isEdit) {
+        data.id = sh.id;
+      } else {
+        const orderId = parseInt(document.getElementById('shOrderId').value);
+        if (!orderId) { showToast('Introduce el ID del pedido', 'error'); return; }
+        data.order_id = orderId;
+      }
+      try {
+        await adminSaveShipment(data);
+        showToast(isEdit ? 'Envío actualizado' : 'Envío creado', 'success');
+        closeModal();
+        await loadShipments();
+      } catch(e) { showToast('Error: ' + e.message, 'error'); }
+    },
+    isEdit ? 'Guardar cambios' : 'Crear envío'
+  );
+}
+</script>
+</body>
+</html>

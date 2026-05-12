@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clientes — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<div id="adminLoading" class="admin-loading">
+  <div class="admin-spinner"></div> Cargando…
+</div>
+
+<div id="adminApp" class="admin-layout" style="display:none">
+  <div class="admin-sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+  <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div class="admin-topbar-left">
+        <button class="sidebar-toggle-btn" onclick="openSidebar()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <span class="admin-page-title">Clientes</span>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <div class="admin-filters">
+        <input type="search" class="admin-search" id="customerSearch" placeholder="Buscar por email o nombre…" oninput="filterCustomers()"/>
+        <select class="admin-select" id="roleFilter" onchange="filterCustomers()">
+          <option value="">Todos los roles</option>
+          <option value="customer">Cliente</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Rol</th>
+                <th>Registro</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="customersBody">
+              <tr><td colspan="6" style="text-align:center;padding:32px;color:var(--text-muted)">Cargando…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+<script>
+let _allCustomers = [];
+
+document.addEventListener('DOMContentLoaded', async () => {
+  renderSidebar('customers');
+  const ok = await checkAdminAuth();
+  if (!ok) return;
+  document.getElementById('adminLoading').style.display = 'none';
+  document.getElementById('adminApp').style.display = 'flex';
+  await loadCustomers();
+});
+
+async function loadCustomers() {
+  const tbody = document.getElementById('customersBody');
+  try {
+    _allCustomers = await adminGetCustomers() || [];
+    filterCustomers();
+  } catch(e) {
+    tbody.innerHTML = `<tr><td colspan="6" style="padding:24px;text-align:center;color:#ff6666">Error: ${e.message}</td></tr>`;
+  }
+}
+
+function filterCustomers() {
+  const q = document.getElementById('customerSearch').value.toLowerCase();
+  const r = document.getElementById('roleFilter').value;
+  const filtered = _allCustomers.filter(c => {
+    const matchQ = !q || (c.email||'').toLowerCase().includes(q) || (c.full_name||'').toLowerCase().includes(q);
+    const matchR = !r || c.role === r;
+    return matchQ && matchR;
+  });
+  renderCustomersTable(filtered);
+}
+
+function renderCustomersTable(customers) {
+  const tbody = document.getElementById('customersBody');
+  if (!customers.length) {
+    tbody.innerHTML = `<tr><td colspan="6"><div class="admin-empty">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      <p>Sin clientes</p></div></td></tr>`;
+    return;
+  }
+  tbody.innerHTML = customers.map(c => {
+    const initials = (c.full_name || c.email || '?').charAt(0).toUpperCase();
+    const roleBadge = c.role === 'admin'
+      ? `<span class="badge badge-purple">Admin</span>`
+      : `<span class="badge badge-blue">Cliente</span>`;
+    return `<tr>
+      <td>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="admin-user-avatar" style="width:32px;height:32px;font-size:0.75rem">${initials}</div>
+          <span class="text-bold">${c.full_name || '—'}</span>
+        </div>
+      </td>
+      <td class="text-muted">${c.email || '—'}</td>
+      <td class="text-muted">${c.phone || '—'}</td>
+      <td>${roleBadge}</td>
+      <td class="text-muted">${fmtDate(c.created_at)}</td>
+      <td>
+        <div class="cell-actions">
+          ${c.role !== 'admin'
+            ? `<button class="btn-admin btn-admin-ghost" style="font-size:0.78rem;padding:5px 10px" onclick="changeRole('${c.id}','admin')">Hacer admin</button>`
+            : `<button class="btn-admin btn-admin-danger" style="font-size:0.78rem;padding:5px 10px" onclick="changeRole('${c.id}','customer')">Quitar admin</button>`}
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+async function changeRole(userId, newRole) {
+  const label = newRole === 'admin' ? 'admin' : 'cliente';
+  if (!confirm('¿Cambiar rol del usuario a ' + label + '?')) return;
+  try {
+    await adminUpdateUserRole(userId, newRole);
+    showToast('Rol actualizado a ' + label, 'success');
+    await loadCustomers();
+  } catch(e) { showToast('Error: ' + e.message, 'error'); }
+}
+</script>
+</body>
+</html>
