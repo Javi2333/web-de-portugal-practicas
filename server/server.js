@@ -101,7 +101,7 @@ function parsePriceToEuros(str) {
 
 app.post('/create-checkout-session', async (req, res) => {
   try {
-    const { items, customerEmail, shippingCost } = req.body;
+    const { items, customerEmail, customerName, shippingCost } = req.body;
 
     if (!items || items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
@@ -115,11 +115,18 @@ app.post('/create-checkout-session', async (req, res) => {
     if (SUPABASE_SERVICE_KEY) {
       try {
         const orderRows = await sbInsert('orders', {
-          status:         'pending_payment',
-          total:          Math.round(total * 100) / 100,
-          customer_email: customerEmail || null
+          status:          'pending_payment',
+          total:           Math.round(total * 100) / 100,
+          customer_email:  customerEmail || null,
+          customer_name:   customerName  || null,
         });
         orderId = orderRows?.[0]?.id || null;
+
+        // Generar referencia legible: LP-2026-00123
+        if (orderId) {
+          const ref = 'LP-' + new Date().getFullYear() + '-' + String(orderId).padStart(5, '0');
+          sbPatch('orders', orderId, { order_reference: ref }).catch(() => {});
+        }
 
         if (orderId && items.length) {
           await sbInsert('order_items', items.map(item => ({
