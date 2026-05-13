@@ -64,10 +64,7 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
 
     if (orderId && SUPABASE_SERVICE_KEY) {
       try {
-        await sbPatch('orders', orderId, {
-          status:            'processing',
-          stripe_session_id: session.id
-        });
+        await sbPatch('orders', orderId, { status: 'processing' });
         console.log('✅ Pedido #' + orderId + ' actualizado a "processing" en Supabase');
       } catch (e) {
         console.error('Error actualizando pedido en Supabase:', e.message);
@@ -109,16 +106,20 @@ app.post('/create-checkout-session', async (req, res) => {
 
     // 1. Guardar pedido pendiente en Supabase
     let orderId = null;
-    const total = items.reduce((sum, i) => sum + parsePriceToEuros(i.price) * (i.qty || 1), 0)
-                + (shippingCost || 0);
+    const subtotal    = items.reduce((sum, i) => sum + parsePriceToEuros(i.price) * (i.qty || 1), 0);
+    const shippingAmt = shippingCost || 0;
+    const total       = Math.round((subtotal + shippingAmt) * 100) / 100;
 
     if (SUPABASE_SERVICE_KEY) {
       try {
         const orderRows = await sbInsert('orders', {
-          status:          'pending_payment',
-          total:           Math.round(total * 100) / 100,
-          customer_email:  customerEmail || null,
-          customer_name:   customerName  || null,
+          status:        'pending_payment',
+          subtotal:      Math.round(subtotal * 100) / 100,
+          shipping_cost: shippingAmt,
+          total,
+          currency:      'EUR',
+          customer_email: customerEmail || null,
+          customer_name:  customerName  || null,
         });
         orderId = orderRows?.[0]?.id || null;
 
@@ -129,14 +130,19 @@ app.post('/create-checkout-session', async (req, res) => {
         }
 
         if (orderId && items.length) {
-          await sbInsert('order_items', items.map(item => ({
-            order_id:      orderId,
-            product_id:    item.id || null,
-            product_title: item.title,
-            variant_label: item.options?.map(o => `${o.label}: ${o.value}`).join(' | ') || null,
-            quantity:      item.qty || 1,
-            unit_price:    parsePriceToEuros(item.price)
-          })));
+          await sbInsert('order_items', items.map(item => {
+            const unitPrice  = parsePriceToEuros(item.price);
+            const qty        = item.qty || 1;
+            return {
+              order_id:      orderId,
+              product_id:    item.id || null,
+              product_title: item.title,
+              variant_label: item.options?.map(o => `${o.label}: ${o.value}`).join(' | ') || null,
+              quantity:      qty,
+              unit_price:    unitPrice,
+              total_price:   Math.round(unitPrice * qty * 100) / 100
+            };
+          }));
         }
 
         console.log('📦 Pedido #' + orderId + ' guardado en Supabase (pendiente de pago)');
@@ -190,13 +196,6 @@ app.post('/create-checkout-session', async (req, res) => {
       success_url:          `${frontendUrl}/success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url:           `${frontendUrl}/checkout.html`
     });
-
-    // 4. Guardar el stripe_session_id en el pedido
-    if (orderId && SUPABASE_SERVICE_KEY) {
-      sbPatch('orders', orderId, { stripe_session_id: session.id }).catch(e =>
-        console.error('Error guardando stripe_session_id:', e.message)
-      );
-    }
 
     res.json({ url: session.url });
 
