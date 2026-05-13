@@ -81,6 +81,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../Nueva carpeta')));
 
+// ── Helpers ──────────────────────────────────────────────────────────
+
+function generateOrderRef() {
+  const year   = new Date().getFullYear();
+  const suffix = Date.now().toString(36).toUpperCase().slice(-6);
+  return `LPT-${year}-${suffix}`;
+}
+
 // ── Convertidores de precio ──────────────────────────────────────────
 
 function parsePriceToCents(str) {
@@ -98,7 +106,7 @@ function parsePriceToEuros(str) {
 
 app.post('/create-checkout-session', async (req, res) => {
   try {
-    const { items, customerEmail, customerName, shippingCost } = req.body;
+    const { items, customerEmail, customerName, customerPhone, shippingCost, userId, notes } = req.body;
 
     if (!items || items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
@@ -112,27 +120,29 @@ app.post('/create-checkout-session', async (req, res) => {
 
     if (SUPABASE_SERVICE_KEY) {
       try {
-        const orderRows = await sbInsert('orders', {
-          status:        'pending_payment',
-          subtotal:      Math.round(subtotal * 100) / 100,
-          shipping_cost: shippingAmt,
+        const orderData = {
+          order_reference: generateOrderRef(),
+          user_id:         userId        || null,
+          customer_name:   customerName  || 'Cliente',
+          customer_email:  customerEmail || null,
+          customer_phone:  customerPhone || null,
+          status:          'pending',
+          subtotal:        Math.round(subtotal * 100) / 100,
+          shipping_cost:   shippingAmt,
           total,
-          currency:      'EUR',
-          customer_email: customerEmail || null,
-          customer_name:  customerName  || null,
-        });
-        orderId = orderRows?.[0]?.id || null;
+          currency:        'EUR',
+          notes:           notes         || null,
+        };
+        console.log('orderData', orderData);
 
-        // Generar referencia legible: LP-2026-00123
-        if (orderId) {
-          const ref = 'LP-' + new Date().getFullYear() + '-' + String(orderId).padStart(5, '0');
-          sbPatch('orders', orderId, { order_reference: ref }).catch(() => {});
-        }
+        const orderRows = await sbInsert('orders', orderData);
+        console.log('order insert result', orderRows);
+        orderId = orderRows?.[0]?.id || null;
 
         if (orderId && items.length) {
           await sbInsert('order_items', items.map(item => {
-            const unitPrice  = parsePriceToEuros(item.price);
-            const qty        = item.qty || 1;
+            const unitPrice = parsePriceToEuros(item.price);
+            const qty       = item.qty || 1;
             return {
               order_id:      orderId,
               product_id:    item.id || null,
@@ -145,9 +155,9 @@ app.post('/create-checkout-session', async (req, res) => {
           }));
         }
 
-        console.log('📦 Pedido #' + orderId + ' guardado en Supabase (pendiente de pago)');
+        console.log('📦 Pedido #' + orderId + ' (' + orderData.order_reference + ') guardado en Supabase');
       } catch (e) {
-        console.error('Error guardando pedido en Supabase:', e.message);
+        console.error('order insert error', e.message);
         // Continuamos igualmente — el pago no debe bloquearse por un error de BD
       }
     } else {
