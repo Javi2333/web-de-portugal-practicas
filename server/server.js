@@ -215,6 +215,46 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
+// ── GET /api/order-items/:orderId ────────────────────────────────────
+
+app.get('/api/order-items/:orderId', async (req, res) => {
+  const token = (req.headers.authorization || '').replace('Bearer ', '').trim();
+  if (!token) return res.status(401).json({ error: 'No autorizado' });
+
+  // Verificar que el usuario es admin usando su JWT
+  if (SUPABASE_SERVICE_KEY) {
+    try {
+      const profileRes = await fetch(`${SUPABASE_URL}/rest/v1/profiles?select=role&limit=1`, {
+        headers: { 'apikey': SUPABASE_SERVICE_KEY, 'Authorization': 'Bearer ' + token }
+      });
+      const profiles = profileRes.ok ? await profileRes.json() : [];
+      if (!profiles.length || profiles[0].role !== 'admin') {
+        return res.status(403).json({ error: 'Solo admins pueden ver los productos del pedido' });
+      }
+    } catch (e) {
+      return res.status(500).json({ error: 'Error al verificar permisos: ' + e.message });
+    }
+  }
+
+  // Obtener los items con la clave de servicio (bypassa RLS)
+  try {
+    const itemsRes = await fetch(
+      `${SUPABASE_URL}/rest/v1/order_items?order_id=eq.${req.params.orderId}&select=*&order=id.asc`,
+      {
+        headers: {
+          'apikey':        SUPABASE_SERVICE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_SERVICE_KEY,
+          'Content-Type':  'application/json'
+        }
+      }
+    );
+    const items = itemsRes.ok ? await itemsRes.json() : [];
+    res.json(items);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 // ── POST /admin/send-tracking-email ─────────────────────────────────
 
 app.post('/admin/send-tracking-email', async (req, res) => {
