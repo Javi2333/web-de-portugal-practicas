@@ -36,7 +36,6 @@
         <input type="search" class="admin-search" id="orderSearch" placeholder="Buscar por referencia o email…" oninput="filterOrders()"/>
         <select class="admin-select" id="statusFilter" onchange="loadOrders()">
           <option value="">Todos los estados</option>
-          <option value="pending_payment">Pendiente pago</option>
           <option value="pending">Pendiente</option>
           <option value="processing">Procesando</option>
           <option value="shipped">Enviado</option>
@@ -175,7 +174,7 @@ function renderOrdersTable(orders) {
       <td>${orderBadge(o.status)}</td>
       <td>
         <div class="cell-actions">
-          <button class="btn-admin btn-admin-ghost btn-icon" onclick="openOrderDetail(${o.id})" title="Ver detalle">
+          <button class="btn-admin btn-admin-ghost btn-icon" onclick="window.location.href='order-detail.html?id=${o.id}'" title="Ver detalle">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </button>
           <button class="btn-admin btn-admin-ghost btn-icon" onclick="openTrackingModal(${o.id})" title="Enviar seguimiento" style="color:var(--accent)">
@@ -189,40 +188,91 @@ function renderOrdersTable(orders) {
     </tr>`).join('');
 }
 
-async function openOrderDetail(id) {
-  let items = [];
-  try { items = await adminGetOrderItems(id) || []; } catch(e) {}
-  const order = _allOrders.find(o => o.id === id);
+async function openOrderDetail(orderId) {
+  const order = _allOrders.find(o => o.id === orderId);
+  if (!order) return;
 
-  showModal('Pedido ' + (order?.order_reference || '#' + id), `
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px">
-      <div><span class="form-label">Estado</span><br>${orderBadge(order?.status)}</div>
-      <div><span class="form-label">Total</span><br><strong>${fmtPrice(order?.total)}</strong></div>
-      <div><span class="form-label">Fecha</span><br><span class="text-muted">${fmtDate(order?.created_at)}</span></div>
-      <div><span class="form-label">Email</span><br><span class="text-muted" style="font-size:0.83rem">${order?.customer_email || '—'}</span></div>
-      ${order?.customer_name  ? `<div><span class="form-label">Nombre</span><br>${order.customer_name}</div>` : ''}
-      ${order?.customer_phone ? `<div><span class="form-label">Teléfono</span><br>${order.customer_phone}</div>` : ''}
-    </div>
-    ${order?.notes ? `<div class="form-group"><label class="form-label">Notas</label><p style="font-size:0.85rem;color:var(--text-muted)">${order.notes}</p></div>` : ''}
-    <label class="form-label">Líneas de pedido</label>
-    <div class="admin-table-wrap">
-      <table class="admin-table">
-        <thead><tr><th>Producto</th><th>Cant.</th><th>P. unitario</th><th>Subtotal</th></tr></thead>
-        <tbody>
-          ${items.length ? items.map(i => `
-            <tr>
-              <td>${i.product_title || ('Producto #' + i.product_id)}${i.variant_label ? `<br><span class="text-muted" style="font-size:0.78rem">${i.variant_label}</span>` : ''}</td>
-              <td>${i.quantity}</td>
-              <td>${fmtPrice(i.unit_price)}</td>
-              <td>${fmtPrice((i.quantity || 0) * (i.unit_price || 0))}</td>
-            </tr>`).join('') :
-            `<tr><td colspan="4" style="text-align:center;padding:16px;color:var(--text-muted)">Sin líneas de pedido</td></tr>`}
-        </tbody>
-      </table>
-    </div>`,
+  const ref = order.order_reference || ('#' + orderId);
+
+  // 1. Abrir modal INMEDIATAMENTE con pantalla de carga
+  showModal('Pedido ' + ref,
+    '<div id="orderDetailBody" style="text-align:center;padding:40px;color:var(--text-muted)">Cargando productos…</div>',
     null
   );
   document.getElementById('modalSaveBtn').style.display = 'none';
+
+  // 2. Pedir los productos al servidor en segundo plano
+  let items = [];
+  let fetchError = null;
+  try {
+    items = await adminGetOrderItems(orderId) || [];
+  } catch (e) {
+    fetchError = e.message;
+    console.error('Error cargando productos:', e);
+  }
+
+  // Si el usuario cerr\xf3 el modal mientras cargaba, salir
+  const body = document.getElementById('orderDetailBody');
+  if (!body) return;
+
+  const subtotal = parseFloat(order.subtotal)      || 0;
+  const shipping = parseFloat(order.shipping_cost) || 0;
+
+  var html = '';
+
+  // Info cliente
+  html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;font-size:0.87rem">';
+  html += '<div><div class="form-label">Estado</div>'    + orderBadge(order.status) + '</div>';
+  html += '<div><div class="form-label">Fecha</div><span class="text-muted">' + fmtDate(order.created_at) + '</span></div>';
+  html += '<div><div class="form-label">Nombre</div>'   + (order.customer_name  || '<span class="text-muted">—</span>') + '</div>';
+  html += '<div><div class="form-label">Email</div><span class="text-muted" style="font-size:0.81rem">' + (order.customer_email || '—') + '</span></div>';
+  if (order.customer_phone) html += '<div><div class="form-label">Tel\xe9fono</div>' + order.customer_phone + '</div>';
+  html += '</div>';
+  if (order.notes) {
+    html += '<div style="background:var(--dark-2);border:1px solid var(--border);border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:0.83rem;color:var(--text-muted)">'
+          + '<strong style="color:var(--white)">Nota:</strong> ' + order.notes + '</div>';
+  }
+
+  // Tabla de productos
+  html += '<div class="admin-table-wrap"><table class="admin-table">';
+  html += '<thead><tr><th>Producto</th><th style="text-align:center">Cant.</th>'
+        + '<th style="text-align:right">Precio unit.</th><th style="text-align:right">Total</th></tr></thead>';
+  html += '<tbody>';
+
+  if (fetchError) {
+    html += '<tr><td colspan="4" style="padding:16px;color:#ff6666;text-align:center">Error: ' + fetchError + '</td></tr>';
+  } else if (items.length === 0) {
+    html += '<tr><td colspan="4" style="padding:20px;text-align:center;color:var(--text-muted)">Sin productos registrados</td></tr>';
+  } else {
+    for (var n = 0; n < items.length; n++) {
+      var it        = items[n];
+      var itTitle   = it.product_title || ('Producto #' + it.product_id);
+      var itVariant = it.variant_label ? '<br><small style="color:var(--text-muted)">' + it.variant_label + '</small>' : '';
+      var itTotal   = it.total_price != null ? it.total_price : (it.quantity * it.unit_price);
+      html += '<tr>'
+            + '<td><strong>' + itTitle + '</strong>' + itVariant + '</td>'
+            + '<td style="text-align:center">' + it.quantity + '</td>'
+            + '<td style="text-align:right">' + fmtPrice(it.unit_price) + '</td>'
+            + '<td style="text-align:right;font-weight:700">' + fmtPrice(itTotal) + '</td>'
+            + '</tr>';
+    }
+  }
+
+  html += '</tbody><tfoot>';
+  if (subtotal > 0) {
+    html += '<tr><td colspan="3" style="text-align:right;color:var(--text-muted);padding:6px 14px;font-size:0.83rem">Subtotal</td>'
+          + '<td style="text-align:right;padding:6px 14px">' + fmtPrice(subtotal) + '</td></tr>';
+  }
+  html += '<tr><td colspan="3" style="text-align:right;color:var(--text-muted);padding:6px 14px;font-size:0.83rem">Env\xedo</td>'
+        + '<td style="text-align:right;padding:6px 14px;' + (shipping > 0 ? '' : 'color:#22c55e;font-weight:600') + '">'
+        + (shipping > 0 ? fmtPrice(shipping) : 'Gratis') + '</td></tr>';
+  html += '<tr style="background:rgba(0,102,255,0.07)">'
+        + '<td colspan="3" style="text-align:right;font-weight:700;padding:10px 14px">TOTAL</td>'
+        + '<td style="text-align:right;font-weight:800;font-size:1.05rem;padding:10px 14px;color:var(--primary-light)">'
+        + fmtPrice(order.total) + '</td></tr>';
+  html += '</tfoot></table></div>';
+
+  body.innerHTML = html;
 }
 
 function openChangeStatus(orderId, currentStatus) {

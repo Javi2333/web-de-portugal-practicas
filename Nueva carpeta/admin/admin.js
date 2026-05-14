@@ -274,7 +274,7 @@ async function adminDeleteVariant(id) {
 async function adminGetOrders(status = '') {
   let q = '/orders?order=created_at.desc';
   if (status) q += '&status=eq.' + status;
-  return await _sbFetch(q + '&select=id,status,total,created_at,user_id,customer_name,customer_email,customer_phone,order_reference,notes');
+  return await _sbFetch(q + '&select=id,status,subtotal,shipping_cost,total,created_at,user_id,customer_name,customer_email,customer_phone,order_reference,notes');
 }
 
 async function adminGetShipmentByOrderId(orderId) {
@@ -308,7 +308,15 @@ async function adminSendTrackingEmail(payload) {
 }
 
 async function adminGetOrderItems(orderId) {
-  return await _sbFetch('/order_items?order_id=eq.' + orderId + '&select=*');
+  const session = _getSession();
+  const res = await fetch('/api/order-items/' + orderId, {
+    headers: { 'Authorization': 'Bearer ' + (session ? session.access_token : '') }
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || 'Error ' + res.status);
+  }
+  return res.json();
 }
 
 async function adminUpdateOrderStatus(orderId, status) {

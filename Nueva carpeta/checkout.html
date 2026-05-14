@@ -871,16 +871,26 @@
       btn.textContent = 'Redirigiendo a Stripe...';
 
       try {
-        const cart = getCart();
-        const email = document.getElementById('inp-email')?.value.trim() || '';
+        const cart      = getCart();
+        const email     = document.getElementById('inp-email')?.value.trim() || '';
+        const nombre    = document.getElementById('inp-nombre')?.value.trim() || '';
+        const apellidos = document.getElementById('inp-apellidos')?.value.trim() || '';
+        const fullName  = [nombre, apellidos].filter(Boolean).join(' ');
+
+        const sbSession = JSON.parse(sessionStorage.getItem('sb_session') || 'null');
+        const userId    = sbSession?.user?.id || null;
 
         const res = await fetch(`${SERVER_URL}/create-checkout-session`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            items: cart,
-            customerEmail: email,
-            shippingCost: state.shippingCost
+            items:          cart,
+            customerEmail:  email     || null,
+            customerName:   fullName  || null,
+            customerPhone:  null,
+            shippingCost:   state.shippingCost,
+            userId,
+            notes:          null
           })
         });
 
