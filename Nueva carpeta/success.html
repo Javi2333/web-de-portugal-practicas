@@ -17,6 +17,54 @@
       justify-content: center;
       padding: 2rem;
     }
+
+    /* ── Animación inicial (solo el tick grande) ── */
+    .anim-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: opacity 0.4s ease;
+    }
+    .anim-overlay.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .anim-circle {
+      width: 120px;
+      height: 120px;
+      background: rgba(34,197,94,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .anim-circle::before {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 4px solid #22c55e;
+      opacity: 0;
+      transform: scale(0.5);
+      animation: ringPop 0.5s ease 0.1s forwards;
+    }
+    @keyframes ringPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+    .anim-tick {
+      stroke-dasharray: 36;
+      stroke-dashoffset: 36;
+      animation: drawTick 0.45s ease 0.4s forwards;
+    }
+    @keyframes drawTick {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* ── Card ── */
     .success-card {
       background: var(--dark-2);
       border: 1px solid rgba(34,197,94,0.3);
@@ -25,6 +73,13 @@
       max-width: 520px;
       width: 100%;
       text-align: center;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .success-card.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     .success-icon {
       width: 80px;
@@ -35,6 +90,14 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 1.5rem;
+      position: relative;
+    }
+    .success-icon::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 3px solid #22c55e;
     }
     .success-card h1 {
       font-size: 1.8rem;
@@ -51,7 +114,7 @@
     .success-card p strong { color: var(--text); }
     .success-actions {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
       justify-content: center;
       margin-top: 2rem;
       flex-wrap: wrap;
@@ -81,8 +144,17 @@
     </div>
   </nav>
 
+  <!-- Animación del tick -->
+  <div class="anim-overlay" id="animOverlay">
+    <div class="anim-circle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" width="56" height="56">
+        <path class="anim-tick" d="M20 6L9 17l-5-5"/>
+      </svg>
+    </div>
+  </div>
+
   <section class="success-page">
-    <div class="success-card">
+    <div class="success-card" id="successCard">
       <div class="success-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" width="40" height="40">
           <path d="M20 6L9 17l-5-5"/>
@@ -93,15 +165,26 @@
       <p>Nuestro equipo se pondrá en contacto contigo para coordinar la entrega e instalación.</p>
       <div class="success-actions">
         <a href="index.html" class="btn btn-primary btn-large">Volver al inicio</a>
-        <a href="contacto.html" class="btn btn-outline">Contactar</a>
+        <a href="produtos.html" class="btn btn-outline btn-large">Seguir comprando</a>
       </div>
     </div>
   </section>
 
   <script src="main.js"></script>
   <script>
-    // Vaciar el carrito tras pago exitoso
     localStorage.removeItem('ledsign_cart');
+
+    // 1. Animación del tick durante ~1.2s
+    // 2. Fade out del overlay
+    // 3. Fade in de la card
+    setTimeout(() => {
+      const overlay = document.getElementById('animOverlay');
+      overlay.classList.add('hide');
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        document.getElementById('successCard').classList.add('visible');
+      }, 400);
+    }, 1200);
   </script>
 </body>
 </html>
