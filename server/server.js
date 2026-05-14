@@ -157,17 +157,24 @@ app.post('/create-checkout-session', async (req, res) => {
 
         console.log('📦 Pedido #' + orderId + ' (' + orderData.order_reference + ') guardado en Supabase');
 
+        const enrichedItems = items.map(item => ({
+          product_title: item.title,
+          variant_label: item.options?.map(o => `${o.label}: ${o.value}`).join(' | ') || null,
+          quantity:      item.qty || 1,
+          unit_price:    parsePriceToEuros(item.price),
+          total_price:   Math.round(parsePriceToEuros(item.price) * (item.qty || 1) * 100) / 100
+        }));
+        const enrichedOrder = { ...orderData, id: orderId };
+
         // Notificar a la empresa del nuevo pedido
-        sendNewOrderNotification(
-          { ...orderData, id: orderId },
-          items.map(item => ({
-            product_title: item.title,
-            variant_label: item.options?.map(o => `${o.label}: ${o.value}`).join(' | ') || null,
-            quantity:      item.qty || 1,
-            unit_price:    parsePriceToEuros(item.price),
-            total_price:   Math.round(parsePriceToEuros(item.price) * (item.qty || 1) * 100) / 100
-          }))
-        ).catch(e => console.error('Error enviando notificación a empresa:', e.message));
+        sendNewOrderNotification(enrichedOrder, enrichedItems)
+          .catch(e => console.error('Error enviando notificación a empresa:', e.message));
+
+        // Confirmación de pedido al cliente
+        if (customerEmail) {
+          sendOrderConfirmationToCustomer(enrichedOrder, enrichedItems)
+            .catch(e => console.error('Error enviando confirmación al cliente:', e.message));
+        }
 
       } catch (e) {
         console.error('order insert error', e.message);
@@ -337,6 +344,110 @@ async function sendNewOrderNotification(order, items) {
     throw new Error(err.message || JSON.stringify(err));
   }
   console.log('✅ Notificación de nuevo pedido enviada a ' + process.env.ADMIN_ORDERS_EMAIL);
+}
+
+// ── Confirmación de pedido al cliente ───────────────────────────────
+
+async function sendOrderConfirmationToCustomer(order, items) {
+  if (!process.env.RESEND_API_KEY || !order.customer_email) return;
+
+  const itemRows = items.map(i => `
+    <tr>
+      <td style="padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#2d3748">
+        <strong>${i.product_title}</strong>
+        ${i.variant_label ? `<div style="font-size:0.78rem;color:#718096;margin-top:2px">${i.variant_label}</div>` : ''}
+      </td>
+      <td style="padding:9px 14px;border-bottom:1px solid #e2e8f0;text-align:center;color:#2d3748">${i.quantity}</td>
+      <td style="padding:9px 14px;border-bottom:1px solid #e2e8f0;text-align:right;font-weight:700;color:#2d3748">${Number(i.total_price || i.unit_price * i.quantity).toFixed(2)} €</td>
+    </tr>`).join('');
+
+  const shippingRow = order.shipping_cost > 0
+    ? `<tr><td colspan="2" style="padding:8px 14px;text-align:right;color:#718096;font-size:0.83rem">Envío</td><td style="padding:8px 14px;text-align:right;color:#2d3748">${Number(order.shipping_cost).toFixed(2)} €</td></tr>`
+    : `<tr><td colspan="2" style="padding:8px 14px;text-align:right;color:#718096;font-size:0.83rem">Envío</td><td style="padding:8px 14px;text-align:right;color:#22c55e;font-weight:600">Gratis</td></tr>`;
+
+  const emailHtml = `<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body style="margin:0;padding:0;background:#f7fafc;font-family:Inter,Arial,sans-serif">
+  <div style="max-width:600px;margin:40px auto;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08)">
+
+    <!-- Cabecera -->
+    <div style="background:linear-gradient(135deg,#0066ff,#00d4ff);padding:36px 40px;text-align:center">
+      <div style="width:56px;height:56px;background:rgba(255,255,255,0.2);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem">✓</div>
+      <h1 style="margin:0;color:#ffffff;font-size:1.5rem;font-weight:800;letter-spacing:-0.02em">Pedido confirmado</h1>
+      <p style="margin:8px 0 0;color:rgba(255,255,255,0.85);font-size:0.95rem">Hemos recibido tu pedido correctamente</p>
+    </div>
+
+    <!-- Cuerpo -->
+    <div style="padding:36px 40px">
+
+      <p style="margin:0 0 8px;color:#2d3748;font-size:1rem">Estimado/a${order.customer_name ? ' <strong>' + order.customer_name + '</strong>' : ''},</p>
+      <p style="margin:0 0 24px;color:#4a5568;line-height:1.7">Nos complace confirmarle que hemos recibido su pedido y que nuestro equipo ya está trabajando en su preparación. En breve recibirá una nueva notificación cuando su pedido sea enviado junto con los datos de seguimiento.</p>
+
+      <!-- Referencia -->
+      <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 20px;margin-bottom:28px;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-size:0.72rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:3px">Número de pedido</div>
+          <div style="font-size:1.15rem;font-weight:800;color:#1e40af">${order.order_reference}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:0.72rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:3px">Total</div>
+          <div style="font-size:1.15rem;font-weight:800;color:#1e40af">${Number(order.total).toFixed(2)} €</div>
+        </div>
+      </div>
+
+      <!-- Resumen de productos -->
+      <div style="margin-bottom:28px">
+        <div style="font-size:0.72rem;color:#718096;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:10px">Resumen del pedido</div>
+        <table style="width:100%;border-collapse:collapse;font-size:0.88rem">
+          <thead>
+            <tr style="background:#f7fafc">
+              <th style="padding:8px 14px;text-align:left;color:#718096;font-weight:600;font-size:0.78rem;border-bottom:2px solid #e2e8f0">Producto</th>
+              <th style="padding:8px 14px;text-align:center;color:#718096;font-weight:600;font-size:0.78rem;border-bottom:2px solid #e2e8f0">Cant.</th>
+              <th style="padding:8px 14px;text-align:right;color:#718096;font-weight:600;font-size:0.78rem;border-bottom:2px solid #e2e8f0">Total</th>
+            </tr>
+          </thead>
+          <tbody>${itemRows}</tbody>
+          <tfoot>
+            ${shippingRow}
+            <tr style="background:#f7fafc">
+              <td colspan="2" style="padding:10px 14px;text-align:right;font-weight:700;color:#2d3748">TOTAL</td>
+              <td style="padding:10px 14px;text-align:right;font-weight:800;font-size:1rem;color:#0066ff">${Number(order.total).toFixed(2)} €</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- Mensaje final -->
+      <p style="margin:0 0 6px;color:#4a5568;font-size:0.9rem;line-height:1.7">Si tiene alguna pregunta sobre su pedido, no dude en ponerse en contacto con nosotros respondiendo a este correo.</p>
+      <p style="margin:24px 0 0;color:#2d3748;font-size:0.95rem">Gracias por su compra.<br><br>Un cordial saludo,<br><strong>Letreros Programables</strong></p>
+
+    </div>
+
+    <!-- Pie -->
+    <div style="background:#f7fafc;border-top:1px solid #e2e8f0;padding:16px 40px;text-align:center;font-size:0.77rem;color:#a0aec0">
+      Este correo es una confirmación automática de su pedido. Por favor, consérvelo como justificante.
+    </div>
+  </div>
+</body>
+</html>`;
+
+  const emailRes = await fetch('https://api.resend.com/emails', {
+    method:  'POST',
+    headers: { 'Authorization': 'Bearer ' + process.env.RESEND_API_KEY, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from:    process.env.EMAIL_FROM || 'Letreros Programables <onboarding@resend.dev>',
+      to:      [order.customer_email],
+      subject: `Confirmación de pedido ${order.order_reference} — Letreros Programables`,
+      html:    emailHtml
+    })
+  });
+
+  if (!emailRes.ok) {
+    const err = await emailRes.json().catch(() => ({}));
+    throw new Error(err.message || JSON.stringify(err));
+  }
+  console.log('✅ Confirmación de pedido enviada a ' + order.customer_email);
 }
 
 // ── GET /api/order-items/:orderId ────────────────────────────────────
