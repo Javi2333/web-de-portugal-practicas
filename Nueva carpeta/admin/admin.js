@@ -237,10 +237,19 @@ async function adminGetProductById(id) {
 }
 
 async function adminUpdateProduct(id, fields) {
-  return await _sbFetch('/products?id=eq.' + id, {
+  const session = _getSession();
+  const token = session ? session.access_token : null;
+  const res = await fetch('/admin/update-product/' + id, {
     method: 'PATCH',
+    headers: {
+      'Content-Type':  'application/json',
+      'Authorization': 'Bearer ' + token
+    },
     body: JSON.stringify(fields)
   });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Error actualizando producto');
+  return data;
 }
 
 async function adminGetVariants(productId) {

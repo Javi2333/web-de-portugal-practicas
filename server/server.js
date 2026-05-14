@@ -345,6 +345,56 @@ app.post('/admin/send-tracking-email', async (req, res) => {
   }
 });
 
+// ── PATCH /admin/update-product/:id ─────────────────────────────────
+
+app.patch('/admin/update-product/:id', async (req, res) => {
+  const authHeader = req.headers.authorization || '';
+  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+  if (!token) return res.status(401).json({ error: 'No autorizado' });
+
+  if (!SUPABASE_SERVICE_KEY) {
+    return res.status(503).json({ error: 'SUPABASE_SERVICE_KEY no configurada en el servidor' });
+  }
+
+  // Verificar que el usuario es admin
+  try {
+    const profileRes = await fetch(`${SUPABASE_URL}/rest/v1/profiles?select=role&limit=1`, {
+      headers: {
+        'apikey':        SUPABASE_SERVICE_KEY,
+        'Authorization': 'Bearer ' + token
+      }
+    });
+    const profiles = profileRes.ok ? await profileRes.json() : [];
+    if (!profiles.length || profiles[0].role !== 'admin') {
+      return res.status(403).json({ error: 'Solo los administradores pueden editar productos' });
+    }
+  } catch(e) {
+    return res.status(500).json({ error: 'Error verificando permisos: ' + e.message });
+  }
+
+  const id = parseInt(req.params.id);
+  const fields = req.body;
+
+  try {
+    const upRes = await fetch(`${SUPABASE_URL}/rest/v1/products?id=eq.${id}`, {
+      method: 'PATCH',
+      headers: {
+        'apikey':        SUPABASE_SERVICE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_SERVICE_KEY,
+        'Content-Type':  'application/json',
+        'Prefer':        'return=representation'
+      },
+      body: JSON.stringify(fields)
+    });
+    if (!upRes.ok) throw new Error('Supabase: ' + await upRes.text());
+    const updated = await upRes.json();
+    res.json({ ok: true, product: updated[0] || null });
+  } catch(e) {
+    console.error('Error actualizando producto:', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
 // ── Arrancar servidor ────────────────────────────────────────────────
 
 const PORT = process.env.PORT || 3000;
