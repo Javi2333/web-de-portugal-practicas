@@ -156,6 +156,19 @@ app.post('/create-checkout-session', async (req, res) => {
         }
 
         console.log('📦 Pedido #' + orderId + ' (' + orderData.order_reference + ') guardado en Supabase');
+
+        // Notificar a la empresa del nuevo pedido
+        sendNewOrderNotification(
+          { ...orderData, id: orderId },
+          items.map(item => ({
+            product_title: item.title,
+            variant_label: item.options?.map(o => `${o.label}: ${o.value}`).join(' | ') || null,
+            quantity:      item.qty || 1,
+            unit_price:    parsePriceToEuros(item.price),
+            total_price:   Math.round(parsePriceToEuros(item.price) * (item.qty || 1) * 100) / 100
+          }))
+        ).catch(e => console.error('Error enviando notificación a empresa:', e.message));
+
       } catch (e) {
         console.error('order insert error', e.message);
         // Continuamos igualmente — el pago no debe bloquearse por un error de BD
@@ -214,6 +227,117 @@ app.post('/create-checkout-session', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// ── Notificación de nuevo pedido a la empresa ────────────────────────
+
+async function sendNewOrderNotification(order, items) {
+  if (!process.env.RESEND_API_KEY || !process.env.ADMIN_ORDERS_EMAIL) {
+    console.warn('⚠️  ADMIN_ORDERS_EMAIL o RESEND_API_KEY no configurados — no se enviará aviso a la empresa');
+    return;
+  }
+
+  const adminUrl = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/admin/order-detail.html?id=${order.id}`;
+
+  const itemRows = items.map(i => `
+    <tr>
+      <td style="padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#2d3748">
+        <strong>${i.product_title}</strong>
+        ${i.variant_label ? `<div style="font-size:0.8rem;color:#718096;margin-top:2px">${i.variant_label}</div>` : ''}
+      </td>
+      <td style="padding:9px 14px;border-bottom:1px solid #e2e8f0;text-align:center;color:#2d3748">${i.quantity}</td>
+      <td style="padding:9px 14px;border-bottom:1px solid #e2e8f0;text-align:right;color:#2d3748">${Number(i.unit_price).toFixed(2)} €</td>
+      <td style="padding:9px 14px;border-bottom:1px solid #e2e8f0;text-align:right;font-weight:700;color:#2d3748">${Number(i.total_price || i.unit_price * i.quantity).toFixed(2)} €</td>
+    </tr>`).join('');
+
+  const emailHtml = `<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"/></head>
+<body style="margin:0;padding:0;background:#f7fafc;font-family:Inter,Arial,sans-serif">
+  <div style="max-width:600px;margin:32px auto;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08)">
+
+    <div style="background:linear-gradient(135deg,#0066ff,#00d4ff);padding:28px 36px">
+      <h1 style="margin:0;color:#fff;font-size:1.3rem;font-weight:800">🛒 Nuevo pedido recibido</h1>
+      <p style="margin:6px 0 0;color:rgba(255,255,255,0.85);font-size:0.9rem">Se ha creado un pedido nuevo en la tienda</p>
+    </div>
+
+    <div style="padding:32px 36px">
+
+      <!-- Referencia y total -->
+      <div style="display:flex;justify-content:space-between;align-items:center;background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;margin-bottom:24px">
+        <div>
+          <div style="font-size:0.73rem;color:#718096;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:3px">Referencia</div>
+          <div style="font-size:1.1rem;font-weight:800;color:#0066ff">${order.order_reference}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:0.73rem;color:#718096;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:3px">Total</div>
+          <div style="font-size:1.2rem;font-weight:800;color:#2d3748">${Number(order.total).toFixed(2)} €</div>
+        </div>
+      </div>
+
+      <!-- Datos del cliente -->
+      <div style="margin-bottom:24px">
+        <div style="font-size:0.73rem;color:#718096;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:10px">Cliente</div>
+        <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
+          <tr><td style="padding:4px 0;color:#718096;width:140px">Nombre</td><td style="padding:4px 0;color:#2d3748;font-weight:600">${order.customer_name || '—'}</td></tr>
+          <tr><td style="padding:4px 0;color:#718096">Email</td><td style="padding:4px 0;color:#2d3748">${order.customer_email || '—'}</td></tr>
+          <tr><td style="padding:4px 0;color:#718096">Teléfono</td><td style="padding:4px 0;color:#2d3748">${order.customer_phone || '—'}</td></tr>
+        </table>
+      </div>
+
+      <!-- Productos -->
+      <div style="margin-bottom:28px">
+        <div style="font-size:0.73rem;color:#718096;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:10px">Productos</div>
+        <table style="width:100%;border-collapse:collapse;font-size:0.88rem">
+          <thead>
+            <tr style="background:#f7fafc">
+              <th style="padding:8px 14px;text-align:left;color:#718096;font-weight:600;font-size:0.78rem;border-bottom:2px solid #e2e8f0">Producto</th>
+              <th style="padding:8px 14px;text-align:center;color:#718096;font-weight:600;font-size:0.78rem;border-bottom:2px solid #e2e8f0">Cant.</th>
+              <th style="padding:8px 14px;text-align:right;color:#718096;font-weight:600;font-size:0.78rem;border-bottom:2px solid #e2e8f0">P. unit.</th>
+              <th style="padding:8px 14px;text-align:right;color:#718096;font-weight:600;font-size:0.78rem;border-bottom:2px solid #e2e8f0">Total</th>
+            </tr>
+          </thead>
+          <tbody>${itemRows}</tbody>
+          <tfoot>
+            ${order.shipping_cost > 0 ? `<tr><td colspan="3" style="padding:8px 14px;text-align:right;color:#718096;font-size:0.83rem">Envío</td><td style="padding:8px 14px;text-align:right;color:#2d3748">${Number(order.shipping_cost).toFixed(2)} €</td></tr>` : ''}
+            <tr style="background:#f7fafc">
+              <td colspan="3" style="padding:10px 14px;text-align:right;font-weight:700;color:#2d3748">TOTAL</td>
+              <td style="padding:10px 14px;text-align:right;font-weight:800;font-size:1rem;color:#0066ff">${Number(order.total).toFixed(2)} €</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align:center">
+        <a href="${adminUrl}" style="display:inline-block;background:linear-gradient(135deg,#0066ff,#00d4ff);color:#fff;text-decoration:none;padding:13px 28px;border-radius:8px;font-weight:700;font-size:0.95rem">Ver pedido en el panel admin</a>
+      </div>
+
+    </div>
+
+    <div style="background:#f7fafc;border-top:1px solid #e2e8f0;padding:14px 36px;text-align:center;font-size:0.77rem;color:#a0aec0">
+      Notificación automática — Panel de administración Letreros Programables
+    </div>
+  </div>
+</body>
+</html>`;
+
+  const emailRes = await fetch('https://api.resend.com/emails', {
+    method:  'POST',
+    headers: { 'Authorization': 'Bearer ' + process.env.RESEND_API_KEY, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from:    process.env.EMAIL_FROM || 'onboarding@resend.dev',
+      to:      [process.env.ADMIN_ORDERS_EMAIL],
+      subject: `🛒 Nuevo pedido ${order.order_reference} — ${Number(order.total).toFixed(2)} €`,
+      html:    emailHtml
+    })
+  });
+
+  if (!emailRes.ok) {
+    const err = await emailRes.json().catch(() => ({}));
+    throw new Error(err.message || JSON.stringify(err));
+  }
+  console.log('✅ Notificación de nuevo pedido enviada a ' + process.env.ADMIN_ORDERS_EMAIL);
+}
 
 // ── GET /api/order-items/:orderId ────────────────────────────────────
 
