@@ -641,6 +641,10 @@
             <span>Subtotal</span>
             <span id="summarySubtotal">0,00 €</span>
           </div>
+          <div class="summary-line" id="roleDiscountLine" style="display:none">
+            <span id="roleDiscountLabel">Descuento</span>
+            <span style="color:#22c55e;font-weight:600" id="summaryRoleDiscount">-0,00 €</span>
+          </div>
           <div class="summary-line">
             <span>Transporte</span>
             <span class="free" id="summaryEnvio">Gratis</span>
@@ -728,6 +732,13 @@
         const qtyLabel = item.qty > 1 ? ` ×${item.qty}` : '';
         const unitPrice = parsePrice(item.price);
         const linePrice = unitPrice * item.qty;
+        const discPct = getUserDiscountPct();
+        const discLine = discPct > 0
+          ? Math.round(linePrice * (1 - discPct / 100) * 100) / 100
+          : linePrice;
+        const priceHtml = discPct > 0
+          ? `<s style="opacity:0.45;font-size:0.82em;display:block">${formatPrice(linePrice)}</s>${formatPrice(discLine)}`
+          : formatPrice(linePrice);
 
         return `
           <div class="summary-item">
@@ -736,7 +747,7 @@
               <div class="summary-item-title">${item.title}${qtyLabel}</div>
               ${optsHtml ? `<div class="summary-item-opts">${optsHtml}</div>` : ''}
             </div>
-            <div class="summary-item-price">${formatPrice(linePrice)}</div>
+            <div class="summary-item-price">${priceHtml}</div>
           </div>`;
       }).join('');
 
@@ -745,12 +756,22 @@
 
     function updateTotals() {
       const cart = getCart();
-      let subtotal = cart.reduce((s, i) => s + parsePrice(i.price) * i.qty, 0);
-      subtotal -= state.promoDiscount;
+      const rawSubtotal = cart.reduce((s, i) => s + parsePrice(i.price) * i.qty, 0);
+      const discPct = getUserDiscountPct();
+      const roleDiscountEuros = discPct > 0 ? Math.round(rawSubtotal * discPct / 100 * 100) / 100 : 0;
+      let subtotal = rawSubtotal - roleDiscountEuros - state.promoDiscount;
       if (subtotal < 0) subtotal = 0;
       const total = subtotal + state.shippingCost;
 
-      document.getElementById('summarySubtotal').textContent = formatPrice(subtotal);
+      document.getElementById('summarySubtotal').textContent = formatPrice(rawSubtotal);
+      const discLine = document.getElementById('roleDiscountLine');
+      if (roleDiscountEuros > 0) {
+        document.getElementById('roleDiscountLabel').textContent = 'Descuento (-' + discPct + '%)';
+        document.getElementById('summaryRoleDiscount').textContent = '-' + formatPrice(roleDiscountEuros);
+        discLine.style.display = '';
+      } else {
+        discLine.style.display = 'none';
+      }
       document.getElementById('summaryEnvio').textContent = state.shippingCost === 0 ? 'Gratis' : formatPrice(state.shippingCost);
       document.getElementById('summaryTotal').textContent = formatPrice(total);
       const pagarEl = document.getElementById('pagarTotal');

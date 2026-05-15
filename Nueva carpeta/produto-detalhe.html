@@ -1451,6 +1451,22 @@
         ? parseFloat(product.price.replace(/\./g, '').replace(',', '.').replace(/[^0-9.]/g, ''))
         : 0;
 
+      function showPrice(priceNum, formatted) {
+        product.price = formatted; // keep original for cart (server applies discount)
+        const priceEl = document.getElementById('dynamicPrice');
+        if (!priceEl) return;
+        const disc = getUserDiscountPct();
+        if (disc > 0) {
+          const discNum = Math.round(priceNum * (1 - disc / 100) * 100) / 100;
+          const discStr = discNum.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+          priceEl.innerHTML = '<s style="opacity:0.45;font-size:0.72em;font-weight:400;margin-right:6px">' + formatted + '</s>'
+            + '<span style="color:var(--primary-light,#4d94ff)">' + discStr + '</span>'
+            + '<span class="detalhe-price-tax">Impuestos incluidos · -' + disc + '%</span>';
+        } else {
+          priceEl.innerHTML = formatted + '<span class="detalhe-price-tax">Impuestos incluidos</span>';
+        }
+      }
+
       function updateDynamicPrice() {
         // Case 1: product has a combinations matrix (price per combination of options)
         if (product.combinations && product.combinations.length > 0) {
@@ -1477,9 +1493,7 @@
           });
           if (match) {
             const formatted = match.price.toFixed(2).replace('.', ',') + ' €';
-            const priceEl = document.getElementById('dynamicPrice');
-            if (priceEl) priceEl.innerHTML = formatted + '<span class="detalhe-price-tax">Impuestos incluidos</span>';
-            product.price = formatted;
+            showPrice(match.price, formatted);
           }
           return;
         }
@@ -1518,9 +1532,7 @@
 
         if (total === 0) return;
         const formatted = total.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
-        const priceEl = document.getElementById('dynamicPrice');
-        if (priceEl) priceEl.innerHTML = formatted + '<span class="detalhe-price-tax">Impuestos incluidos</span>';
-        product.price = formatted;
+        showPrice(total, formatted);
       }
 
       // Toggle option buttons

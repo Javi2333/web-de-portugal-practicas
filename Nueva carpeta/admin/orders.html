@@ -68,52 +68,77 @@
   </div>
 </div>
 
-<!-- Modal de seguimiento -->
-<div id="trackingOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;display:none;align-items:center;justify-content:center;padding:24px">
-  <div style="background:var(--dark-3);border:1px solid var(--border);border-radius:var(--radius-lg);width:100%;max-width:540px;max-height:90vh;overflow-y:auto">
-    <div class="modal-header" style="display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--border)">
-      <span class="modal-title" id="trackingModalTitle">Enviar seguimiento</span>
-      <button class="modal-close-btn" onclick="closeTrackingModal()">✕</button>
+<!-- ── Modal de seguimiento ── -->
+<div id="trackingOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark-3);border:1px solid var(--border);border-radius:12px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,0.5)">
+
+    <!-- Cabecera -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--border)">
+      <span style="font-size:1rem;font-weight:700;color:var(--white)" id="trackingModalTitle">Enviar seguimiento</span>
+      <button onclick="closeTrackingModal()" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1.3rem;line-height:1;padding:4px">✕</button>
     </div>
+
+    <!-- Cuerpo -->
     <div style="padding:24px">
+
       <!-- Datos del pedido (solo lectura) -->
-      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:20px">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:0.83rem">
-          <div><span style="color:var(--text-muted);display:block;font-size:0.73rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">Referencia</span><strong id="trkRef" style="color:var(--white)">—</strong></div>
-          <div><span style="color:var(--text-muted);display:block;font-size:0.73rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">Total</span><strong id="trkTotal" style="color:var(--white)">—</strong></div>
-          <div><span style="color:var(--text-muted);display:block;font-size:0.73rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">Cliente</span><span id="trkName" style="color:var(--text)">—</span></div>
-          <div><span style="color:var(--text-muted);display:block;font-size:0.73rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">Email</span><span id="trkEmail" style="color:var(--text)">—</span></div>
+      <div style="background:var(--dark-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:0.84rem">
+        <div>
+          <div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px">Referencia</div>
+          <strong id="trkRef" style="color:var(--white)">—</strong>
+        </div>
+        <div>
+          <div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px">Total</div>
+          <strong id="trkTotal" style="color:var(--white)">—</strong>
+        </div>
+        <div>
+          <div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px">Cliente</div>
+          <span id="trkName" style="color:var(--text)">—</span>
+        </div>
+        <div>
+          <div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px">Email</div>
+          <span id="trkEmail" style="color:var(--text)">—</span>
         </div>
       </div>
 
-      <!-- Formulario de seguimiento -->
-      <div class="form-group" style="margin-bottom:14px">
-        <label class="form-label">Empresa de transporte</label>
-        <input class="form-input" id="trkCarrier" placeholder="Ej: Correos, MRW, SEUR, DHL…"/>
+      <!-- Campos del formulario -->
+      <div class="form-group">
+        <label class="form-label">Empresa de transporte *</label>
+        <input class="form-input" id="trkCarrier" placeholder="Ej: Correos, MRW, SEUR, DHL…" autocomplete="off"/>
       </div>
-      <div class="form-group" style="margin-bottom:14px">
-        <label class="form-label">Número de seguimiento</label>
-        <input class="form-input" id="trkNumber" placeholder="Ej: ES123456789ES"/>
+
+      <div class="form-group">
+        <label class="form-label">Número de seguimiento *</label>
+        <input class="form-input" id="trkNumber" placeholder="Ej: ES123456789ES" autocomplete="off"/>
       </div>
-      <div class="form-group" style="margin-bottom:14px">
-        <label class="form-label">URL de seguimiento</label>
+
+      <div class="form-group">
+        <label class="form-label">URL de seguimiento <span style="font-weight:400;color:var(--text-muted)">(opcional)</span></label>
         <input class="form-input" id="trkUrl" type="url" placeholder="https://www.correos.es/seguimiento?tracking=…"/>
       </div>
-      <div class="form-group" style="margin-bottom:20px">
-        <label class="form-label">Mensaje adicional (opcional)</label>
+
+      <div class="form-group">
+        <label class="form-label">Mensaje adicional <span style="font-weight:400;color:var(--text-muted)">(opcional)</span></label>
         <textarea class="form-input" id="trkMessage" rows="3" placeholder="Ej: El paquete saldrá esta tarde…" style="resize:vertical;min-height:72px"></textarea>
       </div>
 
+      <!-- Mensaje de estado -->
       <div id="trkMsg" style="display:none;font-size:0.84rem;padding:10px 14px;border-radius:8px;margin-bottom:14px"></div>
 
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <button class="btn-admin btn-admin-ghost" onclick="closeTrackingModal()" style="flex:1">Cancelar</button>
-        <button class="btn-admin btn-admin-ghost" id="trkSaveBtn" onclick="saveTracking(false)" style="flex:1">Guardar</button>
-        <button class="btn-admin btn-admin-primary" id="trkSendBtn" onclick="saveTracking(true)" style="flex:2">
+      <!-- Botones -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+        <button class="btn-admin btn-admin-ghost" onclick="closeTrackingModal()" style="flex:1;min-width:100px">
+          Cancelar
+        </button>
+        <button class="btn-admin btn-admin-ghost" id="trkSaveBtn" onclick="saveTracking(false)" style="flex:1;min-width:100px">
+          Guardar
+        </button>
+        <button class="btn-admin btn-admin-primary" id="trkSendBtn" onclick="saveTracking(true)" style="flex:2;min-width:180px">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           Guardar y enviar email
         </button>
       </div>
+
     </div>
   </div>
 </div>
@@ -130,6 +155,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('adminLoading').style.display = 'none';
   document.getElementById('adminApp').style.display = 'flex';
   await loadOrders();
+
+  // Si viene ?tracking=id en la URL, abrir el formulario de seguimiento directamente
+  const trackingId = new URLSearchParams(window.location.search).get('tracking');
+  if (trackingId) openTrackingModal(parseInt(trackingId));
 });
 
 async function loadOrders() {
@@ -177,7 +206,7 @@ function renderOrdersTable(orders) {
           <button class="btn-admin btn-admin-ghost btn-icon" onclick="window.location.href='order-detail.html?id=${o.id}'" title="Ver detalle">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </button>
-          <button class="btn-admin btn-admin-ghost btn-icon" onclick="openTrackingModal(${o.id})" title="Enviar seguimiento" style="color:var(--accent)">
+          <button class="btn-admin btn-admin-ghost btn-icon" onclick="window.location.href='tracking-form.html?id=${o.id}'" title="Enviar seguimiento" style="color:var(--accent)">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
           <button class="btn-admin btn-admin-ghost btn-icon" onclick="openChangeStatus(${o.id}, '${o.status}')" title="Cambiar estado">

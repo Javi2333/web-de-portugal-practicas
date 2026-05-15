@@ -4,6 +4,39 @@
 
 'use strict';
 
+// ── Role discounts ────────────────────────────────────────────────
+const ROLE_DISCOUNTS = {
+  'colaborador': 5,
+  'profesional': 10,
+  'distribuidor': 15,
+  'cliente20':   20,
+  'cliente25':   25,
+  'cliente30':   30
+};
+
+function getUserDiscountPct() {
+  const role = sessionStorage.getItem('sb_user_role') || '';
+  return ROLE_DISCOUNTS[role] || 0;
+}
+
+function parseNumericPrice(str) {
+  if (!str) return 0;
+  return parseFloat(str.replace(/\./g, '').replace(',', '.').replace(/[^0-9.]/g, '')) || 0;
+}
+
+function applyDiscountToPrice(priceStr) {
+  const pct = getUserDiscountPct();
+  if (!pct) return { html: priceStr, discounted: null };
+  const orig = parseNumericPrice(priceStr);
+  if (!orig) return { html: priceStr, discounted: null };
+  const discNum = Math.round(orig * (1 - pct / 100) * 100) / 100;
+  const discStr = discNum.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  return {
+    html: `<span style="text-decoration:line-through;opacity:0.45;font-size:0.85em;margin-right:4px">${priceStr}</span><span style="color:var(--primary-light,#4d94ff)">${discStr}</span>`,
+    discounted: discStr
+  };
+}
+
 // ── Navbar scroll effect ──────────────────────────────────────────
 const navbar = document.getElementById('navbar');
 function handleNavbarScroll() {
@@ -219,9 +252,11 @@ function renderCarritoPage() {
                 `<li><strong>${o.label}:</strong> ${o.value}</li>`
               ).join('')}</ul>`
             : `<p class="carrito-item-desc">${item.desc}</p>`;
-        const priceHtml = item.price
-            ? `<p class="carrito-item-price">${item.price}</p>`
-            : '';
+        let priceHtml = '';
+        if (item.price) {
+            const { html } = applyDiscountToPrice(item.price);
+            priceHtml = `<p class="carrito-item-price">${html}</p>`;
+        }
         return `
         <div class="carrito-item">
           ${imgHtml}
@@ -437,6 +472,7 @@ renderCarritoPage();
         if (logoutBtn) {
             logoutBtn.addEventListener('click', () => {
                 sessionStorage.removeItem('sb_session');
+                sessionStorage.removeItem('sb_user_role');
                 window.location.href = 'index.html';
             });
         }
@@ -448,13 +484,14 @@ renderCarritoPage();
     const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuenRjaGh3ZXh4ZmpscmZnY3Z5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNDc2MTYsImV4cCI6MjA5MzYyMzYxNn0.6Ihq0BrTmcodWGpegdpcCi3MT3K6MnPj7lgIN6HnSE8';
 
     if (session.user && session.user.id) {
-        fetch(`${SB_URL}/profiles?id=eq.${session.user.id}&select=full_name&limit=1`, {
+        fetch(`${SB_URL}/profiles?id=eq.${session.user.id}&select=full_name,role&limit=1`, {
             headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + session.access_token }
         })
         .then(r => r.ok ? r.json() : null)
         .then(rows => {
-            if (rows && rows.length && rows[0].full_name) {
-                setAvatar(rows[0].full_name.charAt(0).toUpperCase());
+            if (rows && rows.length) {
+                if (rows[0].full_name) setAvatar(rows[0].full_name.charAt(0).toUpperCase());
+                sessionStorage.setItem('sb_user_role', rows[0].role || '');
             }
         })
         .catch(() => {});

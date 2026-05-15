@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enviar seguimiento — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<div id="adminLoading" class="admin-loading">
+  <div class="admin-spinner"></div> Cargando…
+</div>
+
+<div id="adminApp" class="admin-layout" style="display:none">
+  <div class="admin-sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+  <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div class="admin-topbar-left">
+        <button class="sidebar-toggle-btn" onclick="openSidebar()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <a href="orders.html" style="color:var(--text-muted);font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:6px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Volver a pedidos
+        </a>
+        <span class="admin-page-title" id="pageTitle">Enviar seguimiento</span>
+      </div>
+    </div>
+
+    <div class="admin-content" id="adminContent">
+      <p style="color:var(--text-muted);text-align:center;padding:60px">Cargando…</p>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+<script>
+let _order = null;
+
+document.addEventListener('DOMContentLoaded', async () => {
+  renderSidebar('orders');
+  const ok = await checkAdminAuth();
+  if (!ok) return;
+  document.getElementById('adminLoading').style.display = 'none';
+  document.getElementById('adminApp').style.display = 'flex';
+  await loadOrder();
+});
+
+async function loadOrder() {
+  const params  = new URLSearchParams(window.location.search);
+  const orderId = params.get('id');
+
+  if (!orderId) {
+    document.getElementById('adminContent').innerHTML =
+      '<p style="color:#ff6666;padding:40px;text-align:center">No se indicó ningún pedido.</p>';
+    return;
+  }
+
+  try {
+    const rows = await _sbFetch('/orders?id=eq.' + orderId + '&select=*&limit=1');
+    _order = rows && rows[0];
+    if (!_order) {
+      document.getElementById('adminContent').innerHTML =
+        '<p style="color:#ff6666;padding:40px;text-align:center">Pedido no encontrado.</p>';
+      return;
+    }
+
+    document.getElementById('pageTitle').textContent =
+      'Seguimiento — ' + (_order.order_reference || '#' + _order.id);
+
+    // Pre-rellenar si ya hay un envío guardado
+    let shipment = null;
+    try {
+      const sh = await _sbFetch('/shipments?order_id=eq.' + orderId + '&limit=1');
+      shipment = sh && sh[0] ? sh[0] : null;
+    } catch(e) {}
+
+    renderForm(_order, shipment);
+  } catch(e) {
+    document.getElementById('adminContent').innerHTML =
+      '<p style="color:#ff6666;padding:40px;text-align:center">Error: ' + e.message + '</p>';
+  }
+}
+
+function renderForm(order, shipment) {
+  document.getElementById('adminContent').innerHTML = `
+    <div style="max-width:600px">
+
+      <!-- Datos del pedido (solo lectura) -->
+      <div class="admin-card" style="margin-bottom:1.5rem;padding:20px 24px">
+        <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:14px">Datos del pedido</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:0.875rem">
+          <div>
+            <div class="form-label">Referencia</div>
+            <strong style="color:var(--white)">${order.order_reference || ('#' + order.id)}</strong>
+          </div>
+          <div>
+            <div class="form-label">Total</div>
+            <strong style="color:var(--primary-light)">${fmtPrice(order.total)}</strong>
+          </div>
+          <div>
+            <div class="form-label">Cliente</div>
+            <span style="color:var(--text)">${order.customer_name || '—'}</span>
+          </div>
+          <div>
+            <div class="form-label">Email del cliente</div>
+            <span style="color:var(--text)">${order.customer_email || '—'}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario de seguimiento -->
+      <div class="admin-card" style="padding:24px">
+        <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:20px">Información de envío</div>
+
+        <div class="form-group">
+          <label class="form-label">Empresa de transporte *</label>
+          <input class="form-input" id="fCarrier" placeholder="Ej: Correos, MRW, SEUR, DHL…" value="${shipment?.carrier || ''}" autocomplete="off"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Número de seguimiento *</label>
+          <input class="form-input" id="fNumber" placeholder="Ej: ES123456789ES" value="${shipment?.tracking_number || ''}" autocomplete="off"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">URL de seguimiento <span style="font-weight:400;color:var(--text-muted)">(opcional)</span></label>
+          <input class="form-input" id="fUrl" type="url" placeholder="https://www.correos.es/seguimiento?tracking=…" value="${shipment?.tracking_url || ''}"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Mensaje para el cliente <span style="font-weight:400;color:var(--text-muted)">(opcional)</span></label>
+          <textarea class="form-input" id="fMessage" rows="3" placeholder="Ej: Tu pedido saldrá esta tarde…" style="resize:vertical;min-height:80px"></textarea>
+        </div>
+
+        <!-- Mensaje de estado -->
+        <div id="fMsg" style="display:none;font-size:0.85rem;padding:10px 14px;border-radius:8px;margin-bottom:16px"></div>
+
+        <!-- Botones -->
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-admin btn-admin-ghost" onclick="history.back()" style="flex:1;min-width:100px">
+            Cancelar
+          </button>
+          <button class="btn-admin btn-admin-ghost" id="btnSave" onclick="guardar(false)" style="flex:1;min-width:100px">
+            Guardar
+          </button>
+          <button class="btn-admin btn-admin-primary" id="btnSend" onclick="guardar(true)" style="flex:2;min-width:180px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Guardar y enviar email
+          </button>
+        </div>
+      </div>
+
+    </div>`;
+}
+
+function showMsg(msg, isError) {
+  const el = document.getElementById('fMsg');
+  el.textContent = msg;
+  el.style.background = isError ? 'rgba(255,68,68,0.1)' : 'rgba(0,200,100,0.1)';
+  el.style.color  = isError ? '#ff6666' : '#00c864';
+  el.style.border = isError ? '1px solid rgba(255,68,68,0.25)' : '1px solid rgba(0,200,100,0.25)';
+  el.style.display = 'block';
+}
+
+async function guardar(sendEmail) {
+  const carrier  = document.getElementById('fCarrier').value.trim();
+  const tracking = document.getElementById('fNumber').value.trim();
+  const url      = document.getElementById('fUrl').value.trim();
+  const message  = document.getElementById('fMessage').value.trim();
+
+  if (!carrier || !tracking) {
+    showMsg('Rellena al menos la empresa de transporte y el número de seguimiento.', true);
+    return;
+  }
+  if (sendEmail && !_order.customer_email) {
+    showMsg('Este pedido no tiene email de cliente. No se puede enviar el correo.', true);
+    return;
+  }
+
+  const btnSave = document.getElementById('btnSave');
+  const btnSend = document.getElementById('btnSend');
+  btnSave.disabled = btnSend.disabled = true;
+
+  try {
+    await adminUpsertShipment(_order.id, {
+      carrier,
+      tracking_number: tracking,
+      tracking_url:    url || null,
+      shipping_status: 'shipped',
+      shipped_at:      new Date().toISOString()
+    });
+
+    if (sendEmail) {
+      await adminSendTrackingEmail({
+        orderId:        _order.id,
+        to:             _order.customer_email,
+        customerName:   _order.customer_name   || '',
+        orderReference: _order.order_reference || ('#' + _order.id),
+        carrier,
+        trackingNumber: tracking,
+        trackingUrl:    url || null,
+        message:        message || null
+      });
+      showMsg('Seguimiento guardado y email enviado al cliente.', false);
+    } else {
+      showMsg('Seguimiento guardado correctamente.', false);
+    }
+
+    try { await adminUpdateOrderStatus(_order.id, 'shipped'); } catch(e) {}
+
+  } catch(err) {
+    showMsg(err.message, true);
+  } finally {
+    btnSave.disabled = btnSend.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
