@@ -9,6 +9,15 @@ const app = express();
 const SUPABASE_URL         = 'https://jnztchhwexxfjlrfgcvy.supabase.co';
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
 
+const ROLE_DISCOUNTS = {
+  'colaborador': 5,
+  'profesional': 10,
+  'distribuidor': 15,
+  'cliente20':   20,
+  'cliente25':   25,
+  'cliente30':   30
+};
+
 // ── Helpers Supabase ─────────────────────────────────────────────────
 
 async function sbInsert(table, data) {
@@ -40,6 +49,21 @@ async function sbPatch(table, id, data) {
     body: JSON.stringify(data)
   });
   if (!res.ok) throw new Error('Supabase PATCH ' + table + ': ' + await res.text());
+}
+
+async function sbGetUserRole(userId) {
+  if (!SUPABASE_SERVICE_KEY || !userId) return '';
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/profiles?id=eq.${userId}&select=role&limit=1`, {
+      headers: {
+        'apikey':        SUPABASE_SERVICE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_SERVICE_KEY
+      }
+    });
+    if (!res.ok) return '';
+    const rows = await res.json();
+    return rows?.[0]?.role || '';
+  } catch(e) { return ''; }
 }
 
 // ── Stripe webhook (raw body — DEBE ir antes de express.json()) ──────
@@ -112,9 +136,17 @@ app.post('/create-checkout-session', async (req, res) => {
       return res.status(400).json({ error: 'El carrito está vacío' });
     }
 
+    // Descuento por rol
+    const userRole   = await sbGetUserRole(userId);
+    const discountPct = ROLE_DISCOUNTS[userRole] || 0;
+    const discountMultiplier = 1 - discountPct / 100;
+
     // 1. Guardar pedido pendiente en Supabase
     let orderId = null;
-    const subtotal    = items.reduce((sum, i) => sum + parsePriceToEuros(i.price) * (i.qty || 1), 0);
+    const subtotal    = items.reduce((sum, i) => {
+      const price = parsePriceToEuros(i.price);
+      return sum + Math.round(price * discountMultiplier * 100) / 100 * (i.qty || 1);
+    }, 0);
     const shippingAmt = shippingCost || 0;
     const total       = Math.round((subtotal + shippingAmt) * 100) / 100;
 
@@ -141,7 +173,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
         if (orderId && items.length) {
           await sbInsert('order_items', items.map(item => {
-            const unitPrice = parsePriceToEuros(item.price);
+            const unitPrice = Math.round(parsePriceToEuros(item.price) * discountMultiplier * 100) / 100;
             const qty       = item.qty || 1;
             return {
               order_id:      orderId,
@@ -155,15 +187,18 @@ app.post('/create-checkout-session', async (req, res) => {
           }));
         }
 
-        console.log('📦 Pedido #' + orderId + ' (' + orderData.order_reference + ') guardado en Supabase');
+        console.log('📦 Pedido #' + orderId + ' (' + orderData.order_reference + ') guardado en Supabase' + (discountPct ? ` [descuento ${discountPct}% — ${userRole}]` : ''));
 
-        const enrichedItems = items.map(item => ({
-          product_title: item.title,
-          variant_label: item.options?.map(o => `${o.label}: ${o.value}`).join(' | ') || null,
-          quantity:      item.qty || 1,
-          unit_price:    parsePriceToEuros(item.price),
-          total_price:   Math.round(parsePriceToEuros(item.price) * (item.qty || 1) * 100) / 100
-        }));
+        const enrichedItems = items.map(item => {
+          const unitPrice = Math.round(parsePriceToEuros(item.price) * discountMultiplier * 100) / 100;
+          return {
+            product_title: item.title,
+            variant_label: item.options?.map(o => `${o.label}: ${o.value}`).join(' | ') || null,
+            quantity:      item.qty || 1,
+            unit_price:    unitPrice,
+            total_price:   Math.round(unitPrice * (item.qty || 1) * 100) / 100
+          };
+        });
         const enrichedOrder = { ...orderData, id: orderId };
 
         // Notificar a la empresa del nuevo pedido
@@ -186,7 +221,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
     // 2. Construir líneas de Stripe
     const lineItems = items.map(item => {
-      const unitAmount  = parsePriceToCents(item.price);
+      const unitAmount  = Math.round(parsePriceToCents(item.price) * discountMultiplier);
       const description = item.options?.length
         ? item.options.map(o => `${o.label}: ${o.value}`).join(' | ')
         : undefined;
@@ -666,6 +701,39 @@ app.patch('/admin/update-product/:id', async (req, res) => {
     res.json({ ok: true, product: updated[0] || null });
   } catch(e) {
     console.error('Error actualizando producto:', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// ── GET /test-email (diagnóstico) ────────────────────────────────────
+
+app.get('/test-email', async (req, res) => {
+  const to = req.query.to || process.env.ADMIN_ORDERS_EMAIL;
+  if (!to) return res.status(400).json({ error: 'Indica ?to=email@ejemplo.com' });
+
+  if (!process.env.RESEND_API_KEY) {
+    return res.status(503).json({ error: 'RESEND_API_KEY no está en .env' });
+  }
+
+  try {
+    const r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + process.env.RESEND_API_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from:    process.env.EMAIL_FROM || 'onboarding@resend.dev',
+        to:      [to],
+        subject: 'Test de email — Letreros Programables',
+        html:    '<p>Este es un email de prueba. Si lo recibes, el sistema de correo funciona correctamente.</p>'
+      })
+    });
+    const data = await r.json();
+    if (!r.ok) {
+      console.error('❌ Test email fallido:', JSON.stringify(data));
+      return res.status(r.status).json({ error: data.message || data.name || JSON.stringify(data), resend: data });
+    }
+    console.log('✅ Test email enviado a', to, '| ID:', data.id);
+    res.json({ ok: true, emailId: data.id, to, from: process.env.EMAIL_FROM || 'onboarding@resend.dev' });
+  } catch(e) {
     res.status(500).json({ error: e.message });
   }
 });
