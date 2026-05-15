@@ -1818,6 +1818,7 @@
         }
 
         function buildTabsHtml(tabs) {
+          tabs = tabs.filter(t => t.id !== 'comentarios' && t.id !== 'comments');
           return `<section class="detalhe-tabs-section">
             <div class="container">
               <div class="tabs-nav">

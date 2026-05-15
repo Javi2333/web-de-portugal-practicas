@@ -71,7 +71,7 @@ const fadeEls = document.querySelectorAll(
 fadeEls.forEach(el => el.classList.add('fade-up'));
 
 const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
             // Staggered delay capped at 200ms so products appear quickly
             const siblings = Array.from(entry.target.parentElement.children);
@@ -461,78 +461,170 @@ renderCarritoPage();
     }
 })();
 
-// ── Category Sidebar Logic ──────────────────────────────────────
+// ── Category / Filter Sidebar Logic ────────────────────────────────
 (function initCategoryFilter() {
     const sidebar = document.getElementById('catSidebar');
-    if (!sidebar) return; // Only runs on pages with sidebar (produtos.html)
+    if (!sidebar) return;
 
-    const catButtons = document.querySelectorAll('.cat-item');
-    const cards = document.querySelectorAll('.produto-card');
+    const cards = Array.from(document.querySelectorAll('.produto-card'));
     const activeLabel = document.getElementById('catActiveName');
     const activeCount = document.getElementById('catActiveCount');
-    const mobileToggle = document.getElementById('catMobileToggle');
-    const catList = document.getElementById('catList');
+    const catAllBtn = document.getElementById('catAllBtn');
 
-    // 1. Calculate dynamic counts when page loads
-    const counts = { all: cards.length };
-    cards.forEach(card => {
-        const cat = card.dataset.category;
-        if (cat) {
-            counts[cat] = (counts[cat] || 0) + 1;
-        }
-    });
+    // Explicit product attribute map (resolution / colorType / location)
+    const PROD_ATTRS = {
+        1:  { resolution: 'p10', colorType: 'rgb',       location: 'exterior' },
+        2:  { resolution: 'p10', colorType: 'fullcolor',  location: 'exterior' },
+        3:  { resolution: 'p5',  colorType: 'fullcolor',  location: 'exterior' },
+        4:  { resolution: 'p10', colorType: 'monocolor',  location: 'exterior' },
+        5:  { resolution: 'p10', colorType: 'monocolor',  location: 'exterior' },
+        6:  { resolution: 'p6',  colorType: 'fullcolor',  location: 'exterior' },
+        7:  { resolution: 'p5',  colorType: 'fullcolor',  location: 'interior' },
+        8:  { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        9:  { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        10: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        11: { resolution: 'p5',  colorType: 'fullcolor',  location: 'exterior' },
+        12: { resolution: 'p10', colorType: 'fullcolor',  location: 'exterior' },
+        13: { resolution: 'p10', colorType: 'monocolor',  location: 'exterior' },
+        14: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        15: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        16: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        17: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        18: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        19: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        20: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        21: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        22: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        23: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        24: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        25: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        26: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        27: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        28: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        29: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        30: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        31: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        32: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        33: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+        34: { resolution: 'p10', colorType: 'monocolor',  location: 'exterior' },
+        35: { resolution: 'p6',  colorType: 'rgb',        location: 'exterior' },
+        36: { resolution: 'p10', colorType: 'rgb',        location: 'exterior' },
+    };
 
-    // 2. Update count badges in sidebar
-    catButtons.forEach(btn => {
-        const cat = btn.dataset.cat;
-        const countEl = btn.querySelector('.cat-count');
-        if (countEl) {
-            countEl.textContent = counts[cat] || 0;
-        }
-    });
-
-    // Mobile Toggle
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            catList.classList.toggle('show');
-        });
+    function getAttrs(card) {
+        return PROD_ATTRS[parseInt(card.dataset.id)] || { resolution: '', colorType: '', location: '' };
     }
 
-    // 3. Filtering logic
-    function filterCategory(cat, name) {
-        let visibleCount = 0;
+    cards.forEach(card => { card._fa = getAttrs(card); });
+
+    // Update count badges on cat-item buttons
+    const catCounts = {};
+    cards.forEach(c => {
+        const cat = c.dataset.category;
+        if (cat) catCounts[cat] = (catCounts[cat] || 0) + 1;
+    });
+    sidebar.querySelectorAll('.cat-item[data-cat]').forEach(btn => {
+        const el = btn.querySelector('.cat-count');
+        if (el) el.textContent = catCounts[btn.dataset.cat] || 0;
+    });
+    const totalCountEl = document.getElementById('catTotalCount');
+    if (totalCountEl) totalCountEl.textContent = cards.length;
+
+    // Filter state
+    let state = { resolution: null, colorType: null, location: null, category: null };
+
+    function applyFilters() {
+        const hasDim = state.resolution || state.colorType || state.location;
+        let visible = 0;
+
         cards.forEach(card => {
-            if (cat === 'all' || card.dataset.category === cat) {
-                card.style.display = '';
-                visibleCount++;
+            let show = false;
+            if (!state.category && !hasDim) {
+                show = true;
+            } else if (state.category) {
+                show = card.dataset.category === state.category;
             } else {
-                card.style.display = 'none';
+                const a = card._fa;
+                const okRes = !state.resolution || a.resolution === state.resolution;
+                const okCol = !state.colorType  || a.colorType  === state.colorType;
+                const okLoc = !state.location   || a.location   === state.location;
+                show = okRes && okCol && okLoc;
             }
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
         });
 
-        // Update top bar text & count
-        if (activeLabel) activeLabel.textContent = name;
-        if (activeCount) activeCount.textContent = `${visibleCount} producto${visibleCount !== 1 ? 's' : ''}`;
-
-        // Close mobile menu if open
-        if (window.innerWidth <= 1024 && catList.classList.contains('show')) {
-            catList.classList.remove('show');
+        if (activeCount) activeCount.textContent = `${visible} producto${visible !== 1 ? 's' : ''}`;
+        if (activeLabel) {
+            if (state.category) {
+                const btn = sidebar.querySelector(`.cat-item[data-cat="${state.category}"]`);
+                activeLabel.textContent = btn ? btn.querySelector('.cat-label').textContent : state.category;
+            } else if (hasDim) {
+                const parts = [];
+                if (state.resolution) parts.push(state.resolution.toUpperCase());
+                if (state.colorType === 'fullcolor') parts.push('Full Color');
+                else if (state.colorType) parts.push(state.colorType.charAt(0).toUpperCase() + state.colorType.slice(1));
+                if (state.location) parts.push(state.location.charAt(0).toUpperCase() + state.location.slice(1));
+                activeLabel.textContent = parts.join(' · ');
+            } else {
+                activeLabel.textContent = 'Todos los productos';
+            }
         }
     }
 
-    // 4. Click events on category buttons
-    catButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            catButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            const cat = btn.dataset.cat;
-            const name = btn.querySelector('.cat-label').textContent;
-            filterCategory(cat, name);
+    // Collapsible group headers
+    sidebar.querySelectorAll('.filter-group-hdr').forEach(hdr => {
+        hdr.addEventListener('click', () => hdr.closest('.filter-group').classList.toggle('open'));
+    });
+
+    // Filter option clicks
+    sidebar.querySelectorAll('.filter-opt').forEach(opt => {
+        opt.addEventListener('click', () => {
+            const dim = opt.dataset.dim;
+            const isActive = opt.classList.contains('active');
+
+            sidebar.querySelectorAll('.cat-item').forEach(b => b.classList.remove('active'));
+            catAllBtn.classList.remove('active');
+            state.category = null;
+
+            if (isActive) {
+                opt.classList.remove('active');
+                state[dim] = null;
+            } else {
+                sidebar.querySelectorAll(`.filter-opt[data-dim="${dim}"]`).forEach(o => o.classList.remove('active'));
+                opt.classList.add('active');
+                state[dim] = opt.dataset.val;
+            }
+
+            if (!state.resolution && !state.colorType && !state.location) {
+                catAllBtn.classList.add('active');
+            }
+            applyFilters();
         });
     });
 
-    // Note: Search logic sets `display: ''` or `'none'` based on query parsing.
-    // If the user searches from search bar inside produtos.html, it will override categories!
-    // This is generally acceptable. If they click a category, it clears search overrides.
+    // Category buttons (accesorios, extras, vehiculos)
+    sidebar.querySelectorAll('.cat-item[data-cat]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            sidebar.querySelectorAll('.filter-opt').forEach(o => o.classList.remove('active'));
+            sidebar.querySelectorAll('.cat-item').forEach(b => b.classList.remove('active'));
+            catAllBtn.classList.remove('active');
+            state = { resolution: null, colorType: null, location: null, category: btn.dataset.cat };
+            btn.classList.add('active');
+            applyFilters();
+        });
+    });
+
+    // "Todos" button
+    if (catAllBtn) {
+        catAllBtn.addEventListener('click', () => {
+            sidebar.querySelectorAll('.filter-opt').forEach(o => o.classList.remove('active'));
+            sidebar.querySelectorAll('.cat-item').forEach(b => b.classList.remove('active'));
+            catAllBtn.classList.add('active');
+            state = { resolution: null, colorType: null, location: null, category: null };
+            applyFilters();
+        });
+    }
+
+    applyFilters();
 })();
