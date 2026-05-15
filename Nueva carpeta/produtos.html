@@ -84,19 +84,59 @@
       <div class="produtos-layout">
         <aside class="cat-sidebar" id="catSidebar">
           <div class="cat-sidebar-inner">
-            <div class="cat-sidebar-title">Categorías</div>
-            <ul class="cat-list" id="catList">
-              <li><button class="cat-item active" data-cat="all"><span class="cat-icon">◈</span><span class="cat-label">Todos los productos</span><span class="cat-count">44</span></button></li>
-              <li><button class="cat-item" data-cat="letreros"><span class="cat-icon">▬</span><span class="cat-label">Letreros LED Programables</span><span class="cat-count">4</span></button></li>
-              <li><button class="cat-item" data-cat="banderolas"><span class="cat-icon">⬛</span><span class="cat-label">Banderolas LED Programables</span><span class="cat-count">2</span></button></li>
-              <li><button class="cat-item" data-cat="pantallas"><span class="cat-icon">▣</span><span class="cat-label">Pantallas LED Full Color</span><span class="cat-count">4</span></button></li>
-              <li><button class="cat-item" data-cat="rotulos"><span class="cat-icon">◉</span><span class="cat-label">Rótulos Especial Negocios</span><span class="cat-count">22</span></button></li>
-              <li><button class="cat-item" data-cat="cruces"><span class="cat-icon">✚</span><span class="cat-label">Cruces LED Programables</span><span class="cat-count">3</span></button></li>
-              <li><button class="cat-item" data-cat="marcadores"><span class="cat-icon">⏱</span><span class="cat-label">Marcadores Deportivos</span><span class="cat-count">2</span></button></li>
-              <li><button class="cat-item" data-cat="accesorios"><span class="cat-icon">⚙</span><span class="cat-label">Accesorios / Control Acceso</span><span class="cat-count">2</span></button></li>
-              <li><button class="cat-item" data-cat="extras"><span class="cat-icon">🔧</span><span class="cat-label">Accesorios</span><span class="cat-count">6</span></button></li>
-              <li><button class="cat-item" data-cat="vehiculos"><span class="cat-icon">🚌</span><span class="cat-label">Especial Vehículos</span><span class="cat-count">2</span></button></li>
-            </ul>
+            <div class="cat-sidebar-title">Filtros</div>
+
+            <button class="cat-item active" id="catAllBtn">
+              <span class="cat-icon">◈</span>
+              <span class="cat-label">Todos los productos</span>
+              <span class="cat-count" id="catTotalCount">44</span>
+            </button>
+
+            <div class="filter-divider"></div>
+
+            <!-- Resolución -->
+            <div class="filter-group open" id="fg-resolution">
+              <button class="filter-group-hdr" data-fg="resolution">
+                <span>Resolución</span>
+                <svg class="fg-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <ul class="fg-list">
+                <li><button class="filter-opt" data-dim="resolution" data-val="p5">P5</button></li>
+                <li><button class="filter-opt" data-dim="resolution" data-val="p6">P6</button></li>
+                <li><button class="filter-opt" data-dim="resolution" data-val="p10">P10</button></li>
+              </ul>
+            </div>
+
+            <!-- Color -->
+            <div class="filter-group open" id="fg-color">
+              <button class="filter-group-hdr" data-fg="color">
+                <span>Color</span>
+                <svg class="fg-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <ul class="fg-list">
+                <li><button class="filter-opt" data-dim="colorType" data-val="fullcolor">Full Color</button></li>
+                <li><button class="filter-opt" data-dim="colorType" data-val="rgb">RGB</button></li>
+                <li><button class="filter-opt" data-dim="colorType" data-val="monocolor">Monocolor</button></li>
+              </ul>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="filter-group open" id="fg-location">
+              <button class="filter-group-hdr" data-fg="location">
+                <span>Ubicación</span>
+                <svg class="fg-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <ul class="fg-list">
+                <li><button class="filter-opt" data-dim="location" data-val="exterior">Exterior</button></li>
+                <li><button class="filter-opt" data-dim="location" data-val="interior">Interior</button></li>
+              </ul>
+            </div>
+
+            <div class="filter-divider"></div>
+
+            <button class="cat-item" data-cat="accesorios"><span class="cat-icon">⚙</span><span class="cat-label">Accesorios / Control Acceso</span><span class="cat-count">0</span></button>
+            <button class="cat-item" data-cat="extras"><span class="cat-icon" style="font-size:0.9rem">🔧</span><span class="cat-label">Accesorios</span><span class="cat-count">0</span></button>
+            <button class="cat-item" data-cat="vehiculos"><span class="cat-icon" style="font-size:0.9rem">🚌</span><span class="cat-label">Especial Vehículos</span><span class="cat-count">0</span></button>
           </div>
         </aside>
 
@@ -118,7 +158,7 @@
             </article>
 
         <!-- 2 -->
-        <article class="produto-card" data-id="2" data-title="Pantalla LED Programable Full Color P10 (Exterior) 1 Cara" data-desc="Pantalla LED programable Full Color P10 para exterior, 1 cara. Alta resolución con pixel pitch P10, resistente a la intemperie IP65. Perfecta para publicidad LED en grandes superficies, estaciones de servicio, centros comerciales y fachadas. Incluye control remoto." data-badge="">
+        <article class="produto-card" data-id="2" data-category="pantallas" data-title="Pantalla LED Programable Full Color P10 (Exterior) 1 Cara" data-desc="Pantalla LED programable Full Color P10 para exterior, 1 cara. Alta resolución con pixel pitch P10, resistente a la intemperie IP65. Perfecta para publicidad LED en grandes superficies, estaciones de servicio, centros comerciales y fachadas. Incluye control remoto." data-badge="">
           <div class="produto-img-wrap">
             <img src="img/producto-2/img-1.jpg" alt="Pantalla LED Programable Full Color P10 (Exterior) 1 Cara" loading="lazy" />
           </div>
@@ -380,7 +420,7 @@
         </article>
 
         <!-- 28 -->
-        <article class="produto-card" data-id="28" data-category="clinicas" data-title="LETRERO LED PROGRAMABLE PARA CLÍNICAS EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS" data-desc="Banderola luminosa LED programable para clínicas y farmacias a 2 cara en RGB. Tenemos gran variedad de pantallas luminosas LED para su farmacia o clínica. Puede mostrar en este cartel programable, varios tipos de cruces, además de texto, logos y más información. Estos rótulos electrónicos son de lata luminosidad para ser visibles desde largas distancias. Válidos para exterior." data-badge="">
+        <article class="produto-card" data-id="28" data-category="rotulos" data-title="LETRERO LED PROGRAMABLE PARA CLÍNICAS EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS" data-desc="Banderola luminosa LED programable para clínicas y farmacias a 2 cara en RGB. Tenemos gran variedad de pantallas luminosas LED para su farmacia o clínica. Puede mostrar en este cartel programable, varios tipos de cruces, además de texto, logos y más información. Estos rótulos electrónicos son de lata luminosidad para ser visibles desde largas distancias. Válidos para exterior." data-badge="">
           <div class="produto-img-wrap"><img src="img/producto-28/letrero-led-programable-para-clinicas-rgb-2-caras.jpg" alt="LETRERO LED PROGRAMABLE PARA CLÍNICAS EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS" loading="lazy" /></div>
           <div class="produto-body">
             <h3>LETRERO LED PROGRAMABLE PARA CLÍNICAS EN RGB, 2 CARAS. DISPONIBLE EN VARIOS TAMAÑOS</h3>
