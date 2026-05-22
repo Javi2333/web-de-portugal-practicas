@@ -15,6 +15,8 @@ const ROLE_DISCOUNTS = {
 };
 
 function getUserDiscountPct() {
+  const urlDisc = parseInt(new URLSearchParams(window.location.search).get('discount'), 10);
+  if (urlDisc > 0) return urlDisc;
   const role = sessionStorage.getItem('sb_user_role') || '';
   return ROLE_DISCOUNTS[role] || 0;
 }

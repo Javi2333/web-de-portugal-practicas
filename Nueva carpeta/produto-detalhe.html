@@ -1668,9 +1668,17 @@
             });
           }
           const image = product.images && product.images.length > 0 ? product.images[0] : null;
-          const currentPrice = product.price;
+          let currentPrice = product.price;
+          const disc = getUserDiscountPct();
+          if (disc > 0 && currentPrice) {
+            const origNum = parseNumericPrice(currentPrice);
+            if (origNum > 0) {
+              const discNum = Math.round(origNum * (1 - disc / 100) * 100) / 100;
+              currentPrice = discNum.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            }
+          }
           for (let i = 0; i < qty; i++) {
-            addToCart(product.title, product.shortDesc || product.desc, image, currentPrice || product.price, selectedOptions);
+            addToCart(product.title, product.shortDesc || product.desc, image, currentPrice, selectedOptions);
           }
         });
       }
