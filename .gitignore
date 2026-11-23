@@ -1,0 +1,18 @@
+# Secretos y entorno
+.env
+.env.*
+!.env.example
+
+# Dependencias
+node_modules/
+
+# Vercel
+.vercel/
+
+# Copias y temporales
+*.bak
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini

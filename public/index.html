@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ledparatodos</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Letreros LED programables y paneles LED para tiendas, farmacias, bares y empresas en España. Alta visibilidad, fácil programación y entrega rápida. Pide tu presupuesto hoy." />
+  <meta name="keywords" content="letreros LED programables, paneles LED para tiendas, letreros luminosos LED, publicidad LED para negocios, reclamo luminoso programable, letrero LED España" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/hero/estancos-1024.webp" imagesrcset="images/hero/estancos-640.webp 640w, images/hero/estancos-1024.webp 1024w" imagesizes="100vw" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-home">
+
+  <script src="header.js"></script>
+
+  <main id="main">
+
+    <!-- ===== 1. CARRUSEL PRINCIPAL =====
+         Imágenes: images/hero/<nombre>-1024.webp (escritorio) y -640.webp (móvil).
+         Para usar tus imágenes definitivas, sustituye esos archivos (recomendado: apaisadas,
+         mínimo 1920×1080) o cambia las rutas de cada diapositiva. Solo la primera carga al
+         entrar; el resto usan data-src y se cargan después (home.js). -->
+    <section class="hm-hero" id="hmHero" aria-roledescription="carrusel" aria-label="Destacados">
+      <div class="hm-slides">
+
+        <article class="hm-slide is-active" aria-roledescription="diapositiva" aria-label="1 de 5">
+          <picture>
+            <source media="(max-width: 700px)" srcset="images/hero/estancos-640.webp" />
+            <img class="hm-slide-img" src="images/hero/estancos-1024.webp" alt="" fetchpriority="high" />
+          </picture>
+          <div class="sh-wrap hm-slide-content">
+            <p class="hm-kicker">Publicidad LED para negocios</p>
+            <h1 class="hm-slide-title">Letreros LED programables para tu negocio</h1>
+            <p class="hm-slide-text">Comunica promociones, horarios y mensajes de forma visual, rápida y profesional. Atrae más clientes con rótulos luminosos LED de alta visibilidad.</p>
+            <div class="hm-slide-ctas">
+              <a class="hm-btn hm-btn--primary" href="produtos.html">Ver productos</a>
+              <a class="hm-btn hm-btn--ghost" href="contacto.html">Pedir presupuesto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hm-slide" aria-roledescription="diapositiva" aria-label="2 de 5">
+          <picture>
+            <source media="(max-width: 700px)" data-srcset="images/hero/farmacias-640.webp" />
+            <img class="hm-slide-img" data-src="images/hero/farmacias-1024.webp" alt="" />
+          </picture>
+          <div class="sh-wrap hm-slide-content">
+            <p class="hm-kicker">Farmacias, veterinarias y clínicas</p>
+            <h2 class="hm-slide-title">Cruces LED programables</h2>
+            <p class="hm-slide-text">Muestra la hora, la temperatura y tus mensajes con la máxima visibilidad, de día y de noche.</p>
+            <div class="hm-slide-ctas">
+              <a class="hm-btn hm-btn--primary" href="produtos.html?sector=farmacias&amp;sub=cruces">Ver cruces LED</a>
+              <a class="hm-btn hm-btn--ghost" href="contacto.html">Pedir presupuesto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hm-slide" aria-roledescription="diapositiva" aria-label="3 de 5">
+          <picture>
+            <source media="(max-width: 700px)" data-srcset="images/hero/hosteleria-640.webp" />
+            <img class="hm-slide-img" data-src="images/hero/hosteleria-1024.webp" alt="" />
+          </picture>
+          <div class="sh-wrap hm-slide-content">
+            <p class="hm-kicker">Hostelería</p>
+            <h2 class="hm-slide-title">Tu menú del día, a todo color</h2>
+            <p class="hm-slide-text">Letreros RGB para bares, restaurantes y cafeterías: menús, ofertas y horarios que se cambian en segundos.</p>
+            <div class="hm-slide-ctas">
+              <a class="hm-btn hm-btn--primary" href="produtos.html?sector=hosteleria">Ver hostelería</a>
+              <a class="hm-btn hm-btn--ghost" href="contacto.html">Pedir presupuesto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hm-slide" aria-roledescription="diapositiva" aria-label="4 de 5">
+          <picture>
+            <source media="(max-width: 700px)" data-srcset="images/hero/comercios-640.webp" />
+            <img class="hm-slide-img" data-src="images/hero/comercios-1024.webp" alt="" />
+          </picture>
+          <div class="sh-wrap hm-slide-content">
+            <p class="hm-kicker">Comercios</p>
+            <h2 class="hm-slide-title">Haz que tu escaparate se vea desde la calle</h2>
+            <p class="hm-slide-text">Letreros, pantallas Full Color y banderolas de una o dos caras para tiendas y locales.</p>
+            <div class="hm-slide-ctas">
+              <a class="hm-btn hm-btn--primary" href="produtos.html?sector=comercios">Ver comercios</a>
+              <a class="hm-btn hm-btn--ghost" href="contacto.html">Pedir presupuesto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hm-slide" aria-roledescription="diapositiva" aria-label="5 de 5">
+          <picture>
+            <source media="(max-width: 700px)" data-srcset="images/hero/parking-640.webp" />
+            <img class="hm-slide-img" data-src="images/hero/parking-1024.webp" alt="" />
+          </picture>
+          <div class="sh-wrap hm-slide-content">
+            <p class="hm-kicker">Parking, autoescuelas y más</p>
+            <h2 class="hm-slide-title">Información clara para tus clientes</h2>
+            <p class="hm-slide-text">Logotipo, texto, fecha y hora en letreros RGB. Opcional: sonda de temperatura y programación por WiFi.</p>
+            <div class="hm-slide-ctas">
+              <a class="hm-btn hm-btn--primary" href="produtos.html?sector=otros">Ver otros sectores</a>
+              <a class="hm-btn hm-btn--ghost" href="contacto.html">Pedir presupuesto</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="sh-wrap hm-hero-controls">
+        <div class="hm-dots" role="group" aria-label="Elegir diapositiva">
+          <button class="hm-dot is-active" type="button" aria-label="Diapositiva 1" aria-current="true"><span></span></button>
+          <button class="hm-dot" type="button" aria-label="Diapositiva 2"><span></span></button>
+          <button class="hm-dot" type="button" aria-label="Diapositiva 3"><span></span></button>
+          <button class="hm-dot" type="button" aria-label="Diapositiva 4"><span></span></button>
+          <button class="hm-dot" type="button" aria-label="Diapositiva 5"><span></span></button>
+        </div>
+        <div class="hm-arrows">
+          <button class="hm-arrow" type="button" data-dir="-1" aria-label="Diapositiva anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="hm-arrow" type="button" data-dir="1" aria-label="Diapositiva siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. SECTORES ===== -->
+    <section class="hm-section">
+      <div class="sh-wrap">
+        <header class="hm-head">
+          <div>
+            <p class="hm-eyebrow">Soluciones por sector</p>
+            <h2 class="hm-title">¿Qué tipo de negocio tienes?</h2>
+          </div>
+          <a class="hm-link" href="produtos.html">Ver todo el catálogo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </header>
+
+        <ul class="hm-sectors">
+          <li><a class="hm-sector" href="produtos.html?sector=farmacias" data-sector="farmacias">
+            <span class="hm-sector-img"><img src="img/producto-14/img-1.jpg" alt="" loading="lazy" /></span>
+            <span class="hm-sector-body"><span class="hm-sector-name">Farmacias</span><span class="hm-sector-meta">Cruces LED y clínicas</span></span>
+          </a></li>
+          <li><a class="hm-sector" href="produtos.html?sector=estancos" data-sector="estancos">
+            <span class="hm-sector-img"><img src="img/producto-31/letrero-led-programable-para-estancos-en-rgb.jpg" alt="" loading="lazy" /></span>
+            <span class="hm-sector-body"><span class="hm-sector-name">Estancos</span><span class="hm-sector-meta">Letreros RGB</span></span>
+          </a></li>
+          <li><a class="hm-sector" href="produtos.html?sector=hosteleria" data-sector="hosteleria">
+            <span class="hm-sector-img"><img src="img/producto-22/img-1.jpg" alt="" loading="lazy" /></span>
+            <span class="hm-sector-body"><span class="hm-sector-name">Hostelería</span><span class="hm-sector-meta">Bares, hoteles y ocio</span></span>
+          </a></li>
+          <li><a class="hm-sector" href="produtos.html?sector=comercios" data-sector="comercios">
+            <span class="hm-sector-img"><img src="img/producto-4/img-1.jpg" alt="" loading="lazy" /></span>
+            <span class="hm-sector-body"><span class="hm-sector-name">Comercios</span><span class="hm-sector-meta">Letreros, pantallas y banderolas</span></span>
+          </a></li>
+          <li><a class="hm-sector" href="produtos.html?sector=gasolineras" data-sector="gasolineras">
+            <span class="hm-sector-img"><img src="img/producto-15/img-1.jpg" alt="" loading="lazy" /></span>
+            <span class="hm-sector-body"><span class="hm-sector-name">Gasolineras</span><span class="hm-sector-meta">Precios y mensajes</span></span>
+          </a></li>
+          <li><a class="hm-sector" href="produtos.html?sector=otros" data-sector="otros">
+            <span class="hm-sector-img"><img src="img/producto-8/img-1.jpg" alt="" loading="lazy" /></span>
+            <span class="hm-sector-body"><span class="hm-sector-name">Otros sectores</span><span class="hm-sector-meta">Parking, autoescuelas, academias…</span></span>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 3. PRODUCTOS DESTACADOS (el precio "Desde" se carga en vivo: home.js) ===== -->
+    <section class="hm-section hm-section--alt">
+      <div class="sh-wrap">
+        <header class="hm-head">
+          <div>
+            <p class="hm-eyebrow">Destacados</p>
+            <h2 class="hm-title">Los más solicitados</h2>
+          </div>
+          <a class="hm-link" href="produtos.html">Ver todos los productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </header>
+
+        <ul class="hm-products">
+          <li><article class="pcard" data-product-id="4">
+            <a class="pcard-media" href="produto-detalhe.html?id=4" tabindex="-1" aria-hidden="true"><img src="img/producto-4/img-1.jpg" alt="" loading="lazy" /><span class="pcard-badge">Más vendido</span></a>
+            <div class="pcard-body">
+              <p class="pcard-meta">Monocolor · 1 cara · Interior / exterior</p>
+              <h3 class="pcard-title"><a href="produto-detalhe.html?id=4">Letrero LED programable, 1 cara</a></h3>
+              <p class="pcard-desc">Disponible en diferentes tamaños y colores.</p>
+              <div class="pcard-foot"><p class="pcard-price" hidden></p><a class="pcard-cta" href="produto-detalhe.html?id=4">Ver producto</a></div>
+            </div>
+          </article></li>
+          <li><article class="pcard" data-product-id="13">
+            <a class="pcard-media" href="produto-detalhe.html?id=13" tabindex="-1" aria-hidden="true"><img src="img/producto-13/img-1.jpg" alt="" loading="lazy" /></a>
+            <div class="pcard-body">
+              <p class="pcard-meta">Cruz LED · 2 caras</p>
+              <h3 class="pcard-title"><a href="produto-detalhe.html?id=13">Cruz LED programable para farmacias, veterinarias y clínicas</a></h3>
+              <p class="pcard-desc">Disponible en varios colores y tamaños. 2 años de garantía.</p>
+              <div class="pcard-foot"><p class="pcard-price" hidden></p><a class="pcard-cta" href="produto-detalhe.html?id=13">Ver producto</a></div>
+            </div>
+          </article></li>
+          <li><article class="pcard" data-product-id="22">
+            <a class="pcard-media" href="produto-detalhe.html?id=22" tabindex="-1" aria-hidden="true"><img src="img/producto-22/img-1.jpg" alt="" loading="lazy" /></a>
+            <div class="pcard-body">
+              <p class="pcard-meta">RGB · 1 cara</p>
+              <h3 class="pcard-title"><a href="produto-detalhe.html?id=22">Letrero LED para bares, restaurantes y cafeterías</a></h3>
+              <p class="pcard-desc">Muestre menús, ofertas y promociones.</p>
+              <div class="pcard-foot"><p class="pcard-price" hidden></p><a class="pcard-cta" href="produto-detalhe.html?id=22">Ver producto</a></div>
+            </div>
+          </article></li>
+          <li><article class="pcard" data-product-id="2">
+            <a class="pcard-media" href="produto-detalhe.html?id=2" tabindex="-1" aria-hidden="true"><img src="img/producto-2/img-1.jpg" alt="" loading="lazy" /></a>
+            <div class="pcard-body">
+              <p class="pcard-meta">Full Color · P10 · Exterior</p>
+              <h3 class="pcard-title"><a href="produto-detalhe.html?id=2">Pantalla LED programable Full Color P10, 1 cara</a></h3>
+              <p class="pcard-desc">Pantalla para exterior: texto, imágenes y vídeo.</p>
+              <div class="pcard-foot"><p class="pcard-price" hidden></p><a class="pcard-cta" href="produto-detalhe.html?id=2">Ver producto</a></div>
+            </div>
+          </article></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 4. VENTAJAS DE NUESTROS PRODUCTOS ===== -->
+    <section class="hm-section">
+      <div class="sh-wrap hm-split">
+        <div class="hm-split-intro">
+          <p class="hm-eyebrow">Por qué elegirnos</p>
+          <h2 class="hm-title">Todo lo que necesitas en un letrero LED</h2>
+          <p class="hm-lead">Nuestros paneles LED programables son la solución más eficaz para destacar tu negocio y comunicarte con tus clientes.</p>
+          <a class="hm-link" href="como-funciona.html">Cómo funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="hm-features">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+            <h3>Fácil programación</h3>
+            <p>Configura tus mensajes vía USB, WiFi o Bluetooth directamente desde el móvil o el ordenador, sin conocimientos técnicos.</p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <h3>Alta visibilidad</h3>
+            <p>Visible de día y de noche, a cualquier distancia. Nuestros letreros luminosos LED captan la atención de todos los transeúntes.</p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10M4 10v10h16V10M4 10h16M9 20v-5h6v5"/></svg>
+            <h3>Ideal para tiendas y negocios</h3>
+            <p>Perfecto para restaurantes, farmacias, peluquerías, tiendas, oficinas, gimnasios y mucho más. Se adapta a cualquier negocio.</p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            <h3>Varios tamaños y formatos</h3>
+            <p>Disponible en diferentes dimensiones, monocolor y RGB multicolor, para interior y exterior. Siempre la medida exacta para tu espacio.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 5. LA EMPRESA ===== -->
+    <section class="hm-section hm-section--dark">
+      <div class="sh-wrap hm-company">
+        <div class="hm-company-text">
+          <p class="hm-eyebrow">Quiénes somos</p>
+          <h2 class="hm-title">Fabricantes y distribuidores de letreros LED</h2>
+          <p class="hm-lead">Spain Worldex Business S.L. es una empresa de fabricación nacional ubicada en Granada, que distribuye pantallas LED por toda España y el resto de Europa.</p>
+          <p class="hm-lead">Trabajamos con LEDs y componentes de alta calidad, y nuestra experiencia en el sector nos permite ofrecerte la mejor relación calidad–precio del mercado.</p>
+          <a class="hm-btn hm-btn--ghost" href="sobre-nos.html">Conoce la empresa</a>
+        </div>
+        <dl class="hm-stats">
+          <div><dt>Clientes satisfechos</dt><dd>+5.000</dd></div>
+          <div><dt>De experiencia en el sector</dt><dd>+10 años</dd></div>
+          <div><dt>Vida útil de nuestros LEDs</dt><dd>100.000 h</dd></div>
+          <div><dt>Distribución</dt><dd>España y Europa</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== 6. VENTAJAS DE COMPRAR CON NOSOTROS ===== -->
+    <section class="hm-section hm-section--tight">
+      <div class="sh-wrap">
+        <h2 class="hm-title hm-title--center">Comprar con nosotros</h2>
+        <ul class="hm-benefits">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+            <div><h3>Entrega rápida</h3><p>Envío en 24-48 horas a toda España, con embalaje seguro.</p></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            <div><h3>2 años de garantía</h3><p>En todos nuestros letreros y pantallas LED.</p></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+            <div><h3>Pago seguro</h3><p>Pago con tarjeta a través de Stripe.</p></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg>
+            <div><h3>Atención al cliente</h3><p>Te asesoramos y encontramos la solución para tu negocio, sin compromiso.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 7. LLAMADA A LA ACCIÓN ===== -->
+    <section class="hm-section hm-section--alt">
+      <div class="sh-wrap hm-cta">
+        <div class="hm-cta-card">
+          <p class="hm-eyebrow">Configurador rápido</p>
+          <h2 class="hm-cta-title">¿No sabes qué letrero elegir?</h2>
+          <p>Te recomendamos el producto adecuado para tu negocio en menos de un minuto.</p>
+          <a class="hm-btn hm-btn--dark" href="recomendador.html">Encuentra tu letrero ideal</a>
+        </div>
+        <div class="hm-cta-card hm-cta-card--accent">
+          <p class="hm-eyebrow">Presupuesto sin compromiso</p>
+          <h2 class="hm-cta-title">¿Necesitas una medida especial?</h2>
+          <p>Cuéntanos tu proyecto y te preparamos una propuesta a medida.</p>
+          <div class="hm-cta-actions">
+            <a class="hm-btn hm-btn--light" href="contacto.html">Pedir presupuesto</a>
+            <a class="hm-cta-phone" href="tel:+34652027910">o llama al 652 027 910</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 8. PIE ===== -->
+  <script src="footer.js"></script>
+
+  <a href="https://wa.me/34652027910" class="whatsapp-float" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+  <script src="home.js"></script>
+  <script>
+  // Captura el token de confirmación de email que manda Supabase en la URL (#access_token=...)
+  (function () {
+    const hash = window.location.hash;
+    if (!hash.includes('access_token=')) return;
+
+    const params = new URLSearchParams(hash.replace('#', ''));
+    const access_token  = params.get('access_token');
+    const refresh_token = params.get('refresh_token');
+    const type          = params.get('type'); // 'signup' o 'recovery'
+    if (!access_token) return;
+
+    const SB_BASE = APP_CONFIG.SUPABASE_URL;
+    const SB_KEY  = APP_CONFIG.SUPABASE_ANON_KEY;
+
+    // Limpiar el hash de la URL para que no se vea el token
+    history.replaceState(null, '', window.location.pathname);
+
+    (async function () {
+      try {
+        // Obtener datos del usuario con el token
+        const userRes = await fetch(SB_BASE + '/auth/v1/user', {
+          headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + access_token }
+        });
+        if (!userRes.ok) return;
+        const user = await userRes.json();
+
+        // Guardar sesión
+        sessionStorage.setItem('sb_session', JSON.stringify({
+          access_token, refresh_token,
+          user: { id: user.id, email: user.email }
+        }));
+
+        // Si es registro, crear perfil si no existe
+        if (type === 'signup') {
+          const profRes = await fetch(SB_BASE + '/rest/v1/profiles?id=eq.' + user.id + '&select=id&limit=1', {
+            headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + access_token }
+          });
+          const profiles = profRes.ok ? await profRes.json() : [];
+          if (!profiles.length) {
+            const pending = JSON.parse(sessionStorage.getItem('sb_pending_profile') || 'null');
+            await fetch(SB_BASE + '/rest/v1/profiles', {
+              method: 'POST',
+              headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + access_token, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+              body: JSON.stringify({
+                id:        user.id,
+                email:     user.email,
+                full_name: pending?.full_name || '',
+                phone:     pending?.phone || null,
+                role:      'customer'
+              })
+            });
+            sessionStorage.removeItem('sb_pending_profile');
+          }
+        }
+      } catch (e) {
+        console.warn('Auth callback error:', e);
+      }
+    })();
+  })();
+  </script>
+</body>
+</html>
