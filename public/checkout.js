@@ -6,7 +6,7 @@
 'use strict';
 
 (function () {
-  const SHIPPING = { gratis: 0, express: 9.99 };      // solo para mostrar; el servidor fija el importe
+  const SHIPPING = { gratis: 0, granformato: 0 };     // solo para mostrar; el servidor fija el método y el importe
   const DRAFT_KEY = 'ledsign_checkout_draft';          // datos del formulario si el cliente vuelve de Stripe
 
   const form    = document.getElementById('checkoutForm');
@@ -34,7 +34,7 @@
         </div>
         <p class="co-mini-price">${total ? formatEuros(total) : '—'}</p>
       </li>`).join('');
-    document.getElementById('coTotals').innerHTML = cartTotalsHtml(s);
+    document.getElementById('coTotals').innerHTML = cartTotalsHtml(s, { shippingLabel: shippingMethod() === 'granformato' ? 'A consultar' : '' });
     payLbl.textContent = 'Pagar ' + formatEuros(s.total);
   }
 
@@ -155,5 +155,13 @@
   window.addEventListener('pageshow', ev => { if (ev.persisted) setBusy(false); });
 
   loadDraft();
+  // Con un artículo de gran formato solo hay envío "a consultar" (lo decide también el servidor)
+  if (cartHasLargeItem(cart)) {
+    document.getElementById('coShipStd').hidden = true;
+    document.getElementById('coShipLarge').hidden = false;
+    form.elements.shipping.value = 'granformato';
+  } else if (form.elements.shipping.value !== 'gratis') {
+    form.elements.shipping.value = 'gratis';
+  }
   renderSummary();
 })();

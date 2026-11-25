@@ -66,7 +66,8 @@ function saveCart(cart) {
 }
 // productId identifica el producto en el servidor (que recalcula el precio); dos productos
 // pueden compartir título, por eso forma parte de la clave de la línea.
-function addToCart(title, desc, image, price, options, productId) {
+// offerPct: % de la oferta del tamaño elegido (solo para mostrar; el servidor la vuelve a comprobar)
+function addToCart(title, desc, image, price, options, productId, offerPct) {
     const cart = getCart();
     const base = (productId ? productId + '::' : '') + title;
     const key = (options && options.length > 0)
@@ -74,9 +75,10 @@ function addToCart(title, desc, image, price, options, productId) {
         : base;
     const idx = cart.findIndex(i => (i.key || i.title) === key);
     if (idx >= 0) {
-        cart[idx].qty += 1;
+        cart[idx].qty = Math.min(MAX_QTY, cart[idx].qty + 1);
+        cart[idx].offerPct = offerPct || 0;
     } else {
-        cart.push({ key, id: productId || null, title, desc, image: image || null, price: price || null, options: options || [], qty: 1 });
+        cart.push({ key, id: productId || null, title, desc, image: image || null, price: price || null, options: options || [], qty: 1, offerPct: offerPct || 0 });
     }
     saveCart(cart);
     updateCartBadge();
@@ -139,18 +141,46 @@ function formatEuros(n) {
 }
 const roundCents = n => Math.round(n * 100) / 100;
 
+// Gran formato (misma regla que server/lib/pricing.js): las medidas en cm de un artículo suman 290 o más.
+// El envío de esos pedidos se coordina con el cliente ("A consultar").
+function isLargeItem(item) {
+    let cm = 0;
+    (item.options || []).forEach(o => (String(o.value || '').match(/\d+(?:[.,]\d+)?\s*cm/gi) || [])
+        .forEach(m => { cm += parseFloat(m.replace(',', '.')); }));
+    return cm >= 290;
+}
+const cartHasLargeItem = cart => cart.some(isLargeItem);
+
+// ── Ofertas (GET /api/offers; el servidor las aplica al cobrar) ──
+let offersPromise = null;
+function getOffers() {
+    if (!offersPromise) {
+        offersPromise = fetch(`${API_BASE}/api/offers`).then(r => (r.ok ? r.json() : [])).catch(() => []);
+    }
+    return offersPromise;
+}
+const normText = s => String(s ?? '').trim().replace(/\s+/g, ' ').toLowerCase();
+function offerPctFor(offers, productId, size) {
+    const o = (offers || []).find(x => x.productId === productId && normText(x.size) === normText(size));
+    return o ? o.pct : 0;
+}
+
 // Totales del carrito con la misma regla que el servidor: descuento por unidad, redondeado a céntimos.
+// Oferta y tarifa de cliente no se acumulan: se aplica el mayor.
 function cartSummary(cart, shipping = 0) {
     const pct = getUserDiscountPct();
+    let usesOffer = false;
     const lines = cart.map(item => {
         const unit = parseNumericPrice(item.price);
-        const unitFinal = pct ? roundCents(unit * (1 - pct / 100)) : unit;
+        const linePct = Math.max(pct, item.offerPct || 0);
+        if ((item.offerPct || 0) > pct) usesOffer = true;
+        const unitFinal = linePct ? roundCents(unit * (1 - linePct / 100)) : unit;
         return { item, unit, unitFinal, total: roundCents(unitFinal * item.qty), totalBefore: roundCents(unit * item.qty) };
     });
     const subtotal = roundCents(lines.reduce((s, l) => s + l.totalBefore, 0));
     const afterDiscount = roundCents(lines.reduce((s, l) => s + l.total, 0));
     return {
-        lines, pct, subtotal,
+        lines, pct, usesOffer, subtotal,
         discount: roundCents(subtotal - afterDiscount),
         shipping,
         total: roundCents(afterDiscount + shipping),
@@ -180,7 +210,7 @@ function cartTotalsHtml(s, { shippingLabel } = {}) {
     const units = s.units === 1 ? '1 producto' : `${s.units} productos`;
     return `
       <div><dt>Subtotal <span>(${units})</span></dt><dd>${formatEuros(s.subtotal)}</dd></div>
-      ${s.discount > 0 ? `<div class="co-discount"><dt>Tu descuento (−${s.pct} %)</dt><dd>−${formatEuros(s.discount)}</dd></div>` : ''}
+      ${s.discount > 0 ? `<div class="co-discount"><dt>${s.usesOffer ? 'Ofertas y descuentos' : `Tu descuento (−${s.pct} %)`}</dt><dd>−${formatEuros(s.discount)}</dd></div>` : ''}
       <div><dt>Envío</dt><dd>${shippingLabel || (s.shipping ? formatEuros(s.shipping) : 'Gratis')}</dd></div>
       <div class="co-total"><dt>Total <span>Impuestos incluidos</span></dt><dd>${formatEuros(s.total)}</dd></div>`;
 }
@@ -199,7 +229,9 @@ function renderCarritoPage() {
 
     const s = cartSummary(cart);
     document.getElementById('carritoCount').textContent = s.units === 1 ? '1 producto' : `${s.units} productos`;
-    document.getElementById('carritoTotals').innerHTML = cartTotalsHtml(s, { shippingLabel: 'Gratis <small>Express: en el siguiente paso</small>' });
+    document.getElementById('carritoTotals').innerHTML = cartTotalsHtml(s, {
+        shippingLabel: cartHasLargeItem(cart) ? 'A consultar <small>Gran formato: te contactamos para el envío</small>' : 'Gratis'
+    });
 
     listEl.innerHTML = s.lines.map(({ item, unit, unitFinal, total, totalBefore }) => {
         const key = escHtml(item.key || item.title);
@@ -272,8 +304,9 @@ renderCarritoPage();
     });
 })();
 
-// Backend Express: mismo origen; con Live Server u otro puerto local, localhost:3000
-const API_BASE = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && location.port !== '3000'
+// Backend Express: mismo origen (Vercel o `npm start`). Solo si la página se abre con
+// Live Server (puertos 5500/5501) las llamadas van al servidor local en localhost:3000.
+const API_BASE = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && ['5500', '5501'].includes(location.port)
     ? 'http://localhost:3000' : '';
 
 // ── Sesión de Supabase Auth (sessionStorage: solo esta pestaña) ───
@@ -324,6 +357,12 @@ async function refreshSession(s) {
     } catch (e) {
         return s; // sin conexión: se mantiene y el servidor decidirá
     }
+}
+
+// Enlaces de los emails de Supabase (confirmar cuenta, recuperar contraseña): si la dirección de vuelta
+// no está autorizada en Supabase llegan a la portada; login.html es quien los procesa.
+if (/(^#|&)(access_token|error_description)=/.test(location.hash) && !/\/login\.html$/.test(location.pathname)) {
+    location.replace('login.html' + location.hash);
 }
 
 // ── User state: show avatar initial when logged in ────────────────

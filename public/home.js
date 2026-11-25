@@ -116,4 +116,31 @@
       });
     }).catch(() => { /* sin precio: la tarjeta sigue siendo válida */ });
   }
+
+  // ── Ofertas (server/lib/offers.js vía GET /api/offers; el servidor aplica el mismo precio al cobrar) ──
+  const offersSection = document.getElementById('hmOffers');
+  if (offersSection && typeof getOffers === 'function') {
+    getOffers().then(offers => {
+      if (!offers.length) return; // sin ofertas (o servidor no disponible): la sección no aparece
+      const fmtE = typeof formatEuros === 'function' ? formatEuros : n => n.toFixed(2) + ' €';
+      const e = typeof escHtml === 'function' ? escHtml : s => String(s);
+      document.getElementById('hmOffersList').innerHTML = offers.map(o => {
+        const url = `produto-detalhe.html?id=${encodeURIComponent(o.productId)}&size=${encodeURIComponent(o.size)}`;
+        return `
+          <li><article class="pcard pcard--offer">
+            <a class="pcard-media" href="${url}" tabindex="-1" aria-hidden="true"><img src="${e(o.image)}" alt="" loading="lazy" /><span class="pcard-badge pcard-badge--offer">−${e(o.pct)} %</span></a>
+            <div class="pcard-body">
+              <p class="pcard-meta">${e(o.sizeTag)}</p>
+              <h3 class="pcard-title"><a href="${url}">${e(o.title)}</a></h3>
+              <p class="pcard-desc">${e(o.desc)}</p>
+              <div class="pcard-foot">
+                <p class="pcard-price"><s class="pcard-price-old">${fmtE(o.price)}</s> ${fmtE(o.finalPrice)}</p>
+                <a class="pcard-cta" href="${url}">Ver oferta</a>
+              </div>
+            </div>
+          </article></li>`;
+      }).join('');
+      offersSection.hidden = false;
+    });
+  }
 })();

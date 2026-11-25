@@ -22,16 +22,18 @@
       icon: '<path d="M14 8h3V4h-3a4 4 0 00-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/>' },
     { label: 'YouTube',   href: 'https://www.youtube.com/@ledparatodos',
       icon: '<path d="M22 8.2a3 3 0 00-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 002 8.2 31 31 0 001.6 12c0 1.3.1 2.6.4 3.8a3 3 0 002.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 002.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8zM10 15.2V8.8l5.2 3.2-5.2 3.2z"/>' },
-    { label: 'Instagram', href: 'https://www.instagram.com/explore/search/keyword/?q=%23rondaluziluminacion',
+    { label: 'Instagram', href: 'https://www.instagram.com/ledparatodos_',
       icon: '<path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4z"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1"/>' },
     { label: 'WhatsApp',  href: COMPANY.whatsapp,
       icon: '<path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.4-.3z"/>' }
   ];
 
   const LEGAL = [
-    { href: '#', label: 'Política de privacidad' },
-    { href: '#', label: 'Términos y condiciones' },
-    { href: '#', label: 'Política de cookies' }
+    { href: 'formas-de-pago.html',        label: 'Formas de pago' },
+    { href: 'terminos-devoluciones.html', label: 'Términos y devoluciones' },
+    { href: 'aviso-legal.html',           label: 'Aviso legal' },
+    { href: 'privacidad.html',            label: 'Política de privacidad' },
+    { href: 'cookies.html',               label: 'Política de cookies' }
   ];
 
   const nav = window.SITE_NAV || { SECTORS: [], CATALOG: { subs: [] } };
@@ -51,6 +53,7 @@
   const companyLinks = [
     { href: 'sobre-nos.html',     label: 'Sobre nosotros' },
     { href: 'como-funciona.html', label: 'Cómo funciona' },
+    { href: 'zona-profesionales.html', label: 'Zona profesionales' },
     { href: 'contacto.html',      label: 'Contacto y presupuestos' },
     { href: 'mi-cuenta.html',     label: 'Mi cuenta' }
   ];

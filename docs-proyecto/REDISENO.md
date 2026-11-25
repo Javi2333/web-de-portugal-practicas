@@ -104,6 +104,16 @@ Referencia: navegación por sectores inspirada en cuma.es (sin copiar su diseño
 - **Recomendador (rehecho):** antes solo usaba el tipo de negocio (color, pitch, ubicación y tamaño no influían) y sus ids no coincidían con el menú (p. ej. "Bar" recomendaba un letrero de hotel). Ahora: 5 preguntas (negocio, qué mostrar, distancia, ubicación, caras) → productos reales de `SITE_NAV` con `PCard`, puntuados; si el sector no tiene nada compatible se proponen modelos genéricos. Respuestas en la URL (compartible), "Cambiar" por respuesta y foco gestionado. `lang="es"` (antes `pt-PT`).
 - **Precios:** todos los formateadores usan punto de miles también con 4 cifras (`useGrouping: "always"`).
 
+## Integración con `main` del equipo (2026-11-25)
+`main` tenía 11 commits del equipo sobre `Nueva carpeta/` (ya renombrada a `public/` y rediseñada). Se fusionó conservando su trabajo:
+- **Páginas nuevas al diseño nuevo:** `aviso-legal`, `privacidad`, `cookies`, `formas-de-pago`, `terminos-devoluciones` (con índice lateral) y `zona-profesionales`. Texto legal sin modificar. `empresa.html` repetía Sobre nosotros + Cómo funciona: redirige a `sobre-nos.html`.
+- **Pie (`footer.js`):** Instagram real (`@ledparatodos_`), "Zona profesionales" y enlaces legales reales. También Instagram en contacto y sobre nosotros, y privacidad/términos enlazados en el registro.
+- **Envío:** como decidió el equipo, sin express; estándar gratis y, si un artículo suma ≥ 290 cm, "Envío gran formato · A consultar". El servidor decide el método (`shippingMethodFor`) y lo anota en el pedido.
+- **Ofertas:** su sección de portada usaba `?discount=10` en la URL (el servidor habría cobrado el precio completo y cualquiera podía poner otro número). Ahora la lista vive en `server/lib/offers.js`, el servidor la aplica al cobrar y la publica en `GET /api/offers`; la portada, la ficha y el carrito la leen de ahí. Oferta y tarifa de cliente no se acumulan: se aplica la mayor. No se incorporó el `?discount=` de `main.js`.
+- **Enlaces de Supabase** (`#access_token`) que lleguen a cualquier página se redirigen a `login.html` (su portada los procesaba).
+- **No se incorporó:** su recomendador (el nuevo ya filtra por las respuestas con datos del catálogo), la animación `btn-pulse` (era del botón de la portada antigua) ni los pies duplicados en cada página.
+- `vercel.json` incluye explícitamente `public/**` y `server/lib/**`. `API_BASE` solo apunta a `localhost:3000` con Live Server (5500/5501).
+
 ## Pequeños fallitos pendientes (para dejar la web a punto)
 _Se arreglarán al final, cuando el usuario lo pida. Ir añadiendo aquí._
 - Plazo de envío contradictorio: cabecera y ficha dicen "24-48 h a toda España"; el checkout, "3–5 días · España peninsular" (express 1–2 días).
@@ -114,7 +124,8 @@ _Se arreglarán al final, cuando el usuario lo pida. Ir añadiendo aquí._
 - El perfil se crea desde el navegador con `role: 'customer'`: hay que comprobar en Supabase que RLS impide crear o editar el perfil con otro rol (p. ej. `admin`).
 - Para cambiar el email de la cuenta hay que escribir a la empresa (no hay formulario).
 - La portada ("Fácil programación") sigue diciendo "USB, WiFi o Bluetooth"; "Cómo funciona" ya dice USB, WiFi, RJ45 o 4G. Confirmar con la empresa.
-- Los enlaces a la política de privacidad del formulario de contacto apuntan a "#".
+- Textos legales del equipo que contradicen la tienda: envío "gratis desde 160 €, si no 12 €" (la tienda cobra 0 €); PayPal y transferencia (solo se acepta tarjeta); desistimiento de **7 días** (en España son 14 desde 2014); dominio "letrerosp rogramables.com" y marca "Letreros Programables" en aviso legal/garantía.
+- La cabecera dice "Envío en 24-48 h"; el checkout ya no promete plazo ("te avisamos cuando esté preparado").
 
 ## Siguiente fase propuesta
 1. ✅ **Seguridad de precios: hecho** (ver AUDITORIA.md §5).

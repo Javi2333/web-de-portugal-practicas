@@ -6,7 +6,7 @@ const stripe  = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const { hasServiceKey, sbSelect, sbInsert, sbPatch, sbGetUserRole, sbGetUserFromToken } = require('./lib/supabase');
 const { requireAdmin, getBearerToken } = require('./lib/auth');
-const { priceCart, shippingCostFor, PricingError } = require('./lib/pricing');
+const { priceCart, pricedOffers, shippingCostFor, shippingMethodFor, PricingError } = require('./lib/pricing');
 const { parsePriceToEuros, roundEuros } = require('./lib/prices');
 const {
   isEmailConfigured,
@@ -154,7 +154,7 @@ app.use(express.static(PUBLIC_DIR));
 
 app.post('/create-checkout-session', async (req, res) => {
   try {
-    const { items, shippingMethod } = req.body || {};
+    const { items } = req.body || {};
 
     if (!hasServiceKey()) {
       return res.status(503).json({ error: 'La tienda no puede verificar los precios ahora mismo. Inténtalo más tarde.' });
@@ -162,18 +162,20 @@ app.post('/create-checkout-session', async (req, res) => {
 
     // 1. Precios y envío calculados en el servidor (nunca se usa el precio que envía el navegador)
     const customer    = parseCustomer(req.body || {});
-    const pricedLines = await priceCart(items);
-    const shippingAmt = shippingCostFor(shippingMethod);
+    const pricedLines    = await priceCart(items);
+    const shippingMethod = shippingMethodFor(pricedLines);   // lo decide el servidor, no el navegador
+    const shippingAmt    = shippingCostFor(shippingMethod);
 
     // 2. Usuario y descuento por rol: solo a partir de una sesión verificada (JWT de Supabase)
     const user               = await sbGetUserFromToken(getBearerToken(req)).catch(() => null);
     const userRole           = user ? await sbGetUserRole(user.id) : '';
     const discountPct        = ROLE_DISCOUNTS[userRole] || 0;
-    const discountMultiplier = 1 - discountPct / 100;
 
-    // Líneas del pedido con precio ya descontado (misma cifra para BD, emails y Stripe)
+    // Líneas del pedido con precio ya descontado (misma cifra para BD, emails y Stripe).
+    // Oferta y tarifa de cliente no se acumulan: se aplica el mayor de los dos.
     const orderLines = pricedLines.map(line => {
-      const unitPrice = roundEuros(line.unitPrice * discountMultiplier);
+      const pct = Math.max(discountPct, line.offerPct || 0);
+      const unitPrice = roundEuros(line.unitPrice * (1 - pct / 100));
       const clientPrice = parsePriceToEuros(line.clientPrice);
       if (clientPrice && Math.abs(clientPrice - line.unitPrice) > 0.01) {
         console.warn(`⚠️  Precio del navegador distinto al real en producto #${line.product_id}: ${clientPrice} vs ${line.unitPrice} (se cobra el real)`);
@@ -204,7 +206,8 @@ app.post('/create-checkout-session', async (req, res) => {
       shipping_cost:   shippingAmt,
       total,
       currency:        'EUR',
-      notes:           orderNotes(customer)
+      notes:           orderNotes(customer) + (shippingMethod === 'granformato'
+        ? '\nEnvío: GRAN FORMATO — coordinar el envío y su coste con el cliente.' : '')
     };
 
     let orderId = null;
@@ -247,7 +250,7 @@ app.post('/create-checkout-session', async (req, res) => {
       lineItems.push({
         price_data: {
           currency:     'eur',
-          product_data: { name: 'Envío express' },
+          product_data: { name: 'Envío' },
           unit_amount:  Math.round(shippingAmt * 100)
         },
         quantity: 1
@@ -271,6 +274,23 @@ app.post('/create-checkout-session', async (req, res) => {
     if (err instanceof PricingError) return res.status(err.status).json({ error: err.message });
     console.error('Error Stripe:', err.message);
     res.status(500).json({ error: 'No se pudo iniciar el pago. Inténtalo de nuevo.' });
+  }
+});
+
+// ── GET /api/offers (público) ─────────────────────────────────────────
+// Ofertas de server/lib/offers.js con el precio actual. La portada y la ficha las leen de aquí.
+
+let offersCache = { at: 0, data: null };
+app.get('/api/offers', async (req, res) => {
+  try {
+    if (!offersCache.data || Date.now() - offersCache.at > 5 * 60 * 1000) {
+      offersCache = { at: Date.now(), data: await pricedOffers() };
+    }
+    res.set('Cache-Control', 'public, max-age=300');
+    res.json(offersCache.data);
+  } catch (e) {
+    console.error('Error calculando ofertas:', e.message);
+    res.status(503).json([]);
   }
 });
 

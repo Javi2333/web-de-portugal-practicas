@@ -9,11 +9,24 @@
 
 const { sbSelect } = require('./supabase');
 const { roundEuros } = require('./prices');
+const { OFFERS, offerPctFor } = require('./offers');
 
 const MAX_QTY_PER_ITEM = 99;
 
-// Envío: el cliente solo elige el método; el importe lo fija el servidor.
-const SHIPPING_METHODS = { gratis: 0, express: 9.99 };
+// Envío: el servidor fija método e importe. Estándar gratuito; los pedidos con algún artículo
+// de gran formato se envían "a consultar" (la empresa coordina el envío con el cliente).
+const SHIPPING_METHODS = { gratis: 0, granformato: 0 };
+const LARGE_FORMAT_CM = 290;
+
+// Misma regla que public/main.js (isLargeItem): suma de las medidas en cm de las opciones del artículo
+function isLargeFormatLine(line) {
+  let cm = 0;
+  for (const o of line.options || []) {
+    for (const m of String(o.value || '').match(/\d+(?:[.,]\d+)?\s*cm/gi) || []) cm += parseFloat(m.replace(',', '.'));
+  }
+  return cm >= LARGE_FORMAT_CM;
+}
+const shippingMethodFor = lines => (lines.some(isLargeFormatLine) ? 'granformato' : 'gratis');
 
 class PricingError extends Error {
   constructor(message, status = 400) { super(message); this.status = status; }
@@ -119,12 +132,35 @@ function priceItem(item, product, sizePrices) {
     if (opt.surcharges && opt.surcharges[value] != null) total += Number(opt.surcharges[value]) || 0;
   }
 
+  // Tamaño elegido (opción "tamano" o la que tenga sizePrices) para buscar ofertas
+  const sizeOptId = (options.find(o => o.id === 'tamano') || options.find(o => o.sizePrices) || {}).id;
   return {
     product_id: product.id,
     title,
-    unitPrice: roundEuros(total),
+    unitPrice: roundEuros(total),          // precio sin descuentos
+    offerPct: offerPctFor(product.id, sizeOptId ? valueOf(sizeOptId) : null),
     options: selected.map(s => ({ label: s.opt.label, value: s.value }))
   };
+}
+
+// Ofertas con su precio actual (para la portada). Si una oferta ya no es válida, se omite.
+async function pricedOffers() {
+  const ids = [...new Set(OFFERS.map(o => o.productId))];
+  const catalog = await loadCatalog(ids.map(id => ({ id })));
+  const out = [];
+  for (const offer of OFFERS) {
+    const product = catalog.products.find(p => p.id === offer.productId);
+    if (!product) continue;
+    const sizeOpt = (product.options || []).find(o => o.id === 'tamano' || o.sizePrices);
+    try {
+      const line = priceItem({ options: sizeOpt ? [{ label: sizeOpt.label, value: offer.size }] : [] }, product, catalog.variantsByProduct[product.id]);
+      if (!line.offerPct) { console.warn(`⚠️  Oferta sin efecto (tamaño no encontrado): producto ${offer.productId}, ${offer.size}`); continue; }
+      out.push({ ...offer, price: line.unitPrice, finalPrice: roundEuros(line.unitPrice * (1 - offer.pct / 100)) });
+    } catch (e) {
+      console.warn(`⚠️  Oferta omitida (producto ${offer.productId}): ${e.message}`);
+    }
+  }
+  return out;
 }
 
 // items: [{ id?, title, qty, options }]  →  líneas con el precio calculado por el servidor
@@ -159,4 +195,4 @@ function shippingCostFor(method) {
   return SHIPPING_METHODS[key];
 }
 
-module.exports = { priceCart, shippingCostFor, PricingError, SHIPPING_METHODS, MAX_QTY_PER_ITEM };
+module.exports = { priceCart, pricedOffers, shippingCostFor, shippingMethodFor, PricingError, SHIPPING_METHODS, MAX_QTY_PER_ITEM };

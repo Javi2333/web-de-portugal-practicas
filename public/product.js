@@ -78,16 +78,32 @@
       priceEl.innerHTML = `<span class="pd-price-quote">${available ? 'Precio a consultar' : 'No disponible actualmente'}</span>`;
       return;
     }
-    const disc = typeof getUserDiscountPct === 'function' ? getUserDiscountPct() : 0;
+    // Oferta del tamaño elegido y tarifa de cliente: no se acumulan, se aplica la mayor (igual que el servidor)
+    const roleDisc = typeof getUserDiscountPct === 'function' ? getUserDiscountPct() : 0;
+    product.offerPct = typeof offerPctFor === 'function' ? offerPctFor(offers, product.id, currentSize()) : 0;
+    const disc = Math.max(roleDisc, product.offerPct);
     if (disc > 0) {
       const discStr = (Math.round(priceNum * (1 - disc / 100) * 100) / 100).toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: "always" }) + " €";
-      priceEl.innerHTML = `<s class="pd-price-old">${formatted}</s>${discStr}<span class="pd-price-tax">Impuestos incluidos · −${disc}% de descuento</span>`;
+      const why = product.offerPct > roleDisc ? `<span class="pd-offer">Oferta −${disc} %</span>` : `−${disc}% de descuento`;
+      priceEl.innerHTML = `<s class="pd-price-old">${formatted}</s>${discStr}<span class="pd-price-tax">Impuestos incluidos · ${why}</span>`;
     } else {
       priceEl.innerHTML = `${formatted}<span class="pd-price-tax">Impuestos incluidos</span>`;
     }
   }
 
   function activeToggle(optId) { return main.querySelector(`.pd-toggle.is-active[data-option="${optId}"]`); }
+
+  // Tamaño elegido (opción "tamano" o la que tenga precios por tamaño)
+  function currentSize() {
+    const opts = product.options || [];
+    const opt = opts.find(o => o.id === 'tamano') || opts.find(o => o.sizePrices);
+    const el = document.getElementById(`opt_${opt ? opt.id : 'tamano'}`);
+    return el ? el.value : null;
+  }
+
+  // Ofertas del servidor: cuando llegan se recalcula el precio mostrado
+  let offers = [];
+  if (typeof getOffers === 'function') getOffers().then(list => { offers = list; updateDynamicPrice(); });
 
   function updateDynamicPrice() {
     let total = defaultBasePrice;
@@ -199,7 +215,7 @@
       }
     });
     const image = product.images && product.images.length ? product.images[0] : null;
-    for (let i = 0; i < qty; i++) addToCart(product.title, product.shortDesc || product.desc, image, product.price, selectedOptions, product.id);
+    for (let i = 0; i < qty; i++) addToCart(product.title, product.shortDesc || product.desc, image, product.price, selectedOptions, product.id, product.offerPct || 0);
   });
 
   // Pestañas (con teclado: flechas izquierda/derecha)

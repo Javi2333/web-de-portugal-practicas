@@ -484,6 +484,9 @@ body.page-home, body.page-light { background: var(--c-bg); color: var(--c-text);
 .pcard-foot { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--c-line); display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
 .pcard-price { font-size: 1.08rem; font-weight: 700; line-height: 1.2; }
 .pcard-price-from { display: block; font-size: 0.74rem; font-weight: 500; color: var(--c-muted); }
+.pcard-price-old { display: block; font-size: 0.82rem; font-weight: 500; color: var(--c-muted); }
+.pcard-badge--offer { background: #c62828; }
+.hm-offers[hidden] { display: none; }
 .pcard-cta { margin-left: auto; font-size: 0.88rem; font-weight: 600; color: var(--c-accent); white-space: nowrap; }
 .pcard-cta:hover { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -776,6 +779,7 @@ body.page-home, body.page-light { background: var(--c-bg); color: var(--c-text);
 .pd-price-old { font-size: 1.1rem; font-weight: 500; color: var(--c-muted); }
 .pd-price-tax { font-size: 0.82rem; font-weight: 400; letter-spacing: 0; color: var(--c-muted); }
 .pd-price-quote { font-size: 1.3rem; }
+.pd-offer { display: inline-block; padding: 1px 7px; border-radius: 3px; background: #c62828; color: #fff; font-weight: 600; }
 .pd-desc { font-size: 1rem; line-height: 1.65; color: var(--c-text-2); }
 .pd-specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 20px; background: var(--c-line); border: 1px solid var(--c-line); border-radius: 6px; overflow: hidden; }
 .pd-specs div { padding: 10px 14px; background: #fff; }
@@ -1338,6 +1342,28 @@ body.page-home, body.page-light { background: var(--c-bg); color: var(--c-text);
 .rc-summary li > span { grid-column: 1 / -1; font-size: 0.8rem; color: var(--c-muted); }
 .rc-summary .co-link { font-size: 0.84rem; }
 .rc-grid:empty { display: none; }
+
+/* Textos legales */
+.in-steps--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.in-steps a:not(.hm-link) { color: var(--c-accent); text-decoration: underline; text-underline-offset: 3px; }
+.in-legal { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; align-items: start; }
+.in-toc { position: sticky; top: calc(var(--sh-main-h) + var(--sh-nav-h) + 24px); }
+.in-toc-title { margin-bottom: 10px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-muted); }
+.in-toc ul { display: grid; gap: 2px; border-left: 1px solid var(--c-line); }
+.in-toc a { display: block; padding: 6px 0 6px 14px; margin-left: -1px; border-left: 2px solid transparent; font-size: 0.92rem; color: var(--c-text-2); }
+.in-toc a:hover { color: var(--c-text); border-left-color: var(--c-line-2); }
+.in-prose { max-width: 780px; font-size: 0.98rem; line-height: 1.75; color: var(--c-text-2); }
+.in-prose > *:first-child, .in-prose section:first-child > h2 { margin-top: 0; }
+.in-prose section { scroll-margin-top: calc(var(--sh-main-h) + var(--sh-nav-h) + 24px); padding-bottom: 8px; }
+.in-prose section + section { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--c-line); }
+.in-prose h2 { margin: 32px 0 10px; font-size: 1.2rem; font-weight: 700; line-height: 1.35; color: var(--c-text); }
+.in-prose h3 { margin: 22px 0 6px; font-size: 1.02rem; font-weight: 600; color: var(--c-text); }
+.in-prose p { margin-bottom: 14px; overflow-wrap: anywhere; }
+.in-prose strong { color: var(--c-text); }
+.in-prose ul { margin: 0 0 16px; }
+.in-prose li { position: relative; padding-left: 20px; margin-bottom: 8px; overflow-wrap: anywhere; }
+.in-prose li::before { content: ''; position: absolute; left: 4px; top: 0.75em; width: 6px; height: 2px; background: var(--c-accent); }
+.in-prose a { color: var(--c-accent); text-decoration: underline; text-underline-offset: 3px; }
 .in-steps :focus-visible, .rc-quiz :focus-visible, .rc-result :focus-visible, .in-aside :focus-visible, .in-card :focus-visible { outline: 2px solid var(--c-accent); outline-offset: 2px; }
 
 @media (max-width: 1100px) {
@@ -1346,7 +1372,9 @@ body.page-home, body.page-light { background: var(--c-bg); color: var(--c-text);
   .in-contact { grid-template-columns: 1fr; }
 }
 @media (max-width: 700px) {
-  .in-steps, .in-grid, .in-checks, .in-company, .rc-options--grid { grid-template-columns: 1fr; }
+  .in-steps, .in-steps--3, .in-grid, .in-checks, .in-company, .rc-options--grid { grid-template-columns: 1fr; }
+  .in-legal { grid-template-columns: 1fr; gap: 24px; }
+  .in-toc { position: static; }
   .in-card, .in-contact .ac-card { padding: 24px 18px; }
   .rc-result-head { flex-direction: column; gap: 8px; }
   .rc-nav .hm-btn { min-width: 0; flex: 1; }
