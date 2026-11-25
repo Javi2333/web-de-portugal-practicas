@@ -30,7 +30,7 @@ function applyDiscountToPrice(priceStr) {
   const orig = parseNumericPrice(priceStr);
   if (!orig) return { html: priceStr, discounted: null };
   const discNum = Math.round(orig * (1 - pct / 100) * 100) / 100;
-  const discStr = discNum.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  const discStr = discNum.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: "always" }) + " €";
   return {
     html: `<span style="text-decoration:line-through;opacity:0.45;font-size:0.85em;margin-right:4px">${priceStr}</span><span style="color:var(--primary-light,#4d94ff)">${discStr}</span>`,
     discounted: discStr
@@ -39,30 +39,6 @@ function applyDiscountToPrice(priceStr) {
 
 // La cabecera (navegación, menú móvil, buscador) vive en header.js.
 const siteHeader = document.getElementById('siteHeader');
-
-// ── Scroll Reveal (fade-up) ───────────────────────────────────────
-const fadeEls = document.querySelectorAll(
-    '.step-card, .testimonial-card, .sobre-stat, .section-header, .fade-up'
-);
-
-fadeEls.forEach(el => el.classList.add('fade-up'));
-
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            // Staggered delay capped at 200ms so products appear quickly
-            const siblings = Array.from(entry.target.parentElement.children);
-            const idx = siblings.indexOf(entry.target);
-            const delay = Math.min(idx * 40, 200);
-            setTimeout(() => {
-                entry.target.classList.add('visible');
-            }, delay);
-            revealObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.05 });
-
-fadeEls.forEach(el => revealObserver.observe(el));
 
 // ── Smooth anchor scrolling offset (navbar height) ───────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -88,16 +64,19 @@ function getCart() {
 function saveCart(cart) {
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
-function addToCart(title, desc, image, price, options) {
+// productId identifica el producto en el servidor (que recalcula el precio); dos productos
+// pueden compartir título, por eso forma parte de la clave de la línea.
+function addToCart(title, desc, image, price, options, productId) {
     const cart = getCart();
+    const base = (productId ? productId + '::' : '') + title;
     const key = (options && options.length > 0)
-        ? title + '||' + options.map(o => o.value).join('|')
-        : title;
+        ? base + '||' + options.map(o => o.value).join('|')
+        : base;
     const idx = cart.findIndex(i => (i.key || i.title) === key);
     if (idx >= 0) {
         cart[idx].qty += 1;
     } else {
-        cart.push({ key, title, desc, image: image || null, price: price || null, options: options || [], qty: 1 });
+        cart.push({ key, id: productId || null, title, desc, image: image || null, price: price || null, options: options || [], qty: 1 });
     }
     saveCart(cart);
     updateCartBadge();
@@ -108,11 +87,12 @@ function removeFromCart(key) {
     updateCartBadge();
     renderCarritoPage();
 }
+const MAX_QTY = 99; // mismo límite que el servidor
 function updateQty(key, delta) {
     const cart = getCart();
     const idx = cart.findIndex(i => (i.key || i.title) === key);
     if (idx < 0) return;
-    cart[idx].qty = Math.max(1, cart[idx].qty + delta);
+    cart[idx].qty = Math.min(MAX_QTY, Math.max(1, cart[idx].qty + delta));
     saveCart(cart);
     updateCartBadge();
     renderCarritoPage();
@@ -148,82 +128,130 @@ function showCartToast(title) {
     toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// ── Carrito page render ───────────────────────────────────────────
+// ── Utilidades de compra (carrito y checkout) ─────────────────────
+function escHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+// 1.250,00 € — con punto de miles también en cifras de 4 dígitos (toLocaleString('es-ES') lo omite)
+function formatEuros(n) {
+    const [int, dec] = Math.abs(n).toFixed(2).split('.');
+    return (n < 0 ? '−' : '') + int.replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',' + dec + ' €';
+}
+const roundCents = n => Math.round(n * 100) / 100;
+
+// Totales del carrito con la misma regla que el servidor: descuento por unidad, redondeado a céntimos.
+function cartSummary(cart, shipping = 0) {
+    const pct = getUserDiscountPct();
+    const lines = cart.map(item => {
+        const unit = parseNumericPrice(item.price);
+        const unitFinal = pct ? roundCents(unit * (1 - pct / 100)) : unit;
+        return { item, unit, unitFinal, total: roundCents(unitFinal * item.qty), totalBefore: roundCents(unit * item.qty) };
+    });
+    const subtotal = roundCents(lines.reduce((s, l) => s + l.totalBefore, 0));
+    const afterDiscount = roundCents(lines.reduce((s, l) => s + l.total, 0));
+    return {
+        lines, pct, subtotal,
+        discount: roundCents(subtotal - afterDiscount),
+        shipping,
+        total: roundCents(afterDiscount + shipping),
+        units: cart.reduce((s, i) => s + i.qty, 0)
+    };
+}
+
+const CART_ICONS = {
+    image: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5L5 20"/></svg>',
+    trash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>'
+};
+
+function cartLineImage(item) {
+    return item.image
+        ? `<img src="${escHtml(item.image)}" alt="" loading="lazy" />`
+        : CART_ICONS.image;
+}
+
+function cartOptionsList(item, cls) {
+    if (!item.options || !item.options.length) return '';
+    return `<ul class="${cls}">${item.options.map(o =>
+        `<li>${escHtml(o.label)}: <span>${escHtml(o.value)}</span></li>`).join('')}</ul>`;
+}
+
+// Filas del resumen (subtotal, descuento, envío, total) — compartidas por carrito y checkout
+function cartTotalsHtml(s, { shippingLabel } = {}) {
+    const units = s.units === 1 ? '1 producto' : `${s.units} productos`;
+    return `
+      <div><dt>Subtotal <span>(${units})</span></dt><dd>${formatEuros(s.subtotal)}</dd></div>
+      ${s.discount > 0 ? `<div class="co-discount"><dt>Tu descuento (−${s.pct} %)</dt><dd>−${formatEuros(s.discount)}</dd></div>` : ''}
+      <div><dt>Envío</dt><dd>${shippingLabel || (s.shipping ? formatEuros(s.shipping) : 'Gratis')}</dd></div>
+      <div class="co-total"><dt>Total <span>Impuestos incluidos</span></dt><dd>${formatEuros(s.total)}</dd></div>`;
+}
+
+// ── Página del carrito (carrito.html) ─────────────────────────────
 function renderCarritoPage() {
     const emptyEl = document.getElementById('carritoEmpty');
     const contentEl = document.getElementById('carritoContent');
     const listEl = document.getElementById('carritoList');
-    const totalEl = document.getElementById('carritoTotalItems');
-    if (!emptyEl || !contentEl) return;
+    if (!emptyEl || !contentEl || !listEl) return;
 
     const cart = getCart();
-    const totalItems = cart.reduce((s, i) => s + i.qty, 0);
+    emptyEl.hidden = cart.length > 0;
+    contentEl.hidden = cart.length === 0;
+    if (!cart.length) return;
 
-    if (cart.length === 0) {
-        emptyEl.style.display = '';
-        contentEl.style.display = 'none';
-        return;
-    }
+    const s = cartSummary(cart);
+    document.getElementById('carritoCount').textContent = s.units === 1 ? '1 producto' : `${s.units} productos`;
+    document.getElementById('carritoTotals').innerHTML = cartTotalsHtml(s, { shippingLabel: 'Gratis <small>Express: en el siguiente paso</small>' });
 
-    emptyEl.style.display = 'none';
-    contentEl.style.display = '';
-    totalEl.textContent = totalItems;
-
-    listEl.innerHTML = cart.map(item => {
-        const itemKey = item.key || item.title;
-        const imgHtml = item.image
-            ? `<img src="${item.image}" alt="${item.title}" class="carrito-item-img" />`
-            : `<div class="carrito-item-img carrito-item-img--placeholder">
-                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
-                   <rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/>
-                 </svg>
-               </div>`;
-        const optionsHtml = item.options && item.options.length > 0
-            ? `<ul class="carrito-item-options">${item.options.map(o =>
-                `<li><strong>${o.label}:</strong> ${o.value}</li>`
-              ).join('')}</ul>`
-            : `<p class="carrito-item-desc">${item.desc}</p>`;
-        let priceHtml = '';
-        if (item.price) {
-            const { html } = applyDiscountToPrice(item.price);
-            priceHtml = `<p class="carrito-item-price">${html}</p>`;
-        }
+    listEl.innerHTML = s.lines.map(({ item, unit, unitFinal, total, totalBefore }) => {
+        const key = escHtml(item.key || item.title);
+        const title = escHtml(item.title);
+        const href = item.id ? `produto-detalhe.html?id=${encodeURIComponent(item.id)}` : null;
+        const link = inner => href ? `<a href="${href}">${inner}</a>` : inner;
+        const unitHtml = unit
+            ? (unitFinal !== unit ? `<s>${formatEuros(unit)}</s> ${formatEuros(unitFinal)}` : formatEuros(unit)) + ' / unidad'
+            : 'Precio a confirmar';
         return `
-        <div class="carrito-item">
-          ${imgHtml}
-          <div class="carrito-item-info">
-            <h3>${item.title}</h3>
-            ${optionsHtml}
-            ${priceHtml}
+        <li class="co-line">
+          <div class="co-line-img">${link(cartLineImage(item))}</div>
+          <div class="co-line-info">
+            <h3 class="co-line-title">${link(title)}</h3>
+            ${cartOptionsList(item, 'co-line-opts')}
+            <p class="co-line-unit">${unitHtml}</p>
           </div>
-          <div class="carrito-item-qty">
-            <button class="qty-btn" data-action="dec" data-key="${itemKey}">−</button>
-            <span class="qty-num">${item.qty}</span>
-            <button class="qty-btn" data-action="inc" data-key="${itemKey}">+</button>
+          <div class="co-line-qty pd-qty" role="group" aria-label="Cantidad de ${title}">
+            <button type="button" data-action="dec" data-key="${key}" aria-label="Quitar una unidad"${item.qty <= 1 ? ' disabled' : ''}>−</button>
+            <span aria-live="polite">${item.qty}</span>
+            <button type="button" data-action="inc" data-key="${key}" aria-label="Añadir una unidad"${item.qty >= MAX_QTY ? ' disabled' : ''}>+</button>
           </div>
-          <button class="carrito-item-remove" data-key="${itemKey}" aria-label="Eliminar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-              <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/>
-              <path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/>
-            </svg>
-          </button>
-        </div>`;
+          <p class="co-line-total">${unit ? (totalBefore !== total ? `<s>${formatEuros(totalBefore)}</s>` : '') + formatEuros(total) : '—'}</p>
+          <button type="button" class="co-line-remove" data-remove="${key}" aria-label="Eliminar ${title} del carrito">${CART_ICONS.trash}</button>
+        </li>`;
     }).join('');
-
-    // qty + remove events
-    listEl.querySelectorAll('.qty-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            updateQty(btn.dataset.key, btn.dataset.action === 'inc' ? 1 : -1);
-        });
-    });
-    listEl.querySelectorAll('.carrito-item-remove').forEach(btn => {
-        btn.addEventListener('click', () => removeFromCart(btn.dataset.key));
-    });
 }
 
-// vaciar carrito button
-const vaciarBtn = document.getElementById('vaciarCarrito');
-if (vaciarBtn) vaciarBtn.addEventListener('click', clearCart);
+(function initCarritoPage() {
+    const listEl = document.getElementById('carritoList');
+    if (!listEl) return;
+    // Delegación: la lista se vuelve a pintar tras cada cambio
+    listEl.addEventListener('click', e => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+        if (btn.dataset.remove != null) {
+            removeFromCart(btn.dataset.remove);
+            document.getElementById('main')?.focus();
+        } else if (btn.dataset.action) {
+            const { key, action } = btn.dataset;
+            updateQty(key, action === 'inc' ? 1 : -1);
+            // Mantener el foco del teclado en el mismo control tras repintar la lista
+            const sel = b => `button[data-action="${b}"][data-key="${CSS.escape(key)}"]`;
+            const again = listEl.querySelector(sel(action));
+            (again && !again.disabled ? again : listEl.querySelector(sel(action === 'inc' ? 'dec' : 'inc')))?.focus();
+        }
+    });
+    const vaciarBtn = document.getElementById('vaciarCarrito');
+    if (vaciarBtn) vaciarBtn.addEventListener('click', () => {
+        if (confirm('¿Quitar todos los productos del carrito?')) clearCart();
+    });
+})();
 
 // init on every page
 updateCartBadge();
@@ -244,11 +272,64 @@ renderCarritoPage();
     });
 })();
 
+// Backend Express: mismo origen; con Live Server u otro puerto local, localhost:3000
+const API_BASE = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && location.port !== '3000'
+    ? 'http://localhost:3000' : '';
+
+// ── Sesión de Supabase Auth (sessionStorage: solo esta pestaña) ───
+// Formato: { access_token, refresh_token, user: { id, email } } — también lo lee admin/admin.js.
+const SESSION_KEY = 'sb_session';
+
+function readSession() {
+    try { return JSON.parse(sessionStorage.getItem(SESSION_KEY)); } catch (e) { return null; }
+}
+// Respuesta de /auth/v1/token (login o renovación) → sesión guardada
+function storeSession(auth) {
+    const data = { access_token: auth.access_token, refresh_token: auth.refresh_token, user: { id: auth.user.id, email: auth.user.email } };
+    sessionStorage.setItem(SESSION_KEY, JSON.stringify(data));
+    return data;
+}
+function clearSession() {
+    sessionStorage.removeItem(SESSION_KEY);
+    sessionStorage.removeItem('sb_user_role');
+}
+function logoutUser(to = 'index.html') {
+    clearSession();
+    window.location.href = to;
+}
+function tokenExpiry(token) {
+    try { return JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'))).exp || 0; }
+    catch (e) { return 0; }
+}
+// Devuelve una sesión válida: si el token caduca en menos de un minuto, lo renueva.
+// null = no hay sesión o ya no se puede renovar (se borra).
+let sessionRefresh = null; // una sola renovación a la vez aunque la pidan varios scripts
+function getFreshSession() {
+    const s = readSession();
+    if (!s || !s.access_token) return Promise.resolve(null);
+    if (tokenExpiry(s.access_token) - 60 > Date.now() / 1000) return Promise.resolve(s);
+    if (!s.refresh_token) { clearSession(); return Promise.resolve(null); }
+    if (!sessionRefresh) sessionRefresh = refreshSession(s).finally(() => { sessionRefresh = null; });
+    return sessionRefresh;
+}
+async function refreshSession(s) {
+    try {
+        const res = await fetch(APP_CONFIG.SUPABASE_URL + '/auth/v1/token?grant_type=refresh_token', {
+            method: 'POST',
+            headers: { 'apikey': APP_CONFIG.SUPABASE_ANON_KEY, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ refresh_token: s.refresh_token })
+        });
+        if (!res.ok) { clearSession(); return null; }
+        return storeSession(await res.json());
+    } catch (e) {
+        return s; // sin conexión: se mantiene y el servidor decidirá
+    }
+}
+
 // ── User state: show avatar initial when logged in ────────────────
-(function initUserState() {
-    let session;
-    try { session = JSON.parse(sessionStorage.getItem('sb_session')); } catch(e) { session = null; }
-    if (!session || !session.access_token) return;
+(async function initUserState() {
+    const session = await getFreshSession();
+    if (!session) return;
 
     const wrap = document.getElementById('navUserWrap');
     const btn  = document.getElementById('navUserBtn');
@@ -278,11 +359,7 @@ renderCarritoPage();
             '</button>';
         const logoutBtn = document.getElementById('navLogoutBtn');
         if (logoutBtn) {
-            logoutBtn.addEventListener('click', () => {
-                sessionStorage.removeItem('sb_session');
-                sessionStorage.removeItem('sb_user_role');
-                window.location.href = 'index.html';
-            });
+            logoutBtn.addEventListener('click', () => logoutUser());
         }
     }
 

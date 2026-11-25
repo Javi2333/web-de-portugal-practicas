@@ -30,7 +30,7 @@ Tienda online de letreros y pantallas LED programables (proyecto colaborativo de
 │  └─ docs/                PDFs comerciales (dossiers y fichas técnicas)
 ├─ server/
 │  ├─ server.js            Rutas de la API y servidor de estáticos
-│  └─ lib/                 supabase.js · auth.js · email.js · prices.js
+│  └─ lib/                 supabase.js · auth.js · email.js · prices.js · pricing.js
 ├─ _archivo/               Material de referencia que NO se publica (páginas de origen guardadas)
 ├─ docs-proyecto/          Documentación interna (auditoría, pendientes)
 └─ vercel.json             Todas las rutas → server/server.js
@@ -70,7 +70,7 @@ Nunca subas `.env` al repositorio. En Vercel se configuran en *Project → Setti
 
 | Método y ruta | Acceso | Función |
 |---|---|---|
-| `POST /create-checkout-session` | público | Crea el pedido en Supabase y la sesión de Stripe |
+| `POST /create-checkout-session` | público (token opcional) | Recalcula precios y envío en el servidor (`lib/pricing.js`), crea el pedido y la sesión de Stripe. Cuerpo: `items[{id, qty, options}]`, `shippingMethod`; `Authorization: Bearer` aplica el descuento por rol |
 | `POST /webhook` | Stripe (firma) | Marca el pedido como `processing` al completarse el pago |
 | `GET /api/order-items/:orderId` | admin | Líneas de un pedido |
 | `POST /admin/send-tracking-email` | admin | Envía el email de seguimiento |

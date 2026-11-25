@@ -95,7 +95,7 @@
     const ids = cards.map(c => Number(c.dataset.productId));
     const headers = { apikey: cfg.SUPABASE_ANON_KEY, Authorization: 'Bearer ' + cfg.SUPABASE_ANON_KEY };
     const base = cfg.SUPABASE_URL + '/rest/v1/';
-    const fmt = n => n.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+    const fmt = n => n.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: "always" }) + " €";
 
     Promise.all([
       fetch(`${base}products?select=id,base_price&active=eq.true&id=in.(${ids})`, { headers }).then(r => r.ok ? r.json() : []),

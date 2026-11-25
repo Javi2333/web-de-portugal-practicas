@@ -9,7 +9,10 @@ Referencia: navegación por sectores inspirada en cuma.es (sin copiar su diseño
 | 2 | Cabecera, navegación, logo y favicon | ✅ aprobada |
 | 3 | Inicio: carrusel + secciones + pie | ✅ aprobada |
 | 4 | Catálogo, tarjetas y páginas de sector | ✅ aprobada |
-| 5 | Ficha de producto y verificación final | ✅ pendiente de revisión |
+| 5 | Ficha de producto y verificación final | ✅ aprobada |
+| 6 | Compra: carrito, checkout y confirmación | ✅ aprobada |
+| 7 | Cuenta: login, registro y mi cuenta | ✅ aprobada |
+| 8 | Información: contacto, cómo funciona, sobre nosotros, recomendador; quitar `--legacy-nav-h` | ✅ pendiente de revisión |
 
 ## Sistema visual
 - **Cabecera:** `#0a0b0c` (barra superior) · `#111214` (barra principal) · `#18191c` (mega menú y desplegables). Texto `#f3f4f6`, secundario `#a3a8b0`.
@@ -72,8 +75,49 @@ Referencia: navegación por sectores inspirada en cuma.es (sin copiar su diseño
 - Servidor: las protecciones de la limpieza siguen activas (admin, `/test-email`, validación del checkout, CORS y webhook).
 - CSS: eliminadas 38 reglas de clases que ya no usa ninguna página (`styles.css` 1.379 → 1.299 líneas).
 
+## Compra (etapa 6) — `carrito.html` + `checkout.html` + `checkout.js` + `success.html` + sección COMPRA de `styles.css`
+- **Pasos visibles** (Carrito → Datos y envío → Pago) en las tres páginas.
+- **Carrito:** líneas con foto y enlace a la ficha, opciones, precio por unidad y total de línea, cantidad 1–99, eliminar y "Vaciar carrito" (con confirmación). Resumen lateral con subtotal, descuento por rol, envío y total. La lógica está en `main.js` (`cartSummary`, `cartTotalsHtml`): mismo redondeo que el servidor (descuento por unidad, a céntimos).
+- **Checkout:** una sola página (contacto, dirección, envío y observaciones) con el resumen fijo al lado y el botón "Pagar X €". Validación por campo con mensajes accesibles; los datos se guardan en `sessionStorage` por si el cliente vuelve desde Stripe; con sesión iniciada se rellena el email.
+- **Eliminado del checkout:** "Mr./Mrs.", "Crear cuenta" y "Registrarse" (no hacían nada) y los códigos `LED10`/`PROMO20`, que solo restaban en pantalla: Stripe cobraba el importe completo.
+- **Corregido:** la dirección de envío no se enviaba al servidor. Ahora se mandan nombre, email, teléfono (nuevo y obligatorio), empresa, NIF/CIF, dirección y observaciones. Como `orders` no tiene columnas de dirección, el servidor la guarda en `notes`, que aparece en el panel admin y en el email de aviso a la empresa.
+- **Decisión del usuario aplicada:** si el pedido no se puede guardar en Supabase, no se crea la sesión de Stripe (respuesta 503 "no se ha realizado ningún cargo"). Si falla al guardar las líneas, el pedido se marca como `cancelled`.
+- **Seguridad:** textos del carrito escapados; el panel admin (`orders.html`, `order-detail.html`) escapa nombre, email, teléfono y notas (`escAdmin` en `admin.js`).
+- **Confirmación:** el carrito solo se vacía si se llega desde Stripe (`?session_id=`); se explican los siguientes pasos.
+
+## Cuenta (etapa 7) — `login.html` + `registro.html` + `mi-cuenta.html` + `account.js` + sección CUENTA de `styles.css`
+- **Sin librería externa:** login, registro, recuperación y cambio de contraseña usan la API REST de Supabase Auth con `fetch` (antes se cargaba `supabase-js@2` desde un CDN sin versión fija).
+- **Sesión (`main.js`):** `readSession`, `storeSession`, `clearSession`, `logoutUser` y `getFreshSession`, que renueva el token antes de que caduque (dura 1 hora) con una sola petición aunque la pidan varios scripts. El formato de `sb_session` no cambia (lo usa el panel admin). `API_BASE` también vive ahora en `main.js`.
+- **Login:** vuelve a la página de origen con `?next=` (solo `mi-cuenta`, `checkout` o `carrito`; los admins van al panel). Desde el checkout se llega con `?next=checkout`.
+- **Contraseña olvidada:** antes se enviaba el email pero no había dónde poner la contraseña nueva. Ahora el enlace abre `login.html` con el formulario "Nueva contraseña". El mensaje es el mismo exista o no la cuenta.
+- **Registro:** el nombre y el teléfono viajan en `user_metadata`, y el perfil se crea en el primer acceso aunque el email se confirme en otro navegador (antes dependía de `sessionStorage`). Al confirmar el email se entra directamente.
+- **Mi cuenta:** pedidos con estado, productos y número de seguimiento (nuevo endpoint `GET /api/my-orders`, que verifica el JWT y filtra por ese usuario con la service key, sin depender de RLS); datos editables; tarifa del cliente visible; cambio de contraseña.
+- **Eliminado:** botones de Google y Facebook (no funcionaban), casilla de newsletter (no se guardaba), promesas de "favoritos y comparador" (no existen) y el campo "Confirmar contraseña" del registro (sustituido por "Mostrar").
+- **Corregido:** cerrar sesión desde Mi cuenta dejaba el rol guardado y se seguían viendo precios con descuento.
+- **Configurar en Supabase** (Authentication → URL Configuration): añadir `https://<dominio>/login.html` y `http://localhost:3000/login.html` a *Redirect URLs*. Si no, los enlaces de confirmación y de recuperación llevan a la *Site URL*.
+
+## Información (etapa 8) — `como-funciona.html`, `sobre-nos.html`, `contacto.html` + `contacto.js`, `recomendador.html` + `recomendador.js`, sección INFORMACIÓN de `styles.css`
+- **Todas las páginas públicas usan ya el tema claro.** Eliminados `--legacy-nav-h`, la compensación del `body` y el CSS antiguo sin uso (`.container`, `.btn`, `.section-*`, `.accent-text`, secciones COMO FUNCIONA, TESTEMUNHOS, SOBRE NÓS, CTA FINAL y ANIMATIONS) y la animación de aparición de `main.js`. `styles.css`: 1.524 → 1.379 líneas. El panel admin sigue usando las variables oscuras de `:root` (no se tocan) y ya no recibe el margen superior de la compensación.
+- **Cómo funciona:** 4 pasos, formas de programar (USB, WiFi, RJ45, 4G, nube, software; movidas desde "Sobre nosotros"), qué puede mostrar el letrero y llamada a la acción. Ya no menciona Bluetooth.
+- **Sobre nosotros:** empresa y cifras, características de los letreros, datos de la empresa y redes.
+- **Contacto:** formulario (mismo Formspree y mismos nombres de campo; apellidos opcional; trampa `_gotcha` contra spam; errores accesibles; email prerrellenado con sesión) y canales, horario y dirección completa al lado. Se elimina la fila de tarjetas que repetía los mismos datos.
+- **Recomendador (rehecho):** antes solo usaba el tipo de negocio (color, pitch, ubicación y tamaño no influían) y sus ids no coincidían con el menú (p. ej. "Bar" recomendaba un letrero de hotel). Ahora: 5 preguntas (negocio, qué mostrar, distancia, ubicación, caras) → productos reales de `SITE_NAV` con `PCard`, puntuados; si el sector no tiene nada compatible se proponen modelos genéricos. Respuestas en la URL (compartible), "Cambiar" por respuesta y foco gestionado. `lang="es"` (antes `pt-PT`).
+- **Precios:** todos los formateadores usan punto de miles también con 4 cifras (`useGrouping: "always"`).
+
+## Pequeños fallitos pendientes (para dejar la web a punto)
+_Se arreglarán al final, cuando el usuario lo pida. Ir añadiendo aquí._
+- Plazo de envío contradictorio: cabecera y ficha dicen "24-48 h a toda España"; el checkout, "3–5 días · España peninsular" (express 1–2 días).
+- El checkout ofrece Portugal, Francia, Italia, Alemania y "Otro" con envío gratis, pero el texto dice "España peninsular".
+- El email de "pedido confirmado" al cliente se envía al crear el pedido, antes de pagar (moverlo al webhook requiere `STRIPE_WEBHOOK_SECRET`).
+- Sin webhook, los pedidos pagados se quedan en "pending": en Mi cuenta salen como "Pendiente de confirmar" (también los intentos de pago abandonados) hasta que el admin cambia el estado.
+- Los enlaces a "términos y condiciones" y "política de privacidad" del registro apuntan a "#" (faltan las páginas legales).
+- El perfil se crea desde el navegador con `role: 'customer'`: hay que comprobar en Supabase que RLS impide crear o editar el perfil con otro rol (p. ej. `admin`).
+- Para cambiar el email de la cuenta hay que escribir a la empresa (no hay formulario).
+- La portada ("Fácil programación") sigue diciendo "USB, WiFi o Bluetooth"; "Cómo funciona" ya dice USB, WiFi, RJ45 o 4G. Confirmar con la empresa.
+- Los enlaces a la política de privacidad del formulario de contacto apuntan a "#".
+
 ## Siguiente fase propuesta
-1. **Seguridad (urgente, pendiente desde la auditoría):** el servidor sigue cobrando el precio que envía el navegador. La fuente de verdad ya está clara (variantes de Supabase + recargos de `options`), así que se puede implementar.
+1. ✅ **Seguridad de precios: hecho** (ver AUDITORIA.md §5).
 2. **Páginas que conservan el diseño oscuro:** carrito, checkout, contacto, cómo funciona, sobre nosotros, recomendador, login, registro, mi cuenta y success. Tras rediseñarlas se puede eliminar `--legacy-nav-h`.
 3. **Datos:** el precio fijo del producto 35 está en el código (1.713,36 € / 726 €); conviene pasarlo a variantes en Supabase. `recomendador.html` tiene textos en portugués.
 

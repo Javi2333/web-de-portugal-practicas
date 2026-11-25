@@ -70,8 +70,10 @@ Copia de seguridad previa: `C:\Users\Gerardo\Backups\web-de-portugal-practicas_b
 ## 3. Pendientes
 
 ### 🔴 Seguridad (aprobados, a la espera de una decisión)
-1. **Precio validado en el servidor.** `/create-checkout-session` todavía cobra el `price` que envía el navegador, y el envío también llega del cliente. Hay que decidir la fuente de verdad: `product_variants` en Supabase o `combinations` en `products-data.js`. La página de producto usa las dos (Supabase y, si falla, el archivo local). Marcado con `TODO` en `server/server.js`.
-2. **Descuento por rol desde el JWT.** Hoy se calcula con el `userId` que manda `checkout.html`. Hay que enviar el token de sesión en la cabecera y deducir el usuario en el servidor.
+1. ✅ **RESUELTO (2026-11-23) — Precio validado en el servidor.** Ver §5.
+   ~~**Precio validado en el servidor.**~~ `/create-checkout-session` todavía cobra el `price` que envía el navegador, y el envío también llega del cliente. Hay que decidir la fuente de verdad: `product_variants` en Supabase o `combinations` en `products-data.js`. La página de producto usa las dos (Supabase y, si falla, el archivo local). Marcado con `TODO` en `server/server.js`.
+2. ✅ **RESUELTO (2026-11-23) — Descuento por rol desde el JWT.** Ver §5.
+   ~~**Descuento por rol desde el JWT.**~~ Hoy se calcula con el `userId` que manda `checkout.html`. Hay que enviar el token de sesión en la cabecera y deducir el usuario en el servidor.
 3. **RLS de `profiles` (revisar en Supabase).** El registro inserta el perfil desde el navegador con `role: 'customer'`. Si RLS permite insertar o actualizar el campo `role`, un usuario podría darse a sí mismo `admin` o un rol con descuento. Consultas de **solo lectura** para el SQL Editor:
    ```sql
    select tablename, policyname, cmd, roles, qual, with_check
@@ -106,3 +108,23 @@ Copia de seguridad previa: `C:\Users\Gerardo\Backups\web-de-portugal-practicas_b
 3. Registro e inicio de sesión → Mi cuenta.
 4. Checkout con una tarjeta de prueba de Stripe (`4242 4242 4242 4242`) y `stripe listen --forward-to localhost:3000/webhook` → el pedido pasa a `processing`.
 5. Entrar en `/admin/` como admin: ver un pedido con sus productos, enviar un email de seguimiento y editar un producto.
+
+## 5. Seguridad de precios (2026-11-23)
+
+**Antes:** `/create-checkout-session` cobraba el `price` y el `shippingCost` que enviaba el navegador, y el descuento por rol se aplicaba al `userId` del cuerpo de la petición.
+
+**Ahora** (`server/lib/pricing.js`):
+- Por cada línea, el servidor carga el producto y sus variantes activas desde Supabase (con la service key) y recalcula el precio con la misma regla que la ficha (`public/product.js`): variante del tamaño elegido → `sizePrices` de la opción → `base_price`; más los recargos de `options[].surcharges`; precio fijo del producto 35.
+- **Se rechaza:** producto inactivo o inexistente; precio base ≤ 0 (a presupuesto); opción, valor o tamaño que no existan en el producto; etiquetas de opción desconocidas; cantidad fuera de 1–99; más de 50 líneas.
+- **Envío:** el cliente envía `shippingMethod` (`gratis` | `express`) y el importe lo fija el servidor (0 € / 9,99 €).
+- **Descuento:** el usuario se obtiene del JWT (`Authorization: Bearer`), verificado con Supabase Auth. El `user_id` del pedido también sale de ahí. Un token falso equivale a "sin descuento".
+- El precio del navegador solo se compara para dejar un aviso en el log si difiere; se cobra siempre el del servidor.
+- Si Supabase no responde, el pago se rechaza (503) en lugar de fiarse del navegador.
+- **Carrito:** cada línea guarda ahora el `id` del producto (los productos 17 y 21 comparten título y precios distintos). Los carritos antiguos sin id se resuelven por título si es único; si es ambiguo, se pide volver a añadir el producto.
+
+**Verificación:**
+- 16 casos unitarios: manipulación de precio, recargos, producto 35, 17/21, carrito antiguo, producto a presupuesto, inactivo, opciones inventadas, cantidad y envío.
+- **Paridad ficha ↔ servidor:** 126 combinaciones aleatorias de opciones en los 43 productos activos, sin ninguna diferencia.
+- Petición real del checkout interceptada en el navegador: lleva id, opciones, `shippingMethod` y token; el servidor calcula el mismo total que muestra la ficha.
+
+**Riesgo que queda (decisión de negocio):** si el pedido no se puede guardar en Supabase, el pago continúa igualmente (comportamiento original: "el pago no debe bloquearse"). En ese caso el pedido solo queda en Stripe. Valorar si rechazar el pago cuando falla el registro.

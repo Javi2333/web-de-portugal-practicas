@@ -97,6 +97,7 @@ function newOrderAdminTemplate(order, items) {
           <tr><td style="padding:4px 0;color:#718096">Email</td><td style="padding:4px 0;color:#2d3748">${escapeHtml(order.customer_email || '—')}</td></tr>
           <tr><td style="padding:4px 0;color:#718096">Teléfono</td><td style="padding:4px 0;color:#2d3748">${escapeHtml(order.customer_phone || '—')}</td></tr>
         </table>
+        ${order.notes ? `<div style="margin-top:12px;padding:12px 14px;background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;font-size:0.88rem;line-height:1.55;color:#2d3748">${escapeHtml(order.notes).replace(/\n/g, '<br>')}</div>` : ''}
       </div>
 
       <!-- Productos -->

@@ -15,7 +15,7 @@ const SB_HEADERS = {
 // Format a number to Spanish price string: 257.98 → "257,98 €"
 function _formatPrice(num) {
   if (num == null) return null;
-  return num.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  return num.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: "always" }) + " €";
 }
 
 // Map a Supabase products row to the shape the existing code expects

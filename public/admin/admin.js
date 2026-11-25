@@ -181,9 +181,14 @@ function closeModal() {
 
 // ── Formateador de precio ─────────────────────────────────────────────
 
+// Escapa texto antes de insertarlo como HTML (datos que escribe el cliente en el checkout).
+function escAdmin(value) {
+  return String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
 function fmtPrice(n) {
   if (n == null) return '—';
-  return Number(n).toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  return Number(n).toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: "always" }) + " €";
 }
 
 function fmtDate(s) {

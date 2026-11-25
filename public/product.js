@@ -67,7 +67,7 @@
   // basePrice: precio del tamaño ANTES de recargos. Si es 0, el producto va a presupuesto
   // (si no, un recargo de +25 € lo dejaría a la venta por 25 €).
   function showPrice(priceNum, basePrice) {
-    const formatted = priceNum.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+    const formatted = priceNum.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: "always" }) + " €";
     product.price = formatted; // precio sin descuento para el carrito
     const onQuote = !available || !(basePrice > 0);
     buyEl.hidden = onQuote;
@@ -80,7 +80,7 @@
     }
     const disc = typeof getUserDiscountPct === 'function' ? getUserDiscountPct() : 0;
     if (disc > 0) {
-      const discStr = (Math.round(priceNum * (1 - disc / 100) * 100) / 100).toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+      const discStr = (Math.round(priceNum * (1 - disc / 100) * 100) / 100).toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: "always" }) + " €";
       priceEl.innerHTML = `<s class="pd-price-old">${formatted}</s>${discStr}<span class="pd-price-tax">Impuestos incluidos · −${disc}% de descuento</span>`;
     } else {
       priceEl.innerHTML = `${formatted}<span class="pd-price-tax">Impuestos incluidos</span>`;
@@ -199,7 +199,7 @@
       }
     });
     const image = product.images && product.images.length ? product.images[0] : null;
-    for (let i = 0; i < qty; i++) addToCart(product.title, product.shortDesc || product.desc, image, product.price, selectedOptions);
+    for (let i = 0; i < qty; i++) addToCart(product.title, product.shortDesc || product.desc, image, product.price, selectedOptions, product.id);
   });
 
   // Pestañas (con teclado: flechas izquierda/derecha)

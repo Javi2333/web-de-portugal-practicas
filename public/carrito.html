@@ -3,125 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ledparatodos</title>
+  <title>Carrito | ledparatodos</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <meta name="description" content="Su selección de letreros LED programables. Revise los productos añadidos y solicite su presupuesto." />
+  <meta name="description" content="Revisa los letreros LED de tu carrito y finaliza tu compra con pago seguro." />
+  <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .carrito-item {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-    }
-    .carrito-item-img {
-      width: 90px;
-      height: 68px;
-      object-fit: cover;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-    .carrito-item-img--placeholder {
-      background: var(--dark-3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-    }
-    .carrito-item-info { flex: 1; min-width: 0; }
-    .carrito-item-info h3 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.35rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .carrito-item-options {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 0.35rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-    .carrito-item-options li {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-    .carrito-item-options li strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-    .carrito-item-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin: 0;
-    }
-    .carrito-item-price {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--primary-light);
-      margin: 0.3rem 0 0;
-    }
-    @media (max-width: 600px) {
-      .carrito-item { flex-wrap: wrap; }
-      .carrito-item-img { width: 60px; height: 46px; }
-    }
-  </style>
 </head>
-<body>
+<body class="page-light">
 
   <script src="header.js"></script>
 
-  <!-- ===== CARRITO ===== -->
-  <section class="carrito-page">
-    <div class="container">
-      <div class="carrito-header">
-        <span class="section-tag">Mi selección</span>
-        <h1>Carrito de Productos</h1>
-        <p>Revisa los productos que has añadido y solicita tu presupuesto sin compromiso.</p>
-      </div>
+  <main id="main" tabindex="-1">
 
-      <!-- Estado vacío -->
-      <div class="carrito-empty" id="carritoEmpty">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" width="80" height="80">
-          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <path d="M16 10a4 4 0 01-8 0"/>
-        </svg>
-        <h2>Tu carrito está vacío</h2>
-        <p>Aún no has añadido ningún producto. Explora nuestro catálogo y encuentra el letrero perfecto para tu negocio.</p>
-        <a href="produtos.html" class="btn btn-primary btn-large">Ver Catálogo</a>
+    <section class="ct-hero co-hero">
+      <div class="sh-wrap">
+        <nav aria-label="Ruta de navegación"><ol class="ct-crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Carrito</li></ol></nav>
+        <h1 class="ct-title">Tu carrito</h1>
+        <ol class="co-progress" aria-label="Pasos de la compra">
+          <li class="is-current" aria-current="step"><span>1</span>Carrito</li>
+          <li><span>2</span>Datos y envío</li>
+          <li><span>3</span>Pago</li>
+        </ol>
       </div>
+    </section>
 
-      <!-- Lista de productos -->
-      <div id="carritoContent" style="display:none">
-        <div class="carrito-list" id="carritoList"></div>
-        <div class="carrito-footer">
-          <div class="carrito-total">
-            Total de productos: <strong id="carritoTotalItems">0</strong>
-          </div>
-          <div class="carrito-actions">
-            <button class="btn btn-outline" id="vaciarCarrito">Vaciar carrito</button>
-            <a href="checkout.html" class="btn btn-primary btn-large">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-              Finalizar Pedido
-            </a>
+    <section class="co-body">
+      <div class="sh-wrap">
+
+        <!-- Carrito vacío -->
+        <div class="co-empty" id="carritoEmpty" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg>
+          <h2>Tu carrito está vacío</h2>
+          <p>Explora el catálogo y encuentra el letrero adecuado para tu negocio.</p>
+          <div class="co-empty-actions">
+            <a href="produtos.html" class="hm-btn hm-btn--primary">Ver catálogo</a>
+            <a href="recomendador.html" class="co-link">Encuentra tu letrero ideal</a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== FOOTER ===== -->
+        <!-- Carrito con productos -->
+        <div class="co-layout" id="carritoContent" hidden>
+          <div class="co-main">
+            <div class="co-list-head">
+              <p id="carritoCount"></p>
+              <button type="button" class="co-link" id="vaciarCarrito">Vaciar carrito</button>
+            </div>
+            <ul class="co-lines" id="carritoList"></ul>
+            <a href="produtos.html" class="co-back">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+              Seguir comprando
+            </a>
+          </div>
+
+          <aside class="co-summary" aria-labelledby="coSummaryTitle">
+            <h2 class="co-summary-title" id="coSummaryTitle">Resumen del pedido</h2>
+            <dl class="co-totals" id="carritoTotals"></dl>
+            <a href="checkout.html" class="hm-btn hm-btn--primary co-cta">Finalizar compra</a>
+            <ul class="pd-trust co-trust">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>Pago seguro con tarjeta (Stripe)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Envío estándar gratis</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>2 años de garantía</li>
+            </ul>
+            <p class="co-help">¿Pedido grande o letrero a medida? <a href="contacto.html">Pide presupuesto</a>.</p>
+          </aside>
+        </div>
+
+        <noscript><p class="co-empty">Activa JavaScript para ver tu carrito, o <a href="contacto.html">contacta con nosotros</a>.</p></noscript>
+      </div>
+    </section>
+
+  </main>
+
   <script src="footer.js"></script>
 
-  <!-- WhatsApp Float -->
   <a href="https://wa.me/34652027910" class="whatsapp-float" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
